@@ -11,3 +11,6 @@ export function siteUrl(): string {
   if (vercel) return `https://${vercel}`;
   return "http://localhost:3000";
 }
+
+/** Repositorio público del proyecto (código, datos y su historial). */
+export const REPO_URL = "https://github.com/acoidaan/political-quest";

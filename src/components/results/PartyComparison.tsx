@@ -11,17 +11,19 @@ import {
   calculatePartySimilarity,
   computeQuizResult,
 } from "@/lib/scoring";
-import { useStoredSession } from "@/lib/store";
+import { saveSession, useStoredSession } from "@/lib/store";
 import { answerLabel, POSITION_LABELS, SOURCE_TYPE_LABELS } from "@/lib/labels";
 import { Compass2D, compassFromAxes, type CompassPoint } from "@/components/charts/Compass2D";
 import { DemoBanner } from "@/components/ui/DemoBanner";
+import { RevealByProposal } from "./RevealByProposal";
 
 /** Var CSS del color de cada partido (validado en claro y oscuro). */
 const partyColor = (id: string) => `var(--party-${id})`;
 
 export function PartyComparison() {
   const session = useStoredSession();
-  const [revealed, setRevealed] = useState(false);
+  // gate → predict → (session.prediction definida) revelación
+  const [stage, setStage] = useState<"gate" | "predict">("gate");
 
   const data = useMemo(() => {
     if (session === undefined || !session?.finishedAt) return null;
@@ -64,39 +66,77 @@ export function PartyComparison() {
     );
   }
 
-  if (!revealed) {
+  if (session && session.prediction === undefined) {
+    if (stage === "gate") {
+      return (
+        <div className="mx-auto max-w-2xl px-4 sm:px-6 py-20 sm:py-24 text-center rise-in">
+          <p className="text-xs uppercase tracking-[0.25em] text-muted">
+            Comparación opcional
+          </p>
+          <h1 className="font-display text-3xl sm:text-5xl mt-4 leading-tight text-balance">
+            Ha llegado el momento de levantar el velo
+          </h1>
+          <p className="mt-5 text-ink-2 text-lg">
+            Hasta aquí has juzgado ideas sin siglas. Ahora verás qué partidos
+            defendían cada propuesta y cuáles se acercan más y menos a tus
+            respuestas, con sus fuentes.
+          </p>
+          <p className="mt-3 text-sm text-muted">
+            Coincidencia programática no significa intención de voto ni apoyo a
+            un partido.
+          </p>
+          <button
+            type="button"
+            onClick={() => setStage("predict")}
+            className="mt-9 bg-ink text-paper px-8 py-4 rounded-lg text-lg hover:bg-accent transition-colors"
+          >
+            Continuar
+          </button>
+          <div className="mt-6">
+            <Link
+              href="/resultados"
+              className="text-sm text-ink-2 underline decoration-dotted underline-offset-4 hover:text-accent"
+            >
+              ← Volver a mis resultados
+            </Link>
+          </div>
+        </div>
+      );
+    }
+    const choose = (prediction: string) => saveSession({ ...session, prediction });
     return (
-      <div className="mx-auto max-w-2xl px-4 sm:px-6 py-24 text-center rise-in">
+      <div className="mx-auto max-w-2xl px-4 sm:px-6 py-20 sm:py-24 text-center rise-in">
         <p className="text-xs uppercase tracking-[0.25em] text-muted">
-          Comparación opcional
+          Antes de mirar
         </p>
-        <h1 className="font-display text-3xl sm:text-4xl mt-4 leading-snug">
-          Ahora sí: comparemos tus respuestas con posiciones públicas
-          verificables
+        <h1 className="font-display text-3xl sm:text-4xl mt-4 leading-snug text-balance">
+          ¿Con qué partido crees que coincidirán más tus respuestas?
         </h1>
         <p className="mt-4 text-ink-2">
-          Hasta aquí has juzgado ideas sin siglas. Si continúas, verás qué
-          programas se acercan más y menos a tus respuestas, con sus fuentes.
+          Solo es un juego: tu predicción no cambia ningún cálculo. Después
+          verás si tu intuición acierta.
         </p>
-        <p className="mt-3 text-sm text-muted">
-          Coincidencia programática no significa intención de voto ni apoyo a un
-          partido.
-        </p>
+        <div className="mt-9 grid grid-cols-2 gap-3 max-w-md mx-auto">
+          {[...ACTIVE_PARTIES]
+            .sort((a, b) => a.name.localeCompare(b.name, "es"))
+            .map((party) => (
+              <button
+                key={party.id}
+                type="button"
+                onClick={() => choose(party.id)}
+                className="px-4 py-4 rounded-lg border border-line bg-surface font-medium hover:border-accent hover:-translate-y-0.5 transition-all"
+              >
+                {party.name}
+              </button>
+            ))}
+        </div>
         <button
           type="button"
-          onClick={() => setRevealed(true)}
-          className="mt-8 bg-ink text-paper px-8 py-4 rounded-md text-lg hover:bg-accent transition-colors"
+          onClick={() => choose("none")}
+          className="mt-5 text-sm text-ink-2 underline decoration-dotted underline-offset-4 hover:text-accent"
         >
-          Mostrar comparación
+          Prefiero no adivinar
         </button>
-        <div className="mt-6">
-          <Link
-            href="/resultados"
-            className="text-sm text-ink-2 underline decoration-dotted underline-offset-4 hover:text-accent"
-          >
-            ← Volver a mis resultados
-          </Link>
-        </div>
       </div>
     );
   }
@@ -139,11 +179,18 @@ export function PartyComparison() {
         </p>
       </header>
 
+      <PredictionOutcome
+        prediction={session?.prediction}
+        similarities={data.similarities}
+      />
+
       <section aria-label="Coincidencia por partido" className="space-y-4">
-        {data.similarities.map((sim) => (
-          <PartyCard key={sim.party} sim={sim} />
+        {data.similarities.map((sim, i) => (
+          <PartyCard key={sim.party} sim={sim} rank={i} />
         ))}
       </section>
+
+      {session && <RevealByProposal session={session} />}
 
       <section aria-labelledby="mapa2d">
         <h2 id="mapa2d" className="font-display text-2xl mb-4">
@@ -182,7 +229,7 @@ export function PartyComparison() {
 
 // ---------------------------------------------------------------------------
 
-function PartyCard({ sim }: { sim: PartySimilarity }) {
+function PartyCard({ sim, rank }: { sim: PartySimilarity; rank: number }) {
   const [open, setOpen] = useState(false);
   const party = PARTY_BY_ID[sim.party];
   if (!party) return null;
@@ -190,7 +237,10 @@ function PartyCard({ sim }: { sim: PartySimilarity }) {
   const noData = sim.comparableCount === 0;
 
   return (
-    <article className="border border-line rounded-lg bg-surface overflow-hidden">
+    <article
+      className="border border-line rounded-xl bg-surface overflow-hidden rise-in"
+      style={{ animationDelay: `${rank * 80}ms`, animationFillMode: "both" }}
+    >
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -204,18 +254,20 @@ function PartyCard({ sim }: { sim: PartySimilarity }) {
             style={{ background: partyColor(party.id) }}
           />
           <span className="font-medium">{party.name}</span>
-          <span className="text-xs text-muted">{party.fullName}</span>
+          <span className="hidden sm:inline text-xs text-muted">{party.fullName}</span>
           <span className="ml-auto font-display text-2xl tabular-nums">
             {noData ? "—" : `${Math.round(sim.similarity)}%`}
           </span>
         </div>
-        <div className="mt-1 flex items-center justify-between text-xs text-muted">
+        <div className="mt-1 flex items-start justify-between gap-3 text-xs text-muted">
           <span>
             {noData
               ? "Sin posiciones comparables con tus respuestas"
               : `Coincidencia en las cuestiones comparables · ${sim.comparableCount} de ${sim.totalAnswered} respondidas · ±${Math.round(sim.uncertainty)}`}
           </span>
-          <span aria-hidden="true">{open ? "cerrar ▴" : "ver por qué ▾"}</span>
+          <span aria-hidden="true" className="shrink-0 whitespace-nowrap">
+            {open ? "cerrar ▴" : "ver por qué ▾"}
+          </span>
         </div>
         {!noData && (
           <div
@@ -223,10 +275,11 @@ function PartyCard({ sim }: { sim: PartySimilarity }) {
             aria-hidden="true"
           >
             <div
-              className="h-full rounded-full"
+              className="h-full rounded-full grow-x"
               style={{
                 width: `${sim.similarity}%`,
                 background: partyColor(party.id),
+                animationDelay: `${150 + rank * 120}ms`,
               }}
             />
           </div>
@@ -320,5 +373,58 @@ function PartyCard({ sim }: { sim: PartySimilarity }) {
         </div>
       )}
     </article>
+  );
+}
+
+// ---------------------------------------------------------------------------
+
+/**
+ * Resultado del juego de predicción. Si la diferencia entre los dos primeros
+ * es menor que su incertidumbre, se dice: no hay un «ganador» claro.
+ */
+function PredictionOutcome({
+  prediction,
+  similarities,
+}: {
+  prediction: string | undefined;
+  similarities: PartySimilarity[];
+}) {
+  const ranked = similarities.filter((s) => s.comparableCount > 0);
+  if (ranked.length === 0) return null;
+  const [first, second] = ranked;
+  const tie =
+    second !== undefined &&
+    first.similarity - second.similarity <
+      Math.max(first.uncertainty, second.uncertainty);
+  const predictedIndex = ranked.findIndex((s) => s.party === prediction);
+  const predictedName = prediction ? PARTY_BY_ID[prediction]?.name : undefined;
+
+  let headline: string;
+  if (!predictedName) {
+    headline = `Tus respuestas coinciden más con ${PARTY_BY_ID[first.party]?.name}.`;
+  } else if (predictedIndex === 0) {
+    headline = `Acertaste: ${predictedName} es el partido que más coincide con tus respuestas.`;
+  } else if (tie && predictedIndex === 1) {
+    headline = `Casi: apostaste por ${predictedName}, que queda segundo en empate técnico con ${PARTY_BY_ID[first.party]?.name}.`;
+  } else if (predictedIndex > 0) {
+    headline = `Apostaste por ${predictedName}, pero queda en ${predictedIndex + 1}.ª posición. El que más coincide es ${PARTY_BY_ID[first.party]?.name}.`;
+  } else {
+    headline = `Apostaste por ${predictedName}, pero no hay posiciones comparables con tus respuestas.`;
+  }
+
+  return (
+    <div className="rounded-xl border border-accent/40 bg-accent-soft/40 p-5 rise-in">
+      <p className="text-xs uppercase tracking-[0.2em] text-muted">
+        {predictedName ? "Tu predicción" : "Resultado"}
+      </p>
+      <p className="mt-1.5 font-display text-xl sm:text-2xl leading-snug">{headline}</p>
+      {tie && (
+        <p className="mt-2 text-sm text-ink-2">
+          Ojo: entre {PARTY_BY_ID[first.party]?.name} y{" "}
+          {PARTY_BY_ID[second.party]?.name} la diferencia es menor que el margen
+          de incertidumbre. Es un empate técnico.
+        </p>
+      )}
+    </div>
   );
 }

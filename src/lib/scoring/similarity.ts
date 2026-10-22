@@ -10,6 +10,7 @@ import type {
 import { POSITION_VALUE } from "@/lib/types";
 import { MAX_ANSWER, PERSONAL_IMPORTANCE_MULT, uncertaintyFloor } from "./constants";
 import { weightedStats } from "./uncertainty";
+import { currentPosition } from "./positions";
 
 export interface SimilarityOptions {
   /**
@@ -17,6 +18,8 @@ export interface SimilarityOptions {
    * con aviso visible en la UI). En producción debe ser false.
    */
   allowUnverified?: boolean;
+  /** Fecha (ISO) en la que se evalúan las posiciones vigentes. Por defecto, hoy. */
+  asOf?: string;
 }
 
 const NON_COMPARABLE: PositionStatus[] = [
@@ -56,7 +59,7 @@ export function calculatePartySimilarity(
     if (!answer || answer.value === "skipped") continue;
     totalAnswered++;
 
-    const position = q.partyPositions.find((p) => p.party === partyId);
+    const position = currentPosition(q, partyId, options.asOf);
     if (!position) continue;
     if (NON_COMPARABLE.includes(position.status)) continue;
     if (position.needsVerification && !options.allowUnverified) continue;

@@ -1,0 +1,19 @@
+name: Error en la web
+description: Algo no funciona o se ve mal.
+title: "web: "
+labels: [web]
+body:
+  - type: textarea
+    id: que
+    attributes:
+      label: Qué ocurre
+    validations:
+      required: true
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Cómo reproducirlo
+  - type: input
+    id: entorno
+    attributes:
+      label: Navegador y dispositivo

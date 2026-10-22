@@ -12,6 +12,7 @@ export { selectQuestions } from "./selectQuestions";
 export { discriminationScore } from "./discrimination";
 export { calculateCentrist, calculateConvictions } from "./convictions";
 export { calculatePartyAxisScores } from "./partyProfile";
+export { currentPosition, currentPositions, todayIso } from "./positions";
 export * from "./constants";
 
 /**

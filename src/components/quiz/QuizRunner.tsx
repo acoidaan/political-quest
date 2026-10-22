@@ -8,6 +8,7 @@ import { activeQuestions, USING_DEMO_DATA } from "@/data/questions";
 import { categoryLabel } from "@/data/categories";
 import { selectQuestions } from "@/lib/scoring";
 import { ANSWER_SCALE, MODE_INFO, PERSONAL_IMPORTANCE_LABELS, SKIP_LABEL } from "@/lib/labels";
+import { AnswerScale } from "./AnswerScale";
 import {
   clearSession,
   createSession,
@@ -64,7 +65,19 @@ function ActiveQuiz({ session }: { session: QuizSession }) {
   const [showImportance, setShowImportance] = useState(false);
   const [showExplainer, setShowExplainer] = useState(false);
   const [selfPlacementPhase, setSelfPlacementPhase] = useState(false);
+  const [confirmRestart, setConfirmRestart] = useState(false);
+  // Respuesta recién pulsada: se marca al instante y se avanza tras una pausa
+  // breve para que el feedback sea visible.
+  const [pending, setPending] = useState<AnswerValue | null>(null);
+  const advanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(
+    () => () => {
+      if (advanceTimer.current) clearTimeout(advanceTimer.current);
+    },
+    []
+  );
 
   const questionsById = useMemo(
     () => new Map(activeQuestions.map((q) => [q.id, q])),
@@ -82,6 +95,89 @@ function ActiveQuiz({ session }: { session: QuizSession }) {
         ? total - 1
         : firstUnanswered;
 
+  const questionId = session.questionIds[index];
+  const question = questionsById.get(questionId);
+  const current = session.answers[questionId];
+  const answeredCount = Object.keys(session.answers).length;
+
+  const goTo = (i: number) => {
+    setIndexOverride(i);
+    setShowImportance(false);
+    setShowExplainer(false);
+    setConfirmRestart(false);
+    headingRef.current?.focus();
+  };
+
+  const commit = (value: AnswerValue | "skipped") => {
+    saveSession({
+      ...session,
+      answers: {
+        ...session.answers,
+        [questionId]: {
+          questionId,
+          value,
+          personalImportance: current?.personalImportance,
+          answeredAt: new Date().toISOString(),
+        },
+      },
+    });
+    setPending(null);
+    if (index + 1 < total) {
+      goTo(index + 1);
+    } else {
+      setSelfPlacementPhase(true);
+    }
+  };
+
+  const record = (value: AnswerValue | "skipped") => {
+    if (advanceTimer.current) return; // ya avanzando
+    if (value === "skipped") {
+      commit(value);
+      return;
+    }
+    setPending(value);
+    advanceTimer.current = setTimeout(() => {
+      advanceTimer.current = null;
+      commit(value);
+    }, 220);
+  };
+
+  const setImportance = (imp: PersonalImportance) => {
+    if (!current) return;
+    saveSession({
+      ...session,
+      answers: {
+        ...session.answers,
+        [questionId]: { ...current, personalImportance: imp },
+      },
+    });
+  };
+
+  // Atajos: 1–7 responden, N = sin información, ←/→ navegan, I = explicación.
+  useEffect(() => {
+    if (selfPlacementPhase) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+      const target = e.target as HTMLElement | null;
+      if (target?.closest("input, textarea, select")) return;
+      if (/^[1-7]$/.test(e.key)) {
+        e.preventDefault();
+        record(ANSWER_SCALE[Number(e.key) - 1].value);
+      } else if (e.key === "n" || e.key === "N" || e.key === "0") {
+        e.preventDefault();
+        record("skipped");
+      } else if (e.key === "ArrowLeft" && index > 0) {
+        goTo(index - 1);
+      } else if (e.key === "ArrowRight" && current && index + 1 < total) {
+        goTo(index + 1);
+      } else if (e.key === "i" || e.key === "I") {
+        setShowExplainer((v) => !v);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  });
+
   if (selfPlacementPhase) {
     return (
       <SelfPlacement
@@ -97,64 +193,21 @@ function ActiveQuiz({ session }: { session: QuizSession }) {
     );
   }
 
-  const questionId = session.questionIds[index];
-  const question = questionsById.get(questionId);
   if (!question) return null;
 
-  const current = session.answers[questionId];
-  const answeredCount = Object.keys(session.answers).length;
-
-  const goTo = (i: number) => {
-    setIndexOverride(i);
-    setShowImportance(false);
-    setShowExplainer(false);
-    headingRef.current?.focus();
-  };
-
-  const record = (value: AnswerValue | "skipped") => {
-    saveSession({
-      ...session,
-      answers: {
-        ...session.answers,
-        [questionId]: {
-          questionId,
-          value,
-          personalImportance: current?.personalImportance,
-          answeredAt: new Date().toISOString(),
-        },
-      },
-    });
-    setShowImportance(false);
-    setShowExplainer(false);
-    if (index + 1 < total) {
-      goTo(index + 1);
-    } else {
-      setSelfPlacementPhase(true);
-    }
-  };
-
-  const setImportance = (imp: PersonalImportance) => {
-    if (!current) return;
-    saveSession({
-      ...session,
-      answers: {
-        ...session.answers,
-        [questionId]: { ...current, personalImportance: imp },
-      },
-    });
-  };
+  const progress = answeredCount / total;
 
   return (
     <div className="mx-auto max-w-2xl px-4 sm:px-6 py-8 sm:py-14">
       {/* Progreso discreto (§55): sin puntuaciones provisionales. */}
       <div className="flex items-center justify-between text-sm text-muted mb-2">
-        <span>
-          {index + 1} / {total}
+        <span className="tabular-nums">
+          <span className="text-ink font-medium">{index + 1}</span> / {total}
         </span>
-        <span aria-hidden="true">Tu mapa se está definiendo</span>
+        <span aria-hidden="true">{progressMessage(progress)}</span>
       </div>
       <div
-        className="h-1 bg-track rounded-full overflow-hidden"
+        className="h-1.5 bg-track rounded-full overflow-hidden"
         role="progressbar"
         aria-valuenow={answeredCount}
         aria-valuemin={0}
@@ -162,25 +215,25 @@ function ActiveQuiz({ session }: { session: QuizSession }) {
         aria-label="Progreso del test"
       >
         <div
-          className="h-full bg-accent transition-all duration-300"
-          style={{ width: `${(answeredCount / total) * 100}%` }}
+          className="h-full bg-accent rounded-full transition-all duration-500 ease-out"
+          style={{ width: `${progress * 100}%` }}
         />
       </div>
 
-      <div key={question.id} className="rise-in mt-10">
+      <div key={question.id} className="rise-in mt-10 sm:mt-14">
         <p className="text-xs uppercase tracking-[0.2em] text-muted">
           {categoryLabel(question.category)}
         </p>
         <h1
           ref={headingRef}
           tabIndex={-1}
-          className="font-display text-2xl sm:text-3xl leading-snug mt-3 outline-none"
+          className="font-display text-2xl sm:text-[2rem] leading-snug mt-3 outline-none text-balance"
         >
           {question.statement}
         </h1>
 
         {question.explainer && (
-          <div className="mt-3">
+          <div className="mt-4">
             <button
               type="button"
               onClick={() => setShowExplainer((v) => !v)}
@@ -223,28 +276,15 @@ function ActiveQuiz({ session }: { session: QuizSession }) {
           </div>
         )}
 
-        <div className="mt-8 grid gap-2" role="group" aria-label="Tu respuesta">
-          {ANSWER_SCALE.map((option) => {
-            const active = current?.value === option.value;
-            return (
-              <button
-                key={option.value}
-                type="button"
-                onClick={() => record(option.value)}
-                aria-pressed={active}
-                className={`text-left px-4 py-3 rounded-md border transition-colors ${
-                  active
-                    ? "border-accent bg-accent-soft/50 text-ink"
-                    : "border-line bg-surface hover:border-accent/60"
-                }`}
-              >
-                {option.label}
-              </button>
-            );
-          })}
+        <div className="mt-10">
+          <AnswerScale
+            value={current?.value}
+            pending={pending}
+            onPick={(v) => record(v)}
+          />
         </div>
 
-        <div className="mt-4 flex flex-wrap items-center justify-between gap-3 text-sm">
+        <div className="mt-6 flex flex-wrap items-center justify-between gap-3 text-sm">
           <button
             type="button"
             onClick={() => record("skipped")}
@@ -304,7 +344,7 @@ function ActiveQuiz({ session }: { session: QuizSession }) {
           </div>
         )}
 
-        <div className="mt-10 flex items-center justify-between text-sm">
+        <div className="mt-12 flex items-center justify-between text-sm">
           <button
             type="button"
             onClick={() => index > 0 && goTo(index - 1)}
@@ -312,15 +352,6 @@ function ActiveQuiz({ session }: { session: QuizSession }) {
             className="text-ink-2 hover:text-accent transition-colors disabled:opacity-30"
           >
             ← Anterior
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              clearSession();
-            }}
-            className="text-xs text-muted hover:text-accent transition-colors"
-          >
-            Empezar de nuevo
           </button>
           {current && index + 1 < total ? (
             <button
@@ -334,8 +365,58 @@ function ActiveQuiz({ session }: { session: QuizSession }) {
             <span aria-hidden="true" />
           )}
         </div>
+
+        <div className="mt-10 pt-5 border-t border-line flex flex-wrap items-center justify-between gap-3 text-xs text-muted">
+          <p className="hidden sm:block">
+            Atajos: <Kbd>1</Kbd>–<Kbd>7</Kbd> responder · <Kbd>N</Kbd> sin
+            información · <Kbd>←</Kbd> <Kbd>→</Kbd> navegar · <Kbd>I</Kbd>{" "}
+            explicación
+          </p>
+          {confirmRestart ? (
+            <span className="flex items-center gap-3" role="group" aria-label="Confirmar reinicio">
+              <span className="text-ink-2">¿Borrar tus respuestas?</span>
+              <button
+                type="button"
+                onClick={() => clearSession()}
+                className="text-accent font-medium hover:underline"
+              >
+                Sí, empezar de nuevo
+              </button>
+              <button
+                type="button"
+                onClick={() => setConfirmRestart(false)}
+                className="hover:text-ink"
+              >
+                Cancelar
+              </button>
+            </span>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setConfirmRestart(true)}
+              className="hover:text-accent transition-colors"
+            >
+              Empezar de nuevo
+            </button>
+          )}
+        </div>
       </div>
     </div>
+  );
+}
+
+function progressMessage(progress: number): string {
+  if (progress < 0.25) return "Tu mapa se está definiendo";
+  if (progress < 0.5) return "Buen ritmo";
+  if (progress < 0.75) return "Más de la mitad";
+  return "Recta final";
+}
+
+function Kbd({ children }: { children: React.ReactNode }) {
+  return (
+    <kbd className="inline-block min-w-[1.4em] px-1 py-px text-center rounded border border-line bg-surface font-sans text-[11px] text-ink-2">
+      {children}
+    </kbd>
   );
 }
 
