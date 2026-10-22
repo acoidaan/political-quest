@@ -7,6 +7,11 @@ updates:
     groups:
       dependencias:
         patterns: ["*"]
+    # Los saltos de versión mayor (TypeScript 7, ESLint 10…) rompen la cadena
+    # de herramientas hasta que el ecosistema los soporta: se hacen a mano.
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: github-actions
     directory: /
     schedule:
