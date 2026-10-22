@@ -23,20 +23,20 @@
     "check": "npm run lint && npm run typecheck && npm test && npm run balance:check && npm run build"
   },
   "dependencies": {
-    "next": "16.3.0",
-    "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "next": "16.4.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^26",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.3.0",
+    "eslint": "^10",
+    "eslint-config-next": "16.4.2",
     "tailwindcss": "^4",
-    "tsx": "^4.23.11",
-    "typescript": "^5",
-    "vitest": "^4.1.10"
+    "tsx": "^4.23.15",
+    "typescript": "^7",
+    "vitest": "^5.0.5"
   }
 }
