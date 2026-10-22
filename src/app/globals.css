@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/*
+ * Tokens de diseño — editorial, papel cálido, un solo acento ocre.
+ * Colores de partido: SOLO tras la revelación explícita, siempre junto a
+ * etiqueta de texto (validado: verde↔rojo en banda ΔE 10.3 deutan → el color
+ * nunca transmite identidad por sí solo).
+ * Paleta validada con el validador de dataviz (light #faf8f5 / dark #161513).
+ */
+:root {
+  --paper: #faf8f5;
+  --surface: #fffefb;
+  --ink: #211d18;
+  --ink-2: #5b554c;
+  --muted: #8a847a;
+  --line: #e6e0d5;
+  --track: #eee8dc;
+  --accent: #a16207;
+  --accent-soft: #f3e5c8;
+  --focus: #1d4ed8;
+  --party-pp: #1e6bb8;
+  --party-psoe: #d13a3a;
+  --party-vox: #5aa831;
+  --party-sumar: #c8386f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #161513;
+    --surface: #1e1c19;
+    --ink: #ece7de;
+    --ink-2: #b3aca0;
+    --muted: #8a847a;
+    --line: #34302a;
+    --track: #2b2825;
+    --accent: #b87f24;
+    --accent-soft: #3a2e14;
+    --focus: #93b4f5;
+    --party-pp: #4b8fd6;
+    --party-psoe: #e05c5c;
+    --party-vox: #57a433;
+    --party-sumar: #d95f8d;
+  }
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-track: var(--track);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::selection {
+  background: var(--accent-soft);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Aparición suave de la pregunta (desactivada con reduced-motion). */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rise-in {
+  animation: rise-in 0.25s ease-out;
+}
