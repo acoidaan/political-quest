@@ -2,13 +2,25 @@
   "name": "political-quest",
   "version": "0.1.0",
   "private": true,
+  "description": "Test político a ciegas: propuestas reales sin siglas, siete ejes con incertidumbre y comparación opcional con posiciones verificadas de partidos.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acoidaan/political-quest.git"
+  },
+  "engines": {
+    "node": ">=20.9"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "balance": "tsx scripts/balance-report.ts"
+    "balance": "tsx scripts/balance-report.ts",
+    "balance:check": "tsx scripts/balance-report.ts --strict",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run lint && npm run typecheck && npm test && npm run balance:check && npm run build"
   },
   "dependencies": {
     "next": "16.3.0",

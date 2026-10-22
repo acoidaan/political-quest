@@ -8,6 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/`, lastModified: now, priority: 1 },
     { url: `${base}/metodologia`, lastModified: now, priority: 0.8 },
     { url: `${base}/fuentes`, lastModified: now, priority: 0.7 },
+    { url: `${base}/elecciones`, lastModified: now, priority: 0.8 },
+    { url: `${base}/novedades`, lastModified: now, priority: 0.5 },
     { url: `${base}/acerca-de`, lastModified: now, priority: 0.5 },
     { url: `${base}/privacidad`, lastModified: now, priority: 0.3 },
   ];

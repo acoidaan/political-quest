@@ -179,8 +179,40 @@ export default function MetodologiaPage() {
         principalmente al ciclo electoral 2023-2026. Cuando un partido cambia de
         posición, se versiona: nunca se sobrescribe la historia en silencio.
       </p>
+      <p className="mt-3">
+        Con las elecciones generales del 29 de noviembre de 2026 ya convocadas,
+        cada programa nuevo se incorpora así: la posición de 2023 recibe fecha
+        de fin, la de 2026 entra en vigor con su cita y su página, y la
+        comparación usa siempre la posición <strong>vigente</strong> de cada
+        partido. Si un programa nuevo no aborda una propuesta, la posición que
+        procedía del programa de 2023 no se arrastra: se registra «evidencia
+        insuficiente». Las posiciones basadas en votaciones del Congreso siguen
+        vigentes salvo que el programa nuevo las contradiga.
+        Los pesos ideológicos de las preguntas <strong>no</strong> se
+        reajustan según la actualidad: dependen solo del contenido de cada
+        propuesta y de la rúbrica de clasificación descrita arriba; lo que cambia con el tiempo son las
+        propuestas incluidas y las posiciones de los partidos. El estado de
+        cada candidatura está en{" "}
+        <Link href="/elecciones" className="underline hover:text-accent">
+          programas del 29-N
+        </Link>{" "}
+        y cada cambio, en{" "}
+        <Link href="/novedades" className="underline hover:text-accent">
+          novedades
+        </Link>
+        .
+      </p>
 
-      <H2 id="sesgo">7. Control de sesgo</H2>
+      <H2 id="prediccion">7. El juego de la predicción</H2>
+      <p>
+        Antes de revelar los partidos te pedimos que predigas con cuál
+        coincidirán más tus respuestas. Es solo un espejo de tu intuición: la
+        predicción se guarda en tu dispositivo y no interviene en ningún
+        cálculo. Si los dos primeros partidos están más cerca entre sí que su
+        margen de incertidumbre, lo indicamos como empate técnico.
+      </p>
+
+      <H2 id="sesgo">8. Control de sesgo</H2>
       <p>
         Un informe automático de balance comprueba: número de propuestas con
         posición por partido, distribución de polaridad de formulación,
@@ -191,7 +223,7 @@ export default function MetodologiaPage() {
         resolverse.
       </p>
 
-      <H2 id="estado">8. Estado actual de los datos</H2>
+      <H2 id="estado">9. Estado actual de los datos</H2>
       <p>
         {USING_DEMO_DATA ? (
           <>
@@ -232,7 +264,7 @@ export default function MetodologiaPage() {
         )}
       </p>
 
-      <H2 id="limites">9. Límites honestos</H2>
+      <H2 id="limites">10. Límites honestos</H2>
       <ul className="mt-2 space-y-1.5 list-disc pl-5">
         <li>Este resultado describe similitud entre respuestas, no tu identidad política.</li>
         <li>Los ejes políticos son simplificaciones útiles, no verdades.</li>

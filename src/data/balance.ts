@@ -1,6 +1,7 @@
 import type { AxisId, PartyId, Question } from "@/lib/types";
 import { AXIS_IDS } from "./axes";
 import { discriminationScore } from "@/lib/scoring/discrimination";
+import { currentPositions } from "@/lib/scoring/positions";
 import { POSITION_VALUE } from "@/lib/types";
 
 /**
@@ -55,7 +56,7 @@ export function generateBalanceReport(questions: Question[]): BalanceReport {
       if (Math.abs(w) >= 0.3) axisCoverage[axis]++;
       signedWeightBalance[axis] += w;
     }
-    for (const p of q.partyPositions) {
+    for (const p of currentPositions(q)) {
       if (p.status === "insufficient_evidence" || p.status === "neutral_or_unclear")
         continue;
       partyPositionCounts[p.party] = (partyPositionCounts[p.party] ?? 0) + 1;

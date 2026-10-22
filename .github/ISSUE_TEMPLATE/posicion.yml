@@ -1,0 +1,45 @@
+name: Posición de partido incorrecta
+description: Una posición atribuida a un partido no coincide con su fuente.
+title: "posición: <id de pregunta> / <partido>"
+labels: [datos, verificación]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias. Toda corrección necesita **fuente primaria** (programa oficial, Congreso, BOE o web oficial del partido). Las noticias no sirven como fuente de una posición.
+  - type: input
+    id: pregunta
+    attributes:
+      label: Id de la pregunta
+      description: Aparece en /fuentes (p. ej. `viv_002`).
+    validations:
+      required: true
+  - type: input
+    id: partido
+    attributes:
+      label: Partido
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: Qué está mal
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL de la fuente primaria
+    validations:
+      required: true
+  - type: input
+    id: pagina
+    attributes:
+      label: Página o sección
+  - type: textarea
+    id: cita
+    attributes:
+      label: Cita literal
+      render: text
+    validations:
+      required: true

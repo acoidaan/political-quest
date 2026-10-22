@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Metodología
+    url: https://political-quest.vercel.app/metodologia
+    about: Antes de abrir un issue, revisa cómo se calcula todo.

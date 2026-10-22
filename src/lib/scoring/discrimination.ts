@@ -1,5 +1,6 @@
 import type { Question } from "@/lib/types";
 import { POSITION_VALUE } from "@/lib/types";
+import { currentPositions } from "./positions";
 
 /**
  * Capacidad discriminativa de una pregunta (§47 del briefing): dispersión de
@@ -12,9 +13,9 @@ import { POSITION_VALUE } from "@/lib/types";
  */
 export function discriminationScore(
   question: Question,
-  opts: { allowUnverified?: boolean } = {}
+  opts: { allowUnverified?: boolean; asOf?: string } = {}
 ): number {
-  const values = question.partyPositions
+  const values = currentPositions(question, opts.asOf)
     .filter(
       (p) =>
         p.status !== "insufficient_evidence" &&

@@ -1,6 +1,7 @@
 import type { AxisScore, PartyId, Question, UserAnswer } from "@/lib/types";
 import { POSITION_VALUE } from "@/lib/types";
 import { calculateAxisScores } from "./axes";
+import { currentPosition } from "./positions";
 
 /**
  * "Los partidos también hacen el test" (§46): construye el vector de
@@ -13,11 +14,11 @@ import { calculateAxisScores } from "./axes";
 export function calculatePartyAxisScores(
   questions: Question[],
   partyId: PartyId,
-  options: { allowUnverified?: boolean } = {}
+  options: { allowUnverified?: boolean; asOf?: string } = {}
 ): AxisScore[] {
   const answers: Record<string, UserAnswer> = {};
   for (const q of questions) {
-    const position = q.partyPositions.find((p) => p.party === partyId);
+    const position = currentPosition(q, partyId, options.asOf);
     if (!position) continue;
     if (
       position.status === "insufficient_evidence" ||

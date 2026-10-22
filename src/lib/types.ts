@@ -232,6 +232,12 @@ export interface QuizSession {
   answers: Record<string, UserAnswer>;
   /** Autopercepción 1-10 (1 izquierda, 10 derecha), opcional, descriptiva. */
   selfPlacement?: number;
+  /**
+   * Predicción del usuario, antes de la revelación, del partido cuyas
+   * posiciones se parecerán más a sus respuestas ("none" = prefirió no
+   * adivinar). Solo es un juego descriptivo: no altera ningún cálculo.
+   */
+  prediction?: string;
   startedAt: string;
   finishedAt?: string;
   /** true si la sesión usa el dataset demo. */

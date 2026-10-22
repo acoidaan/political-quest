@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
-import { siteUrl } from "@/lib/site";
+import { REPO_URL, siteUrl } from "@/lib/site";
+import { SiteHeader } from "@/components/ui/SiteHeader";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
@@ -37,45 +38,40 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Saltar al contenido
         </a>
-        <header className="border-b border-line">
-          <div className="mx-auto max-w-5xl px-4 sm:px-6 py-3 flex items-baseline justify-between gap-4">
-            <Link
-              href="/"
-              className="font-display text-lg tracking-tight hover:text-accent transition-colors"
-            >
-              ¿Dónde estás políticamente?
-            </Link>
-            <nav aria-label="Principal" className="flex gap-4 text-sm text-ink-2">
-              <Link href="/metodologia" className="hover:text-accent transition-colors">
-                Metodología
-              </Link>
-              <Link href="/fuentes" className="hover:text-accent transition-colors">
-                Fuentes
-              </Link>
-              <Link
-                href="/acerca-de"
-                className="hidden sm:inline hover:text-accent transition-colors"
-              >
-                Acerca de
-              </Link>
-            </nav>
-          </div>
-        </header>
+        <SiteHeader />
         <main id="contenido" className="flex-1">
           {children}
         </main>
         <footer className="border-t border-line mt-16">
-          <div className="mx-auto max-w-5xl px-4 sm:px-6 py-8 text-sm text-muted flex flex-wrap gap-x-6 gap-y-2">
-            <span>
-              Un experimento de transparencia política. Sin registro, sin rastreo.
-            </span>
-            <nav aria-label="Legal" className="flex gap-4">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 py-10 grid gap-6 sm:grid-cols-[1fr_auto] text-sm text-muted">
+            <div className="space-y-1.5 max-w-md">
+              <p className="font-display text-base text-ink">¿Dónde estás políticamente?</p>
+              <p>
+                Un experimento de transparencia política. Sin registro, sin
+                rastreo. Código, datos y metodología abiertos.
+              </p>
+            </div>
+            <nav aria-label="Pie" className="flex flex-wrap gap-x-5 gap-y-2 sm:justify-end sm:self-end">
+              <Link href="/novedades" className="hover:text-accent transition-colors">
+                Novedades
+              </Link>
+              <Link href="/elecciones" className="hover:text-accent transition-colors">
+                Programas 29-N
+              </Link>
               <Link href="/privacidad" className="hover:text-accent transition-colors">
                 Privacidad
               </Link>
               <Link href="/acerca-de" className="hover:text-accent transition-colors">
                 Acerca de
               </Link>
+              <a
+                href={REPO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors"
+              >
+                Código en GitHub ↗
+              </a>
             </nav>
           </div>
         </footer>

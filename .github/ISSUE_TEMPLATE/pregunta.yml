@@ -1,0 +1,21 @@
+name: Redacción de una pregunta
+description: Una pregunta no es neutral, induce una respuesta o está mal explicada.
+title: "neutralidad: <id de pregunta>"
+labels: [neutralidad]
+body:
+  - type: input
+    id: pregunta
+    attributes:
+      label: Id de la pregunta
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: Qué sesgo o problema ves
+    validations:
+      required: true
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: Redacción alternativa

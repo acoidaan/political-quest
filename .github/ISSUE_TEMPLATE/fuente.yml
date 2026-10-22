@@ -1,0 +1,27 @@
+name: Proponer una fuente o candidatura
+description: Un programa, documento oficial, votación o candidatura que debería incorporarse.
+title: "fuente: <partido> — <documento>"
+labels: [datos, seguimiento]
+body:
+  - type: input
+    id: partido
+    attributes:
+      label: Partido o candidatura
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL oficial del documento
+      description: Web del partido, congreso.es o boe.es.
+    validations:
+      required: true
+  - type: input
+    id: fecha
+    attributes:
+      label: Fecha de publicación
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto
+      description: Qué propuestas del test afecta o qué propuesta nueva aporta.

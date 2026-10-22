@@ -286,6 +286,7 @@ src/
       similarity.ts           calculatePartySimilarity
       selectQuestions.ts      selección + ordenación
       discrimination.ts       discriminationScore
+      positions.ts            currentPosition (posición vigente por fecha)
       index.ts
   data/
     axes.ts  categories.ts  parties.ts
@@ -294,12 +295,15 @@ src/
       verified/               vacío hasta Fase 2 (solo fuentes primarias)
       index.ts                unión tipada, nunca mezcla flags
     balance.ts                generador del informe de balance
+    elections.ts              seguimiento de programas (29-N)
+    changelog.ts              registro público de cambios (/novedades)
 scripts/
   balance-report.ts           npm run balance
 tests/
   scoring/*.test.ts           unit tests (límites incluidos)
 docs/
   ARQUITECTURA.md             este documento
+  ACTUALIZACION.md            protocolo de actualización de fuentes
 ```
 
 ## Fases

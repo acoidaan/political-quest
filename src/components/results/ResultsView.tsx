@@ -225,17 +225,21 @@ export function ResultsView() {
       {/* ------------------------------------------------ compartir + partidos */}
       <section className="border-t border-line pt-10 text-center space-y-6">
         <div>
-          <h2 className="font-display text-2xl">¿Y los partidos?</h2>
-          <p className="mt-2 text-ink-2 text-sm max-w-lg mx-auto">
-            Si quieres, comparamos tus respuestas con posiciones públicas de
-            partidos. Hasta ahora no ha aparecido ninguna sigla: así juzgaste
-            solo las ideas.
+          <p className="text-xs uppercase tracking-[0.25em] text-muted">
+            Hasta ahora, cero siglas
+          </p>
+          <h2 className="font-display text-3xl sm:text-4xl mt-3">
+            ¿De quién eran estas ideas?
+          </h2>
+          <p className="mt-3 text-ink-2 max-w-lg mx-auto">
+            Si quieres, predice con qué partido coinciden más tus respuestas y
+            descubre, propuesta a propuesta, quién defendía cada una.
           </p>
           <Link
             href="/resultados/partidos"
-            className="mt-5 inline-block bg-ink text-paper px-7 py-3.5 rounded-md hover:bg-accent transition-colors"
+            className="mt-6 inline-flex items-center gap-2 bg-ink text-paper px-8 py-4 rounded-lg text-lg hover:bg-accent transition-colors shadow-[0_10px_30px_-12px_rgba(33,29,24,0.6)]"
           >
-            Comparar con programas políticos
+            Levantar el velo <span aria-hidden="true">→</span>
           </Link>
         </div>
         <div>

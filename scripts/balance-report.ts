@@ -40,6 +40,8 @@ if (report.lowDiscriminationIds.length > 0) {
 if (report.warnings.length > 0) {
   console.log("\n⚠ AVISOS:");
   for (const w of report.warnings) console.log(`  - ${w}`);
+  // En CI (--strict) los avisos bloquean: ARQUITECTURA.md §8.1.
+  if (process.argv.includes("--strict")) process.exitCode = 1;
 } else {
   console.log("\n✓ Sin avisos de desequilibrio.");
 }
