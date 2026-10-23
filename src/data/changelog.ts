@@ -24,6 +24,15 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-10-23",
+    kind: "datos",
+    title: "Seguimiento del 29-N: documento programático del PP",
+    details: [
+      "El PP pasa a «Documentos parciales» con su «Contrato con España» (19 de octubre de 2026), enlazado desde pp.es. No es el programa completo, así que las posiciones del PP en el test no cambian.",
+      "Sin programas nuevos en las webs oficiales de PSOE, BNG, EH Bildu, Junts y PNV.",
+    ],
+  },
+  {
     date: "2026-10-22",
     kind: "web",
     title: "Nueva experiencia y seguimiento de las elecciones del 29-N",

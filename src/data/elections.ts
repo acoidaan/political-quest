@@ -66,7 +66,9 @@ export const CURRENT_ELECTION: Election = {
   campaign: { from: "2026-11-13", to: "2026-11-27" },
 };
 
-const CHECKED = "2026-10-22";
+const CHECKED = "2026-10-23";
+/** Candidaturas cuya fuente no se pudo leer en la última revisión. */
+const PREVIOUS_CHECK = "2026-10-22";
 
 export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
   // ---------------------------------------------------------------- estatales
@@ -78,7 +80,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
       "Registrada en coalición con Ciudadanos y UCIN como «Democracia para el Siglo 21» (pendiente de proclamación)",
     programStatus: "pending",
     documents: [],
-    lastChecked: CHECKED,
+    lastChecked: PREVIOUS_CHECK,
   },
   {
     id: "frente-amplio",
@@ -87,7 +89,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     composition: "Movimiento Sumar, Izquierda Unida, Más Madrid y Comuns",
     programStatus: "pending",
     documents: [],
-    lastChecked: CHECKED,
+    lastChecked: PREVIOUS_CHECK,
   },
   {
     id: "podemos",
@@ -96,15 +98,21 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     officialWebsite: "https://podemos.info",
     programStatus: "pending",
     documents: [],
-    lastChecked: CHECKED,
+    lastChecked: PREVIOUS_CHECK,
   },
   {
     id: "pp",
     name: "PP",
     scope: "Estatal",
     officialWebsite: "https://www.pp.es",
-    programStatus: "pending",
-    documents: [],
+    programStatus: "partial",
+    documents: [
+      {
+        title: "Contrato con España",
+        url: "https://www.pp.es/wp-content/uploads/2026/10/CONTRATO-CON-ESPANA-.pdf",
+        date: "2026-10-19",
+      },
+    ],
     lastChecked: CHECKED,
   },
   {
@@ -123,7 +131,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     officialWebsite: "https://www.voxespana.es",
     programStatus: "pending",
     documents: [],
-    lastChecked: CHECKED,
+    lastChecked: PREVIOUS_CHECK,
   },
   // ------------------------------------------------------------- territoriales
   {
@@ -132,7 +140,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     scope: "Andalucía",
     programStatus: "pending",
     documents: [],
-    lastChecked: CHECKED,
+    lastChecked: PREVIOUS_CHECK,
   },
   {
     id: "bng",
@@ -149,7 +157,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     scope: "Canarias",
     programStatus: "pending",
     documents: [],
-    lastChecked: CHECKED,
+    lastChecked: PREVIOUS_CHECK,
   },
   {
     id: "compromis",
@@ -157,7 +165,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     scope: "Comunitat Valenciana",
     programStatus: "pending",
     documents: [],
-    lastChecked: CHECKED,
+    lastChecked: PREVIOUS_CHECK,
   },
   {
     id: "ehbildu",
@@ -175,7 +183,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     officialWebsite: "https://www.esquerra.cat",
     programStatus: "pending",
     documents: [],
-    lastChecked: CHECKED,
+    lastChecked: PREVIOUS_CHECK,
   },
   {
     id: "junts",
