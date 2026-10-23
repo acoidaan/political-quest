@@ -98,7 +98,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     officialWebsite: "https://podemos.info",
     programStatus: "pending",
     documents: [],
-    lastChecked: PREVIOUS_CHECK,
+    lastChecked: CHECKED,
   },
   {
     id: "pp",
@@ -129,9 +129,15 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "VOX",
     scope: "Estatal",
     officialWebsite: "https://www.voxespana.es",
-    programStatus: "pending",
-    documents: [],
-    lastChecked: PREVIOUS_CHECK,
+    programStatus: "partial",
+    documents: [
+      {
+        title: "Recuperar España. Prioridad nacional, desregulación, remigración",
+        url: "https://www.voxespana.es/wp-content/uploads/2026/10/RECUPERAR-ESPANA-A4.pdf",
+        date: "2026-10-20",
+      },
+    ],
+    lastChecked: CHECKED,
   },
   // ------------------------------------------------------------- territoriales
   {
@@ -183,7 +189,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     officialWebsite: "https://www.esquerra.cat",
     programStatus: "pending",
     documents: [],
-    lastChecked: PREVIOUS_CHECK,
+    lastChecked: CHECKED,
   },
   {
     id: "junts",

@@ -26,10 +26,11 @@ export const CHANGELOG: ChangelogEntry[] = [
   {
     date: "2026-10-23",
     kind: "datos",
-    title: "Seguimiento del 29-N: documento programático del PP",
+    title: "Seguimiento del 29-N: documentos programáticos del PP y VOX",
     details: [
       "El PP pasa a «Documentos parciales» con su «Contrato con España» (19 de octubre de 2026), enlazado desde pp.es. No es el programa completo, así que las posiciones del PP en el test no cambian.",
-      "Sin programas nuevos en las webs oficiales de PSOE, BNG, EH Bildu, Junts y PNV.",
+      "VOX pasa a «Documentos parciales» con «Recuperar España. Prioridad nacional, desregulación, remigración» (20 de octubre de 2026, 6 páginas), publicado en voxespana.es. No es el programa completo, así que las posiciones de VOX en el test no cambian.",
+      "Sin programas nuevos en las webs oficiales de PSOE, Podemos, BNG, EH Bildu, ERC, Junts y PNV.",
     ],
   },
   {
