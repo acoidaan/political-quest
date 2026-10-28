@@ -66,9 +66,12 @@ export const CURRENT_ELECTION: Election = {
   campaign: { from: "2026-11-13", to: "2026-11-27" },
 };
 
-const CHECKED = "2026-10-23";
-/** Candidaturas cuya fuente no se pudo leer en la última revisión. */
+const CHECKED = "2026-10-28";
+/** Candidaturas sin web oficial registrada que revisar. */
 const PREVIOUS_CHECK = "2026-10-22";
+/** Webs que bloquean el acceso automatizado; última lectura, manual. */
+const MANUAL_CHECK = "2026-10-23";
+const BOE_PRESENTED = "Candidaturas presentadas, BOE de 28-10-2026; pendiente de proclamación";
 
 export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
   // ---------------------------------------------------------------- estatales
@@ -90,6 +93,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     programStatus: "pending",
     documents: [],
     lastChecked: PREVIOUS_CHECK,
+    notes: `En Las Palmas y Santa Cruz de Tenerife, IU y Sumar concurren dentro de «Unidad del Pueblo Canario UPC (NC-BC, PODEMOS, IU, SUMAR)». ${BOE_PRESENTED}.`,
   },
   {
     id: "podemos",
@@ -98,7 +102,8 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     officialWebsite: "https://podemos.info",
     programStatus: "pending",
     documents: [],
-    lastChecked: CHECKED,
+    lastChecked: MANUAL_CHECK,
+    notes: `En Las Palmas y Santa Cruz de Tenerife concurre dentro de «Unidad del Pueblo Canario UPC (NC-BC, PODEMOS, IU, SUMAR)», y en Alicante, Castellón y Valencia dentro de «Compromís: Front Valencià (Compromís-EUPV-Podem-ERPV)». ${BOE_PRESENTED}.`,
   },
   {
     id: "pp",
@@ -137,7 +142,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
         date: "2026-10-20",
       },
     ],
-    lastChecked: CHECKED,
+    lastChecked: MANUAL_CHECK,
   },
   // ------------------------------------------------------------- territoriales
   {
@@ -161,6 +166,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     id: "cc",
     name: "Coalición Canaria",
     scope: "Canarias",
+    composition: `En coalición con Municipalistas Primero Canarias (CCa-1.ºCAN). ${BOE_PRESENTED}`,
     programStatus: "pending",
     documents: [],
     lastChecked: PREVIOUS_CHECK,
@@ -169,6 +175,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     id: "compromis",
     name: "Compromís",
     scope: "Comunitat Valenciana",
+    composition: `«Compromís: Front Valencià» (Compromís-EUPV-Podem-ERPV). ${BOE_PRESENTED}`,
     programStatus: "pending",
     documents: [],
     lastChecked: PREVIOUS_CHECK,
@@ -189,7 +196,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     officialWebsite: "https://www.esquerra.cat",
     programStatus: "pending",
     documents: [],
-    lastChecked: CHECKED,
+    lastChecked: MANUAL_CHECK,
   },
   {
     id: "junts",
