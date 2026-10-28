@@ -24,6 +24,15 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-10-28",
+    kind: "datos",
+    title: "Seguimiento del 29-N: candidaturas presentadas en el BOE",
+    details: [
+      "Se añaden las coaliciones con las que concurren Compromís, Coalición Canaria, Podemos y Frente Amplio, según las candidaturas presentadas que publica hoy el BOE (aún pendientes de proclamación).",
+      "Sin programas nuevos en las webs oficiales de PP, PSOE, BNG, EH Bildu, Junts y PNV.",
+    ],
+  },
+  {
     date: "2026-10-23",
     kind: "datos",
     title: "Seguimiento del 29-N: documentos programáticos del PP y VOX",
