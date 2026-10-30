@@ -66,7 +66,7 @@ export const CURRENT_ELECTION: Election = {
   campaign: { from: "2026-11-13", to: "2026-11-27" },
 };
 
-const CHECKED = "2026-10-28";
+const CHECKED = "2026-10-30";
 /** Candidaturas sin web oficial registrada que revisar. */
 const PREVIOUS_CHECK = "2026-10-22";
 /** Webs que bloquean el acceso automatizado; última lectura, manual. */
@@ -81,9 +81,16 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     scope: "Estatal (Madrid y Barcelona)",
     composition:
       "Registrada en coalición con Ciudadanos y UCIN como «Democracia para el Siglo 21» (pendiente de proclamación)",
-    programStatus: "pending",
-    documents: [],
-    lastChecked: PREVIOUS_CHECK,
+    officialWebsite: "https://democracia21.es",
+    programStatus: "partial",
+    documents: [
+      {
+        title: "España Limpia",
+        url: "https://democracia21.es/docs/espana-limpia-democracia21.pdf",
+        date: "2026-10-15",
+      },
+    ],
+    lastChecked: CHECKED,
   },
   {
     id: "frente-amplio",
