@@ -24,6 +24,15 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-10-30",
+    kind: "datos",
+    title: "Seguimiento del 29-N: documento programático de Democracia 21",
+    details: [
+      "Democracia 21 pasa a «Documentos parciales» con «España Limpia», publicado en democracia21.es. No es el programa completo y el partido no forma parte de la comparación, así que el test no cambia.",
+      "Sin programas nuevos en las webs oficiales de PP, PSOE, BNG, EH Bildu, Junts y PNV.",
+    ],
+  },
+  {
     date: "2026-10-28",
     kind: "datos",
     title: "Seguimiento del 29-N: candidaturas presentadas en el BOE",
