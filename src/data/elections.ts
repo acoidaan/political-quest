@@ -66,12 +66,12 @@ export const CURRENT_ELECTION: Election = {
   campaign: { from: "2026-11-13", to: "2026-11-27" },
 };
 
-const CHECKED = "2026-10-30";
+const CHECKED = "2026-11-03";
 /** Candidaturas sin web oficial registrada que revisar. */
 const PREVIOUS_CHECK = "2026-10-22";
 /** Webs que bloquean el acceso automatizado; última lectura, manual. */
-const MANUAL_CHECK = "2026-10-23";
-const BOE_PRESENTED = "Candidaturas presentadas, BOE de 28-10-2026; pendiente de proclamación";
+const MANUAL_CHECK = "2026-11-02";
+const BOE_PROCLAIMED = "Candidaturas proclamadas, BOE de 3-11-2026";
 
 export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
   // ---------------------------------------------------------------- estatales
@@ -80,7 +80,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "Democracia 21",
     scope: "Estatal (Madrid y Barcelona)",
     composition:
-      "Registrada en coalición con Ciudadanos y UCIN como «Democracia para el Siglo 21» (pendiente de proclamación)",
+      "Registrada en coalición con Ciudadanos y UCIN como «Democracia para el Siglo 21», proclamada en Madrid y Barcelona (BOE de 3-11-2026)",
     officialWebsite: "https://democracia21.es",
     programStatus: "partial",
     documents: [
@@ -100,7 +100,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     programStatus: "pending",
     documents: [],
     lastChecked: PREVIOUS_CHECK,
-    notes: `En Las Palmas y Santa Cruz de Tenerife, IU y Sumar concurren dentro de «Unidad del Pueblo Canario UPC (NC-BC, PODEMOS, IU, SUMAR)». ${BOE_PRESENTED}.`,
+    notes: `En Las Palmas y Santa Cruz de Tenerife, IU y Sumar concurren dentro de «Unidad del Pueblo Canario UPC (NC-BC, PODEMOS, IU, SUMAR)». ${BOE_PROCLAIMED}.`,
   },
   {
     id: "podemos",
@@ -110,7 +110,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     programStatus: "pending",
     documents: [],
     lastChecked: MANUAL_CHECK,
-    notes: `En Las Palmas y Santa Cruz de Tenerife concurre dentro de «Unidad del Pueblo Canario UPC (NC-BC, PODEMOS, IU, SUMAR)», y en Alicante, Castellón y Valencia dentro de «Compromís: Front Valencià (Compromís-EUPV-Podem-ERPV)». ${BOE_PRESENTED}.`,
+    notes: `En Las Palmas y Santa Cruz de Tenerife concurre dentro de «Unidad del Pueblo Canario UPC (NC-BC, PODEMOS, IU, SUMAR)», y en Alicante, Castellón y Valencia dentro de «Compromís: Front Valencià (Compromís-EUPV-Podem-ERPV)». ${BOE_PROCLAIMED}.`,
   },
   {
     id: "pp",
@@ -173,7 +173,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     id: "cc",
     name: "Coalición Canaria",
     scope: "Canarias",
-    composition: `En coalición con Municipalistas Primero Canarias (CCa-1.ºCAN). ${BOE_PRESENTED}`,
+    composition: `En coalición con Municipalistas Primero Canarias (CCa-1.ºCAN). ${BOE_PROCLAIMED}`,
     programStatus: "pending",
     documents: [],
     lastChecked: PREVIOUS_CHECK,
@@ -182,7 +182,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     id: "compromis",
     name: "Compromís",
     scope: "Comunitat Valenciana",
-    composition: `«Compromís: Front Valencià» (Compromís-EUPV-Podem-ERPV). ${BOE_PRESENTED}`,
+    composition: `«Compromís: Front Valencià» (Compromís-EUPV-Podem-ERPV). ${BOE_PROCLAIMED}`,
     programStatus: "pending",
     documents: [],
     lastChecked: PREVIOUS_CHECK,

@@ -24,6 +24,16 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-03",
+    kind: "datos",
+    title: "Seguimiento del 29-N: candidaturas proclamadas en el BOE",
+    details: [
+      "Las coaliciones de Compromís, Coalición Canaria, Podemos, Frente Amplio y Democracia 21 pasan de «presentadas» a «proclamadas», según el BOE de hoy.",
+      "Podemos, VOX y ERC: revisión manual de sus webs oficiales el 2 de noviembre, sin documentos nuevos para el 29-N.",
+      "Sin programas nuevos en las webs oficiales de PP, PSOE, BNG, EH Bildu, Junts, PNV y Democracia 21.",
+    ],
+  },
+  {
     date: "2026-10-30",
     kind: "datos",
     title: "Seguimiento del 29-N: documento programático de Democracia 21",
