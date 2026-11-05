@@ -24,6 +24,15 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-05",
+    kind: "datos",
+    title: "Seguimiento del 29-N: programa electoral del BNG",
+    details: [
+      "El BNG pasa a «Programa publicado · en verificación» con su programa para las generales (91 páginas), publicado en bng.gal. El BNG no forma parte de la comparación, así que el test no cambia.",
+      "Sin programas nuevos en las webs oficiales de PP, PSOE, EH Bildu, Junts, PNV y Democracia 21.",
+    ],
+  },
+  {
     date: "2026-11-03",
     kind: "datos",
     title: "Seguimiento del 29-N: candidaturas proclamadas en el BOE",
