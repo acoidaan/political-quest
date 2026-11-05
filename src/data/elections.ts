@@ -66,7 +66,7 @@ export const CURRENT_ELECTION: Election = {
   campaign: { from: "2026-11-13", to: "2026-11-27" },
 };
 
-const CHECKED = "2026-11-03";
+const CHECKED = "2026-11-05";
 /** Candidaturas sin web oficial registrada que revisar. */
 const PREVIOUS_CHECK = "2026-10-22";
 /** Webs que bloquean el acceso automatizado; última lectura, manual. */
@@ -165,8 +165,14 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "BNG",
     scope: "Galicia",
     officialWebsite: "https://www.bng.gal",
-    programStatus: "pending",
-    documents: [],
+    programStatus: "published",
+    documents: [
+      {
+        title: "Programa electoral. 29N. Xerais 2026",
+        url: "https://www.bng.gal/media/bnggaliza/files/2026/11/03/26_bng_xerais_documentos_programa_electoral.pdf",
+        date: "2026-11-03",
+      },
+    ],
     lastChecked: CHECKED,
   },
   {
