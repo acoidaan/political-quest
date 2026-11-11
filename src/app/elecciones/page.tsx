@@ -80,7 +80,7 @@ export default function EleccionesPage() {
       <p className="mt-6 text-ink-2 max-w-2xl leading-relaxed">
         Cuando cada candidatura publique su programa, sus propuestas se
         verifican y se incorporan al test con el mismo procedimiento que el
-        resto. Hasta entonces, la comparación usa los programas del 23J-2023 y
+        resto. Hasta entonces, la comparación usa sus programas del 23J-2023 y
         votaciones en el Congreso, y lo indica en cada posición.
       </p>
       <p className="mt-2 text-xs text-muted">

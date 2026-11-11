@@ -1,5 +1,5 @@
 import type { Question } from "@/lib/types";
-import { axesOnly, ne, verify, vote, vp } from "./helpers";
+import { axesOnly, ne, ne26, verify, vote, vp, vp26 } from "./helpers";
 import { baseQuestion as base } from "./base";
 
 
@@ -34,6 +34,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "…abogamos por una migración regular, segura y ordenada… como han demostrado las dos reformas del reglamento de la ley de extranjería…",
       { confidence: 0.55, explanation: "Facilita el arraigo por vía reglamentaria; su programa no se pronuncia sobre una regularización extraordinaria." }
     ),
+    vp26(
+      "pp",
+      "strongly_oppose",
+      22,
+      "Reformaremos la Ley de Extranjería para prohibir las regularizaciones masivas e indiscriminadas",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("inm_002"), [
     vp(
@@ -64,6 +71,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "…acuerdos mejorados con los países de origen o de tránsito para prevenir amenazas a la seguridad y evitar el efecto “llamada”.",
       { confidence: 0.55, explanation: "Endurecimiento del control migratorio general; los requisitos de residencia no se detallan." }
     ),
+    vp26(
+      "pp",
+      "support",
+      23,
+      "Quien quiera renovar su residencia temporal en el régimen general deberá firmar un compromiso de integración.",
+      { confidence: 0.85, explanation: "Añade como requisito de renovación aprender español, conocer la Constitución y, cuando corresponda, formarse para el empleo." }
+    ),
   ]),
   verify(base("inm_003"), [
     vp(
@@ -88,6 +102,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.55, explanation: "Posición derivada de su enfoque garantista de la extranjería." }
     ),
     ne("psoe"),
+    vp26(
+      "pp",
+      "support",
+      23,
+      "La expulsión será la regla para los extranjeros condenados por delitos sexuales, delitos de sangre y multirreincidencia.",
+      { confidence: 0.75, explanation: "La expulsión como regla se limita a delitos sexuales, de sangre y multirreincidencia, no a todos los delitos de gravedad media." }
+    ),
   ]),
   verify(base("inm_004"), [
     vp(
@@ -114,6 +135,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       149,
       "Un nuevo pacto de migración y asilo para que el Mediterráneo deje de ser una fosa común.",
       { confidence: 0.6, explanation: "Apoya un pacto europeo, pero con enfoque humanitario distinto del acordado." }
+    ),
+    vp26(
+      "pp",
+      "neutral_or_unclear",
+      22,
+      "Aplicaremos el Pacto Europeo e impulsaremos acuerdos con países seguros para que examinen solicitudes y acojan a quienes lo necesiten.",
+      { confidence: 0.4, explanation: "Se compromete a aplicar el Pacto Europeo de Migración y Asilo, pero no se pronuncia sobre cuotas obligatorias de reparto." }
     ),
   ]),
   verify(base("inm_005"), [
@@ -166,6 +194,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.65, explanation: "Posición derivada: prioriza garantías de derechos frente al refuerzo de la contención." }
     ),
     ne("psoe"),
+    vp26(
+      "pp",
+      "strongly_support",
+      21,
+      "Modernizaremos las vallas, los espigones y los sistemas de vigilancia de Ceuta y Melilla, con sensores, cámaras térmicas y drones.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("nac_001"), [
     vp(
@@ -184,6 +219,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ),
     ne("pp", "Su programa aborda la nacionalidad de descendientes de españoles en el exterior, no los plazos generales de residencia."),
     ne("sumar"),
+    vp26(
+      "pp",
+      "oppose",
+      50,
+      "Aprobaremos una nueva Ley de Nacionalidad que refuerce las condiciones de acceso",
+      { confidence: 0.6, explanation: "Posición derivada: endurece el acceso a la nacionalidad, aunque no menciona expresamente los años de residencia." }
+    ),
   ]),
   verify(base("seg_001"), [
     vp(
@@ -213,6 +255,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       93,
       "Un nuevo Código Penal y Ley Penal del Menor elevarán las penas para los crímenes violentos… así como para los delitos más graves…",
       { confidence: 0.5, explanation: "Endurecimiento penal general; la reincidencia no se aborda específicamente." }
+    ),
+    vp26(
+      "pp",
+      "support",
+      17,
+      "LA MULTIRREINCIDENCIA TENDRÁ UNA RESPUESTA PENAL MÁS RÁPIDA Y EFICAZ.",
+      { confidence: 0.65, explanation: "Prioriza los juicios rápidos y la tramitación conjunta de delitos leves; endurece la pena solo para los violadores reincidentes (prisión permanente revisable, medida 30)." }
     ),
   ]),
   verify(base("seg_002"), [
@@ -249,6 +298,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       explanation:
         "Recurrió la constitucionalidad de la pena en 2015 (recurso desestimado por el TC en 2021). Posición anterior al ciclo 23J; su programa actual no la menciona.",
     }),
+    vp26(
+      "pp",
+      "strongly_support",
+      20,
+      "AMPLIAREMOS LA PRISIÓN PERMANENTE REVISABLE A QUIEN HAGA DESAPARECER A SU VÍCTIMA Y A LOS DEPREDADORES SEXUALES.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("pol_001"), [
     vp(
@@ -261,6 +317,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ne("psoe", "Intentó reformar la ley en la legislatura 2019-2023 sin acuerdo final; su programa 23J no la menciona."),
     ne("pp", "Defiende la ley en el debate público; su programa 23J no la aborda expresamente."),
     ne("vox"),
+    vp26(
+      "pp",
+      "oppose",
+      18,
+      "Elevaremos la multa mínima a 3.000 euros para quienes participen activamente en actos de vandalismo contra bienes públicos o privados",
+      { confidence: 0.55, explanation: "Posición derivada: endurece las sanciones de seguridad ciudadana por vandalismo y desórdenes; no menciona las manifestaciones no comunicadas ni la grabación de agentes." }
+    ),
   ]),
   verify(base("jus_001"), [
     vp(
@@ -290,6 +353,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       125,
       "Se debe articular la descentralización del CGPJ en determinadas materias…",
       { confidence: 0.5, explanation: "Propone descentralizar funciones; no se pronuncia sobre el sistema de elección de vocales." }
+    ),
+    vp26(
+      "pp",
+      "strongly_support",
+      32,
+      "Los jueces y magistrados de todas las categorías elegirán a los doce vocales judiciales del Consejo General del Poder Judicial.",
+      { confidence: 0.95 }
     ),
   ]),
   verify(base("jus_002"), [
@@ -321,10 +391,26 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Un nuevo Código Penal y Ley Penal del Menor elevarán las penas para los crímenes violentos…",
       { confidence: 0.7, explanation: "Posición derivada de su agenda de endurecimiento penal generalizado." }
     ),
+    vp26(
+      "pp",
+      "oppose",
+      17,
+      "Reformaremos el delito de desórdenes públicos para ampliar las conductas castigadas y endurecer las penas",
+      { confidence: 0.6, explanation: "Posición derivada: el programa amplía delitos y penas (desórdenes, prisión permanente revisable, Ley del Menor) y no menciona penas alternativas ni la reinserción." }
+    ),
   ]),
   axesOnly(
     base("pri_001"),
-    "Verificación 2026-08: los programas 23J no abordan expresamente los beneficios penitenciarios y el tercer grado."
+    "Verificación 2026-08: los programas 23J no abordan expresamente los beneficios penitenciarios y el tercer grado.",
+    [
+      vp26(
+        "pp",
+        "support",
+        47,
+        "no habrá tercer grado ni libertad condicional para los condenados por terrorismo sin arrepentimiento veraz y sin una colaboración efectiva y verificable con la Justicia",
+        { confidence: 0.7, explanation: "La restricción se concreta para los condenados por terrorismo, no para todos los delitos graves." }
+      ),
+    ]
   ),
   verify(base("lib_001"), [
     vp(
@@ -337,9 +423,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ne("pp"),
     ne("psoe"),
     ne("vox"),
+    ne26("pp"),
   ]),
   axesOnly(
     base("prv_001"),
-    "Verificación 2026-08: ningún programa 23J aborda el reconocimiento facial policial en espacios públicos (SUMAR solo lo trata en el ámbito laboral)."
+    "Verificación 2026-08: ningún programa 23J aborda el reconocimiento facial policial en espacios públicos (SUMAR solo lo trata en el ámbito laboral).",
+    [
+      ne26("pp", "Su programa del 29N prevé financiar videovigilancia municipal (medida 27), pero no menciona el reconocimiento facial."),
+    ]
   ),
 ];

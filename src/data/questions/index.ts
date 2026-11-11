@@ -52,7 +52,7 @@ export const activeQuestions: Question[] = USING_DEMO_DATA
 
 /** Etiqueta del ciclo temporal de las posiciones del pool activo (§21). */
 export const POSITIONS_CYCLE_LABEL =
-  "Posiciones correspondientes principalmente al ciclo electoral 2023-2026 (programas del 23J-2023).";
+  "Posiciones de los programas del 29N-2026 ya incorporados y, para el resto, del ciclo electoral 2023-2026 (programas del 23J-2023).";
 
 // ---------------------------------------------------------------------------
 // Validaciones estructurales en tiempo de carga (fallan el build si se violan).

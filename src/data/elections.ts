@@ -66,7 +66,7 @@ export const CURRENT_ELECTION: Election = {
   campaign: { from: "2026-11-13", to: "2026-11-27" },
 };
 
-const CHECKED = "2026-11-05";
+const CHECKED = "2026-11-11";
 /** Candidaturas sin web oficial registrada que revisar. */
 const PREVIOUS_CHECK = "2026-10-22";
 /** Webs que bloquean el acceso automatizado; última lectura, manual. */
@@ -117,12 +117,17 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "PP",
     scope: "Estatal",
     officialWebsite: "https://www.pp.es",
-    programStatus: "partial",
+    programStatus: "incorporated",
     documents: [
       {
         title: "Contrato con España",
         url: "https://www.pp.es/wp-content/uploads/2026/10/CONTRATO-CON-ESPANA-.pdf",
         date: "2026-10-19",
+      },
+      {
+        title: "Reconstrucción nacional. Programa electoral",
+        url: "https://www.pp.es/wp-content/uploads/2026/11/PROGRAMA-ELECTORAL-PP-LA-RECONSTRUCCION-NACIONAL.pdf",
+        date: "2026-11-10",
       },
     ],
     lastChecked: CHECKED,
@@ -173,7 +178,8 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
         date: "2026-11-03",
       },
     ],
-    lastChecked: CHECKED,
+    // bng.gal bloquea el acceso automatizado desde el 2026-11-06.
+    lastChecked: "2026-11-05",
   },
   {
     id: "cc",
@@ -225,8 +231,14 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "PNV",
     scope: "País Vasco",
     officialWebsite: "https://www.eaj-pnv.eus",
-    programStatus: "pending",
-    documents: [],
+    programStatus: "published",
+    documents: [
+      {
+        title: "Programa elecciones generales 2026 — «Euskadi Zaindu»",
+        url: "https://www.eaj-pnv.eus/es/adjuntos-documentos/21765/pdf/programa-electoral-29n",
+        date: "2026-11-09",
+      },
+    ],
     lastChecked: CHECKED,
   },
 ];

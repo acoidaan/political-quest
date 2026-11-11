@@ -178,7 +178,8 @@ export function AdminQuestions() {
                     .join(", ")}
                 </td>
                 <td className="px-3 py-2 whitespace-nowrap">
-                  {q.partyPositions.map((p) => p.party).join(", ") || "—"}
+                  {[...new Set(q.partyPositions.map((p) => p.party))].join(", ") ||
+                    "—"}
                 </td>
                 <td className="px-3 py-2 whitespace-nowrap">
                   {q.status}
@@ -255,13 +256,17 @@ export function AdminQuestions() {
           </h3>
           <ul className="mt-2 space-y-2 text-xs">
             {selected.partyPositions.map((p) => (
-              <li key={p.party} className="border-l-2 border-line pl-3">
+              <li
+                key={`${p.party}-${p.validFrom}`}
+                className="border-l-2 border-line pl-3"
+              >
                 <strong className="text-ink">
                   {PARTY_BY_ID[p.party]?.name ?? p.party}
                 </strong>{" "}
                 — {POSITION_LABELS[p.status]} · confianza {p.confidence} ·{" "}
                 {SOURCE_TYPE_LABELS[p.source.type]} · {p.source.date} · vigente
                 desde {p.validFrom}
+                {p.validUntil && <> hasta {p.validUntil}</>}
                 {p.needsVerification && (
                   <span className="text-accent"> · SIN VERIFICAR</span>
                 )}

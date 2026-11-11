@@ -123,7 +123,10 @@ export function SourcesExplorer() {
                 </thead>
                 <tbody>
                   {question.partyPositions.map((p) => (
-                    <tr key={p.party} className="border-b border-line/60 align-top">
+                    <tr
+                      key={`${p.party}-${p.validFrom}`}
+                      className="border-b border-line/60 align-top"
+                    >
                       <td className="py-1.5 pr-3 font-medium text-ink">
                         {PARTY_BY_ID[p.party]?.name ?? p.party}
                       </td>
@@ -156,6 +159,11 @@ export function SourcesExplorer() {
                       </td>
                       <td className="py-1.5 pr-3 whitespace-nowrap">
                         {p.source.date}
+                        {p.validUntil && (
+                          <span className="block text-muted">
+                            sustituida el {p.validUntil}
+                          </span>
+                        )}
                       </td>
                       <td className="py-1.5">
                         {p.source.verifiedAt ?? (
