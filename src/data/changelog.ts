@@ -24,6 +24,16 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-11",
+    kind: "datos",
+    title: "Programa del PP para el 29-N incorporado a la comparación",
+    details: [
+      "Las posiciones del PP proceden ahora de su programa «Reconstrucción nacional» (10 de noviembre de 2026), con cita literal y página en las 88 propuestas que se basaban en su programa de 2023. Las posiciones de 2023 se conservan como historial.",
+      "En las propuestas que el nuevo programa no aborda, el PP pasa a «evidencia insuficiente» y esa pregunta deja de puntuar en la comparación con el PP. Las dos posiciones basadas en votaciones del Congreso se mantienen.",
+      "El PNV pasa a «Programa publicado · en verificación» con su programa para las generales.",
+    ],
+  },
+  {
     date: "2026-11-05",
     kind: "datos",
     title: "Seguimiento del 29-N: programa electoral del BNG",

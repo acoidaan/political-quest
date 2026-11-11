@@ -217,7 +217,7 @@ export default function Landing() {
           <p className="mt-2 text-ink-2 max-w-2xl">
             {TRACKED_CANDIDACIES.length} candidaturas en seguimiento ·{" "}
             {published} con documentos publicados · {incorporated} incorporadas
-            a la comparación. Mientras tanto, las posiciones proceden de los
+            a la comparación. Las demás mantienen sus posiciones de los
             programas del 23J-2023 y de votaciones en el Congreso.
           </p>
         </Link>

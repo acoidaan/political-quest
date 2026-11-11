@@ -13,7 +13,7 @@ export const PARTIES: Party[] = [
     fullName: "Partido Popular",
     color: "#1e6bb8",
     active: true,
-    positionCycle: "2023-2026",
+    positionCycle: "2026 (29N)",
   },
   {
     id: "psoe",

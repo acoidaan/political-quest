@@ -64,6 +64,41 @@ const PROGRAMS: Record<PartyId, Omit<Source, "page">> = {
   },
 };
 
+/**
+ * Programas del 29N-2026 que sustituyen a los del 23J-2023
+ * (docs/ACTUALIZACION.md §3). Al incorporar uno, TODAS las posiciones del
+ * partido basadas en su programa anterior (vp/ne) se cierran con validUntil
+ * en la fecha de publicación del nuevo, aunque este no aborde la medida; las
+ * basadas en votaciones o en el BOE (vote) siguen vigentes.
+ *
+ * - PP: «Reconstrucción nacional» (82 pp.), presentado el 2026-11-10 y
+ *   descargado de pp.es. Varias medidas (83, 109, 132, 164, 167, 173, 200,
+ *   210) figuran como «Permanezca atento a la campaña para conocer esta nueva
+ *   medida» y no tienen contenido todavía.
+ */
+export const VERIFIED_AT_2026 = "2026-11-11";
+
+const PROGRAMS_2026: Record<PartyId, Omit<Source, "page">> = {
+  pp: {
+    type: "electoral_program",
+    document: "Programa electoral PP 29N 2026 — «Reconstrucción nacional»",
+    url: "https://www.pp.es/wp-content/uploads/2026/11/PROGRAMA-ELECTORAL-PP-LA-RECONSTRUCCION-NACIONAL.pdf",
+    date: "2026-11-10",
+    verifiedAt: VERIFIED_AT_2026,
+  },
+};
+
+/** Fecha de publicación del programa del 29N, por partido (= validFrom). */
+const PROGRAM_2026_FROM: Record<PartyId, string> = {
+  pp: "2026-11-10",
+};
+
+function program2026(party: PartyId): Omit<Source, "page"> {
+  const program = PROGRAMS_2026[party];
+  if (!program) throw new Error(`Sin programa del 29N incorporado: ${party}`);
+  return program;
+}
+
 export interface VpOptions {
   confidence?: number;
   explanation?: string;
@@ -85,8 +120,48 @@ export function vp(
     source: { ...PROGRAMS[party], page: `${page} (PDF)` },
     confidence: opts.confidence ?? 0.8,
     validFrom: "2023-07-23",
+    validUntil: PROGRAM_2026_FROM[party],
     explanation: opts.explanation,
     originalText,
+    needsVerification: false,
+  };
+}
+
+/**
+ * Posición verificada en el programa del 29N-2026: página del PDF (o rango,
+ * p. ej. "42-43", si la cita salta de página) + cita literal.
+ */
+export function vp26(
+  party: PartyId,
+  status: PositionStatus,
+  page: number | string,
+  originalText: string,
+  opts: VpOptions = {}
+): PartyPosition {
+  return {
+    party,
+    status,
+    value: opts.value,
+    source: { ...program2026(party), page: `${page} (PDF)` },
+    confidence: opts.confidence ?? 0.8,
+    validFrom: PROGRAM_2026_FROM[party],
+    explanation: opts.explanation,
+    originalText,
+    needsVerification: false,
+  };
+}
+
+/** Evidencia insuficiente en el programa del 29N-2026 (análogo a ne()). */
+export function ne26(party: PartyId, note?: string): PartyPosition {
+  return {
+    party,
+    status: "insufficient_evidence",
+    source: { ...program2026(party) },
+    confidence: 0,
+    validFrom: PROGRAM_2026_FROM[party],
+    explanation:
+      note ??
+      "Su programa electoral del 29N-2026 no aborda expresamente esta propuesta. Algunas medidas del programa están pendientes de anunciarse durante la campaña.",
     needsVerification: false,
   };
 }
@@ -147,6 +222,7 @@ export function ne(party: PartyId, note?: string): PartyPosition {
     source: { ...PROGRAMS[party] },
     confidence: 0,
     validFrom: "2023-07-23",
+    validUntil: PROGRAM_2026_FROM[party],
     explanation:
       note ??
       "Su programa electoral del 23J-2023 no aborda expresamente esta propuesta; sin otra fuente primaria verificada en el corpus actual.",
@@ -171,10 +247,18 @@ export function verify(base: Question, positions: PartyPosition[]): Question {
   };
 }
 
-/** Pregunta verificada editorialmente pero sin posiciones atribuibles: solo ejes. */
-export function axesOnly(base: Question, note: string): Question {
+/**
+ * Pregunta verificada editorialmente sin posiciones atribuibles en los
+ * programas del 23J: solo ejes. `newer` recoge las posiciones de los
+ * programas del 29N ya incorporados (vp26/ne26), que pueden no ser vacías.
+ */
+export function axesOnly(
+  base: Question,
+  note: string,
+  newer: PartyPosition[]
+): Question {
   return verify(
     { ...base, methodNotes: `${base.methodNotes ?? ""} ${note}`.trim() },
-    [ne("pp"), ne("psoe"), ne("vox"), ne("sumar")]
+    [ne("pp"), ne("psoe"), ne("vox"), ne("sumar"), ...newer]
   );
 }

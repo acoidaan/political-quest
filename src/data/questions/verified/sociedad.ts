@@ -1,5 +1,5 @@
 import type { Question } from "@/lib/types";
-import { axesOnly, ne, verify, vote, vp } from "./helpers";
+import { axesOnly, ne, ne26, verify, vote, vp, vp26 } from "./helpers";
 import { baseQuestion as base } from "./base";
 
 
@@ -22,6 +22,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne("pp", "Su programa refuerza el SNS sin comprometer objetivos cuantificados de gasto ni su financiación con impuestos."),
     ne("vox"),
+    vp26(
+      "pp",
+      "neutral_or_unclear",
+      69,
+      "garantizará recursos suficientes para asegurar la sostenibilidad de la sanidad pública",
+      { confidence: 0.5, explanation: "Garantiza recursos para la sanidad a través de la financiación autonómica, pero el programa propone bajar impuestos y no plantea subirlos para financiarla." }
+    ),
   ]),
   verify(base("san_002"), [
     vp(
@@ -40,6 +47,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne("pp", "Su programa 23J no se pronuncia expresamente sobre la ampliación de conciertos sanitarios."),
     ne("psoe"),
+    ne26("pp", "Su programa del 29N anuncia un plan urgente de reducción de listas de espera (medida 219) sin mencionar conciertos con la sanidad privada."),
   ]),
   verify(base("san_003"), [
     vp(
@@ -70,10 +78,20 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Proponemos incorporar a los servicios sanitarios públicos nuevas prestaciones, como… la psicoterapia…",
       { confidence: 0.8 }
     ),
+    vp26(
+      "pp",
+      "support",
+      70,
+      "Aumentaremos el número de profesionales dedicados a la salud mental",
+      { confidence: 0.85 }
+    ),
   ]),
   axesOnly(
     base("san_004"),
-    "Verificación 2026-08: ningún programa 23J aborda la desgravación del seguro sanitario privado."
+    "Verificación 2026-08: ningún programa 23J aborda la desgravación del seguro sanitario privado.",
+    [
+      ne26("pp", "Su programa del 29N no aborda la desgravación del seguro sanitario privado."),
+    ]
   ),
   verify(base("edu_001"), [
     vp(
@@ -92,10 +110,20 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne("pp", "Su programa 23J defiende la libertad educativa en términos generales sin pronunciarse expresamente sobre la financiación de la concertada."),
     ne("psoe"),
+    vp26(
+      "pp",
+      "strongly_support",
+      67,
+      "Los conciertos durarán al menos seis años en todas las etapas, con módulos que cubran el coste real, para que la plaza concertada sea gratuita de verdad.",
+      { confidence: 0.9 }
+    ),
   ]),
   axesOnly(
     base("edu_002"),
-    "Verificación 2026-08: ningún programa 23J aborda expresamente la asignatura de religión."
+    "Verificación 2026-08: ningún programa 23J aborda expresamente la asignatura de religión.",
+    [
+      ne26("pp", "Su programa del 29N no aborda la asignatura de religión."),
+    ]
   ),
   verify(base("edu_003"), [
     vp(
@@ -114,6 +142,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne("psoe"),
     ne("sumar", "Su programa defiende la pluralidad lingüística sin pronunciarse sobre la elección de lengua vehicular."),
+    vp26(
+      "pp",
+      "support",
+      39,
+      "Garantizaremos el derecho constitucional de recibir enseñanza en castellano en todas las etapas del sistema educativo y en toda la Nación",
+      { confidence: 0.7, explanation: "Garantiza la enseñanza en castellano «desde el respeto a las lenguas cooficiales»; no concreta que sea la lengua vehicular principal a elección de las familias." }
+    ),
   ]),
   verify(base("edu_004"), [
     vp(
@@ -132,6 +167,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne("pp"),
     ne("psoe"),
+    ne26("pp"),
   ]),
   verify(base("uni_001"), [
     vp(
@@ -161,6 +197,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       103,
       "…la ampliación y la modernización de los sistemas de becas y ayudas al estudio, cuya partida presupuestaria se seguirá ampliando significativamente.",
       { confidence: 0.7 }
+    ),
+    vp26(
+      "pp",
+      "conditional_support",
+      68,
+      "La beca será un derecho por ley para quien la necesite y apruebe, con los mismos umbrales en la universidad que en la FP.",
+      { confidence: 0.6, explanation: "Amplía las becas y elimina la matrícula en los ciclos de FP de alta demanda, pero no propone reducir las tasas universitarias." }
     ),
   ]),
   verify(base("igu_001"), [
@@ -192,6 +235,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "En lugar de las “cuotas de género”, planes de igualdad u obligaciones de contratación, impulsaremos políticas que permitan la estabilidad familiar…",
       { confidence: 0.85 }
     ),
+    ne26("pp"),
   ]),
   verify(base("gen_001"), [
     vp(
@@ -222,6 +266,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "La coeducación es una estrategia fundamental para erradicar estereotipos de género y prevenir la violencia machista.",
       { confidence: 0.7 }
     ),
+    vp26(
+      "pp",
+      "support",
+      19,
+      "Cada año rendiremos cuentas del cumplimiento del Pacto de Estado contra la Violencia de Género. Dotaremos de más medios y mayor especialización a las secciones de violencia sobre la mujer de los tribunales.",
+      { confidence: 0.5, explanation: "Posición derivada: mantiene y refuerza el marco específico de violencia de género (VioGen, Pacto de Estado, secciones especializadas) sin pronunciarse expresamente sobre el Código Penal." }
+    ),
   ]),
   verify(base("gen_002"), [
     vp(
@@ -246,6 +297,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.55, explanation: "Su Gobierno impulsó la Ley 4/2023 como proyecto de ley; el programa no la menciona expresamente." }
     ),
     ne("pp"),
+    vp26(
+      "pp",
+      "strongly_oppose",
+      44,
+      "Revisaremos las normas que hayan generado inseguridad jurídica en nombre de la igualdad, como la Ley Trans, y eliminaremos la libre autodeterminación registral del sexo",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("lgb_001"), [
     vp(
@@ -276,6 +334,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "…trabajar para eliminar las restricciones de terceros países a la adopción internacional por parte de familias LGTBI+.",
       { confidence: 0.75 }
     ),
+    ne26("pp", "Su programa del 29N se compromete a seguir luchando contra la LGTBIfobia (medida 111), pero no menciona el matrimonio ni la adopción."),
   ]),
   verify(base("lgb_002"), [
     vote("psoe", "support", {
@@ -346,6 +405,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Impulso de una prestación por crianza, para luchar por la erradicación de la pobreza infantil. Se cobrará hasta los 18 años…",
       { confidence: 0.9 }
     ),
+    vp26(
+      "pp",
+      "support",
+      56,
+      "Refundiremos las deducciones familiares del IRPF en una sola, reembolsable, con un único trámite y abono mensual. Ampliaremos su acceso para que llegue a todas las familias, también a las que no tengan cuota suficiente en el IRPF.",
+      { confidence: 0.75, explanation: "La ayuda se canaliza como deducción reembolsable de cobro mensual, que funciona como un pago directo; no cuantifica el aumento." }
+    ),
   ]),
   verify(base("abo_001"), [
     vp(
@@ -376,6 +442,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "…blindaremos la objeción de conciencia de los profesionales sanitarios.",
       { confidence: 0.55, explanation: "No cuestiona el marco general, pero introduce restricciones (objeción, consentimiento paterno en menores)." }
     ),
+    ne26("pp", "Su programa del 29N no menciona el aborto."),
   ]),
   verify(base("abo_002"), [
     vp(
@@ -406,6 +473,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Será una prioridad garantizar el acceso efectivo al derecho al aborto…",
       { confidence: 0.7, explanation: "Posición derivada de su defensa del acceso efectivo al derecho." }
     ),
+    ne26("pp", "Su programa del 29N no menciona el aborto."),
   ]),
   verify(base("eut_001"), [
     vp(
@@ -436,6 +504,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "…la derogación de las leyes de eutanasia y del aborto.",
       { confidence: 0.95 }
     ),
+    vp26(
+      "pp",
+      "neutral_or_unclear",
+      "70-71",
+      "aprobaremos una ley nacional de cuidados paliativos con el fin de que nadie se vea empujado a la aceleración de la muerte por falta de alternativas",
+      { confidence: 0.5, explanation: "Prioriza los cuidados paliativos frente a la eutanasia, pero no propone modificar ni derogar la ley vigente." }
+    ),
   ]),
   verify(base("rel_001"), [
     vp(
@@ -448,6 +523,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne("pp"),
     ne("vox"),
     ne("sumar"),
+    ne26("pp"),
   ]),
   verify(base("rel_002"), [
     vp(
@@ -460,6 +536,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne("pp"),
     ne("psoe"),
     ne("sumar"),
+    ne26("pp", "Su programa del 29N protege fiestas y tradiciones populares (medida 136), pero no menciona los símbolos religiosos en instituciones."),
   ]),
   verify(base("cul_001"), [
     vp(
@@ -478,6 +555,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne("pp"),
     ne("psoe"),
+    vp26(
+      "pp",
+      "strongly_oppose",
+      "48-49",
+      "Recuperaremos el respeto y la promoción de las expresiones que mejor combinan tradición y futuro, empezando por la restitución del Premio Nacional de Tauromaquia",
+      { confidence: 0.85, explanation: "Posición derivada: propone restituir el Premio Nacional de Tauromaquia y reforzar su promoción, lo contrario de retirarle el apoyo público." }
+    ),
   ]),
   verify(base("cul_002"), [
     vp(
@@ -496,6 +580,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne("pp", "Recupera la caza del lobo al norte del Duero, pero no plantea promoción general de tauromaquia o caza."),
     ne("psoe"),
+    vp26(
+      "pp",
+      "strongly_support",
+      66,
+      "DEFENDEREMOS LA CAZA Y SU PAPEL EN EL MEDIO RURAL. Reduciremos las trabas a la caza sostenible y respaldaremos su contribución a la economía de los pueblos y al mantenimiento de la biodiversidad.",
+      { confidence: 0.9, explanation: "También restituye el Premio Nacional de Tauromaquia (medida 136, págs. 48-49)." }
+    ),
   ]),
   verify(base("mpu_001"), [
     vp(
@@ -514,5 +605,6 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne("pp"),
     ne("sumar"),
+    ne26("pp", "Su programa del 29N plantea reformar RTVE para recuperar su independencia (medida 76), sin pronunciarse sobre su financiación."),
   ]),
 ];
