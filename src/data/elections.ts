@@ -66,7 +66,7 @@ export const CURRENT_ELECTION: Election = {
   campaign: { from: "2026-11-13", to: "2026-11-27" },
 };
 
-const CHECKED = "2026-11-11";
+const CHECKED = "2026-11-12";
 /** Candidaturas sin web oficial registrada que revisar. */
 const PREVIOUS_CHECK = "2026-10-22";
 /** Webs que bloquean el acceso automatizado; última lectura, manual. */
@@ -126,7 +126,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
       },
       {
         title: "Reconstrucción nacional. Programa electoral",
-        url: "https://www.pp.es/wp-content/uploads/2026/11/PROGRAMA-ELECTORAL-PP-LA-RECONSTRUCCION-NACIONAL.pdf",
+        url: "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf",
         date: "2026-11-10",
       },
     ],
@@ -161,9 +161,16 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     id: "adelante-andalucia",
     name: "Adelante Andalucía",
     scope: "Andalucía",
-    programStatus: "pending",
-    documents: [],
-    lastChecked: PREVIOUS_CHECK,
+    officialWebsite: "https://adelanteandalucia.org",
+    programStatus: "published",
+    documents: [
+      {
+        title: "Programa electoral 29N — «Un programa para frenar a las derechas»",
+        url: "https://programa.adelanteandalucia.org/programa-29n-adelante-andalucia.pdf",
+        date: "2026-11-10",
+      },
+    ],
+    lastChecked: CHECKED,
   },
   {
     id: "bng",
