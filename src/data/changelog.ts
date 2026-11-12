@@ -24,6 +24,15 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-12",
+    kind: "datos",
+    title: "Seguimiento del 29-N: programa de Adelante Andalucía y enlace del PP",
+    details: [
+      "Adelante Andalucía pasa a «Programa publicado · en verificación» con su programa para las generales. No forma parte de la comparación, así que el test no cambia.",
+      "El enlace al programa del PP apunta ahora al PDF de pp.es que se usó para las citas, porque la dirección anterior dejó de funcionar. El texto y las páginas citadas no cambian.",
+    ],
+  },
+  {
     date: "2026-11-11",
     kind: "datos",
     title: "Programa del PP para el 29-N incorporado a la comparación",

@@ -72,7 +72,9 @@ const PROGRAMS: Record<PartyId, Omit<Source, "page">> = {
  * basadas en votaciones o en el BOE (vote) siguen vigentes.
  *
  * - PP: «Reconstrucción nacional» (82 pp.), presentado el 2026-11-10 y
- *   descargado de pp.es. Varias medidas (83, 109, 132, 164, 167, 173, 200,
+ *   descargado de pp.es. El 2026-11-11 pp.es pasó a enlazar una maquetación
+ *   de 64 pp. con el mismo texto; las páginas citadas son las del PDF de 82
+ *   pp., que sigue publicado en la URL de abajo. Varias medidas (83, 109, 132, 164, 167, 173, 200,
  *   210) figuran como «Permanezca atento a la campaña para conocer esta nueva
  *   medida» y no tienen contenido todavía.
  */
@@ -82,7 +84,7 @@ const PROGRAMS_2026: Record<PartyId, Omit<Source, "page">> = {
   pp: {
     type: "electoral_program",
     document: "Programa electoral PP 29N 2026 — «Reconstrucción nacional»",
-    url: "https://www.pp.es/wp-content/uploads/2026/11/PROGRAMA-ELECTORAL-PP-LA-RECONSTRUCCION-NACIONAL.pdf",
+    url: "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf",
     date: "2026-11-10",
     verifiedAt: VERIFIED_AT_2026,
   },
