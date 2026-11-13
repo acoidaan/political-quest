@@ -24,6 +24,15 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-13",
+    kind: "datos",
+    title: "Seguimiento del 29-N: programas de VOX, ERC y Coalición Canaria",
+    details: [
+      "VOX pasa a «Programa publicado · en verificación» con sus medidas para el 29-N. Sus posiciones en el test siguen siendo las de 2023 hasta que se verifique el documento.",
+      "ERC pasa a «Programa publicado · en verificación» y Coalición Canaria a «Documentos parciales» con las bases de su programa. No forman parte de la comparación, así que el test no cambia.",
+    ],
+  },
+  {
     date: "2026-11-12",
     kind: "datos",
     title: "Seguimiento del 29-N: programa de Adelante Andalucía y enlace del PP",
