@@ -146,7 +146,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "VOX",
     scope: "Estatal",
     officialWebsite: "https://www.voxespana.es",
-    programStatus: "published",
+    programStatus: "incorporated",
     documents: [
       {
         title: "Recuperar España. Prioridad nacional, desregulación, remigración",
@@ -158,8 +158,13 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
         url: "https://www.voxespana.es/abascal/es-sentido-comun-estas-son-las-medidas-de-vox-para-el-29n-20261112",
         date: "2026-11-12",
       },
+      {
+        title: "Programa electoral 29 de noviembre de 2026 — «Es sentido común»",
+        url: "https://www.voxespana.es/wp-content/uploads/2026/11/Programa-completo-A5-1.pdf",
+        date: "2026-11-12",
+      },
     ],
-    lastChecked: MANUAL_CHECK,
+    lastChecked: CHECKED,
   },
   // ------------------------------------------------------------- territoriales
   {

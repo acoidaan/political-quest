@@ -26,9 +26,10 @@ export const CHANGELOG: ChangelogEntry[] = [
   {
     date: "2026-11-13",
     kind: "datos",
-    title: "Seguimiento del 29-N: programas de VOX, ERC y Coalición Canaria",
+    title: "Programa de VOX para el 29-N incorporado; programas de ERC y Coalición Canaria",
     details: [
-      "VOX pasa a «Programa publicado · en verificación» con sus medidas para el 29-N. Sus posiciones en el test siguen siendo las de 2023 hasta que se verifique el documento.",
+      "Las posiciones de VOX proceden ahora de su programa «Es sentido común» (12 de noviembre de 2026), con cita literal y página en las 89 propuestas que se basaban en su programa de 2023. Las posiciones de 2023 se conservan como historial.",
+      "En las propuestas que el nuevo programa de VOX no aborda, pasa a «evidencia insuficiente» y esa pregunta deja de puntuar en la comparación con VOX. La posición basada en una votación del Congreso se mantiene.",
       "ERC pasa a «Programa publicado · en verificación» y Coalición Canaria a «Documentos parciales» con las bases de su programa. No forman parte de la comparación, así que el test no cambia.",
     ],
   },

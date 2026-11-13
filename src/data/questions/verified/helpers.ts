@@ -74,9 +74,13 @@ const PROGRAMS: Record<PartyId, Omit<Source, "page">> = {
  * - PP: «Reconstrucción nacional» (82 pp.), presentado el 2026-11-10 y
  *   descargado de pp.es. El 2026-11-11 pp.es pasó a enlazar una maquetación
  *   de 64 pp. con el mismo texto; las páginas citadas son las del PDF de 82
- *   pp., que sigue publicado en la URL de abajo. Varias medidas (83, 109, 132, 164, 167, 173, 200,
- *   210) figuran como «Permanezca atento a la campaña para conocer esta nueva
- *   medida» y no tienen contenido todavía.
+ *   pp., que sigue publicado en la URL de abajo. Varias medidas (83, 109,
+ *   132, 164, 167, 173, 200, 210) figuran como «Permanezca atento a la
+ *   campaña para conocer esta nueva medida» y no tienen contenido todavía.
+ * - VOX: «Es sentido común» (66 pp., 115 medidas), presentado el 2026-11-12.
+ *   voxespana.es bloquea el acceso automatizado a sus páginas, pero no al
+ *   PDF: el archivo descargado de la URL de abajo es idéntico byte a byte al
+ *   que el mantenedor obtuvo manualmente.
  */
 export const VERIFIED_AT_2026 = "2026-11-11";
 
@@ -88,11 +92,19 @@ const PROGRAMS_2026: Record<PartyId, Omit<Source, "page">> = {
     date: "2026-11-10",
     verifiedAt: VERIFIED_AT_2026,
   },
+  vox: {
+    type: "electoral_program",
+    document: "Programa electoral VOX 29N 2026 — «Es sentido común»",
+    url: "https://www.voxespana.es/wp-content/uploads/2026/11/Programa-completo-A5-1.pdf",
+    date: "2026-11-12",
+    verifiedAt: "2026-11-13",
+  },
 };
 
 /** Fecha de publicación del programa del 29N, por partido (= validFrom). */
 const PROGRAM_2026_FROM: Record<PartyId, string> = {
   pp: "2026-11-10",
+  vox: "2026-11-12",
 };
 
 function program2026(party: PartyId): Omit<Source, "page"> {
@@ -163,10 +175,15 @@ export function ne26(party: PartyId, note?: string): PartyPosition {
     validFrom: PROGRAM_2026_FROM[party],
     explanation:
       note ??
-      "Su programa electoral del 29N-2026 no aborda expresamente esta propuesta. Algunas medidas del programa están pendientes de anunciarse durante la campaña.",
+      `Su programa electoral del 29N-2026 no aborda expresamente esta propuesta.${PROGRAM_2026_PENDING[party] ?? ""}`,
     needsVerification: false,
   };
 }
+
+/** Advertencia para los programas con medidas aún sin publicar. */
+const PROGRAM_2026_PENDING: Partial<Record<PartyId, string>> = {
+  pp: " Algunas medidas del programa están pendientes de anunciarse durante la campaña.",
+};
 
 export interface VoteSourceInput {
   type: "congress_vote" | "boe";
