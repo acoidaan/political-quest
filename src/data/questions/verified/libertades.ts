@@ -41,6 +41,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Reformaremos la Ley de Extranjería para prohibir las regularizaciones masivas e indiscriminadas",
       { confidence: 0.9 }
     ),
+    vp26(
+      "vox",
+      "strongly_oppose",
+      15,
+      "Prohibición de las regularizaciones masivas. Quien entra de forma ilegal jamás podrá regularizar su situación.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("inm_002"), [
     vp(
@@ -78,6 +85,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Quien quiera renovar su residencia temporal en el régimen general deberá firmar un compromiso de integración.",
       { confidence: 0.85, explanation: "Añade como requisito de renovación aprender español, conocer la Constitución y, cuando corresponda, formarse para el empleo." }
     ),
+    vp26(
+      "vox",
+      "strongly_support",
+      15,
+      "Supresión de la institución del arraigo como forma de atajar la inmigración ilegal",
+      { confidence: 0.8 }
+    ),
   ]),
   verify(base("inm_003"), [
     vp(
@@ -108,6 +122,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       23,
       "La expulsión será la regla para los extranjeros condenados por delitos sexuales, delitos de sangre y multirreincidencia.",
       { confidence: 0.75, explanation: "La expulsión como regla se limita a delitos sexuales, de sangre y multirreincidencia, no a todos los delitos de gravedad media." }
+    ),
+    vp26(
+      "vox",
+      "strongly_support",
+      15,
+      "Deportación de quienes cometan delitos graves o hagan del delito leve su forma de vida",
+      { confidence: 0.85 }
     ),
   ]),
   verify(base("inm_004"), [
@@ -143,6 +164,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Aplicaremos el Pacto Europeo e impulsaremos acuerdos con países seguros para que examinen solicitudes y acojan a quienes lo necesiten.",
       { confidence: 0.4, explanation: "Se compromete a aplicar el Pacto Europeo de Migración y Asilo, pero no se pronuncia sobre cuotas obligatorias de reparto." }
     ),
+    ne26("vox"),
   ]),
   verify(base("inm_005"), [
     vote("psoe", "strongly_support", {
@@ -170,6 +192,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
     }),
     ne("vox", "Sin representación parlamentaria en 2018; su programa 23J no aborda expresamente esta cuestión."),
     ne("sumar", "Constituido después de esa votación; su programa 23J no la aborda expresamente."),
+    vp26(
+      "vox",
+      "strongly_oppose",
+      19,
+      "excluyendo a los extranjeros en situación ilegal salvo casos de urgencia grave.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("inm_006"), [
     vp(
@@ -201,6 +230,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Modernizaremos las vallas, los espigones y los sistemas de vigilancia de Ceuta y Melilla, con sensores, cámaras térmicas y drones.",
       { confidence: 0.9 }
     ),
+    vp26(
+      "vox",
+      "strongly_support",
+      7,
+      "Militarización de la frontera para repeler cualquier intento futuro de invasión o ataque híbrido.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("nac_001"), [
     vp(
@@ -225,6 +261,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       50,
       "Aprobaremos una nueva Ley de Nacionalidad que refuerce las condiciones de acceso",
       { confidence: 0.6, explanation: "Posición derivada: endurece el acceso a la nacionalidad, aunque no menciona expresamente los años de residencia." }
+    ),
+    vp26(
+      "vox",
+      "strongly_oppose",
+      15,
+      "Endurecimiento de los requisitos de adquisición de la nacionalidad española.",
+      { confidence: 0.8, explanation: "Además revoca las «pasarelas rápidas para adquirir la nacionalidad española»." }
     ),
   ]),
   verify(base("seg_001"), [
@@ -263,6 +306,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "LA MULTIRREINCIDENCIA TENDRÁ UNA RESPUESTA PENAL MÁS RÁPIDA Y EFICAZ.",
       { confidence: 0.65, explanation: "Prioriza los juicios rápidos y la tramitación conjunta de delitos leves; endurece la pena solo para los violadores reincidentes (prisión permanente revisable, medida 30)." }
     ),
+    ne26("vox"),
   ]),
   verify(base("seg_002"), [
     vp(
@@ -305,6 +349,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "AMPLIAREMOS LA PRISIÓN PERMANENTE REVISABLE A QUIEN HAGA DESAPARECER A SU VÍCTIMA Y A LOS DEPREDADORES SEXUALES.",
       { confidence: 0.95 }
     ),
+    vp26(
+      "vox",
+      "strongly_support",
+      45,
+      "Ampliación de la prisión permanente revisable.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("pol_001"), [
     vp(
@@ -324,6 +375,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Elevaremos la multa mínima a 3.000 euros para quienes participen activamente en actos de vandalismo contra bienes públicos o privados",
       { confidence: 0.55, explanation: "Posición derivada: endurece las sanciones de seguridad ciudadana por vandalismo y desórdenes; no menciona las manifestaciones no comunicadas ni la grabación de agentes." }
     ),
+    ne26("vox"),
   ]),
   verify(base("jus_001"), [
     vp(
@@ -359,6 +411,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "strongly_support",
       32,
       "Los jueces y magistrados de todas las categorías elegirán a los doce vocales judiciales del Consejo General del Poder Judicial.",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "vox",
+      "strongly_support",
+      55,
+      "Modificar la Ley Orgánica del Poder Judicial para que los doce vocales de procedencia judicial del Consejo General del Poder Judicial sean elegidos mediante voto personal, directo y secreto por y entre los propios jueces y magistrados",
       { confidence: 0.95 }
     ),
   ]),
@@ -398,6 +457,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Reformaremos el delito de desórdenes públicos para ampliar las conductas castigadas y endurecer las penas",
       { confidence: 0.6, explanation: "Posición derivada: el programa amplía delitos y penas (desórdenes, prisión permanente revisable, Ley del Menor) y no menciona penas alternativas ni la reinserción." }
     ),
+    vp26(
+      "vox",
+      "oppose",
+      45,
+      "Los que cometen los peores delitos deben tener las máximas condenas.",
+      { confidence: 0.65, explanation: "Posición derivada: amplía la prisión permanente revisable y rebaja la edad de responsabilidad penal; no menciona la reinserción." }
+    ),
   ]),
   axesOnly(
     base("pri_001"),
@@ -408,6 +474,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
         "support",
         47,
         "no habrá tercer grado ni libertad condicional para los condenados por terrorismo sin arrepentimiento veraz y sin una colaboración efectiva y verificable con la Justicia",
+        { confidence: 0.7, explanation: "La restricción se concreta para los condenados por terrorismo, no para todos los delitos graves." }
+      ),
+      vp26(
+        "vox",
+        "support",
+        57,
+        "Fin de los privilegios penitenciarios de los condenados por terrorismo.",
         { confidence: 0.7, explanation: "La restricción se concreta para los condenados por terrorismo, no para todos los delitos graves." }
       ),
     ]
@@ -424,12 +497,20 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ne("psoe"),
     ne("vox"),
     ne26("pp"),
+    vp26(
+      "vox",
+      "strongly_oppose",
+      56,
+      "Dotar de la máxima protección jurídica a los símbolos de la Nación, especialmente la Bandera, el Escudo y el Himno o la Corona. Las penas por las ofensas y ultrajes a España y sus símbolos o emblemas deben agravarse para que ninguna afrenta a ellos quede impune.",
+      { confidence: 0.8, explanation: "Propone agravar las penas por ofensas a la Corona; no se refiere a las ofensas a los sentimientos religiosos." }
+    ),
   ]),
   axesOnly(
     base("prv_001"),
     "Verificación 2026-08: ningún programa 23J aborda el reconocimiento facial policial en espacios públicos (SUMAR solo lo trata en el ámbito laboral).",
     [
       ne26("pp", "Su programa del 29N prevé financiar videovigilancia municipal (medida 27), pero no menciona el reconocimiento facial."),
+      ne26("vox"),
     ]
   ),
 ];

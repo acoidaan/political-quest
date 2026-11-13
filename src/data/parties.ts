@@ -29,7 +29,7 @@ export const PARTIES: Party[] = [
     fullName: "VOX",
     color: "#5aa831",
     active: true,
-    positionCycle: "2023-2026",
+    positionCycle: "2026 (29N)",
   },
   {
     id: "sumar",

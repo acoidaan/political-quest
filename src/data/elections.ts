@@ -66,7 +66,7 @@ export const CURRENT_ELECTION: Election = {
   campaign: { from: "2026-11-13", to: "2026-11-27" },
 };
 
-const CHECKED = "2026-11-12";
+const CHECKED = "2026-11-13";
 /** Candidaturas sin web oficial registrada que revisar. */
 const PREVIOUS_CHECK = "2026-10-22";
 /** Webs que bloquean el acceso automatizado; última lectura, manual. */
@@ -146,15 +146,25 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "VOX",
     scope: "Estatal",
     officialWebsite: "https://www.voxespana.es",
-    programStatus: "partial",
+    programStatus: "incorporated",
     documents: [
       {
         title: "Recuperar España. Prioridad nacional, desregulación, remigración",
         url: "https://www.voxespana.es/wp-content/uploads/2026/10/RECUPERAR-ESPANA-A4.pdf",
         date: "2026-10-20",
       },
+      {
+        title: "«Es sentido común»: medidas de VOX para el 29N",
+        url: "https://www.voxespana.es/abascal/es-sentido-comun-estas-son-las-medidas-de-vox-para-el-29n-20261112",
+        date: "2026-11-12",
+      },
+      {
+        title: "Programa electoral 29 de noviembre de 2026 — «Es sentido común»",
+        url: "https://www.voxespana.es/wp-content/uploads/2026/11/Programa-completo-A5-1.pdf",
+        date: "2026-11-12",
+      },
     ],
-    lastChecked: MANUAL_CHECK,
+    lastChecked: CHECKED,
   },
   // ------------------------------------------------------------- territoriales
   {
@@ -193,9 +203,15 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "Coalición Canaria",
     scope: "Canarias",
     composition: `En coalición con Municipalistas Primero Canarias (CCa-1.ºCAN). ${BOE_PROCLAIMED}`,
-    programStatus: "pending",
-    documents: [],
-    lastChecked: PREVIOUS_CHECK,
+    programStatus: "partial",
+    documents: [
+      {
+        title: "Defiende Canarias. Bases del programa electoral para las elecciones generales 29N",
+        url: "https://primerocanarias.com/wp-content/uploads/2026/11/CCA-26-Programa_Electoral-29NOV-comprimido.pdf",
+        date: "2026-11-09",
+      },
+    ],
+    lastChecked: CHECKED,
   },
   {
     id: "compromis",
@@ -220,9 +236,15 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "ERC",
     scope: "Cataluña",
     officialWebsite: "https://www.esquerra.cat",
-    programStatus: "pending",
-    documents: [],
-    lastChecked: MANUAL_CHECK,
+    programStatus: "published",
+    documents: [
+      {
+        title: "Eleccions al Congrés 2026. Programa electoral",
+        url: "https://esquerrarepublicana.cat/documents/e2026-programa.pdf",
+        date: "2026-11-10",
+      },
+    ],
+    lastChecked: CHECKED,
   },
   {
     id: "junts",

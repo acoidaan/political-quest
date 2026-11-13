@@ -23,6 +23,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Revisaremos todas las participaciones empresariales del Estado y venderemos aquellas que no respondan a un interés público o estratégico acreditado.",
       { confidence: 0.5, explanation: "Posición derivada: mantiene solo las participaciones con interés público o estratégico acreditado y vende el resto." }
     ),
+    ne26("vox"),
   ]),
   verify(base("eco_002"), [
     vp(
@@ -48,6 +49,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "bonificaremos el 100% de las cotizaciones empresariales por el primer trabajador durante un año y el 50% por el segundo.",
       { confidence: 0.5, explanation: "Bonificaciones selectivas (primeros empleados de autónomos, plantillas estables, trabajadores con hijos), no una rebaja general de cotizaciones." }
     ),
+    ne26("vox", "Su programa del 29N no plantea una rebaja general de cotizaciones empresariales; solo una cuota de autónomos progresiva desde cero (pág. 9)."),
   ]),
   verify(base("eco_003"), [
     vp(
@@ -67,6 +69,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne("pp", "Su programa 23J no menciona los gravámenes a banca y energéticas."),
     ne("vox"),
     ne26("pp", "Su programa del 29N no menciona los gravámenes a banca y energéticas; la medida 183 («Eliminaremos los impuestos que frenan la inversión») no identifica qué impuestos."),
+    ne26("vox"),
   ]),
   axesOnly(
     base("eco_004"),
@@ -79,6 +82,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
         "Revisaremos todas las participaciones empresariales del Estado y venderemos aquellas que no respondan a un interés público o estratégico acreditado.",
         { confidence: 0.75 }
       ),
+      ne26("vox"),
     ]
   ),
   verify(base("imp_001"), [
@@ -111,6 +115,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.8, explanation: "Posición derivada: un tipo único implica una fuerte rebaja para las rentas más altas." }
     ),
     ne26("pp", "Su programa del 29N anuncia rebajas del IRPF para rentas medias y bajas, pero no aborda la tributación de las rentas más altas."),
+    vp26(
+      "vox",
+      "oppose",
+      9,
+      "Revisión y reducción sistemática de todos los impuestos y tasas que lastran la prosperidad de los trabajadores, familias y empresas españolas.",
+      { confidence: 0.55, explanation: "Posición derivada: propone una rebaja general de impuestos y no contempla subirlos a las rentas altas." }
+    ),
   ]),
   verify(base("imp_002"), [
     vp(
@@ -142,6 +153,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Elevaremos los mínimos personales y familiares del IRPF y bajaremos el IRPF de las rentas medias y bajas y de las familias.",
       { confidence: 0.75, explanation: "Rebaja centrada en rentas medias y bajas, más la deflactación de la tarifa (medida 178), no una rebaja uniforme para todos los tramos." }
     ),
+    vp26(
+      "vox",
+      "strongly_support",
+      9,
+      "Reforma del sistema de tributación sobre la renta (IRPF). Simplificación y bajada del IRPF.",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("imp_003"), [
     vp(
@@ -161,6 +179,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne("pp"),
     ne("psoe"),
     ne26("pp", "Su programa del 29N no menciona el impuesto de sucesiones y donaciones; la medida 185 deja a las comunidades autónomas libertad para bajar sus impuestos cedidos."),
+    ne26("vox", "Su programa del 29N no menciona el impuesto de sucesiones y donaciones."),
   ]),
   verify(base("imp_004"), [
     vp("pp", "strongly_oppose", 23, "Eliminaremos el impuesto a las grandes fortunas…", { confidence: 0.95 }),
@@ -186,6 +205,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.9 }
     ),
     ne26("pp", "Su programa del 29N no menciona el impuesto a las grandes fortunas."),
+    ne26("vox", "Su programa del 29N no menciona el impuesto a las grandes fortunas."),
   ]),
   verify(base("bie_001"), [
     vp(
@@ -211,6 +231,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ),
     ne("vox"),
     ne26("pp", "Su programa del 29N no aborda el ingreso mínimo vital; menciona reforzar las ayudas a familias vulnerables (medida 166) sin concretar."),
+    vp26(
+      "vox",
+      "oppose",
+      19,
+      "El Ingreso Mínimo Vital atenderá únicamente las necesidades de los españoles con menos recursos.",
+      { confidence: 0.65, explanation: "Restringe el ingreso mínimo vital a los españoles en lugar de ampliarlo." }
+    ),
   ]),
   verify(base("bie_002"), [
     vp(
@@ -224,6 +251,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne("vox"),
     ne("sumar", "Su programa amplía la garantía de ingresos sin pronunciarse expresamente sobre una mayor condicionalidad."),
     ne26("pp", "Su programa del 29N no condiciona prestaciones a la búsqueda de empleo; solo anuncia perseguir el fraude en la incapacidad temporal (medida 175)."),
+    ne26("vox"),
   ]),
   verify(base("pen_001"), [
     vp(
@@ -255,6 +283,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Aseguraremos que mantengan su poder adquisitivo y suban cada año con el IPC.",
       { confidence: 0.75, explanation: "Compromete la revalorización con el IPC, pero el programa propone bajar impuestos y no asume el coste en cotizaciones o impuestos que plantea la pregunta." }
     ),
+    ne26("vox", "Su programa del 29N vincula la sostenibilidad de las pensiones al crecimiento económico (pág. 10), sin pronunciarse sobre su revalorización con el IPC."),
   ]),
   verify(base("pen_002"), [
     vp(
@@ -268,6 +297,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne("vox"),
     ne("sumar"),
     ne26("pp", "Su programa del 29N propone un trato fiscal equivalente para todas las formas de ahorro (medida 184), no un incentivo específico al ahorro para la jubilación."),
+    ne26("vox"),
   ]),
   verify(base("tra_001"), [
     vp(
@@ -281,6 +311,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne("psoe"),
     ne("vox"),
     ne26("pp", "Su programa del 29N no aborda las indemnizaciones por despido."),
+    ne26("vox", "Su programa del 29N propone derogar la legislación laboral del Gobierno (pág. 13), sin concretar nada sobre las indemnizaciones por despido."),
   ]),
   verify(base("tra_002"), [
     vp(
@@ -300,6 +331,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne("pp"),
     ne("vox"),
     ne26("pp", "Su programa del 29N no aborda la reducción de la jornada máxima; propone bancos de horas y horarios flexibles (medida 162)."),
+    ne26("vox"),
   ]),
   verify(base("smi_001"), [
     vp(
@@ -331,6 +363,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.5, explanation: "No se pronuncia sobre el instrumento del SMI por encima del IPC." }
     ),
     ne26("pp", "Su programa del 29N no aborda la evolución del salario mínimo; solo vincula a él el umbral de exención del IRPF (medida 177)."),
+    ne26("vox"),
   ]),
   verify(base("viv_001"), [
     vp(
@@ -367,6 +400,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       53,
       "Eliminaremos las zonas tensionadas y el índice de precios, que han introducido más intervención, más incertidumbre y menos oferta en el mercado del alquiler.",
       { confidence: 0.9 }
+    ),
+    vp26(
+      "vox",
+      "oppose",
+      23,
+      "Recuperar la seguridad jurídica y una oferta de alquileres estable, abundante y asequible. Derogación de la Ley de Vivienda.",
+      { confidence: 0.6, explanation: "Posición derivada: deroga la Ley de Vivienda, que es la norma que permite limitar los alquileres en zonas tensionadas; no menciona expresamente los topes." }
     ),
   ]),
   verify(base("viv_002"), [
@@ -405,6 +445,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Eliminaremos las zonas tensionadas y el índice de precios, que han introducido más intervención, más incertidumbre y menos oferta en el mercado del alquiler.",
       { confidence: 0.75, explanation: "Elimina los límites vigentes; incentiva fiscalmente, sin imponerlas, las renovaciones con subidas por debajo del IPC (medida 156)." }
     ),
+    vp26(
+      "vox",
+      "support",
+      23,
+      "Recuperar la seguridad jurídica y una oferta de alquileres estable, abundante y asequible. Derogación de la Ley de Vivienda.",
+      { confidence: 0.6, explanation: "Posición derivada: deroga la Ley de Vivienda y apuesta por incentivos fiscales al alquiler de larga duración." }
+    ),
   ]),
   verify(base("viv_003"), [
     vp(
@@ -436,6 +483,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Aprobaremos una ley para que el propietario pueda recuperar su vivienda en 48 horas desde el primer día.",
       { confidence: 0.9 }
     ),
+    vp26(
+      "vox",
+      "strongly_support",
+      24,
+      "Desalojo de la vivienda okupada en menos de 24 horas y recuperación inmediata de la posesión por su legítimo titular, el propietario.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("viv_004"), [
     vp(
@@ -455,6 +509,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Publicaremos todas las parcelas públicas destinadas a vivienda para que cualquier promotor o cooperativa pueda conocerlas.",
       { confidence: 0.5, explanation: "Posición derivada: abre el suelo público a cualquier promotor o cooperativa en lugar de reservarlo a vivienda pública en alquiler." }
     ),
+    vp26(
+      "vox",
+      "neutral_or_unclear",
+      23,
+      "Aumentar con urgencia la construcción de vivienda protegida para las familias españolas mediante su promoción y colaboración público-privada: cesiones de suelo, subvenciones, descuentos, avales a financiación y créditos blandos.",
+      { confidence: 0.4, explanation: "Aumenta la vivienda protegida mediante cesiones de suelo y colaboración público-privada, sin precisar si el suelo público se reserva para alquiler público." }
+    ),
   ]),
   verify(base("reg_001"), [
     vp(
@@ -473,6 +534,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       14,
       "Reformaremos la normativa estatal para que más actividades de bajo riesgo puedan iniciarse mediante declaración responsable.",
       { confidence: 0.85 }
+    ),
+    vp26(
+      "vox",
+      "strongly_support",
+      28,
+      "Silencio administrativo positivo y declaración responsable como regla general.",
+      { confidence: 0.9 }
     ),
   ]),
   verify(base("emp_001"), [
@@ -498,6 +566,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       69,
       "En Atención Primaria, al menos 4.500 médicos más.",
       { confidence: 0.75, explanation: "También crea las plazas de jueces, fiscales y funcionarios de Justicia necesarias (medida 33)." }
+    ),
+    vp26(
+      "vox",
+      "neutral_or_unclear",
+      38,
+      "Refuerzo de plantillas médicas, de enfermería y personal administrativo.",
+      { confidence: 0.5, explanation: "Refuerza las plantillas sanitarias y de justicia, pero también propone «reducir al mínimo estrictamente necesario el tamaño de la Administración Pública» (pág. 29)." }
     ),
   ]),
 ];
