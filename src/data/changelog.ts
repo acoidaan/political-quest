@@ -24,6 +24,15 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-14",
+    kind: "web",
+    title: "La web funciona sin conexión tras la primera visita",
+    details: [
+      "Después de abrirla una vez con conexión, la web se puede volver a abrir y recorrer sin red, y el test se puede hacer entero sin conexión. Las respuestas se siguen guardando solo en tu dispositivo.",
+      "Con conexión se carga siempre la versión más reciente. Si se pierde la red, aparece un aviso.",
+    ],
+  },
+  {
     date: "2026-11-13",
     kind: "datos",
     title: "Programa de VOX para el 29-N incorporado; programas de ERC y Coalición Canaria",
