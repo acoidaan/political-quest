@@ -3,6 +3,7 @@ import Link from "next/link";
 import "./globals.css";
 import { REPO_URL, siteUrl } from "@/lib/site";
 import { SiteHeader } from "@/components/ui/SiteHeader";
+import { OfflineSupport } from "@/components/ui/OfflineSupport";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Saltar al contenido
         </a>
         <SiteHeader />
+        <OfflineSupport />
         <main id="contenido" className="flex-1">
           {children}
         </main>

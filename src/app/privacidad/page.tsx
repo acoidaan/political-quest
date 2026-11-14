@@ -35,6 +35,11 @@ export default function PrivacidadPage() {
           copia en ningún otro lugar.
         </li>
         <li>
+          Para que la web funcione sin conexión, tu navegador guarda una copia
+          de sus páginas públicas (las mismas para todo el mundo). Esa copia no
+          contiene tus respuestas.
+        </li>
+        <li>
           La tarjeta compartible se genera también en tu dispositivo y solo
           contiene tus puntuaciones por eje; compartirla es decisión tuya.
         </li>
