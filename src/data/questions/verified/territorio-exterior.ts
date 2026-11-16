@@ -29,6 +29,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.5, explanation: "Mantiene la autonomía tributaria dentro de las competencias actuales y rechaza fragmentar la gestión de los tributos del Estado (medida 18); no amplía su capacidad recaudatoria." }
     ),
     ne26("vox"),
+    ne26("psoe"),
   ]),
   verify(base("ter_002"), [
     vp(
@@ -60,6 +61,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       41,
       "Igualar las oportunidades para todos los alumnos españoles: unificar currículo, evaluaciones nacionales e inspección.",
       { confidence: 0.5, explanation: "Posición derivada: unifica currículo, evaluaciones e inspección educativas y garantiza servicios iguales en toda España, sin plantear expresamente la devolución de competencias al Estado." }
+    ),
+    vp26(
+      "psoe",
+      "oppose",
+      91,
+      "el reto no es recentralizar ni fragmentar, sino hacer que el Estado autonómico funcione mejor",
+      { confidence: 0.75 }
     ),
   ]),
   verify(base("cat_001"), [
@@ -130,6 +138,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         "Ilegalización de los partidos políticos, asociaciones u organizaciones de cualquier tipo que atenten contra la soberanía e independencia de España, su unidad e integridad territorial.",
         { confidence: 0.7, explanation: "Posición derivada: no menciona un referéndum pactado, pero propone ilegalizar a quien atente contra la unidad de España." }
       ),
+      ne26("psoe"),
     ]
   ),
   axesOnly(
@@ -138,6 +147,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     [
       ne26("pp", "Su programa del 29N no menciona el concierto económico vasco-navarro; la medida 101 se refiere a las comunidades del régimen común."),
       ne26("vox"),
+      ne26("psoe"),
     ]
   ),
   axesOnly(
@@ -146,6 +156,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     [
       ne26("pp", "Su programa del 29N no aborda la forma de Estado más allá de una mención genérica a la monarquía parlamentaria en la introducción (pág. 8)."),
       ne26("vox", "Su programa del 29N protege la Corona como símbolo (pág. 56), pero no aborda la forma de Estado."),
+      ne26("psoe"),
     ]
   ),
   axesOnly(
@@ -154,6 +165,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     [
       ne26("pp", "Su programa del 29N no aborda la forma de Estado más allá de una mención genérica a la monarquía parlamentaria en la introducción (pág. 8)."),
       ne26("vox", "Su programa del 29N protege la Corona como símbolo (pág. 56), pero no aborda la forma de Estado."),
+      ne26("psoe"),
     ]
   ),
   axesOnly(
@@ -162,6 +174,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     [
       ne26("pp"),
       ne26("vox"),
+      vp26(
+        "psoe",
+        "strongly_support",
+        27,
+        "Reformar la Constitución Española para que la vivienda se considere un derecho fundamental, permitiendo así que la ciudadanía pueda exigir su cumplimiento a los poderes públicos.",
+        { confidence: 0.9, explanation: "También propone proteger como derechos fundamentales la salud y la vivienda (pág. 89)." }
+      ),
     ]
   ),
   verify(base("ter_003"), [
@@ -183,6 +202,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.7, explanation: "Refuerza las diputaciones y crea un Estatuto de los Pequeños Municipios en lugar de suprimirlos o fusionarlos." }
     ),
     ne26("vox"),
+    vp26(
+      "psoe",
+      "conditional_opposition",
+      "91-92",
+      "Actualizaremos la Ley Reguladora de las Bases del Régimen Local para clarificar las competencias municipales y el papel de diputaciones, cabildos, consejos insulares y áreas metropolitanas",
+      { confidence: 0.5, explanation: "Posición derivada: mantiene las diputaciones y refuerza la financiación local; no plantea suprimirlas ni fusionar municipios." }
+    ),
   ]),
   verify(base("ue_001"), [
     vp(
@@ -209,6 +235,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne("pp"),
     ne26("pp", "Su programa del 29N defiende compras conjuntas de defensa (medida 236), pero no aborda impuestos ni deuda europeos comunes."),
     ne26("vox"),
+    vp26(
+      "psoe",
+      "strongly_support",
+      109,
+      "Hacer de la Unión Europea no solo un mercado único, sino una auténtica unión política y fiscal",
+      { confidence: 0.85, explanation: "Además propone centralizar parte de la emisión de deuda pública en un Mecanismo Soberano Europeo (pág. 111)." }
+    ),
   ]),
   verify(base("ue_002"), [
     vp(
@@ -241,6 +274,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ),
     ne26("pp", "Su programa del 29N no propone recuperar competencias de la UE; solo pide una pausa de un año en la aprobación de normas europeas (medida 7)."),
     ne26("vox", "Su programa del 29N propone revertir normativas inspiradas en el Pacto Verde Europeo (págs. 11-12, 29 y 33), sin plantear expresamente recuperar competencias de la UE."),
+    vp26(
+      "psoe",
+      "oppose",
+      109,
+      "Hacer de la Unión Europea no solo un mercado único, sino una auténtica unión política y fiscal",
+      { confidence: 0.6, explanation: "Posición derivada: propone más integración europea, no recuperar competencias." }
+    ),
   ]),
   verify(base("ue_003"), [
     vp(
@@ -276,6 +316,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.6, explanation: "Posición derivada: articula su política migratoria con los instrumentos europeos (Pacto Europeo, Reglamento Europeo de Retornos, Frontex)." }
     ),
     ne26("vox"),
+    vp26(
+      "psoe",
+      "oppose",
+      110,
+      "Defender una política migratoria europea ordenada, basada en la solidaridad, la responsabilidad, las necesidades del mercado de trabajo europeo y el respeto de los derechos humanos",
+      { confidence: 0.6, explanation: "Posición derivada: defiende una política migratoria común europea." }
+    ),
   ]),
   verify(base("ue_004"), [
     vp(
@@ -302,6 +349,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne("pp"),
     ne26("pp"),
     ne26("vox"),
+    vp26(
+      "psoe",
+      "strongly_support",
+      109,
+      "superando los bloqueos de la unanimidad y reforzando el Parlamento Europeo.",
+      { confidence: 0.75, explanation: "Lo plantea para el conjunto de la Unión, no solo para la política exterior." }
+    ),
   ]),
   verify(base("ue_005"), [
     vp(
@@ -334,6 +388,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.5, explanation: "Refuerza el pilar europeo dentro de la OTAN y las compras conjuntas de defensa (medida 236), sin integrar la defensa en estructuras militares europeas comunes." }
     ),
     ne26("vox"),
+    vp26(
+      "psoe",
+      "support",
+      110,
+      "Impulsar la Unión Europea de la defensa, reforzando la autonomía estratégica y militar de Europa",
+      { confidence: 0.75 }
+    ),
   ]),
   verify(base("ota_001"), [
     vp(
@@ -372,6 +433,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.85 }
     ),
     ne26("vox", "Su programa del 29N no menciona la OTAN."),
+    ne26("psoe", "Su programa del 29N no menciona la OTAN; rechaza elevar el gasto militar al 5% del PIB (pág. 105)."),
   ]),
   verify(base("def_001"), [
     vp(
@@ -416,6 +478,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Aumento de la inversión en Defensa",
       { confidence: 0.7, explanation: "Aumenta la inversión en defensa sin fijar una cifra sobre el PIB." }
     ),
+    ne26("psoe", "Su programa del 29N rechaza elevar el gasto militar al 5% del PIB (pág. 105) y propone hacer más eficiente la inversión en defensa (pág. 112), sin fijar un objetivo de gasto."),
   ]),
   verify(base("def_002"), [
     vp(
@@ -430,6 +493,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne("vox"),
     ne26("pp"),
     ne26("vox"),
+    ne26("psoe", "Su programa del 29N recuerda el embargo de armas a Israel aprobado por el Gobierno (pág. 105), sin proponer una regla general sobre el comercio de armas."),
   ]),
   axesOnly(
     base("ext_001"),
@@ -443,6 +507,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         { confidence: 0.6, explanation: "Apoya una solución en el marco de Naciones Unidas sin mencionar el referéndum de autodeterminación." }
       ),
       ne26("vox"),
+      ne26("psoe"),
     ]
   ),
   verify(base("ene_001"), [
@@ -458,6 +523,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne("vox"),
     ne26("pp"),
     ne26("vox"),
+    ne26("psoe"),
   ]),
   verify(base("ene_002"), [
     vp(
@@ -484,6 +550,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Fin a las restricciones para poder explorar, investigar y explotar nuestros recursos naturales y yacimientos minerales.",
       { confidence: 0.9 }
     ),
+    ne26("psoe", "Su programa del 29N propone una nueva Ley de Minas «alineada con la transición ecológica» (pág. 66), sin pronunciarse sobre la eliminación de trabas a la exploración."),
   ]),
   verify(base("nuc_001"), [
     vp(
@@ -528,6 +595,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Recuperar urgentemente el plan nuclear nacional. Se garantizará la supervivencia de las centrales nucleares actuales, derogando el calendario de cierre.",
       { confidence: 0.95, explanation: "Además propone estudiar nuevas centrales en los emplazamientos adyacentes a las actuales." }
     ),
+    vp26(
+      "psoe",
+      "oppose",
+      66,
+      "Mantener el calendario de cierre de las centrales nucleares hasta 2035",
+      { confidence: 0.85, explanation: "Posición derivada: mantiene el calendario de cierre, lo contrario de prolongar su vida." }
+    ),
   ]),
   verify(base("nuc_002"), [
     vp(
@@ -570,6 +644,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "strongly_oppose",
       12,
       "Recuperar urgentemente el plan nuclear nacional. Se garantizará la supervivencia de las centrales nucleares actuales, derogando el calendario de cierre.",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "psoe",
+      "strongly_support",
+      66,
+      "Mantener el calendario de cierre de las centrales nucleares hasta 2035",
       { confidence: 0.95 }
     ),
   ]),
@@ -616,6 +697,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Acabar con todas las imposiciones climáticas como el Pacto Verde que castigan nuestra industria, nuestro campo o que coartan la libertad de circulación de los españoles, como la imposición de ZBE.",
       { confidence: 0.85 }
     ),
+    vp26(
+      "psoe",
+      "support",
+      73,
+      "Defender y profundizar el Pacto Verde Europeo, garantizando que la simplificación administrativa no suponga una reducción de la ambición climática",
+      { confidence: 0.65, explanation: "Mantiene la ambición climática y propone abandonar progresivamente los combustibles fósiles (pág. 65), sin plantear endurecer los objetivos de reducción." }
+    ),
   ]),
   verify(base("cli_002"), [
     vp(
@@ -648,6 +736,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Acabar con todas las imposiciones climáticas como el Pacto Verde que castigan nuestra industria, nuestro campo o que coartan la libertad de circulación de los españoles, como la imposición de ZBE.",
       { confidence: 0.9 }
     ),
+    vp26(
+      "psoe",
+      "strongly_support",
+      71,
+      "Impulsar las Zonas de Bajas Emisiones y la movilidad sostenible en las ciudades",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("agr_001"), [
     vp(
@@ -673,6 +768,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       34,
       "Garantizar su autonomía presupuestaria y el fin de las exigencias burocráticas y medioambientales derivadas del fanatismo climático.",
       { confidence: 0.9, explanation: "Se refiere a la PAC." }
+    ),
+    vp26(
+      "psoe",
+      "conditional_opposition",
+      "69-70",
+      "Facilitar la gestión administrativa de las explotaciones agrarias, reduciendo cargas burocráticas y desarrollando nuevas herramientas digitales de asesoramiento que permitan simplificar la relación de agricultores y ganaderos con la administración sin menoscabar las garantías ambientales, sanitarias y laborales.",
+      { confidence: 0.6, explanation: "Simplifica la gestión administrativa de las explotaciones sin rebajar las garantías ambientales." }
     ),
   ]),
   verify(base("med_001"), [
@@ -718,6 +820,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "así como para impulsar y modernizar los regadíos y la producción de energía.",
       { confidence: 0.5, explanation: "Posición derivada: plantea impulsar los regadíos con un Plan Nacional del Agua que interconecte las cuencas, sin mencionar restricciones en acuíferos sobreexplotados." }
     ),
+    vp26(
+      "psoe",
+      "neutral_or_unclear",
+      68,
+      "Modernizar los regadíos, mejorando la eficiencia hídrica y energética sin aumentar el consumo total de agua.",
+      { confidence: 0.5, explanation: "Propone bancos públicos de agua para prevenir la sobreexplotación de los acuíferos, sin plantear restringir los regadíos existentes." }
+    ),
   ]),
   verify(base("tpt_001"), [
     vp(
@@ -738,6 +847,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne("vox"),
     ne26("pp"),
     ne26("vox"),
+    vp26(
+      "psoe",
+      "support",
+      71,
+      "Consolidar un sistema integrado de transporte público con financiación estable, tarifas sencillas y asequibles",
+      { confidence: 0.75, explanation: "Mantiene además los programas de movilidad para jóvenes; no concreta la gratuidad de los abonos." }
+    ),
   ]),
   verify(base("fis_001"), [
     vp(
@@ -770,6 +886,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Revertir las normativas que atacan frontalmente a la industria nacional (prohibición de motores de combustión, impuestos a las emisiones de CO2)",
       { confidence: 0.75, explanation: "Posición derivada: propone revertir los impuestos a las emisiones de CO2, lo contrario de subir los de los combustibles fósiles." }
     ),
+    ne26("psoe", "Su programa del 29N propone reorientar la fiscalidad para abaratar las tecnologías limpias (pág. 66) y una tasa a los viajes de lujo (pág. 48), sin plantear subir los impuestos a los combustibles fósiles."),
   ]),
   verify(base("dig_001"), [
     vp(
@@ -808,6 +925,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Fin de la cita previa. Derecho a ser atendido presencialmente en cualquier oficina pública de forma inmediata sin necesidad de solicitar turno por internet.",
       { confidence: 0.9 }
     ),
+    vp26(
+      "psoe",
+      "strongly_support",
+      101,
+      "Garantizar que toda persona pueda ser atendida por un empleado público, en persona o por teléfono, sin cita previa obligatoria",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("ia_001"), [
     vp(
@@ -840,6 +964,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.4, explanation: "Exige supervisión humana en las decisiones automatizadas que afecten a derechos, pero no auditorías públicas e independientes." }
     ),
     ne26("vox"),
+    vp26(
+      "psoe",
+      "strongly_support",
+      96,
+      "Establecer auditorías independientes de los sistemas de IA que afecten a derechos",
+      { confidence: 0.8, explanation: "Se refiere a todos los sistemas de IA que afecten a derechos, no solo a los de las administraciones." }
+    ),
   ]),
   verify(base("ia_002"), [
     vp(
@@ -872,5 +1003,12 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.7, explanation: "Aplica el marco europeo sin cargas nacionales añadidas y una AESIA que «acompañará a las empresas» en lugar de limitarse a vigilarlas." }
     ),
     ne26("vox", "Su programa del 29N impulsa la adopción de la inteligencia artificial (pág. 27), sin pronunciarse sobre la intensidad de su regulación."),
+    vp26(
+      "psoe",
+      "support",
+      96,
+      "Aprobar la Ley para el buen uso y la gobernanza de la inteligencia artificial.",
+      { confidence: 0.7, explanation: "Prevé supervisión humana, etiquetado obligatorio y sanciones de hasta 35 millones de euros, sin pronunciarse sobre su efecto en la adopción." }
+    ),
   ]),
 ];

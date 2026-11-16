@@ -48,6 +48,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Prohibición de las regularizaciones masivas. Quien entra de forma ilegal jamás podrá regularizar su situación.",
       { confidence: 0.95 }
     ),
+    ne26("psoe"),
   ]),
   verify(base("inm_002"), [
     vp(
@@ -92,6 +93,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Supresión de la institución del arraigo como forma de atajar la inmigración ilegal",
       { confidence: 0.8 }
     ),
+    vp26(
+      "psoe",
+      "oppose",
+      92,
+      "simplificar los trámites, dar seguridad jurídica, impulsar la contratación en origen, agilizar la homologación de títulos y facilitar el acceso al empleo",
+      { confidence: 0.6, explanation: "Posición derivada: propone simplificar los trámites de extranjería, no endurecer los requisitos." }
+    ),
   ]),
   verify(base("inm_003"), [
     vp(
@@ -130,6 +138,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Deportación de quienes cometan delitos graves o hagan del delito leve su forma de vida",
       { confidence: 0.85 }
     ),
+    ne26("psoe"),
   ]),
   verify(base("inm_004"), [
     vp(
@@ -165,6 +174,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.4, explanation: "Se compromete a aplicar el Pacto Europeo de Migración y Asilo, pero no se pronuncia sobre cuotas obligatorias de reparto." }
     ),
     ne26("vox"),
+    ne26("psoe", "Su programa del 29N defiende una política migratoria europea «basada en la solidaridad» (pág. 110), sin pronunciarse sobre cuotas obligatorias de reparto."),
   ]),
   verify(base("inm_005"), [
     vote("psoe", "strongly_support", {
@@ -237,6 +247,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Militarización de la frontera para repeler cualquier intento futuro de invasión o ataque híbrido.",
       { confidence: 0.9 }
     ),
+    ne26("psoe"),
   ]),
   verify(base("nac_001"), [
     vp(
@@ -269,6 +280,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Endurecimiento de los requisitos de adquisición de la nacionalidad española.",
       { confidence: 0.8, explanation: "Además revoca las «pasarelas rápidas para adquirir la nacionalidad española»." }
     ),
+    ne26("psoe"),
   ]),
   verify(base("seg_001"), [
     vp(
@@ -307,6 +319,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.65, explanation: "Prioriza los juicios rápidos y la tramitación conjunta de delitos leves; endurece la pena solo para los violadores reincidentes (prisión permanente revisable, medida 30)." }
     ),
     ne26("vox"),
+    ne26("psoe"),
   ]),
   verify(base("seg_002"), [
     vp(
@@ -376,6 +389,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.55, explanation: "Posición derivada: endurece las sanciones de seguridad ciudadana por vandalismo y desórdenes; no menciona las manifestaciones no comunicadas ni la grabación de agentes." }
     ),
     ne26("vox"),
+    vp26(
+      "psoe",
+      "support",
+      99,
+      "Aprobar una nueva Ley de Seguridad Ciudadana que sustituya a la Ley Orgánica 4/2015, garantizando los derechos de reunión y manifestación, un régimen sancionador preciso",
+      { confidence: 0.7, explanation: "No se refiere expresamente a la grabación de agentes." }
+    ),
   ]),
   verify(base("jus_001"), [
     vp(
@@ -420,6 +440,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Modificar la Ley Orgánica del Poder Judicial para que los doce vocales de procedencia judicial del Consejo General del Poder Judicial sean elegidos mediante voto personal, directo y secreto por y entre los propios jueces y magistrados",
       { confidence: 0.95 }
     ),
+    ne26("psoe", "Su programa del 29N no aborda el sistema de elección del CGPJ."),
   ]),
   verify(base("jus_002"), [
     vp(
@@ -464,6 +485,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Los que cometen los peores delitos deben tener las máximas condenas.",
       { confidence: 0.65, explanation: "Posición derivada: amplía la prisión permanente revisable y rebaja la edad de responsabilidad penal; no menciona la reinserción." }
     ),
+    ne26("psoe"),
   ]),
   axesOnly(
     base("pri_001"),
@@ -483,6 +505,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
         "Fin de los privilegios penitenciarios de los condenados por terrorismo.",
         { confidence: 0.7, explanation: "La restricción se concreta para los condenados por terrorismo, no para todos los delitos graves." }
       ),
+      ne26("psoe"),
     ]
   ),
   verify(base("lib_001"), [
@@ -504,6 +527,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Dotar de la máxima protección jurídica a los símbolos de la Nación, especialmente la Bandera, el Escudo y el Himno o la Corona. Las penas por las ofensas y ultrajes a España y sus símbolos o emblemas deben agravarse para que ninguna afrenta a ellos quede impune.",
       { confidence: 0.8, explanation: "Propone agravar las penas por ofensas a la Corona; no se refiere a las ofensas a los sentimientos religiosos." }
     ),
+    ne26("psoe"),
   ]),
   axesOnly(
     base("prv_001"),
@@ -511,6 +535,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
     [
       ne26("pp", "Su programa del 29N prevé financiar videovigilancia municipal (medida 27), pero no menciona el reconocimiento facial."),
       ne26("vox"),
+      ne26("psoe"),
     ]
   ),
 ];

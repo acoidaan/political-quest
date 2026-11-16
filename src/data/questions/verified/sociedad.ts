@@ -36,6 +36,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Garantizar la sostenibilidad del sistema sanitario dotándolo de los medios necesarios para atender las necesidades de los españoles",
       { confidence: 0.5, explanation: "Promete dotar de medios a la sanidad, pero el programa propone una rebaja masiva de impuestos y no plantea subirlos para financiarla." }
     ),
+    vp26(
+      "psoe",
+      "support",
+      49,
+      "consolidando una financiación pública de la sanidad en torno al 7% del PIB",
+      { confidence: 0.7, explanation: "Fija un objetivo de gasto sanitario y lo vincula a una fiscalidad progresiva (pág. 47), sin concretar subidas de impuestos para la sanidad." }
+    ),
   ]),
   verify(base("san_002"), [
     vp(
@@ -61,6 +68,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       37,
       "Fomento de la colaboración público-privada cuando ayude efectivamente a reducir demoras, con transparencia, evaluación de calidad y control del gasto.",
       { confidence: 0.75 }
+    ),
+    vp26(
+      "psoe",
+      "oppose",
+      49,
+      "Limitar la privatización de la sanidad estableciendo la gestión directa como modalidad preferente en la prestación sanitaria.",
+      { confidence: 0.8 }
     ),
   ]),
   verify(base("san_003"), [
@@ -106,6 +120,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Refuerzo de la Estrategia Nacional de Salud Mental.",
       { confidence: 0.55, explanation: "Refuerza la estrategia de salud mental sin concretar más profesionales." }
     ),
+    vp26(
+      "psoe",
+      "strongly_support",
+      50,
+      "reforzaremos la presencia de profesionales de psicología clínica en el Sistema Nacional de Salud, especialmente en atención primaria",
+      { confidence: 0.9 }
+    ),
   ]),
   axesOnly(
     base("san_004"),
@@ -113,6 +134,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     [
       ne26("pp", "Su programa del 29N no aborda la desgravación del seguro sanitario privado."),
       ne26("vox"),
+      ne26("psoe"),
     ]
   ),
   verify(base("edu_001"), [
@@ -146,6 +168,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Garantizar la libre elección de centro educativo en todos los niveles para que las familias elijan libremente el modelo educativo que desean, sin que su situación económica o social sea un impedimento para ello.",
       { confidence: 0.6, explanation: "Posición derivada: la libre elección de centro sin barreras económicas implica sostener la financiación de la concertada; no la menciona expresamente." }
     ),
+    ne26("psoe"),
   ]),
   axesOnly(
     base("edu_002"),
@@ -153,6 +176,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     [
       ne26("pp", "Su programa del 29N no aborda la asignatura de religión."),
       ne26("vox"),
+      ne26("psoe"),
     ]
   ),
   verify(base("edu_003"), [
@@ -186,6 +210,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Se garantizará la educación en español en todo el territorio nacional.",
       { confidence: 0.75, explanation: "Garantiza la educación en español en todo el territorio; no lo plantea como elección de las familias." }
     ),
+    ne26("psoe"),
   ]),
   verify(base("edu_004"), [
     vp(
@@ -211,6 +236,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       41,
       "Eliminación de contenidos ideológicos ajenos a las materias académicas.",
       { confidence: 0.5, explanation: "Posición derivada: propone eliminar los contenidos ideológicos, sin mencionar la autorización previa de los padres." }
+    ),
+    vp26(
+      "psoe",
+      "oppose",
+      83,
+      "Garantizar la coeducación y la educación afectivo-sexual obligatorias en todas las etapas educativas",
+      { confidence: 0.6, explanation: "Posición derivada: hace obligatoria la educación afectivo-sexual en todas las etapas, sin prever una autorización previa de los padres." }
     ),
   ]),
   verify(base("uni_001"), [
@@ -256,6 +288,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Mejorar el sistema de becas en las etapas universitaria y preuniversitaria",
       { confidence: 0.6, explanation: "Mejora las becas, pero no propone reducir las tasas universitarias." }
     ),
+    vp26(
+      "psoe",
+      "strongly_support",
+      54,
+      "Impulsar la gratuidad de la matrícula del primer curso de grado en las universidades públicas de todo el país.",
+      { confidence: 0.85, explanation: "Además propone un nuevo modelo de becas (pág. 54)." }
+    ),
   ]),
   verify(base("igu_001"), [
     vp(
@@ -288,6 +327,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne26("pp"),
     ne26("vox"),
+    vp26(
+      "psoe",
+      "support",
+      78,
+      "Reforzar la transparencia retributiva y la igualdad salarial, revisando categorías profesionales y complementos que infravaloran los trabajos feminizados",
+      { confidence: 0.6, explanation: "Refuerza la transparencia retributiva y la Inspección de Trabajo, sin mencionar expresamente las auditorías salariales." }
+    ),
   ]),
   verify(base("gen_001"), [
     vp(
@@ -332,6 +378,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Derogar las leyes que han criminalizado a los hombres y desprotegido a las mujeres. Las leyes de género no han contribuido a proteger a las mujeres o reducir el número de víctimas",
       { confidence: 0.85, explanation: "Propone sustituirlas por normas «que protejan de verdad a las mujeres víctimas de violencia»." }
     ),
+    vp26(
+      "psoe",
+      "strongly_support",
+      84,
+      "Incorporar las violencias digitales a la Ley Integral contra la Violencia de Género",
+      { confidence: 0.85, explanation: "Además propone una Ley Orgánica contra la Violencia Vicaria «como manifestación de la violencia de género» (pág. 82)." }
+    ),
   ]),
   verify(base("gen_002"), [
     vp(
@@ -364,6 +417,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.95 }
     ),
     ne26("vox", "Su programa del 29N exige criterios biológicos en el deporte femenino (pág. 43), pero no aborda el cambio de sexo registral."),
+    vp26(
+      "psoe",
+      "support",
+      97,
+      "Garantizar que la Ley 4/2023 sea el suelo común de derechos de las personas LGTBI en toda España",
+      { confidence: 0.65, explanation: "Posición derivada: blinda la Ley 4/2023, que regula la rectificación registral del sexo por declaración propia; no menciona expresamente ese procedimiento." }
+    ),
   ]),
   verify(base("lgb_001"), [
     vp(
@@ -396,6 +456,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne26("pp", "Su programa del 29N se compromete a seguir luchando contra la LGTBIfobia (medida 111), pero no menciona el matrimonio ni la adopción."),
     ne26("vox"),
+    vp26(
+      "psoe",
+      "strongly_support",
+      89,
+      "garantizando la máxima protección jurídica del matrimonio igualitario",
+      { confidence: 0.9, explanation: "También impulsa la adopción internacional para familias LGTBI (pág. 97)." }
+    ),
   ]),
   verify(base("lgb_002"), [
     vote("psoe", "support", {
@@ -480,6 +547,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Todos los beneficios que ahora existen para las familias numerosas se aumentarán y se extenderán a todas las familias de manera progresiva desde el primer hijo, intensificando las ayudas y bonificaciones en función del número de hijos.",
       { confidence: 0.8 }
     ),
+    vp26(
+      "psoe",
+      "strongly_support",
+      56,
+      "Prestación estatal por crianza para todos los hogares con menores de edad",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("abo_001"), [
     vp(
@@ -518,6 +592,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Defensa del derecho a la vida desde su concepción hasta la muerte natural y fin de la cultura de la muerte.",
       { confidence: 0.7, explanation: "Posición derivada: defiende el derecho a la vida «desde su concepción»; no menciona expresamente el aborto." }
     ),
+    vp26(
+      "psoe",
+      "strongly_support",
+      81,
+      "Blindar constitucionalmente el derecho a la interrupción voluntaria del embarazo.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("abo_002"), [
     vp(
@@ -550,6 +631,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne26("pp", "Su programa del 29N no menciona el aborto."),
     ne26("vox"),
+    vp26(
+      "psoe",
+      "strongly_oppose",
+      77,
+      "Hemos reformado la legislación para garantizar el acceso al aborto de las jóvenes de 16 y 17 años sin consentimiento paterno",
+      { confidence: 0.75, explanation: "Lo presenta como un logro propio y propone blindar el derecho al aborto (pág. 81)." }
+    ),
   ]),
   verify(base("eut_001"), [
     vp(
@@ -594,6 +682,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Defensa del derecho a la vida desde su concepción hasta la muerte natural y fin de la cultura de la muerte.",
       { confidence: 0.7, explanation: "Posición derivada: defiende la vida «hasta la muerte natural» y potenciar los cuidados paliativos; no menciona expresamente la eutanasia." }
     ),
+    vp26(
+      "psoe",
+      "strongly_support",
+      50,
+      "Garantizar la muerte digna y el ejercicio efectivo del derecho a la eutanasia, de acuerdo con la legislación vigente.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("rel_001"), [
     vp(
@@ -608,6 +703,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne("sumar"),
     ne26("pp"),
     ne26("vox"),
+    ne26("psoe"),
   ]),
   verify(base("rel_002"), [
     vp(
@@ -628,6 +724,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Protección de nuestros usos y costumbres y de las tradiciones religiosas y populares de España, frente a cualquier intento de imposición ideológica o de oposición extranjera.",
       { confidence: 0.65, explanation: "Protege las tradiciones religiosas, sin referirse expresamente a símbolos en instituciones públicas." }
     ),
+    ne26("psoe"),
   ]),
   verify(base("cul_001"), [
     vp(
@@ -660,6 +757,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Defensa de la Tauromaquia y promoción de la difusión del arte taurino y potenciación del conjunto de actividades alrededor de esta tradición.",
       { confidence: 0.8, explanation: "Posición derivada: propone promover la tauromaquia, lo contrario de retirarle el apoyo público." }
     ),
+    ne26("psoe", "Su programa del 29N propone retirar la financiación pública a prácticas que amparen el maltrato animal (pág. 73), sin mencionar la tauromaquia."),
   ]),
   verify(base("cul_002"), [
     vp(
@@ -692,6 +790,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Defensa de la Tauromaquia y promoción de la difusión del arte taurino y potenciación del conjunto de actividades alrededor de esta tradición.",
       { confidence: 0.9, explanation: "También defiende la caza «como actividad esencial» (pág. 35)." }
     ),
+    ne26("psoe", "Su programa del 29N propone retirar la financiación pública a prácticas que amparen el maltrato animal (pág. 73), sin mencionar la tauromaquia ni la caza."),
   ]),
   verify(base("mpu_001"), [
     vp(
@@ -718,5 +817,6 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Limpiar RTVE de comisarios políticos, acabar con el despilfarro y ponerla al servicio de los españoles.",
       { confidence: 0.5, explanation: "Posición derivada: propone reformar RTVE y «acabar con el despilfarro», sin pronunciarse sobre su modelo de financiación." }
     ),
+    ne26("psoe"),
   ]),
 ];

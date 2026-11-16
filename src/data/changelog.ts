@@ -24,6 +24,15 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-16",
+    kind: "datos",
+    title: "Programa del PSOE para el 29-N incorporado a la comparación",
+    details: [
+      "Las posiciones del PSOE proceden ahora de su programa «La fuerza de seguir avanzando» (15 de noviembre de 2026), con cita literal y página en las 86 propuestas que se basaban en su programa de 2023. Las posiciones de 2023 se conservan como historial.",
+      "En las propuestas que el nuevo programa del PSOE no aborda, pasa a «evidencia insuficiente» y esa pregunta deja de puntuar en la comparación con el PSOE. Las cuatro posiciones basadas en votaciones del Congreso o en el BOE se mantienen.",
+    ],
+  },
+  {
     date: "2026-11-14",
     kind: "web",
     title: "La web funciona sin conexión tras la primera visita",
