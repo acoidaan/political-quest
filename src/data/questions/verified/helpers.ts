@@ -81,6 +81,10 @@ const PROGRAMS: Record<PartyId, Omit<Source, "page">> = {
  *   voxespana.es bloquea el acceso automatizado a sus páginas, pero no al
  *   PDF: el archivo descargado de la URL de abajo es idéntico byte a byte al
  *   que el mantenedor obtuvo manualmente.
+ * - PSOE: «La fuerza de seguir avanzando» (114 pp., 500 compromisos),
+ *   presentado el 2026-11-15. psoe.es filtra el acceso automatizado: el PDF se
+ *   descargó de la URL de abajo con un navegador (Playwright) el 2026-11-16.
+ *   Hay una captura de esa URL en Wayback Machine del mismo día.
  */
 export const VERIFIED_AT_2026 = "2026-11-11";
 
@@ -99,12 +103,20 @@ const PROGRAMS_2026: Record<PartyId, Omit<Source, "page">> = {
     date: "2026-11-12",
     verifiedAt: "2026-11-13",
   },
+  psoe: {
+    type: "electoral_program",
+    document: "Programa electoral PSOE 29N 2026 — «La fuerza de seguir avanzando»",
+    url: "https://www.psoe.es/media-content/2026/11/PROGRAMAPSOE29N26.pdf",
+    date: "2026-11-15",
+    verifiedAt: "2026-11-16",
+  },
 };
 
 /** Fecha de publicación del programa del 29N, por partido (= validFrom). */
 const PROGRAM_2026_FROM: Record<PartyId, string> = {
   pp: "2026-11-10",
   vox: "2026-11-12",
+  psoe: "2026-11-15",
 };
 
 function program2026(party: PartyId): Omit<Source, "page"> {

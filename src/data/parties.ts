@@ -21,7 +21,7 @@ export const PARTIES: Party[] = [
     fullName: "Partido Socialista Obrero Español",
     color: "#d13a3a",
     active: true,
-    positionCycle: "2023-2026",
+    positionCycle: "2026 (29N)",
   },
   {
     id: "vox",

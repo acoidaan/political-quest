@@ -66,7 +66,9 @@ export const CURRENT_ELECTION: Election = {
   campaign: { from: "2026-11-13", to: "2026-11-27" },
 };
 
-const CHECKED = "2026-11-13";
+const CHECKED = "2026-11-16";
+/** Webs cuyas páginas bloquean hoy el acceso automatizado (Cloudflare). */
+const LAST_READABLE = "2026-11-13";
 /** Candidaturas sin web oficial registrada que revisar. */
 const PREVIOUS_CHECK = "2026-10-22";
 /** Webs que bloquean el acceso automatizado; última lectura, manual. */
@@ -137,8 +139,14 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "PSOE",
     scope: "Estatal",
     officialWebsite: "https://www.psoe.es",
-    programStatus: "pending",
-    documents: [],
+    programStatus: "incorporated",
+    documents: [
+      {
+        title: "La fuerza de seguir avanzando. Programa elecciones generales 29 noviembre 2026",
+        url: "https://www.psoe.es/media-content/2026/11/PROGRAMAPSOE29N26.pdf",
+        date: "2026-11-15",
+      },
+    ],
     lastChecked: CHECKED,
   },
   {
@@ -164,7 +172,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
         date: "2026-11-12",
       },
     ],
-    lastChecked: CHECKED,
+    lastChecked: LAST_READABLE,
   },
   // ------------------------------------------------------------- territoriales
   {
@@ -244,7 +252,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
         date: "2026-11-10",
       },
     ],
-    lastChecked: CHECKED,
+    lastChecked: LAST_READABLE,
   },
   {
     id: "junts",
