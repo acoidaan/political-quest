@@ -7,6 +7,7 @@ import { activeQuestions, USING_DEMO_DATA } from "@/data/questions";
 import { ACTIVE_PARTIES, PARTY_BY_ID } from "@/data/parties";
 import { categoryLabel } from "@/data/categories";
 import {
+  applyTopicImportance,
   calculatePartyAxisScores,
   calculatePartySimilarity,
   computeQuizResult,
@@ -32,8 +33,13 @@ export function PartyComparison() {
       .map((id) => byId.get(id))
       .filter((q): q is NonNullable<typeof q> => q !== undefined);
     const result = computeQuizResult(session, activeQuestions);
+    const answers = applyTopicImportance(
+      questions,
+      session.answers,
+      session.topicImportance
+    );
     const similarities = ACTIVE_PARTIES.map((party) =>
-      calculatePartySimilarity(questions, session.answers, party.id, {
+      calculatePartySimilarity(questions, answers, party.id, {
         allowUnverified: USING_DEMO_DATA,
       })
     ).sort((a, b) => b.similarity - a.similarity);

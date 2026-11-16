@@ -101,7 +101,10 @@ export default function MetodologiaPage() {
         puntuación de un eje es la <strong>media ponderada</strong> de tus
         respuestas, ponderada por |peso| × importancia editorial de la pregunta
         (1-3) × tu importancia personal declarada (×0.75 / ×1 / ×1.3 — acotada
-        para que no domine). «No tengo suficiente información»{" "}
+        para que no domine). Esa importancia puedes marcarla en cada pregunta
+        o, al final del test, por tema (Economía, Territorio…); la de una
+        pregunta concreta prevalece sobre la de su tema. La misma ponderación
+        se aplica a la coincidencia con partidos. «No tengo suficiente información»{" "}
         <strong>no es un cero</strong>: excluye la pregunta del numerador y del
         denominador.
       </p>

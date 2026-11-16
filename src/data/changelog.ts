@@ -25,6 +25,15 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 export const CHANGELOG: ChangelogEntry[] = [
   {
     date: "2026-11-16",
+    kind: "metodologia",
+    title: "Al final del test puedes indicar cuánto te importa cada tema",
+    details: [
+      "Tras la última pregunta aparece un paso opcional: para cada tema del test (Economía, Servicios públicos, Territorio…) eliges si te importa poco, lo normal o mucho.",
+      "Los temas que más te importan cuentan algo más en tus ejes y en la coincidencia con partidos, y los que menos, algo menos. Se usa el mismo multiplicador acotado que la importancia por pregunta (×0,75 / ×1 / ×1,3), y si marcaste la importancia de una pregunta concreta, esa prevalece.",
+    ],
+  },
+  {
+    date: "2026-11-16",
     kind: "datos",
     title: "Programa del PSOE para el 29-N incorporado a la comparación",
     details: [

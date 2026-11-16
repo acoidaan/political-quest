@@ -233,6 +233,11 @@ export interface QuizSession {
   /** Autopercepción 1-10 (1 izquierda, 10 derecha), opcional, descriptiva. */
   selfPlacement?: number;
   /**
+   * Importancia declarada por bloque temático al final del test (clave: grupo
+   * de la categoría). Se aplica a las preguntas sin importancia propia.
+   */
+  topicImportance?: Record<string, PersonalImportance>;
+  /**
    * Predicción del usuario, antes de la revelación, del partido cuyas
    * posiciones se parecerán más a sus respuestas ("none" = prefirió no
    * adivinar). Solo es un juego descriptivo: no altera ningún cálculo.
