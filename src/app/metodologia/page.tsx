@@ -251,7 +251,11 @@ export default function MetodologiaPage() {
             oficiales de votaciones y Diario de Sesiones: ley de amnistía
             30/05/2024, Ley 4/2023 trans-LGTBI 22/12/2022, RDL 7/2018 de acceso
             universal al SNS 06/09/2018) y <strong>documentos del BOE</strong>{" "}
-            (STC 169/2021 sobre la prisión permanente revisable). Cada posición
+            (STC 169/2021 sobre la prisión permanente revisable). Desde
+            noviembre de 2026, las posiciones de PP, VOX, PSOE y Frente Amplio
+            (coalición que sustituye a Sumar) proceden de sus programas para
+            las elecciones del 29 de noviembre; las de 2023 se conservan como
+            historial. Cada posición
             cita documento, página o registro de la votación y un fragmento
             literal, con fecha de verificación. Las posiciones tomadas de actos
             anteriores al ciclo 2023-2026 lo indican expresamente en su

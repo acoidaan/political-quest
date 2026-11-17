@@ -66,7 +66,7 @@ export const CURRENT_ELECTION: Election = {
   campaign: { from: "2026-11-13", to: "2026-11-27" },
 };
 
-const CHECKED = "2026-11-16";
+const CHECKED = "2026-11-17";
 /** Webs cuyas páginas bloquean hoy el acceso automatizado (Cloudflare). */
 const LAST_READABLE = "2026-11-13";
 /** Candidaturas sin web oficial registrada que revisar. */
@@ -99,9 +99,16 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "Frente Amplio",
     scope: "Estatal",
     composition: "Movimiento Sumar, Izquierda Unida, Más Madrid y Comuns",
-    programStatus: "pending",
-    documents: [],
-    lastChecked: PREVIOUS_CHECK,
+    officialWebsite: "https://frenteamplio.info",
+    programStatus: "incorporated",
+    documents: [
+      {
+        title: "Un programa como una casa. Programa electoral, elecciones generales 29N 2026",
+        url: "https://frenteamplio.info/pdf/ProgramaFrenteAmplio.pdf",
+        date: "2026-11-16",
+      },
+    ],
+    lastChecked: CHECKED,
     notes: `En Las Palmas y Santa Cruz de Tenerife, IU y Sumar concurren dentro de «Unidad del Pueblo Canario UPC (NC-BC, PODEMOS, IU, SUMAR)». ${BOE_PROCLAIMED}.`,
   },
   {

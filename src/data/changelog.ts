@@ -24,6 +24,15 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-17",
+    kind: "datos",
+    title: "Frente Amplio entra en la comparación con su programa para el 29-N",
+    details: [
+      "Frente Amplio (Movimiento Sumar, Izquierda Unida, Más Madrid y Comuns) sustituye a Sumar en la comparación. Sus posiciones proceden de su programa «Un programa como una casa» (16 de noviembre de 2026), con cita literal y página en 67 de las 90 propuestas.",
+      "En las 23 propuestas que su programa no aborda figura como «evidencia insuficiente» y no puntúa en la comparación. Las posiciones de Sumar de 2023 se conservan como historial.",
+    ],
+  },
+  {
     date: "2026-11-16",
     kind: "metodologia",
     title: "Al final del test puedes indicar cuánto te importa cada tema",
