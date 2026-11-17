@@ -3,6 +3,7 @@ import { AXIS_IDS } from "./axes";
 import { discriminationScore } from "@/lib/scoring/discrimination";
 import { currentPositions } from "@/lib/scoring/positions";
 import { POSITION_VALUE } from "@/lib/types";
+import { PARTY_BY_ID } from "./parties";
 
 /**
  * Informe de balance del dataset (§24 del briefing): comprobaciones
@@ -69,13 +70,21 @@ export function generateBalanceReport(questions: Question[]): BalanceReport {
   }
 
   const warnings: string[] = [];
-  const counts = Object.values(partyPositionCounts);
+  // El desequilibrio de cobertura se mide entre los partidos estatales que se
+  // comparan: los inactivos no puntúan y los territoriales cubren por
+  // naturaleza menos propuestas de ámbito estatal (se informan, sin aviso).
+  const counts = Object.entries(partyPositionCounts)
+    .filter(([id]) => {
+      const party = PARTY_BY_ID[id];
+      return party?.active && party.scope !== "territorial";
+    })
+    .map(([, n]) => n);
   if (counts.length > 0) {
     const max = Math.max(...counts);
     const min = Math.min(...counts);
     if (min < max * 0.6)
       warnings.push(
-        "Desequilibrio de cobertura entre partidos: el menos cubierto tiene menos del 60% de posiciones que el más cubierto."
+        "Desequilibrio de cobertura entre partidos estatales activos: el menos cubierto tiene menos del 60% de posiciones que el más cubierto."
       );
   }
   const polRatio =

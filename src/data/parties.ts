@@ -50,8 +50,49 @@ export const PARTIES: Party[] = [
     active: true,
     positionCycle: "2026 (29N)",
   },
+  // Partidos de ámbito territorial con programa del 29N incorporado.
+  {
+    id: "adelante-andalucia",
+    name: "Adelante Andalucía",
+    fullName: "Adelante Andalucía",
+    color: "#0f8f6f",
+    active: true,
+    scope: "territorial",
+    positionCycle: "2026 (29N)",
+  },
+  {
+    id: "bng",
+    name: "BNG",
+    fullName: "Bloque Nacionalista Galego",
+    color: "#7b52c7",
+    active: true,
+    scope: "territorial",
+    positionCycle: "2026 (29N)",
+  },
+  {
+    id: "erc",
+    name: "ERC",
+    fullName: "Esquerra Republicana de Catalunya",
+    color: "#b07800",
+    active: true,
+    scope: "territorial",
+    positionCycle: "2026 (29N)",
+  },
+  {
+    id: "pnv",
+    name: "PNV",
+    fullName: "Partido Nacionalista Vasco (EAJ-PNV)",
+    color: "#8c5a2e",
+    // Su programa solo da evidencia en 18 de las 90 preguntas, por debajo
+    // del umbral orientativo de 20 (docs/ACTUALIZACION.md §3).
+    active: false,
+    scope: "territorial",
+    positionCycle: "2026 (29N)",
+    notes:
+      "Programa del 29N incorporado, pero solo aborda 18 de las preguntas del test: por debajo del mínimo para compararlo con garantías.",
+  },
   // Preparados para fases posteriores (inactivos hasta tener posiciones
-  // verificadas): podemos, erc, junts, ehbildu, pnv, bng, cc, upn.
+  // verificadas): podemos, junts, ehbildu, cc, upn.
 ];
 
 export const ACTIVE_PARTIES = PARTIES.filter((p) => p.active);

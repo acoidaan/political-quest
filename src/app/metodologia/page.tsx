@@ -252,7 +252,9 @@ export default function MetodologiaPage() {
             noviembre de 2026, las posiciones de PP, VOX, PSOE y Frente Amplio
             (coalición que sustituye a Sumar) proceden de sus programas para
             las elecciones del 29 de noviembre; las de 2023 se conservan como
-            historial. Cada posición
+            historial. También se comparan Adelante Andalucía, BNG y ERC con sus
+            programas del 29-N (las citas en gallego y catalán se reproducen en
+            el idioma original). Cada posición
             cita documento, página o registro de la votación y un fragmento
             literal, con fecha de verificación. Las posiciones tomadas de actos
             anteriores al ciclo 2023-2026 lo indican expresamente en su

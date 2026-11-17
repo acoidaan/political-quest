@@ -187,7 +187,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "Adelante Andalucía",
     scope: "Andalucía",
     officialWebsite: "https://adelanteandalucia.org",
-    programStatus: "published",
+    programStatus: "incorporated",
     documents: [
       {
         title: "Programa electoral 29N — «Un programa para frenar a las derechas»",
@@ -195,6 +195,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
         date: "2026-11-10",
       },
     ],
+    notes: "El 2026-11-16 se publicó en la misma URL una versión revisada, que es la que se cita.",
     lastChecked: CHECKED,
   },
   {
@@ -202,7 +203,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "BNG",
     scope: "Galicia",
     officialWebsite: "https://www.bng.gal",
-    programStatus: "published",
+    programStatus: "incorporated",
     documents: [
       {
         title: "Programa electoral. 29N. Xerais 2026",
@@ -251,7 +252,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "ERC",
     scope: "Cataluña",
     officialWebsite: "https://www.esquerra.cat",
-    programStatus: "published",
+    programStatus: "incorporated",
     documents: [
       {
         title: "Eleccions al Congrés 2026. Programa electoral",
@@ -283,6 +284,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
         date: "2026-11-09",
       },
     ],
+    notes: "Programa revisado: solo aborda 18 de las 90 propuestas del test, por debajo del mínimo para compararlo con garantías. Sus posiciones se conservan en el dataset.",
     lastChecked: CHECKED,
   },
 ];
@@ -290,7 +292,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
 export const PROGRAM_STATUS_LABELS: Record<ProgramStatus, string> = {
   pending: "Programa pendiente",
   partial: "Documentos parciales",
-  published: "Programa publicado · en verificación",
+  published: "Programa publicado · aún no incorporado",
   incorporated: "Incorporado a la comparación",
 };
 
