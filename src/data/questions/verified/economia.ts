@@ -38,6 +38,22 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Dotaremos a la SEPI de los medios económicos y humanos para entrar como accionista en nuevas empresas y sectores estratégicos y para modernizar las empresas públicas en las que participa.",
       { confidence: 0.9 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      61,
+      "Presencia pública en energía, farmacia, alimentación y telecomunicaciones",
+      { confidence: 0.9 }
+    ),
+    vp26(
+      "bng",
+      "support",
+      9,
+      "control público dos nosos recursos, dos sectores estratéxicos da economía",
+      { confidence: 0.7, explanation: "Lo plantea para los poderes públicos gallegos." }
+    ),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("eco_002"), [
     vp(
@@ -66,6 +82,16 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("vox", "Su programa del 29N no plantea una rebaja general de cotizaciones empresariales; solo una cuota de autónomos progresiva desde cero (pág. 9)."),
     ne26("psoe"),
     ne26("frente-amplio", "Su programa del 29N solo prevé bonificaciones de las cotizaciones empresariales en territorios de baja densidad (pág. 97), no una rebaja general."),
+    ne26("adelante-andalucia"),
+    vp26(
+      "bng",
+      "strongly_oppose",
+      19,
+      "revisión e redución das bonificacións e descontos nas cotizacións empresariais",
+      { confidence: 0.7, explanation: "Posición derivada: propone reducir las bonificaciones en las cotizaciones empresariales para sostener las pensiones." }
+    ),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("eco_003"), [
     vp(
@@ -94,6 +120,28 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Recuperación con carácter estructural del gravamen especial del 1,2 % sobre la cifra de negocios de los grandes operadores y empresas energéticas que actúan en España.",
       { confidence: 0.9, explanation: "En la misma página: «Mantendremos con carácter estructural el gravamen bancario»." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      58,
+      "Gravamen estable sobre los beneficios extraordinarios de la banca y de las energéticas.",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "bng",
+      "strongly_support",
+      44,
+      "Blindar a permanencia dos impostos específicos aos beneficios da banca, das grandes enerxéticas",
+      { confidence: 0.9 }
+    ),
+    vp26(
+      "erc",
+      "strongly_support",
+      22,
+      "Convertir l’impost extraordinari a la banca en un tribut permanent.",
+      { confidence: 0.9, explanation: "Propone también recuperar el impuesto a las grandes energéticas (pág. 22)." }
+    ),
+    ne26("pnv"),
   ]),
   axesOnly(
     base("eco_004"),
@@ -121,6 +169,16 @@ export const VERIFIED_ECONOMIA: Question[] = [
         "Dotaremos a la SEPI de los medios económicos y humanos para entrar como accionista en nuevas empresas y sectores estratégicos y para modernizar las empresas públicas en las que participa.",
         { confidence: 0.6, explanation: "Posición derivada: propone ampliar la participación pública en empresas; no se refiere expresamente a vender participaciones." }
       ),
+      vp26(
+        "adelante-andalucia",
+        "oppose",
+        61,
+        "Presencia pública en energía, farmacia, alimentación y telecomunicaciones",
+        { confidence: 0.6, explanation: "Posición derivada: defiende la presencia pública en sectores estratégicos; no se refiere expresamente a vender participaciones." }
+      ),
+      ne26("bng"),
+      ne26("erc"),
+      ne26("pnv"),
     ]
   ),
   verify(base("imp_001"), [
@@ -174,6 +232,28 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Acercaremos la tributación de las rentas del capital a la de las rentas del trabajo.",
       { confidence: 0.8, explanation: "Se concreta en las rentas del capital y en los grandes patrimonios (págs. 45-46)." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      10,
+      "un IRPF que baje a las rentas más bajas y suba con fuerza a partir de 100.000 euros al año",
+      { confidence: 0.9 }
+    ),
+    vp26(
+      "bng",
+      "strongly_support",
+      43,
+      "Incrementar a súa progresividade: que pague máis quen máis renda obtén.",
+      { confidence: 0.85 }
+    ),
+    vp26(
+      "erc",
+      "strongly_support",
+      21,
+      "Augmentar el tipus màxim de l’IRPF sobre els guanys de capital del 30 % al 35 %",
+      { confidence: 0.85, explanation: "Se concreta en las rentas del capital." }
+    ),
+    ne26("pnv"),
   ]),
   verify(base("imp_002"), [
     vp(
@@ -214,6 +294,28 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ),
     ne26("psoe", "Su programa del 29N propone mejoras fiscales para las rentas medias y bajas (pág. 49), no una rebaja general del IRPF."),
     ne26("frente-amplio", "Su programa del 29N propone bajar el IRPF a las rentas del trabajo de hasta 27.000 euros (pág. 46), no una rebaja general."),
+    vp26(
+      "adelante-andalucia",
+      "oppose",
+      10,
+      "un IRPF que baje a las rentas más bajas y suba con fuerza a partir de 100.000 euros al año",
+      { confidence: 0.75 }
+    ),
+    vp26(
+      "bng",
+      "oppose",
+      43,
+      "Incrementar a súa progresividade: que pague máis quen máis renda obtén.",
+      { confidence: 0.6, explanation: "Posición derivada." }
+    ),
+    vp26(
+      "erc",
+      "oppose",
+      20,
+      "una reforma de l’IRPF i l’IVA que penalitzi les rendes més altes",
+      { confidence: 0.65, explanation: "Propone bajarlo a la clase trabajadora y subirlo a las rentas altas." }
+    ),
+    ne26("pnv"),
   ]),
   verify(base("imp_003"), [
     vp(
@@ -242,6 +344,16 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Crearemos un impuesto estatal sobre las grandes herencias, de más de un millón de euros.",
       { confidence: 0.85, explanation: "Mantiene las reducciones por parentesco, transmisión de empresas y vivienda habitual (pág. 46)." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_oppose",
+      58,
+      "Tributación mínima en todo el Estado para acabar con el dumping fiscal entre comunidades.",
+      { confidence: 0.8, explanation: "Propone un suelo común en el impuesto de sucesiones y donaciones." }
+    ),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("imp_004"), [
     vp("pp", "strongly_oppose", 23, "Eliminaremos el impuesto a las grandes fortunas…", { confidence: 0.95 }),
@@ -282,6 +394,22 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Reformaremos el Impuesto de Solidaridad de las Grandes Fortunas para garantizar que los patrimonios con más de un millón de euros paguen como mínimo el 2 %.",
       { confidence: 0.95 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      10,
+      "Impuesto a las grandes fortunas y a los terratenientes",
+      { confidence: 0.9 }
+    ),
+    ne26("bng"),
+    vp26(
+      "erc",
+      "strongly_support",
+      22,
+      "Fer permanent l’impost temporal de solidaritat de les grans fortunes",
+      { confidence: 0.95 }
+    ),
+    ne26("pnv"),
   ]),
   verify(base("bie_001"), [
     vp(
@@ -328,6 +456,22 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Extenderemos de forma plena el IMV a jóvenes de 18 a 30 años sin exigir requisitos desproporcionados de emancipación previa",
       { confidence: 0.85, explanation: "Propone además concederlo de oficio y acercarlo al 60% de la renta mediana (pág. 22)." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "support",
+      66,
+      "Atención con personal propio de la Seguridad Social y resolución en el plazo legal.",
+      { confidence: 0.6, explanation: "Posición derivada: quiere que el Ingreso Mínimo Vital llegue a quienes tienen derecho, sin hablar de ampliar requisitos." }
+    ),
+    ne26("bng"),
+    vp26(
+      "erc",
+      "support",
+      28,
+      "Exigir a l’Estat els recursos necessaris per adaptar l’ingrés mínim vital al cost de la vida a Catalunya.",
+      { confidence: 0.65, explanation: "Lo plantea como adaptación de la cuantía al coste de vida en Cataluña." }
+    ),
+    ne26("pnv"),
   ]),
   verify(base("bie_002"), [
     vp(
@@ -344,6 +488,10 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("vox"),
     ne26("psoe"),
     ne26("frente-amplio"),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("pen_001"), [
     vp(
@@ -390,6 +538,34 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "ubicaremos el derecho a la pensión pública y su revalorización automática con arreglo al IPC",
       { confidence: 0.95, explanation: "Propone llevarlo a la Constitución." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      55,
+      "Las pensiones públicas subirán con el IPC real",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "bng",
+      "strongly_support",
+      18,
+      "Revalorización anual das pensións conforme ao IPC real.",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "erc",
+      "strongly_support",
+      26,
+      "Revalorar les pensions d’acord amb l’IPC de cada territori.",
+      { confidence: 0.85, explanation: "Propone usar el IPC de cada territorio." }
+    ),
+    vp26(
+      "pnv",
+      "strongly_support",
+      31,
+      "revalorizarlas anualmente conforme al IPC, protegiendo su poder adquisitivo frente al incremento del coste de la vida.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("pen_002"), [
     vp(
@@ -411,6 +587,22 @@ export const VERIFIED_ECONOMIA: Question[] = [
       46,
       "Eliminaremos el régimen fiscal especial de los trabajadores desplazados y las deducciones por planes de pensiones privados individuales.",
       { confidence: 0.85 }
+    ),
+    ne26("adelante-andalucia"),
+    vp26(
+      "bng",
+      "strongly_oppose",
+      19,
+      "Derrogación das normas que fomentan os plans de pensións privados de emprego nos convenios colectivos",
+      { confidence: 0.8 }
+    ),
+    ne26("erc"),
+    vp26(
+      "pnv",
+      "support",
+      31,
+      "Favorecer la extensión de los sistemas de previsión social de empleo",
+      { confidence: 0.6, explanation: "Posición derivada: apoya la previsión social de empleo como complemento de las pensiones públicas, sin mencionar incentivos fiscales." }
     ),
   ]),
   verify(base("tra_001"), [
@@ -440,6 +632,28 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Reformaremos la indemnización por despido improcedente para que repare el daño real causado a la persona trabajadora y disuada de los despidos injustificados",
       { confidence: 0.8, explanation: "No fija la cuantía." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      63,
+      "Trabajar tiene que dar para vivir: menos horas, mejores sueldos y despidos que dejen de salir baratos.",
+      { confidence: 0.8 }
+    ),
+    vp26(
+      "bng",
+      "strongly_support",
+      15,
+      "Os 45 días de indemnización e un máximo de 42 mensualidades por despedimento improcedente.",
+      { confidence: 0.9 }
+    ),
+    vp26(
+      "erc",
+      "strongly_support",
+      26,
+      "recuperant la indemnització per acomiadament improcedent de 45 dies per any treballat, amb un màxim de 42 mensualitats",
+      { confidence: 0.9 }
+    ),
+    ne26("pnv"),
   ]),
   verify(base("tra_002"), [
     vp(
@@ -474,6 +688,28 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Avanzaremos hacia la jornada laboral máxima de 32 horas semanales sin reducción salarial —empezando por las 37,5 horas de forma inmediata—",
       { confidence: 0.95 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      7,
+      "Jornada laboral de 32 horas Sin rebaja de sueldo.",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "bng",
+      "strongly_support",
+      15,
+      "Promover a implantación da xornada laboral de 35 horas semanais sen redución salarial",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "erc",
+      "strongly_support",
+      26,
+      "Reduir la durada màxima de la jornada laboral setmanal a 37 hores i mitja sense reducció salarial.",
+      { confidence: 0.95 }
+    ),
+    ne26("pnv"),
   ]),
   verify(base("smi_001"), [
     vp(
@@ -520,6 +756,22 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Garantizaremos por ley una subida progresiva del Salario Mínimo Interprofesional (SMI) manteniendo un suelo permanente equivalente al 60 % del salario medio neto de la economía.",
       { confidence: 0.8, explanation: "Vincula el SMI al 60% del salario medio neto con subidas progresivas, sin referirse expresamente a la inflación." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "support",
+      9,
+      "Salarios y salario mínimo ligados a la inflación por ley.",
+      { confidence: 0.6, explanation: "Liga el salario mínimo a la inflación, sin comprometer subidas por encima de ella." }
+    ),
+    vp26(
+      "bng",
+      "support",
+      15,
+      "Incrementar o Salario Mínimo Interprofesional até o situar no 60 % do salario medio",
+      { confidence: 0.8 }
+    ),
+    ne26("erc", "Su programa del 29N pide un salario mínimo propio para Cataluña (pág. 20), sin pronunciarse sobre la evolución del estatal."),
+    ne26("pnv", "Su programa del 29N pide la competencia para fijar un salario mínimo vasco por encima del estatal (pág. 9), sin pronunciarse sobre la evolución del estatal."),
   ]),
   verify(base("viv_001"), [
     vp(
@@ -578,6 +830,16 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Limitaremos por ley el precio del alquiler residencial en todas las zonas tensionadas",
       { confidence: 0.95 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      49,
+      "Índice estatal de referencia por barrio o municipio para que ningún alquiler supere el 20 % de la renta media de la zona.",
+      { confidence: 0.95 }
+    ),
+    ne26("bng"),
+    ne26("erc", "Su programa del 29N pide que la Generalitat pueda legislar plenamente sobre arrendamientos urbanos (pág. 19), sin pronunciarse sobre limitar los precios por ley estatal."),
+    ne26("pnv"),
   ]),
   verify(base("viv_002"), [
     vp(
@@ -636,6 +898,16 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Limitaremos por ley el precio del alquiler residencial en todas las zonas tensionadas",
       { confidence: 0.85, explanation: "Posición derivada: propone limitar por ley el precio del alquiler en las zonas tensionadas." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_oppose",
+      49,
+      "Índice estatal de referencia por barrio o municipio para que ningún alquiler supere el 20 % de la renta media de la zona.",
+      { confidence: 0.85, explanation: "Posición derivada: propone limitar los alquileres al 20 % de la renta media de la zona." }
+    ),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("viv_003"), [
     vp(
@@ -682,6 +954,10 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.85 }
     ),
     ne26("frente-amplio"),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("viv_004"), [
     vp(
@@ -722,6 +998,22 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Movilizaremos suelo y edificios públicos de titularidad estatal, incluidos los de Casa 47, para su cesión a cooperativas sin ánimo de lucro mediante derechos de superficie a largo plazo",
       { confidence: 0.65, explanation: "Posición derivada: cede el suelo público estatal a cooperativas sin ánimo de lucro mediante derecho de superficie, sin venderlo; su parque público es mayoritariamente en alquiler (pág. 10)." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      51,
+      "Prohibir la venta del patrimonio público de suelo y edificios y promover la cesión temporal de los que están en desuso para uso social.",
+      { confidence: 0.85 }
+    ),
+    vp26(
+      "bng",
+      "support",
+      13,
+      "Evitar a degradación, o alleamento e a privatización do patrimonio público do solo e da vivenda",
+      { confidence: 0.7, explanation: "Pide además ceder el suelo público estatal a las comunidades autónomas para vivienda." }
+    ),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("reg_001"), [
     vp(
@@ -761,6 +1053,22 @@ export const VERIFIED_ECONOMIA: Question[] = [
       92,
       "Reforzaremos la ventanilla única administrativa y aceleraremos la digitalización para reducir trabas y trámites burocráticos",
       { confidence: 0.5, explanation: "Reduce trámites mediante ventanilla única y digitalización, sin plantear menos control previo." }
+    ),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    vp26(
+      "erc",
+      "conditional_support",
+      23,
+      "s’ha de promoure una simplificació administrativa real durant el cicle de creixement de les pimes, que redueixi costos, duplicitats i terminis sense rebaixar les garanties laborals, socials i ambientals",
+      { confidence: 0.5, explanation: "Simplifica trámites sin rebajar garantías." }
+    ),
+    vp26(
+      "pnv",
+      "support",
+      14,
+      "Reducir la burocracia y eliminar duplicidades administrativas que dificultan la creación, ampliación y gestión de empresas y negocios.",
+      { confidence: 0.65, explanation: "No se refiere expresamente a reducir el control previo." }
     ),
   ]),
   verify(base("emp_001"), [
@@ -808,5 +1116,21 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Fijaremos por ley ratios máximas por aula",
       { confidence: 0.65, explanation: "Fija ratios máximas por aula y más profesionales de salud mental (pág. 28), sin plantear una ampliación general de las plantillas." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "support",
+      17,
+      "Hasta igualar la inversión por estudiante de la media europea, con ratios más bajas y plantillas suficientes.",
+      { confidence: 0.7, explanation: "Se refiere a la educación pública." }
+    ),
+    ne26("bng"),
+    vp26(
+      "erc",
+      "support",
+      43,
+      "Cal continuar apostant pel desplegament de noves places de jutges i jutgesses a Catalunya",
+      { confidence: 0.6, explanation: "Se refiere a la plantilla judicial en Cataluña." }
+    ),
+    ne26("pnv"),
   ]),
 ];

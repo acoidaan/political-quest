@@ -50,6 +50,22 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Compromiso desde los Presupuestos Generales del Estado del 8 % del PIB estatal para la sanidad pública.",
       { confidence: 0.75, explanation: "Fija un objetivo de gasto sanitario; su reforma fiscal (págs. 44-47) no se vincula expresamente a la sanidad." }
     ),
+    ne26("adelante-andalucia"),
+    vp26(
+      "bng",
+      "support",
+      37,
+      "Aumentar o financiamento da sanidade pública, até como mínimo a media de investimento por habitante da UE",
+      { confidence: 0.75, explanation: "Fija un objetivo de gasto, sin vincularlo a subidas de impuestos." }
+    ),
+    vp26(
+      "erc",
+      "support",
+      42,
+      "Incorporar l’atenció odontològica integral a la sanitat pública.",
+      { confidence: 0.6, explanation: "Posición derivada: amplía la cartera pública (dental, visual y psicológica) a cargo del Estado, sin hablar de impuestos." }
+    ),
+    ne26("pnv"),
   ]),
   verify(base("san_002"), [
     vp(
@@ -90,6 +106,22 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Derogaremos expresamente la Ley 15/1997, sobre habilitación de nuevas formas de gestión del SNS, que había abierto la puerta a la colaboración con entidades privadas",
       { confidence: 0.9 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_oppose",
+      14,
+      "fin de los conciertos y externalizaciones: el dinero público, para la sanidad pública.",
+      { confidence: 0.9 }
+    ),
+    vp26(
+      "bng",
+      "strongly_oppose",
+      37,
+      "a titularidade, o financiamento, a xestión e a provisión de servizos sanitarios se fará con entidades exclusivamente públicas",
+      { confidence: 0.9 }
+    ),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("san_003"), [
     vp(
@@ -148,6 +180,28 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "aumentaremos las ratios de profesionales (psiquiatría, psicología clínica, enfermería especializada",
       { confidence: 0.9 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      16,
+      "Psicología en atención primaria y cita en salud mental en un máximo de 15 días",
+      { confidence: 0.85 }
+    ),
+    vp26(
+      "bng",
+      "support",
+      86,
+      "Impulso dun plan de prevención e actuación para a saúde mental dirixido á mocidade, destinando recursos económicos e materiais suficientes para o seu tratamento.",
+      { confidence: 0.65, explanation: "Se centra en la juventud." }
+    ),
+    vp26(
+      "erc",
+      "strongly_support",
+      42,
+      "Garantir l’accés universal i gratuït a l’atenció psicològica i a la salut mental",
+      { confidence: 0.85 }
+    ),
+    ne26("pnv"),
   ]),
   axesOnly(
     base("san_004"),
@@ -163,6 +217,10 @@ export const VERIFIED_SOCIEDAD: Question[] = [
         "Eliminaremos la exención del IVA a la enseñanza privada y la del Impuesto sobre las Primas de Seguros a los seguros sanitarios privados.",
         { confidence: 0.6, explanation: "Posición derivada: suprime el beneficio fiscal de los seguros sanitarios privados en el impuesto sobre primas; no se refiere al IRPF." }
       ),
+      ne26("adelante-andalucia"),
+      ne26("bng"),
+      ne26("erc"),
+      ne26("pnv"),
     ]
   ),
   verify(base("edu_001"), [
@@ -204,6 +262,22 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "El objetivo es que el 100 % de los fondos públicos vayan destinados a la educación pública.",
       { confidence: 0.85 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "oppose",
+      42,
+      "prohibido cerrar líneas públicas mientras haya unidades privadas-concertadas en la misma zona",
+      { confidence: 0.65, explanation: "Posición derivada: prioriza la red pública frente a la concertada." }
+    ),
+    vp26(
+      "bng",
+      "strongly_oppose",
+      35,
+      "mentres non se suprimiren, os concertos educativos",
+      { confidence: 0.85 }
+    ),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   axesOnly(
     base("edu_002"),
@@ -213,6 +287,22 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       ne26("vox"),
       ne26("psoe"),
       ne26("frente-amplio"),
+      vp26(
+        "adelante-andalucia",
+        "strongly_support",
+        42,
+        "La religión confesional, fuera del horario lectivo y del currículo.",
+        { confidence: 0.95 }
+      ),
+      vp26(
+        "bng",
+        "strongly_support",
+        35,
+        "A materia de Relixión non formará parte do currículo escolar",
+        { confidence: 0.95 }
+      ),
+      ne26("erc"),
+      ne26("pnv"),
     ]
   ),
   verify(base("edu_003"), [
@@ -254,6 +344,16 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "garantizando la inmersión lingüística en catalán como lengua vehicular en Cataluña",
       { confidence: 0.75, explanation: "Posición derivada: defiende la inmersión en catalán como lengua vehicular en Cataluña." }
     ),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    vp26(
+      "erc",
+      "strongly_oppose",
+      10,
+      "El català com a llengua vehicular i la immersió lingüística són pilars del nostre model educatiu.",
+      { confidence: 0.85, explanation: "Posición derivada: defiende la inmersión en catalán en Cataluña." }
+    ),
+    ne26("pnv"),
   ]),
   verify(base("edu_004"), [
     vp(
@@ -288,6 +388,16 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.6, explanation: "Posición derivada: hace obligatoria la educación afectivo-sexual en todas las etapas, sin prever una autorización previa de los padres." }
     ),
     ne26("frente-amplio", "Su programa del 29N propone la coeducación y la educación sexoafectiva en las aulas (pág. 37), sin pronunciarse sobre la autorización previa de las familias."),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    ne26("erc"),
+    vp26(
+      "pnv",
+      "oppose",
+      10,
+      "Reforzar la coeducación y la educación afectivo-sexual en igualdad",
+      { confidence: 0.5, explanation: "Posición derivada: no se refiere expresamente a la autorización previa de las familias." }
+    ),
   ]),
   verify(base("uni_001"), [
     vp(
@@ -346,6 +456,22 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "gratuidad desde los 0 años hasta la universidad",
       { confidence: 0.85, explanation: "Propone además elevar las becas al 0,44% del PIB (pág. 32)." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      47,
+      "Matrícula gratuita de forma progresiva, empezando por el grado; mientras tanto, tasas congeladas y pruebas de acceso gratuitas.",
+      { confidence: 0.9 }
+    ),
+    ne26("bng"),
+    vp26(
+      "erc",
+      "support",
+      45,
+      "Cal reforçar les polítiques de beques i ajuts, eliminar les barreres econòmiques",
+      { confidence: 0.7 }
+    ),
+    ne26("pnv"),
   ]),
   verify(base("igu_001"), [
     vp(
@@ -391,6 +517,22 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       123,
       "evaluaciones salariales conjuntas cuando la brecha supere el 5 % sin justificación",
       { confidence: 0.75, explanation: "Dentro de la transposición de la Directiva (UE) 2023/970 de transparencia retributiva; no menciona sanciones." }
+    ),
+    ne26("adelante-andalucia"),
+    vp26(
+      "bng",
+      "strongly_support",
+      17,
+      "Realizar auditorías retributivas e plans de igualdade de obrigado cumprimento, con reforzo da Inspección de Traballo.",
+      { confidence: 0.85 }
+    ),
+    ne26("erc"),
+    vp26(
+      "pnv",
+      "support",
+      9,
+      "Asegurar la aplicación de la normativa europea sobre transparencia retributiva, para detectar y corregir las desigualdades salariales entre mujeres y hombres.",
+      { confidence: 0.65, explanation: "No menciona expresamente auditorías ni sanciones." }
     ),
   ]),
   verify(base("gen_001"), [
@@ -450,6 +592,34 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "blindaremos con carácter plurianual las partidas estructurales del Pacto de Estado contra la Violencia de Género",
       { confidence: 0.6, explanation: "Posición derivada: refuerza el marco específico contra la violencia de género; no se refiere expresamente al tratamiento penal." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "support",
+      27,
+      "Pacto de Estado contra la violencia machista con presupuesto",
+      { confidence: 0.6, explanation: "Posición derivada: refuerza el marco específico contra la violencia machista; no se refiere expresamente al tratamiento penal." }
+    ),
+    vp26(
+      "bng",
+      "support",
+      25,
+      "impulsar un Estatuto de Vítima de Feminicidio para unha abordaxe integral da violencia machista",
+      { confidence: 0.6, explanation: "Posición derivada: amplía el marco específico contra la violencia machista." }
+    ),
+    vp26(
+      "erc",
+      "support",
+      24,
+      "Reformar la Llei orgànica 1/2004 i la resta de legislació estatal per garantir la prevenció, detecció, protecció i reparació davant totes les violències masclistes",
+      { confidence: 0.75, explanation: "Mantiene y amplía el marco de la ley integral de violencia de género." }
+    ),
+    vp26(
+      "pnv",
+      "support",
+      26,
+      "Asegurar el cumplimiento íntegro de las medidas estatales del Pacto de Estado contra la Violencia de Género renovado en 2025",
+      { confidence: 0.6, explanation: "Posición derivada: refuerza el marco específico contra la violencia de género." }
+    ),
   ]),
   verify(base("gen_002"), [
     vp(
@@ -496,6 +666,22 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Desplegaremos de forma efectiva la Ley Trans, reconoceremos a las personas no binarias",
       { confidence: 0.7, explanation: "Posición derivada: despliega la Ley 4/2023, que regula la rectificación registral del sexo por declaración propia, y amplía el reconocimiento a las personas no binarias." }
     ),
+    ne26("adelante-andalucia"),
+    vp26(
+      "bng",
+      "strongly_support",
+      29,
+      "Protección das persoas trans menores de 12 anos, respectando o seu dereito á autodeterminación de xénero.",
+      { confidence: 0.8 }
+    ),
+    ne26("erc"),
+    vp26(
+      "pnv",
+      "support",
+      27,
+      "Asegurar el desarrollo reglamentario del artículo 50 de la Ley 4/2023",
+      { confidence: 0.55, explanation: "Posición derivada: pide desarrollar la Ley 4/2023, que regula la rectificación registral por declaración propia; no se pronuncia sobre ese procedimiento." }
+    ),
   ]),
   verify(base("lgb_001"), [
     vp(
@@ -536,6 +722,10 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.9, explanation: "También impulsa la adopción internacional para familias LGTBI (pág. 97)." }
     ),
     ne26("frente-amplio"),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("lgb_002"), [
     vote("psoe", "support", {
@@ -577,6 +767,22 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "La Ley 4/2023 se votó antes de la constitución de Sumar como grupo; su programa defiende los derechos LGTBI+ sin mencionar expresamente las terapias de conversión."
     ),
     ne26("frente-amplio"),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    vp26(
+      "erc",
+      "strongly_support",
+      24,
+      "Tipificar penalment els casos greus o coercitius",
+      { confidence: 0.85, explanation: "Se refiere a las prácticas que pretenden modificar la orientación sexual o la identidad de género." }
+    ),
+    vp26(
+      "pnv",
+      "strongly_support",
+      27,
+      "Favorecer la tipificación penal específica de las prácticas de conversión o aversión dirigidas a modificar la orientación sexual, la identidad sexual o la expresión de género.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("fam_001"), [
     vp(
@@ -635,6 +841,22 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Implantaremos una Prestación Universal por Crianza de 200 euros mensuales por menor para erradicar la pobreza infantil",
       { confidence: 0.95 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      54,
+      "Entre 100 y 200 euros al mes por hijo o hija hasta los 18 años, para todas las familias.",
+      { confidence: 0.95 }
+    ),
+    ne26("bng"),
+    vp26(
+      "erc",
+      "strongly_support",
+      21,
+      "Traspassar els recursos necessaris per a la creació d’una prestació universal per criança adaptada a cada territori.",
+      { confidence: 0.85 }
+    ),
+    ne26("pnv"),
   ]),
   verify(base("abo_001"), [
     vp(
@@ -687,6 +909,28 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Reformaremos el artículo 43 de la Constitución para incluir el derecho al aborto",
       { confidence: 0.95 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      40,
+      "El derecho al aborto se garantizará en la sanidad pública de todas las provincias, sin conciertos ni copagos, y quedará blindado en la Constitución.",
+      { confidence: 0.95 }
+    ),
+    ne26("bng"),
+    vp26(
+      "erc",
+      "support",
+      23,
+      "garantir els drets sexuals i reproductius",
+      { confidence: 0.55, explanation: "Posición derivada: no menciona expresamente el aborto." }
+    ),
+    vp26(
+      "pnv",
+      "support",
+      26,
+      "Proteger el ejercicio efectivo de los derechos sexuales y reproductivos de las mujeres, garantizando el acceso libre y seguro a los servicios sanitarios.",
+      { confidence: 0.75, explanation: "Propone además perímetros de protección alrededor de las clínicas que practican abortos (pág. 26)." }
+    ),
   ]),
   verify(base("abo_002"), [
     vp(
@@ -727,6 +971,10 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.75, explanation: "Lo presenta como un logro propio y propone blindar el derecho al aborto (pág. 81)." }
     ),
     ne26("frente-amplio"),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("eut_001"), [
     vp(
@@ -785,6 +1033,16 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Derecho a la interrupción voluntaria del embarazo, a la eutanasia y al suicidio asistido.",
       { confidence: 0.85 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      38,
+      "plazos más ágiles por ley para la eutanasia, sin recurso de familiares o allegados",
+      { confidence: 0.9 }
+    ),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("rel_001"), [
     vp(
@@ -807,6 +1065,22 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Revisaremos los Acuerdos de 1979 con la Santa Sede, así como con las otras confesiones religiosas, incluyendo la legislación de privilegio que se deriva de los mismos.",
       { confidence: 0.9 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "support",
+      96,
+      "Ninguna confesión con privilegios fiscales ni simbólicos en un Estado laico.",
+      { confidence: 0.75, explanation: "No menciona expresamente los acuerdos con la Santa Sede." }
+    ),
+    vp26(
+      "bng",
+      "strongly_support",
+      32,
+      "Denunciar e revogar o Concordato coa Igrexa católica e, nomeadamente, os Acordos vixentes coa Santa Sé",
+      { confidence: 0.95 }
+    ),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("rel_002"), [
     vp(
@@ -829,6 +1103,22 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne26("psoe"),
     ne26("frente-amplio"),
+    vp26(
+      "adelante-andalucia",
+      "strongly_oppose",
+      96,
+      "Ninguna confesión con privilegios fiscales ni simbólicos en un Estado laico.",
+      { confidence: 0.7, explanation: "Posición derivada: rechaza los privilegios simbólicos de las confesiones." }
+    ),
+    vp26(
+      "bng",
+      "strongly_oppose",
+      32,
+      "Isto suporá a eliminación dos privilexios da Igrexa e a presenza da relixión nas institucións e servizos públicos.",
+      { confidence: 0.8 }
+    ),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("cul_001"), [
     vp(
@@ -869,6 +1159,16 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Derogaremos la Ley 18/2013 de protección cultural y patrimonial de la tauromaquia, como paso imprescindible para acabar con la financiación pública de la tauromaquia",
       { confidence: 0.95 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      120,
+      "con la tauromaquia en transición hasta su abolición",
+      { confidence: 0.85 }
+    ),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("cul_002"), [
     vp(
@@ -909,6 +1209,16 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Derogaremos la Ley 18/2013 de protección cultural y patrimonial de la tauromaquia, como paso imprescindible para acabar con la financiación pública de la tauromaquia",
       { confidence: 0.8, explanation: "Posición derivada: deroga la protección de la tauromaquia; sobre la caza, pide vincularla a la mejora de los recursos (pág. 87)." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_oppose",
+      120,
+      "con la tauromaquia en transición hasta su abolición",
+      { confidence: 0.8, explanation: "Posición derivada: no se pronuncia sobre la caza como actividad." }
+    ),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("mpu_001"), [
     vp(
@@ -937,5 +1247,15 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne26("psoe"),
     ne26("frente-amplio"),
+    vp26(
+      "adelante-andalucia",
+      "support",
+      95,
+      "Nombramientos por mérito y mayorías amplias, y financiación plurianual estable.",
+      { confidence: 0.7, explanation: "Se refiere a RTVE." }
+    ),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
 ];

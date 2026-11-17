@@ -23,6 +23,10 @@
   --party-vox: #5aa831;
   --party-sumar: #c8386f;
   --party-frente-amplio: #c8386f;
+  --party-adelante-andalucia: #0f8f6f;
+  --party-bng: #7b52c7;
+  --party-erc: #b07800;
+  --party-pnv: #8c5a2e;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,6 +46,10 @@
     --party-vox: #57a433;
     --party-sumar: #d95f8d;
     --party-frente-amplio: #d95f8d;
+    --party-adelante-andalucia: #3cbf9b;
+    --party-bng: #a283e0;
+    --party-erc: #e8b13a;
+    --party-pnv: #c08a5a;
   }
 }
 

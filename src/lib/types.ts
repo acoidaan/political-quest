@@ -56,6 +56,13 @@ export interface Party {
   active: boolean;
   /** Ciclo electoral al que corresponden mayoritariamente sus posiciones */
   positionCycle: string; // p. ej. "2023-2026"
+  /**
+   * "territorial" si solo concurre en una comunidad. Su programa cubre por
+   * naturaleza menos propuestas estatales, así que el aviso de desequilibrio
+   * de cobertura del informe de balance solo compara partidos estatales.
+   * Por defecto, "estatal".
+   */
+  scope?: "estatal" | "territorial";
   notes?: string;
 }
 
