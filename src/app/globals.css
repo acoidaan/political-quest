@@ -22,6 +22,7 @@
   --party-psoe: #d13a3a;
   --party-vox: #5aa831;
   --party-sumar: #c8386f;
+  --party-frente-amplio: #c8386f;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,6 +41,7 @@
     --party-psoe: #e05c5c;
     --party-vox: #57a433;
     --party-sumar: #d95f8d;
+    --party-frente-amplio: #d95f8d;
   }
 }
 

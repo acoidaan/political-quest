@@ -43,6 +43,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "consolidando una financiación pública de la sanidad en torno al 7% del PIB",
       { confidence: 0.7, explanation: "Fija un objetivo de gasto sanitario y lo vincula a una fiscalidad progresiva (pág. 47), sin concretar subidas de impuestos para la sanidad." }
     ),
+    vp26(
+      "frente-amplio",
+      "support",
+      26,
+      "Compromiso desde los Presupuestos Generales del Estado del 8 % del PIB estatal para la sanidad pública.",
+      { confidence: 0.75, explanation: "Fija un objetivo de gasto sanitario; su reforma fiscal (págs. 44-47) no se vincula expresamente a la sanidad." }
+    ),
   ]),
   verify(base("san_002"), [
     vp(
@@ -75,6 +82,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       49,
       "Limitar la privatización de la sanidad estableciendo la gestión directa como modalidad preferente en la prestación sanitaria.",
       { confidence: 0.8 }
+    ),
+    vp26(
+      "frente-amplio",
+      "strongly_oppose",
+      26,
+      "Derogaremos expresamente la Ley 15/1997, sobre habilitación de nuevas formas de gestión del SNS, que había abierto la puerta a la colaboración con entidades privadas",
+      { confidence: 0.9 }
     ),
   ]),
   verify(base("san_003"), [
@@ -127,6 +141,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "reforzaremos la presencia de profesionales de psicología clínica en el Sistema Nacional de Salud, especialmente en atención primaria",
       { confidence: 0.9 }
     ),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      28,
+      "aumentaremos las ratios de profesionales (psiquiatría, psicología clínica, enfermería especializada",
+      { confidence: 0.9 }
+    ),
   ]),
   axesOnly(
     base("san_004"),
@@ -135,6 +156,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       ne26("pp", "Su programa del 29N no aborda la desgravación del seguro sanitario privado."),
       ne26("vox"),
       ne26("psoe"),
+      vp26(
+        "frente-amplio",
+        "oppose",
+        47,
+        "Eliminaremos la exención del IVA a la enseñanza privada y la del Impuesto sobre las Primas de Seguros a los seguros sanitarios privados.",
+        { confidence: 0.6, explanation: "Posición derivada: suprime el beneficio fiscal de los seguros sanitarios privados en el impuesto sobre primas; no se refiere al IRPF." }
+      ),
     ]
   ),
   verify(base("edu_001"), [
@@ -169,6 +197,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.6, explanation: "Posición derivada: la libre elección de centro sin barreras económicas implica sostener la financiación de la concertada; no la menciona expresamente." }
     ),
     ne26("psoe"),
+    vp26(
+      "frente-amplio",
+      "strongly_oppose",
+      31,
+      "El objetivo es que el 100 % de los fondos públicos vayan destinados a la educación pública.",
+      { confidence: 0.85 }
+    ),
   ]),
   axesOnly(
     base("edu_002"),
@@ -177,6 +212,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       ne26("pp", "Su programa del 29N no aborda la asignatura de religión."),
       ne26("vox"),
       ne26("psoe"),
+      ne26("frente-amplio"),
     ]
   ),
   verify(base("edu_003"), [
@@ -211,6 +247,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.75, explanation: "Garantiza la educación en español en todo el territorio; no lo plantea como elección de las familias." }
     ),
     ne26("psoe"),
+    vp26(
+      "frente-amplio",
+      "strongly_oppose",
+      32,
+      "garantizando la inmersión lingüística en catalán como lengua vehicular en Cataluña",
+      { confidence: 0.75, explanation: "Posición derivada: defiende la inmersión en catalán como lengua vehicular en Cataluña." }
+    ),
   ]),
   verify(base("edu_004"), [
     vp(
@@ -244,6 +287,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Garantizar la coeducación y la educación afectivo-sexual obligatorias en todas las etapas educativas",
       { confidence: 0.6, explanation: "Posición derivada: hace obligatoria la educación afectivo-sexual en todas las etapas, sin prever una autorización previa de los padres." }
     ),
+    ne26("frente-amplio", "Su programa del 29N propone la coeducación y la educación sexoafectiva en las aulas (pág. 37), sin pronunciarse sobre la autorización previa de las familias."),
   ]),
   verify(base("uni_001"), [
     vp(
@@ -295,6 +339,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Impulsar la gratuidad de la matrícula del primer curso de grado en las universidades públicas de todo el país.",
       { confidence: 0.85, explanation: "Además propone un nuevo modelo de becas (pág. 54)." }
     ),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      7,
+      "gratuidad desde los 0 años hasta la universidad",
+      { confidence: 0.85, explanation: "Propone además elevar las becas al 0,44% del PIB (pág. 32)." }
+    ),
   ]),
   verify(base("igu_001"), [
     vp(
@@ -333,6 +384,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       78,
       "Reforzar la transparencia retributiva y la igualdad salarial, revisando categorías profesionales y complementos que infravaloran los trabajos feminizados",
       { confidence: 0.6, explanation: "Refuerza la transparencia retributiva y la Inspección de Trabajo, sin mencionar expresamente las auditorías salariales." }
+    ),
+    vp26(
+      "frente-amplio",
+      "support",
+      123,
+      "evaluaciones salariales conjuntas cuando la brecha supere el 5 % sin justificación",
+      { confidence: 0.75, explanation: "Dentro de la transposición de la Directiva (UE) 2023/970 de transparencia retributiva; no menciona sanciones." }
     ),
   ]),
   verify(base("gen_001"), [
@@ -385,6 +443,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Incorporar las violencias digitales a la Ley Integral contra la Violencia de Género",
       { confidence: 0.85, explanation: "Además propone una Ley Orgánica contra la Violencia Vicaria «como manifestación de la violencia de género» (pág. 82)." }
     ),
+    vp26(
+      "frente-amplio",
+      "support",
+      38,
+      "blindaremos con carácter plurianual las partidas estructurales del Pacto de Estado contra la Violencia de Género",
+      { confidence: 0.6, explanation: "Posición derivada: refuerza el marco específico contra la violencia de género; no se refiere expresamente al tratamiento penal." }
+    ),
   ]),
   verify(base("gen_002"), [
     vp(
@@ -423,6 +488,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       97,
       "Garantizar que la Ley 4/2023 sea el suelo común de derechos de las personas LGTBI en toda España",
       { confidence: 0.65, explanation: "Posición derivada: blinda la Ley 4/2023, que regula la rectificación registral del sexo por declaración propia; no menciona expresamente ese procedimiento." }
+    ),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      123,
+      "Desplegaremos de forma efectiva la Ley Trans, reconoceremos a las personas no binarias",
+      { confidence: 0.7, explanation: "Posición derivada: despliega la Ley 4/2023, que regula la rectificación registral del sexo por declaración propia, y amplía el reconocimiento a las personas no binarias." }
     ),
   ]),
   verify(base("lgb_001"), [
@@ -463,6 +535,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "garantizando la máxima protección jurídica del matrimonio igualitario",
       { confidence: 0.9, explanation: "También impulsa la adopción internacional para familias LGTBI (pág. 97)." }
     ),
+    ne26("frente-amplio"),
   ]),
   verify(base("lgb_002"), [
     vote("psoe", "support", {
@@ -503,6 +576,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "sumar",
       "La Ley 4/2023 se votó antes de la constitución de Sumar como grupo; su programa defiende los derechos LGTBI+ sin mencionar expresamente las terapias de conversión."
     ),
+    ne26("frente-amplio"),
   ]),
   verify(base("fam_001"), [
     vp(
@@ -554,6 +628,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Prestación estatal por crianza para todos los hogares con menores de edad",
       { confidence: 0.85 }
     ),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      7,
+      "Implantaremos una Prestación Universal por Crianza de 200 euros mensuales por menor para erradicar la pobreza infantil",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("abo_001"), [
     vp(
@@ -599,6 +680,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Blindar constitucionalmente el derecho a la interrupción voluntaria del embarazo.",
       { confidence: 0.95 }
     ),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      28,
+      "Reformaremos el artículo 43 de la Constitución para incluir el derecho al aborto",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("abo_002"), [
     vp(
@@ -638,6 +726,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Hemos reformado la legislación para garantizar el acceso al aborto de las jóvenes de 16 y 17 años sin consentimiento paterno",
       { confidence: 0.75, explanation: "Lo presenta como un logro propio y propone blindar el derecho al aborto (pág. 81)." }
     ),
+    ne26("frente-amplio"),
   ]),
   verify(base("eut_001"), [
     vp(
@@ -689,6 +778,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Garantizar la muerte digna y el ejercicio efectivo del derecho a la eutanasia, de acuerdo con la legislación vigente.",
       { confidence: 0.95 }
     ),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      150,
+      "Derecho a la interrupción voluntaria del embarazo, a la eutanasia y al suicidio asistido.",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("rel_001"), [
     vp(
@@ -704,6 +800,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("pp"),
     ne26("vox"),
     ne26("psoe"),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      150,
+      "Revisaremos los Acuerdos de 1979 con la Santa Sede, así como con las otras confesiones religiosas, incluyendo la legislación de privilegio que se deriva de los mismos.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("rel_002"), [
     vp(
@@ -725,6 +828,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.65, explanation: "Protege las tradiciones religiosas, sin referirse expresamente a símbolos en instituciones públicas." }
     ),
     ne26("psoe"),
+    ne26("frente-amplio"),
   ]),
   verify(base("cul_001"), [
     vp(
@@ -758,6 +862,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.8, explanation: "Posición derivada: propone promover la tauromaquia, lo contrario de retirarle el apoyo público." }
     ),
     ne26("psoe", "Su programa del 29N propone retirar la financiación pública a prácticas que amparen el maltrato animal (pág. 73), sin mencionar la tauromaquia."),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      76,
+      "Derogaremos la Ley 18/2013 de protección cultural y patrimonial de la tauromaquia, como paso imprescindible para acabar con la financiación pública de la tauromaquia",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("cul_002"), [
     vp(
@@ -791,6 +902,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.9, explanation: "También defiende la caza «como actividad esencial» (pág. 35)." }
     ),
     ne26("psoe", "Su programa del 29N propone retirar la financiación pública a prácticas que amparen el maltrato animal (pág. 73), sin mencionar la tauromaquia ni la caza."),
+    vp26(
+      "frente-amplio",
+      "strongly_oppose",
+      76,
+      "Derogaremos la Ley 18/2013 de protección cultural y patrimonial de la tauromaquia, como paso imprescindible para acabar con la financiación pública de la tauromaquia",
+      { confidence: 0.8, explanation: "Posición derivada: deroga la protección de la tauromaquia; sobre la caza, pide vincularla a la mejora de los recursos (pág. 87)." }
+    ),
   ]),
   verify(base("mpu_001"), [
     vp(
@@ -818,5 +936,6 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.5, explanation: "Posición derivada: propone reformar RTVE y «acabar con el despilfarro», sin pronunciarse sobre su modelo de financiación." }
     ),
     ne26("psoe"),
+    ne26("frente-amplio"),
   ]),
 ];

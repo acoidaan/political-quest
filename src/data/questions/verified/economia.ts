@@ -31,6 +31,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Mantendremos la participación del Estado en sectores estratégicos, preservando capacidades industriales y tecnológicas esenciales, fortaleciendo la autonomía estratégica de España y Europa.",
       { confidence: 0.9 }
     ),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      84,
+      "Dotaremos a la SEPI de los medios económicos y humanos para entrar como accionista en nuevas empresas y sectores estratégicos y para modernizar las empresas públicas en las que participa.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("eco_002"), [
     vp(
@@ -58,6 +65,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ),
     ne26("vox", "Su programa del 29N no plantea una rebaja general de cotizaciones empresariales; solo una cuota de autónomos progresiva desde cero (pág. 9)."),
     ne26("psoe"),
+    ne26("frente-amplio", "Su programa del 29N solo prevé bonificaciones de las cotizaciones empresariales en territorios de baja densidad (pág. 97), no una rebaja general."),
   ]),
   verify(base("eco_003"), [
     vp(
@@ -79,6 +87,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("pp", "Su programa del 29N no menciona los gravámenes a banca y energéticas; la medida 183 («Eliminaremos los impuestos que frenan la inversión») no identifica qué impuestos."),
     ne26("vox"),
     ne26("psoe", "Su programa del 29N recuerda los impuestos extraordinarios a la banca y a las grandes energéticas aprobados en la legislatura (pág. 36), pero no se compromete a mantenerlos ni a recuperarlos."),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      44,
+      "Recuperación con carácter estructural del gravamen especial del 1,2 % sobre la cifra de negocios de los grandes operadores y empresas energéticas que actúan en España.",
+      { confidence: 0.9, explanation: "En la misma página: «Mantendremos con carácter estructural el gravamen bancario»." }
+    ),
   ]),
   axesOnly(
     base("eco_004"),
@@ -98,6 +113,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
         15,
         "Reforzaremos el sector público empresarial.",
         { confidence: 0.6, explanation: "Posición derivada: propone reforzar el sector público empresarial y mantener la participación del Estado en sectores estratégicos; no se refiere expresamente a vender participaciones." }
+      ),
+      vp26(
+        "frente-amplio",
+        "oppose",
+        84,
+        "Dotaremos a la SEPI de los medios económicos y humanos para entrar como accionista en nuevas empresas y sectores estratégicos y para modernizar las empresas públicas en las que participa.",
+        { confidence: 0.6, explanation: "Posición derivada: propone ampliar la participación pública en empresas; no se refiere expresamente a vender participaciones." }
       ),
     ]
   ),
@@ -145,6 +167,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Incrementar la tributación de las rentas de capital más elevadas.",
       { confidence: 0.8, explanation: "Se concreta en las rentas del capital, con un tipo máximo del 35% por encima de 300.000 euros." }
     ),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      46,
+      "Acercaremos la tributación de las rentas del capital a la de las rentas del trabajo.",
+      { confidence: 0.8, explanation: "Se concreta en las rentas del capital y en los grandes patrimonios (págs. 45-46)." }
+    ),
   ]),
   verify(base("imp_002"), [
     vp(
@@ -184,6 +213,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.85 }
     ),
     ne26("psoe", "Su programa del 29N propone mejoras fiscales para las rentas medias y bajas (pág. 49), no una rebaja general del IRPF."),
+    ne26("frente-amplio", "Su programa del 29N propone bajar el IRPF a las rentas del trabajo de hasta 27.000 euros (pág. 46), no una rebaja general."),
   ]),
   verify(base("imp_003"), [
     vp(
@@ -205,6 +235,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("pp", "Su programa del 29N no menciona el impuesto de sucesiones y donaciones; la medida 185 deja a las comunidades autónomas libertad para bajar sus impuestos cedidos."),
     ne26("vox", "Su programa del 29N no menciona el impuesto de sucesiones y donaciones."),
     ne26("psoe"),
+    vp26(
+      "frente-amplio",
+      "strongly_oppose",
+      45,
+      "Crearemos un impuesto estatal sobre las grandes herencias, de más de un millón de euros.",
+      { confidence: 0.85, explanation: "Mantiene las reducciones por parentesco, transmisión de empresas y vivienda habitual (pág. 46)." }
+    ),
   ]),
   verify(base("imp_004"), [
     vp("pp", "strongly_oppose", 23, "Eliminaremos el impuesto a las grandes fortunas…", { confidence: 0.95 }),
@@ -237,6 +274,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       47,
       "La recaudación de la tributación complementaria de los grandes patrimonios y de la mayor progresividad de las rentas del capital contribuirá a financiar la prestación por crianza y la lucha contra la pobreza infantil.",
       { confidence: 0.7, explanation: "Cuenta con mantener la tributación complementaria de los grandes patrimonios, sin detallar su diseño." }
+    ),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      45,
+      "Reformaremos el Impuesto de Solidaridad de las Grandes Fortunas para garantizar que los patrimonios con más de un millón de euros paguen como mínimo el 2 %.",
+      { confidence: 0.95 }
     ),
   ]),
   verify(base("bie_001"), [
@@ -277,6 +321,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Potenciar el IMV. Crear pasarelas que automaticen y simplifiquen la concesión del IMV, utilizando datos de renta y patrimonio más recientes.",
       { confidence: 0.75 }
     ),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      22,
+      "Extenderemos de forma plena el IMV a jóvenes de 18 a 30 años sin exigir requisitos desproporcionados de emancipación previa",
+      { confidence: 0.85, explanation: "Propone además concederlo de oficio y acercarlo al 60% de la renta mediana (pág. 22)." }
+    ),
   ]),
   verify(base("bie_002"), [
     vp(
@@ -292,6 +343,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("pp", "Su programa del 29N no condiciona prestaciones a la búsqueda de empleo; solo anuncia perseguir el fraude en la incapacidad temporal (medida 175)."),
     ne26("vox"),
     ne26("psoe"),
+    ne26("frente-amplio"),
   ]),
   verify(base("pen_001"), [
     vp(
@@ -331,6 +383,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Blindar constitucionalmente el sistema público de pensiones y su revalorización conforme al IPC",
       { confidence: 0.95 }
     ),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      57,
+      "ubicaremos el derecho a la pensión pública y su revalorización automática con arreglo al IPC",
+      { confidence: 0.95, explanation: "Propone llevarlo a la Constitución." }
+    ),
   ]),
   verify(base("pen_002"), [
     vp(
@@ -346,6 +405,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("pp", "Su programa del 29N propone un trato fiscal equivalente para todas las formas de ahorro (medida 184), no un incentivo específico al ahorro para la jubilación."),
     ne26("vox"),
     ne26("psoe"),
+    vp26(
+      "frente-amplio",
+      "strongly_oppose",
+      46,
+      "Eliminaremos el régimen fiscal especial de los trabajadores desplazados y las deducciones por planes de pensiones privados individuales.",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("tra_001"), [
     vp(
@@ -366,6 +432,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       41,
       "Reformar el despido improcedente para garantizar una reparación efectiva, proporcionada y disuasoria",
       { confidence: 0.75, explanation: "No fija la cuantía; remite a la Carta Social Europea revisada." }
+    ),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      52,
+      "Reformaremos la indemnización por despido improcedente para que repare el daño real causado a la persona trabajadora y disuada de los despidos injustificados",
+      { confidence: 0.8, explanation: "No fija la cuantía." }
     ),
   ]),
   verify(base("tra_002"), [
@@ -392,6 +465,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "strongly_support",
       41,
       "Completar la reducción de la jornada a 37,5 horas e incentivar los avances en la negociación colectiva hacia las 35 horas.",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      7,
+      "Avanzaremos hacia la jornada laboral máxima de 32 horas semanales sin reducción salarial —empezando por las 37,5 horas de forma inmediata—",
       { confidence: 0.95 }
     ),
   ]),
@@ -432,6 +512,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       37,
       "Blindar por ley el SMI por encima del 60% del salario medio y actualizarlo periódicamente según los precios, los salarios, la productividad y las necesidades de las personas trabajadoras",
       { confidence: 0.75, explanation: "Vincula el SMI al 60% del salario medio y a su actualización periódica, sin comprometer subidas por encima de la inflación." }
+    ),
+    vp26(
+      "frente-amplio",
+      "support",
+      51,
+      "Garantizaremos por ley una subida progresiva del Salario Mínimo Interprofesional (SMI) manteniendo un suelo permanente equivalente al 60 % del salario medio neto de la economía.",
+      { confidence: 0.8, explanation: "Vincula el SMI al 60% del salario medio neto con subidas progresivas, sin referirse expresamente a la inflación." }
     ),
   ]),
   verify(base("viv_001"), [
@@ -484,6 +571,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Congelar temporalmente las rentas que superen los índices de referencia, evitando incrementos abusivos en los mercados tensionados.",
       { confidence: 0.9 }
     ),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      13,
+      "Limitaremos por ley el precio del alquiler residencial en todas las zonas tensionadas",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("viv_002"), [
     vp(
@@ -535,6 +629,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Congelar temporalmente las rentas que superen los índices de referencia, evitando incrementos abusivos en los mercados tensionados.",
       { confidence: 0.8, explanation: "Posición derivada: congela las rentas que superen los índices de referencia en los mercados tensionados." }
     ),
+    vp26(
+      "frente-amplio",
+      "strongly_oppose",
+      13,
+      "Limitaremos por ley el precio del alquiler residencial en todas las zonas tensionadas",
+      { confidence: 0.85, explanation: "Posición derivada: propone limitar por ley el precio del alquiler en las zonas tensionadas." }
+    ),
   ]),
   verify(base("viv_003"), [
     vp(
@@ -580,6 +681,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "desalojo de viviendas ocupadas en 48 horas",
       { confidence: 0.85 }
     ),
+    ne26("frente-amplio"),
   ]),
   verify(base("viv_004"), [
     vp(
@@ -613,6 +715,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Movilizar suelo público, incluidos suelos dotacionales, para desarrollar en promoción directa, en concesión de obra pública o en colaboración público-privada.",
       { confidence: 0.55, explanation: "Destina el suelo público a vivienda asequible en venta o alquiler, también mediante colaboración público-privada; no lo reserva solo al alquiler público." }
     ),
+    vp26(
+      "frente-amplio",
+      "support",
+      11,
+      "Movilizaremos suelo y edificios públicos de titularidad estatal, incluidos los de Casa 47, para su cesión a cooperativas sin ánimo de lucro mediante derechos de superficie a largo plazo",
+      { confidence: 0.65, explanation: "Posición derivada: cede el suelo público estatal a cooperativas sin ánimo de lucro mediante derecho de superficie, sin venderlo; su parque público es mayoritariamente en alquiler (pág. 10)." }
+    ),
   ]),
   verify(base("reg_001"), [
     vp(
@@ -645,6 +754,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       15,
       "reducir la carga burocrática y facilitar que las empresas puedan operar, crecer y escalar en todo el territorio nacional.",
       { confidence: 0.55, explanation: "Reduce cargas y barreras regulatorias «innecesarias» mediante coordinación entre administraciones, sin plantear menos control previo." }
+    ),
+    vp26(
+      "frente-amplio",
+      "conditional_support",
+      92,
+      "Reforzaremos la ventanilla única administrativa y aceleraremos la digitalización para reducir trabas y trámites burocráticos",
+      { confidence: 0.5, explanation: "Reduce trámites mediante ventanilla única y digitalización, sin plantear menos control previo." }
     ),
   ]),
   verify(base("emp_001"), [
@@ -684,6 +800,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       100,
       "Ampliar las plantillas judiciales y fiscales y acabar con el abuso de la temporalidad",
       { confidence: 0.7, explanation: "Amplía plantillas en justicia, Policía y psicología clínica y reduce la temporalidad, sin plantear una ampliación general de los servicios públicos." }
+    ),
+    vp26(
+      "frente-amplio",
+      "support",
+      31,
+      "Fijaremos por ley ratios máximas por aula",
+      { confidence: 0.65, explanation: "Fija ratios máximas por aula y más profesionales de salud mental (pág. 28), sin plantear una ampliación general de las plantillas." }
     ),
   ]),
 ];

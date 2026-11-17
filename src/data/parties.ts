@@ -36,8 +36,19 @@ export const PARTIES: Party[] = [
     name: "SUMAR",
     fullName: "Sumar",
     color: "#c8386f",
-    active: true,
+    active: false,
     positionCycle: "2023-2026",
+    notes:
+      "Concurre al 29N dentro de Frente Amplio, que lo sustituye en la comparación desde la incorporación de su programa (2026-11-17). Sus posiciones del 23J-2023 se conservan como historial.",
+  },
+  {
+    id: "frente-amplio",
+    name: "Frente Amplio",
+    fullName: "Frente Amplio (Movimiento Sumar, IU, Más Madrid y Comuns)",
+    // Mismos colores ya validados para Sumar, que deja de mostrarse.
+    color: "#c8386f",
+    active: true,
+    positionCycle: "2026 (29N)",
   },
   // Preparados para fases posteriores (inactivos hasta tener posiciones
   // verificadas): podemos, erc, junts, ehbildu, pnv, bng, cc, upn.

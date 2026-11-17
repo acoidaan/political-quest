@@ -85,6 +85,11 @@ const PROGRAMS: Record<PartyId, Omit<Source, "page">> = {
  *   presentado el 2026-11-15. psoe.es filtra el acceso automatizado: el PDF se
  *   descargó de la URL de abajo con un navegador (Playwright) el 2026-11-16.
  *   Hay una captura de esa URL en Wayback Machine del mismo día.
+ * - Frente Amplio (Movimiento Sumar, IU, Más Madrid y Comuns, sucesor de
+ *   Sumar): «Un programa como una casa» (151 pp.), presentado el 2026-11-16 y
+ *   descargado de frenteamplio.info (web enlazada desde movimientosumar.es) el
+ *   2026-11-17. Al ser una coalición nueva, sus posiciones van con su propio
+ *   id; las de Sumar se conservan como historial (docs/ACTUALIZACION.md §3).
  */
 export const VERIFIED_AT_2026 = "2026-11-11";
 
@@ -110,6 +115,13 @@ const PROGRAMS_2026: Record<PartyId, Omit<Source, "page">> = {
     date: "2026-11-15",
     verifiedAt: "2026-11-16",
   },
+  "frente-amplio": {
+    type: "electoral_program",
+    document: "Programa electoral Frente Amplio 29N 2026 — «Un programa como una casa»",
+    url: "https://frenteamplio.info/pdf/ProgramaFrenteAmplio.pdf",
+    date: "2026-11-16",
+    verifiedAt: "2026-11-17",
+  },
 };
 
 /** Fecha de publicación del programa del 29N, por partido (= validFrom). */
@@ -117,6 +129,7 @@ const PROGRAM_2026_FROM: Record<PartyId, string> = {
   pp: "2026-11-10",
   vox: "2026-11-12",
   psoe: "2026-11-15",
+  "frente-amplio": "2026-11-16",
 };
 
 function program2026(party: PartyId): Omit<Source, "page"> {

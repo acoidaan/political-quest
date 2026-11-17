@@ -49,6 +49,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.95 }
     ),
     ne26("psoe"),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      126,
+      "Reformaremos de forma integral la Ley de Extranjería para instaurar un procedimiento estable, permanente y reglado de regularización administrativa.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("inm_002"), [
     vp(
@@ -100,6 +107,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "simplificar los trámites, dar seguridad jurídica, impulsar la contratación en origen, agilizar la homologación de títulos y facilitar el acceso al empleo",
       { confidence: 0.6, explanation: "Posición derivada: propone simplificar los trámites de extranjería, no endurecer los requisitos." }
     ),
+    vp26(
+      "frente-amplio",
+      "oppose",
+      126,
+      "Suprimiremos trabas administrativas para el acceso efectivo a derechos",
+      { confidence: 0.65, explanation: "Posición derivada: propone eliminar trabas administrativas y un procedimiento estable de regularización." }
+    ),
   ]),
   verify(base("inm_003"), [
     vp(
@@ -139,6 +153,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.85 }
     ),
     ne26("psoe"),
+    ne26("frente-amplio"),
   ]),
   verify(base("inm_004"), [
     vp(
@@ -175,6 +190,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ),
     ne26("vox"),
     ne26("psoe", "Su programa del 29N defiende una política migratoria europea «basada en la solidaridad» (pág. 110), sin pronunciarse sobre cuotas obligatorias de reparto."),
+    vp26(
+      "frente-amplio",
+      "conditional_support",
+      127,
+      "Interpretación y aplicación del Pacto Europeo de Migración y Asilo bajo su vertiente más garantista.",
+      { confidence: 0.5, explanation: "Acepta aplicar el Pacto Europeo de Migración y Asilo, sin pronunciarse expresamente sobre el reparto obligatorio." }
+    ),
   ]),
   verify(base("inm_005"), [
     vote("psoe", "strongly_support", {
@@ -207,6 +229,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "strongly_oppose",
       19,
       "excluyendo a los extranjeros en situación ilegal salvo casos de urgencia grave.",
+      { confidence: 0.9 }
+    ),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      26,
+      "Blindaremos por ley la universalidad de la atención sanitaria para residentes en España, independientemente de su estatus administrativo.",
       { confidence: 0.9 }
     ),
   ]),
@@ -248,6 +277,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.9 }
     ),
     ne26("psoe"),
+    vp26(
+      "frente-amplio",
+      "strongly_oppose",
+      126,
+      "Derogaremos formalmente la disposición adicional décima de la Ley de Extranjería (relativa al «rechazo en frontera»)",
+      { confidence: 0.75, explanation: "Posición derivada: deroga el rechazo en frontera y crea un control independiente de derechos humanos en la Frontera Sur." }
+    ),
   ]),
   verify(base("nac_001"), [
     vp(
@@ -281,6 +317,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.8, explanation: "Además revoca las «pasarelas rápidas para adquirir la nacionalidad española»." }
     ),
     ne26("psoe"),
+    ne26("frente-amplio", "Su programa del 29N solo propone devolver la nacionalidad a los saharauis nacidos bajo administración española (pág. 128)."),
   ]),
   verify(base("seg_001"), [
     vp(
@@ -320,6 +357,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ),
     ne26("vox"),
     ne26("psoe"),
+    ne26("frente-amplio"),
   ]),
   verify(base("seg_002"), [
     vp(
@@ -369,6 +407,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Ampliación de la prisión permanente revisable.",
       { confidence: 0.95 }
     ),
+    ne26("frente-amplio"),
   ]),
   verify(base("pol_001"), [
     vp(
@@ -395,6 +434,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       99,
       "Aprobar una nueva Ley de Seguridad Ciudadana que sustituya a la Ley Orgánica 4/2015, garantizando los derechos de reunión y manifestación, un régimen sancionador preciso",
       { confidence: 0.7, explanation: "No se refiere expresamente a la grabación de agentes." }
+    ),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      142,
+      "Derogaremos por completo la Ley Mordaza.",
+      { confidence: 0.95 }
     ),
   ]),
   verify(base("jus_001"), [
@@ -441,6 +487,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.95 }
     ),
     ne26("psoe", "Su programa del 29N no aborda el sistema de elección del CGPJ."),
+    vp26(
+      "frente-amplio",
+      "oppose",
+      148,
+      "Los vocales del turno judicial se seguirán eligiendo por mayoría de tres quintos, pero si en dos meses no hay acuerdo, las Cámaras podrán elegirlos en segunda votación",
+      { confidence: 0.8 }
+    ),
   ]),
   verify(base("jus_002"), [
     vp(
@@ -486,6 +539,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.65, explanation: "Posición derivada: amplía la prisión permanente revisable y rebaja la edad de responsabilidad penal; no menciona la reinserción." }
     ),
     ne26("psoe"),
+    vp26(
+      "frente-amplio",
+      "support",
+      144,
+      "Estableceremos un cuerpo de agentes de penas y medidas en medio abierto, con capacitación especial en reinserción.",
+      { confidence: 0.7, explanation: "Elimina además obstáculos a la progresión de grado (pág. 144)." }
+    ),
   ]),
   axesOnly(
     base("pri_001"),
@@ -506,6 +566,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
         { confidence: 0.7, explanation: "La restricción se concreta para los condenados por terrorismo, no para todos los delitos graves." }
       ),
       ne26("psoe"),
+      vp26(
+        "frente-amplio",
+        "strongly_oppose",
+        144,
+        "Eliminaremos los obstáculos en la progresión de grados y el acceso a los medios abiertos (tercer grado y libertad condicional).",
+        { confidence: 0.75, explanation: "Posición derivada: facilita el acceso al tercer grado, sin distinguir por tipo de delito." }
+      ),
     ]
   ),
   verify(base("lib_001"), [
@@ -528,6 +595,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.8, explanation: "Propone agravar las penas por ofensas a la Corona; no se refiere a las ofensas a los sentimientos religiosos." }
     ),
     ne26("psoe"),
+    vp26(
+      "frente-amplio",
+      "strongly_support",
+      142,
+      "Derogaremos los artículos del Código Penal que castigan los delitos contra los sentimientos religiosos o de escarnio público, los delitos contra la Corona",
+      { confidence: 0.95 }
+    ),
   ]),
   axesOnly(
     base("prv_001"),
@@ -536,6 +610,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       ne26("pp", "Su programa del 29N prevé financiar videovigilancia municipal (medida 27), pero no menciona el reconocimiento facial."),
       ne26("vox"),
       ne26("psoe"),
+      ne26("frente-amplio"),
     ]
   ),
 ];
