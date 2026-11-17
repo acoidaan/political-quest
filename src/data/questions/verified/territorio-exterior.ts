@@ -37,6 +37,28 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "El nuevo modelo debe avanzar en la autonomía financiera de las comunidades autónomas, con una mayor capacidad tributaria y de gestión por las agencias tributarias autonómicas.",
       { confidence: 0.9 }
     ),
+    ne26("adelante-andalucia"),
+    vp26(
+      "bng",
+      "strongly_support",
+      8,
+      "Trátase de que Galiza recade todos os impostos e teña capacidade para decidir como os inviste",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "erc",
+      "strongly_support",
+      11,
+      "un model de finançament que avanci en la línia d’un concert econòmic solidari",
+      { confidence: 0.9 }
+    ),
+    vp26(
+      "pnv",
+      "strongly_support",
+      21,
+      "Ampliar la capacidad normativa de las Haciendas Forales en el IVA y los Impuestos Especiales.",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("ter_002"), [
     vp(
@@ -82,6 +104,34 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       103,
       "debe acomodar la voluntad de mayor autogobierno que han expresado algunas comunidades autónomas",
       { confidence: 0.75, explanation: "Posición derivada: defiende más autogobierno y un modelo federal (pág. 140)." }
+    ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_oppose",
+      24,
+      "Exigimos el máximo nivel de autonomía y autogobierno en cualquier reforma.",
+      { confidence: 0.8, explanation: "Posición derivada: reclama más autogobierno para Andalucía." }
+    ),
+    vp26(
+      "bng",
+      "strongly_oppose",
+      37,
+      "O BNG aspira a que Galiza asuma a plena capacidade para rexer o seu sistema sanitario",
+      { confidence: 0.8, explanation: "Posición derivada: reclama más competencias para Galicia." }
+    ),
+    vp26(
+      "erc",
+      "strongly_oppose",
+      42,
+      "impedir qualsevol intent de recentralització o ingerència de l’Estat en el model sanitari català",
+      { confidence: 0.85 }
+    ),
+    vp26(
+      "pnv",
+      "strongly_oppose",
+      38,
+      "Rechazar cualquier intento de recentralización, invasión o vaciamiento de las competencias vascas",
+      { confidence: 0.95 }
     ),
   ]),
   verify(base("cat_001"), [
@@ -134,6 +184,10 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.9 }
     ),
     ne26("frente-amplio"),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   axesOnly(
     base("cat_002"),
@@ -161,6 +215,22 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         "impulsar el cambio de modelo territorial establecido en la Constitución, en un sentido federal y plurinacional incluyendo el derecho a decidir mediante referéndum",
         { confidence: 0.65, explanation: "Lo plantea mediante reforma constitucional y sin mencionar expresamente Cataluña." }
       ),
+      ne26("adelante-andalucia"),
+      vp26(
+        "bng",
+        "support",
+        32,
+        "referendos vinculantes en asuntos de interese, incluído o dereito de autodeterminación",
+        { confidence: 0.6, explanation: "Posición derivada: defiende el derecho de autodeterminación mediante referéndum, referido a Galicia; no menciona Cataluña." }
+      ),
+      vp26(
+        "erc",
+        "strongly_support",
+        7,
+        "Catalunya té dret a exercir l’autodeterminació, i són els catalans i les catalanes qui han de decidir el futur polític del país.",
+        { confidence: 0.9 }
+      ),
+      ne26("pnv"),
     ]
   ),
   axesOnly(
@@ -171,6 +241,16 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       ne26("vox"),
       ne26("psoe"),
       ne26("frente-amplio"),
+      ne26("adelante-andalucia"),
+      ne26("bng"),
+      ne26("erc"),
+      vp26(
+        "pnv",
+        "strongly_support",
+        37,
+        "En Madrid defenderemos el cumplimiento íntegro del Estatuto de Gernika, el Concierto Económico y las inversiones comprometidas.",
+        { confidence: 0.95 }
+      ),
     ]
   ),
   axesOnly(
@@ -187,6 +267,16 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         "Nuestro horizonte es avanzar hacia una República Federal que nos permita alcanzar una democracia real en la que también elijamos la Jefatura del Estado.",
         { confidence: 0.8, explanation: "Lo plantea como horizonte, sin concretar una consulta." }
       ),
+      ne26("adelante-andalucia"),
+      ne26("bng"),
+      vp26(
+        "erc",
+        "strongly_support",
+        8,
+        "totes les iniciatives que puguin influir a l’hora de posar fi a aquesta institució contrària al principi democràtic",
+        { confidence: 0.8, explanation: "Se refiere a la monarquía; no menciona una consulta." }
+      ),
+      ne26("pnv"),
     ]
   ),
   axesOnly(
@@ -203,6 +293,16 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         "Nuestro horizonte es avanzar hacia una República Federal que nos permita alcanzar una democracia real en la que también elijamos la Jefatura del Estado.",
         { confidence: 0.8, explanation: "Posición derivada: su horizonte es una república federal." }
       ),
+      ne26("adelante-andalucia"),
+      ne26("bng"),
+      vp26(
+        "erc",
+        "strongly_oppose",
+        8,
+        "totes les iniciatives que puguin influir a l’hora de posar fi a aquesta institució contrària al principi democràtic",
+        { confidence: 0.9, explanation: "Se refiere a la monarquía." }
+      ),
+      ne26("pnv"),
     ]
   ),
   axesOnly(
@@ -225,6 +325,16 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         "otorgándole la máxima protección jurídica e idéntica exigibilidad directa ante los tribunales ordinarios y el Tribunal Constitucional mediante recurso de amparo",
         { confidence: 0.9, explanation: "Se refiere al derecho a la vivienda; propone además blindar en la Constitución la salud y las pensiones (pág. 140)." }
       ),
+      vp26(
+        "adelante-andalucia",
+        "strongly_support",
+        49,
+        "Reforma constitucional para llevar el artículo 47 al capítulo de derechos fundamentales, con recurso de amparo.",
+        { confidence: 0.9, explanation: "Se refiere al derecho a la vivienda." }
+      ),
+      ne26("bng"),
+      ne26("erc"),
+      ne26("pnv"),
     ]
   ),
   verify(base("ter_003"), [
@@ -254,6 +364,16 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.5, explanation: "Posición derivada: mantiene las diputaciones y refuerza la financiación local; no plantea suprimirlas ni fusionar municipios." }
     ),
     ne26("frente-amplio"),
+    ne26("adelante-andalucia"),
+    vp26(
+      "bng",
+      "strongly_support",
+      42,
+      "Supresión das deputacións provinciais",
+      { confidence: 0.85, explanation: "Se refiere a las diputaciones; no menciona los municipios pequeños." }
+    ),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("ue_001"), [
     vp(
@@ -294,6 +414,16 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Financiaremos el presupuesto europeo no solo con contribuciones nacionales, sino también con nuevos recursos propios",
       { confidence: 0.65, explanation: "Propone nuevos recursos propios europeos; no menciona deuda común." }
     ),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    vp26(
+      "erc",
+      "support",
+      16,
+      "dotada amb un pressupost comú més ambiciós",
+      { confidence: 0.6, explanation: "Pide un presupuesto común europeo más ambicioso; no se refiere a impuestos ni deuda comunes." }
+    ),
+    ne26("pnv"),
   ]),
   verify(base("ue_002"), [
     vp(
@@ -334,6 +464,10 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.6, explanation: "Posición derivada: propone más integración europea, no recuperar competencias." }
     ),
     ne26("frente-amplio"),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("ue_003"), [
     vp(
@@ -377,6 +511,10 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.6, explanation: "Posición derivada: defiende una política migratoria común europea." }
     ),
     ne26("frente-amplio"),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("ue_004"), [
     vp(
@@ -417,6 +555,10 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Apostaremos por abandonar el requisito de la unanimidad a favor de un sistema de mayorías cualificadas en materia de política exterior y de seguridad común cuando esté involucrada la protección de los derechos humanos",
       { confidence: 0.75, explanation: "Mantiene la unanimidad en seguridad y defensa." }
     ),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("ue_005"), [
     vp(
@@ -463,6 +605,22 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "un espacio europeo de seguridad sujeto a control democrático",
       { confidence: 0.5, explanation: "Defiende una autonomía estratégica europea «no al servicio de la industria armamentística», sin hablar de integrar estructuras militares." }
     ),
+    ne26("adelante-andalucia"),
+    vp26(
+      "bng",
+      "oppose",
+      90,
+      "Opoñerse, no ámbito da UE, á militarización",
+      { confidence: 0.6, explanation: "Posición derivada." }
+    ),
+    vp26(
+      "erc",
+      "support",
+      16,
+      "autònoma de l’OTAN en matèria de defensa",
+      { confidence: 0.55, explanation: "Posición derivada: quiere una UE con defensa propia, autónoma de la OTAN." }
+    ),
+    ne26("pnv"),
   ]),
   verify(base("ota_001"), [
     vp(
@@ -509,6 +667,22 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Rechazaremos de forma explícita el compromiso de destinar el 5 % del PIB a gasto militar en el marco de la OTAN",
       { confidence: 0.55, explanation: "No plantea salir de la OTAN; rechaza su objetivo de gasto y propone la desmilitarización." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "oppose",
+      109,
+      "Proceso que termine en una consulta sobre la permanencia de España.",
+      { confidence: 0.7, explanation: "Propone un referéndum sobre la permanencia en la OTAN y rechaza el objetivo de gasto de la Alianza." }
+    ),
+    vp26(
+      "bng",
+      "strongly_oppose",
+      90,
+      "Rexeitamento ao incremento do gasto militar e ao acatamento das directrices OTAN e Estados Unidos neste ámbito.",
+      { confidence: 0.75, explanation: "Posición derivada: rechaza acatar las directrices de la OTAN; no se pronuncia expresamente sobre la pertenencia." }
+    ),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("def_001"), [
     vp(
@@ -561,6 +735,22 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Rechazaremos de forma explícita el compromiso de destinar el 5 % del PIB a gasto militar en el marco de la OTAN, impulsando una reducción efectiva de las partidas militares",
       { confidence: 0.9 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_oppose",
+      109,
+      "Rechazo al plan europeo de rearme y al objetivo del 5 % del PIB de la OTAN, reducción progresiva del gasto militar",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "bng",
+      "strongly_oppose",
+      90,
+      "Rexeitamento ao incremento do gasto militar e ao acatamento das directrices OTAN e Estados Unidos neste ámbito.",
+      { confidence: 0.95 }
+    ),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("def_002"), [
     vp(
@@ -583,6 +773,22 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Aprobaremos la reforma de la Ley 53/2007 para establecer el embargo automático de material de defensa y de doble uso a cualquier Estado cuyos dirigentes estén investigados por la Corte Penal Internacional",
       { confidence: 0.85 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      32,
+      "embargo total de armas y apoyo al boicot",
+      { confidence: 0.8, explanation: "Se refiere a Israel." }
+    ),
+    ne26("bng"),
+    vp26(
+      "erc",
+      "strongly_support",
+      16,
+      "Promoure un embargament complet d’armes a Israel per part de l’Estat.",
+      { confidence: 0.8, explanation: "Se refiere a Israel." }
+    ),
+    ne26("pnv"),
   ]),
   axesOnly(
     base("ext_001"),
@@ -604,6 +810,28 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         "Defenderemos el derecho incondicional a la autodeterminación del pueblo saharaui mediante un referéndum libre supervisado por Naciones Unidas",
         { confidence: 0.95 }
       ),
+      vp26(
+        "adelante-andalucia",
+        "strongly_support",
+        32,
+        "Autodeterminación del Sáhara Occidental, con España asumiendo su responsabilidad como potencia administradora",
+        { confidence: 0.9 }
+      ),
+      vp26(
+        "bng",
+        "strongly_support",
+        90,
+        "instando a que o Estado español impulse un referendo de autodeterminación con garantías democráticas",
+        { confidence: 0.95 }
+      ),
+      vp26(
+        "erc",
+        "support",
+        16,
+        "gir del govern del PSOE respecte el Sàhara Occidental. Cal revertir-lo",
+        { confidence: 0.7, explanation: "Posición derivada: pide revertir el cambio de posición del Gobierno sobre el Sáhara." }
+      ),
+      ne26("pnv"),
     ]
   ),
   verify(base("ene_001"), [
@@ -627,6 +855,22 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Crearemos una comercializadora pública de referencia, que distribuya energía a los hogares y rompa el oligopolio y su integración vertical.",
       { confidence: 0.9 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      22,
+      "Desprivatizar la energía y crear una empresa pública andaluza de energía",
+      { confidence: 0.85, explanation: "Propone una empresa pública andaluza." }
+    ),
+    vp26(
+      "bng",
+      "support",
+      56,
+      "base para a creación dunha empresa pública galega en materia de enerxía",
+      { confidence: 0.75, explanation: "Propone una empresa pública gallega." }
+    ),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("ene_002"), [
     vp(
@@ -661,6 +905,22 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "El Estado dejará de invertir en empresas dedicadas a la exploración, extracción, refino o distribución de combustibles fósiles.",
       { confidence: 0.7, explanation: "Posición derivada: retira la inversión pública en combustibles fósiles y prohíbe importar gas obtenido con fracking." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_oppose",
+      82,
+      "moratoria de hidrocarburos y Andalucía libre de fracking",
+      { confidence: 0.8 }
+    ),
+    vp26(
+      "bng",
+      "oppose",
+      56,
+      "Comprometer o mantemento da prohibición da fractura hidráulica (fracking)",
+      { confidence: 0.65, explanation: "Posición derivada." }
+    ),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("nuc_001"), [
     vp(
@@ -719,6 +979,16 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Cumpliremos el calendario de cierre de las centrales nucleares.",
       { confidence: 0.9 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_oppose",
+      82,
+      "Fin de las subvenciones a combustibles fósiles y nuclear",
+      { confidence: 0.7, explanation: "Posición derivada." }
+    ),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("nuc_002"), [
     vp(
@@ -777,6 +1047,10 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Cumpliremos el calendario de cierre de las centrales nucleares.",
       { confidence: 0.95 }
     ),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("cli_001"), [
     vp(
@@ -835,6 +1109,16 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Reduciremos las emisiones respecto a 1990 un 38 % en 2035, un 85 % en 2040 y alcanzaremos la neutralidad climática en 2050",
       { confidence: 0.85 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "support",
+      22,
+      "una ley de emergencia climática con objetivos anuales verificables",
+      { confidence: 0.7 }
+    ),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("cli_002"), [
     vp(
@@ -875,6 +1159,10 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.85 }
     ),
     ne26("frente-amplio"),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("agr_001"), [
     vp(
@@ -909,6 +1197,10 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.6, explanation: "Simplifica la gestión administrativa de las explotaciones sin rebajar las garantías ambientales." }
     ),
     ne26("frente-amplio"),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("med_001"), [
     vp(
@@ -967,6 +1259,16 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "creación de un canon hídrico progresivo para el regadío industrial en zonas con acuíferos sobreexplotados",
       { confidence: 0.7, explanation: "Plantea además evaluar moratorias a nuevos regadíos (pág. 75)." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      84,
+      "freno al regadío intensivo, ni trasvases ni compraventa de derechos de riego, cierre de los pozos ilegales",
+      { confidence: 0.8 }
+    ),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("tpt_001"), [
     vp(
@@ -1001,6 +1303,22 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Crearemos un abono único nominativo y mensual válido en todo el Estado, ciudades y modos de transporte.",
       { confidence: 0.85, explanation: "Con precios de 20 €/mes para Cercanías." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "support",
+      77,
+      "el transporte público será más barato que el coche",
+      { confidence: 0.7 }
+    ),
+    ne26("bng"),
+    vp26(
+      "erc",
+      "support",
+      21,
+      "Garantir unes tarifes assequibles i estables que fomentin l’ús del transport públic",
+      { confidence: 0.75 }
+    ),
+    ne26("pnv"),
   ]),
   verify(base("fis_001"), [
     vp(
@@ -1041,6 +1359,16 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Profundizaremos en la fiscalidad sobre el carbono y los hidrocarburos, con compensaciones y exenciones para las rentas bajas y colectivos vulnerables.",
       { confidence: 0.9 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "support",
+      59,
+      "Impuestos sobre las emisiones, los residuos peligrosos y el consumo de recursos comunes.",
+      { confidence: 0.65, explanation: "Posición derivada: no se refiere expresamente a los carburantes." }
+    ),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("dig_001"), [
     vp(
@@ -1093,6 +1421,16 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "atención presencial obligatoria",
       { confidence: 0.75 }
     ),
+    ne26("adelante-andalucia"),
+    vp26(
+      "bng",
+      "strongly_support",
+      41,
+      "Garantir a atención presencial sen cita previa",
+      { confidence: 0.8 }
+    ),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("ia_001"), [
     vp(
@@ -1139,6 +1477,16 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Exigencia a proveedores de superar una auditoría de seguridad independiente antes de desplegar sistemas de IA en contratos públicos",
       { confidence: 0.85, explanation: "Propone además una ley sobre el uso de la IA en el sector público con inventario público obligatorio." }
     ),
+    ne26("adelante-andalucia"),
+    vp26(
+      "bng",
+      "strongly_support",
+      76,
+      "Crear mecanismos públicos de inspección e auditoría dos algoritmos de interese xeral",
+      { confidence: 0.85 }
+    ),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("ia_002"), [
     vp(
@@ -1185,5 +1533,9 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Extenderemos las auditorías independientes a decisiones automatizadas en empleo, crédito, seguros y servicios esenciales",
       { confidence: 0.7 }
     ),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
 ];

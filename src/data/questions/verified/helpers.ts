@@ -90,6 +90,16 @@ const PROGRAMS: Record<PartyId, Omit<Source, "page">> = {
  *   descargado de frenteamplio.info (web enlazada desde movimientosumar.es) el
  *   2026-11-17. Al ser una coalición nueva, sus posiciones van con su propio
  *   id; las de Sumar se conservan como historial (docs/ACTUALIZACION.md §3).
+ * - Adelante Andalucía: «Un programa para frenar a las derechas» (134 pp.),
+ *   presentado el 2026-11-10; se cita la versión revisada del 2026-11-16
+ *   publicada en la misma URL, descargada el 2026-11-17.
+ * - BNG: «Programa electoral. 29N. Xerais 2026» (91 pp., en gallego),
+ *   presentado el 2026-11-03. bng.gal bloquea el acceso automatizado a sus
+ *   páginas, pero no al PDF, que se descargó de la URL de abajo.
+ * - ERC: «Eleccions al Congrés 2026. Programa electoral» (48 pp., en
+ *   catalán), presentado el 2026-11-10 en esquerrarepublicana.cat.
+ * - PNV: «Euskadi Zaindu» (43 pp.), presentado el 2026-11-09.
+ * Las citas en gallego y catalán se transcriben literalmente, sin traducir.
  */
 export const VERIFIED_AT_2026 = "2026-11-11";
 
@@ -122,6 +132,34 @@ const PROGRAMS_2026: Record<PartyId, Omit<Source, "page">> = {
     date: "2026-11-16",
     verifiedAt: "2026-11-17",
   },
+  "adelante-andalucia": {
+    type: "electoral_program",
+    document: "Programa electoral Adelante Andalucía 29N 2026 — «Un programa para frenar a las derechas»",
+    url: "https://programa.adelanteandalucia.org/programa-29n-adelante-andalucia.pdf",
+    date: "2026-11-16",
+    verifiedAt: "2026-11-17",
+  },
+  bng: {
+    type: "electoral_program",
+    document: "Programa electoral BNG 29N 2026 — «Xerais 2026»",
+    url: "https://www.bng.gal/media/bnggaliza/files/2026/11/03/26_bng_xerais_documentos_programa_electoral.pdf",
+    date: "2026-11-03",
+    verifiedAt: "2026-11-17",
+  },
+  erc: {
+    type: "electoral_program",
+    document: "Programa electoral ERC 29N 2026 — «Eleccions al Congrés 2026»",
+    url: "https://esquerrarepublicana.cat/documents/e2026-programa.pdf",
+    date: "2026-11-10",
+    verifiedAt: "2026-11-17",
+  },
+  pnv: {
+    type: "electoral_program",
+    document: "Programa electoral PNV 29N 2026 — «Euskadi Zaindu»",
+    url: "https://www.eaj-pnv.eus/es/adjuntos-documentos/21765/pdf/programa-electoral-29n",
+    date: "2026-11-09",
+    verifiedAt: "2026-11-17",
+  },
 };
 
 /** Fecha de publicación del programa del 29N, por partido (= validFrom). */
@@ -130,6 +168,10 @@ const PROGRAM_2026_FROM: Record<PartyId, string> = {
   vox: "2026-11-12",
   psoe: "2026-11-15",
   "frente-amplio": "2026-11-16",
+  "adelante-andalucia": "2026-11-16",
+  bng: "2026-11-03",
+  erc: "2026-11-10",
+  pnv: "2026-11-09",
 };
 
 function program2026(party: PartyId): Omit<Source, "page"> {

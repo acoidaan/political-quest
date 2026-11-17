@@ -56,6 +56,28 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Reformaremos de forma integral la Ley de Extranjería para instaurar un procedimiento estable, permanente y reglado de regularización administrativa.",
       { confidence: 0.95 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      28,
+      "Derogación de la Ley de Extranjería, regularización extraordinaria y cierre de los CIE",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "bng",
+      "strongly_support",
+      23,
+      "favorecer e facilitar os procesos de regularización administrativa",
+      { confidence: 0.85 }
+    ),
+    ne26("erc"),
+    vp26(
+      "pnv",
+      "support",
+      25,
+      "Avanzar en los procesos de regularización previstos en la legislación, facilitando la integración social y laboral de las personas que cumplen los requisitos establecidos.",
+      { confidence: 0.6, explanation: "Dentro de los procedimientos legales vigentes." }
+    ),
   ]),
   verify(base("inm_002"), [
     vp(
@@ -114,6 +136,16 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Suprimiremos trabas administrativas para el acceso efectivo a derechos",
       { confidence: 0.65, explanation: "Posición derivada: propone eliminar trabas administrativas y un procedimiento estable de regularización." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "oppose",
+      28,
+      "Derogación de la Ley de Extranjería, regularización extraordinaria y cierre de los CIE",
+      { confidence: 0.6, explanation: "Posición derivada: deroga la ley de extranjería y regulariza; no se refiere expresamente a los permisos." }
+    ),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("inm_003"), [
     vp(
@@ -154,6 +186,16 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ),
     ne26("psoe"),
     ne26("frente-amplio"),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    vp26(
+      "erc",
+      "strongly_oppose",
+      14,
+      "per evitar la deriva punitiva i les deportacions automàtiques",
+      { confidence: 0.7, explanation: "Posición derivada: rechaza las expulsiones automáticas." }
+    ),
+    ne26("pnv"),
   ]),
   verify(base("inm_004"), [
     vp(
@@ -197,6 +239,16 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Interpretación y aplicación del Pacto Europeo de Migración y Asilo bajo su vertiente más garantista.",
       { confidence: 0.5, explanation: "Acepta aplicar el Pacto Europeo de Migración y Asilo, sin pronunciarse expresamente sobre el reparto obligatorio." }
     ),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    vp26(
+      "erc",
+      "conditional_support",
+      17,
+      "en el marc de l’aplicació del Pacte Europeu de Migració i Asil",
+      { confidence: 0.5, explanation: "Acepta aplicar el Pacto Europeo de Migración y Asilo, sin pronunciarse expresamente sobre el reparto obligatorio." }
+    ),
+    ne26("pnv"),
   ]),
   verify(base("inm_005"), [
     vote("psoe", "strongly_support", {
@@ -238,6 +290,16 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Blindaremos por ley la universalidad de la atención sanitaria para residentes en España, independientemente de su estatus administrativo.",
       { confidence: 0.9 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      106,
+      "Sanidad universal efectiva, escuela infantil y comedor sin trabas administrativas.",
+      { confidence: 0.85, explanation: "Dentro del apartado sobre personas sin papeles." }
+    ),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("inm_006"), [
     vp(
@@ -284,6 +346,22 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Derogaremos formalmente la disposición adicional décima de la Ley de Extranjería (relativa al «rechazo en frontera»)",
       { confidence: 0.75, explanation: "Posición derivada: deroga el rechazo en frontera y crea un control independiente de derechos humanos en la Frontera Sur." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_oppose",
+      106,
+      "retirada de las concertinas de Ceuta y Melilla",
+      { confidence: 0.8, explanation: "Posición derivada." }
+    ),
+    vp26(
+      "bng",
+      "strongly_oppose",
+      23,
+      "o fin das deportacións en quente",
+      { confidence: 0.75, explanation: "Posición derivada: rechaza las devoluciones en caliente." }
+    ),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("nac_001"), [
     vp(
@@ -318,6 +396,10 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ),
     ne26("psoe"),
     ne26("frente-amplio", "Su programa del 29N solo propone devolver la nacionalidad a los saharauis nacidos bajo administración española (pág. 128)."),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("seg_001"), [
     vp(
@@ -358,6 +440,16 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ne26("vox"),
     ne26("psoe"),
     ne26("frente-amplio"),
+    ne26("adelante-andalucia"),
+    ne26("bng"),
+    ne26("erc"),
+    vp26(
+      "pnv",
+      "support",
+      24,
+      "Combatir la multirreincidencia y proteger a las víctimas.",
+      { confidence: 0.6, explanation: "Pide una respuesta judicial «ágil, eficaz y proporcionada» a la reincidencia, sin concretar un endurecimiento de las penas." }
+    ),
   ]),
   verify(base("seg_002"), [
     vp(
@@ -408,6 +500,28 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.95 }
     ),
     ne26("frente-amplio"),
+    vp26(
+      "adelante-andalucia",
+      "strongly_oppose",
+      94,
+      "Penas orientadas a la reinserción, como manda la Constitución.",
+      { confidence: 0.85, explanation: "Propone derogar la prisión permanente revisable (pág. 94)." }
+    ),
+    vp26(
+      "bng",
+      "strongly_oppose",
+      30,
+      "Derrogación da prisión permanente revisábel",
+      { confidence: 0.95 }
+    ),
+    ne26("erc"),
+    vp26(
+      "pnv",
+      "strongly_oppose",
+      28,
+      "Rechazar la prisión permanente revisable",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("pol_001"), [
     vp(
@@ -441,6 +555,34 @@ export const VERIFIED_LIBERTADES: Question[] = [
       142,
       "Derogaremos por completo la Ley Mordaza.",
       { confidence: 0.95 }
+    ),
+    vp26(
+      "adelante-andalucia",
+      "strongly_support",
+      89,
+      "derogar la ley mordaza",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "bng",
+      "strongly_support",
+      30,
+      "Derrogación íntegra da Lei Mordaza",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "erc",
+      "strongly_support",
+      8,
+      "Derogar la Llei mordassa.",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "pnv",
+      "support",
+      27,
+      "Impulsar la reforma de la legislación conocida como «ley mordaza», eliminando las restricciones desproporcionadas al ejercicio de derechos y libertades.",
+      { confidence: 0.8 }
     ),
   ]),
   verify(base("jus_001"), [
@@ -494,6 +636,10 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Los vocales del turno judicial se seguirán eligiendo por mayoría de tres quintos, pero si en dos meses no hay acuerdo, las Cámaras podrán elegirlos en segunda votación",
       { confidence: 0.8 }
     ),
+    ne26("adelante-andalucia", "Su programa del 29N propone la elección directa del Consejo General del Poder Judicial (pág. 92), una opción distinta de las que plantea la pregunta."),
+    ne26("bng"),
+    ne26("erc"),
+    ne26("pnv"),
   ]),
   verify(base("jus_002"), [
     vp(
@@ -546,6 +692,28 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Estableceremos un cuerpo de agentes de penas y medidas en medio abierto, con capacitación especial en reinserción.",
       { confidence: 0.7, explanation: "Elimina además obstáculos a la progresión de grado (pág. 144)." }
     ),
+    vp26(
+      "adelante-andalucia",
+      "support",
+      94,
+      "Penas orientadas a la reinserción, como manda la Constitución.",
+      { confidence: 0.75 }
+    ),
+    vp26(
+      "bng",
+      "support",
+      30,
+      "ir en contra do principio de reinserción social",
+      { confidence: 0.6, explanation: "Posición derivada: rechaza la prisión permanente revisable y la libertad vigilada tras la condena por contrarias a la reinserción." }
+    ),
+    ne26("erc"),
+    vp26(
+      "pnv",
+      "support",
+      28,
+      "defender un sistema penitenciario orientado a la reeducación y la reinserción",
+      { confidence: 0.7 }
+    ),
   ]),
   axesOnly(
     base("pri_001"),
@@ -573,6 +741,10 @@ export const VERIFIED_LIBERTADES: Question[] = [
         "Eliminaremos los obstáculos en la progresión de grados y el acceso a los medios abiertos (tercer grado y libertad condicional).",
         { confidence: 0.75, explanation: "Posición derivada: facilita el acceso al tercer grado, sin distinguir por tipo de delito." }
       ),
+      ne26("adelante-andalucia"),
+      ne26("bng"),
+      ne26("erc"),
+      ne26("pnv"),
     ]
   ),
   verify(base("lib_001"), [
@@ -602,6 +774,34 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Derogaremos los artículos del Código Penal que castigan los delitos contra los sentimientos religiosos o de escarnio público, los delitos contra la Corona",
       { confidence: 0.95 }
     ),
+    vp26(
+      "adelante-andalucia",
+      "support",
+      96,
+      "Suprimir del Código Penal la ofensa a los sentimientos religiosos.",
+      { confidence: 0.8, explanation: "Se refiere solo a la ofensa religiosa, no a las injurias a la Corona." }
+    ),
+    vp26(
+      "bng",
+      "strongly_support",
+      30,
+      "inxurias contra a Coroa, os Exércitos, as Forzas e Corpos de Seguranza, o Goberno e outras institucións do Estado, do escarnio de crenzas relixiosas",
+      { confidence: 0.9, explanation: "Propone eliminar estos delitos del Código Penal." }
+    ),
+    vp26(
+      "erc",
+      "strongly_support",
+      8,
+      "Suprimir els delictes d’ofensa als sentiments religiosos i d’injúries i calúmnies contra la Corona",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "pnv",
+      "conditional_support",
+      27,
+      "Código Penal en los delitos relacionados con la expresión de opiniones sobre la Corona, las instituciones y los símbolos del Estado, adecuando la legislación a los estándares europeos de libertad de expresión.",
+      { confidence: 0.5, explanation: "Propone reformar estos delitos, no suprimirlos; no menciona la ofensa religiosa." }
+    ),
   ]),
   axesOnly(
     base("prv_001"),
@@ -611,6 +811,16 @@ export const VERIFIED_LIBERTADES: Question[] = [
       ne26("vox"),
       ne26("psoe"),
       ne26("frente-amplio"),
+      ne26("adelante-andalucia"),
+      vp26(
+        "bng",
+        "strongly_oppose",
+        77,
+        "Estabelecer límites estritos ao recoñecemento facial e á vixilancia biométrica masiva en espazos públicos",
+        { confidence: 0.85 }
+      ),
+      ne26("erc"),
+      ne26("pnv"),
     ]
   ),
 ];
