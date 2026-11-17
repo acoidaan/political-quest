@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import type { AnswerValue, PersonalImportance, QuizMode, QuizSession } from "@/lib/types";
 import { activeQuestions, USING_DEMO_DATA } from "@/data/questions";
 import { categoryLabel } from "@/data/categories";
-import { selectQuestions } from "@/lib/scoring";
+import { selectQuestions, topicsOf } from "@/lib/scoring";
 import { ANSWER_SCALE, MODE_INFO, PERSONAL_IMPORTANCE_LABELS, SKIP_LABEL } from "@/lib/labels";
 import { AnswerScale } from "./AnswerScale";
 import {
@@ -64,7 +64,8 @@ function ActiveQuiz({ session }: { session: QuizSession }) {
   const [indexOverride, setIndexOverride] = useState(-1);
   const [showImportance, setShowImportance] = useState(false);
   const [showExplainer, setShowExplainer] = useState(false);
-  const [selfPlacementPhase, setSelfPlacementPhase] = useState(false);
+  // Tras la última pregunta: importancia por tema y autoubicación.
+  const [endPhase, setEndPhase] = useState<"topics" | "self" | null>(null);
   const [confirmRestart, setConfirmRestart] = useState(false);
   // Respuesta recién pulsada: se marca al instante y se avanza tras una pausa
   // breve para que el feedback sea visible.
@@ -125,7 +126,7 @@ function ActiveQuiz({ session }: { session: QuizSession }) {
     if (index + 1 < total) {
       goTo(index + 1);
     } else {
-      setSelfPlacementPhase(true);
+      setEndPhase("topics");
     }
   };
 
@@ -155,7 +156,7 @@ function ActiveQuiz({ session }: { session: QuizSession }) {
 
   // Atajos: 1–7 responden, N = sin información, ←/→ navegan, I = explicación.
   useEffect(() => {
-    if (selfPlacementPhase) return;
+    if (endPhase) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.metaKey || e.ctrlKey || e.altKey) return;
       const target = e.target as HTMLElement | null;
@@ -178,7 +179,25 @@ function ActiveQuiz({ session }: { session: QuizSession }) {
     return () => window.removeEventListener("keydown", onKey);
   });
 
-  if (selfPlacementPhase) {
+  if (endPhase === "topics") {
+    const topics = topicsOf(
+      session.questionIds
+        .map((id) => questionsById.get(id))
+        .filter((q): q is NonNullable<typeof q> => q !== undefined)
+    );
+    return (
+      <TopicImportance
+        topics={topics}
+        initial={session.topicImportance}
+        onDone={(topicImportance) => {
+          saveSession({ ...session, topicImportance });
+          setEndPhase("self");
+        }}
+      />
+    );
+  }
+
+  if (endPhase === "self") {
     return (
       <SelfPlacement
         onDone={(value) => {
@@ -498,6 +517,94 @@ function AlreadyFinished() {
  * Autopercepción (§14): opcional, se guarda aparte y solo se usa como
  * elemento descriptivo en los resultados. Nunca altera las puntuaciones.
  */
+function TopicImportance({
+  topics,
+  initial,
+  onDone,
+}: {
+  topics: string[];
+  initial?: Record<string, PersonalImportance>;
+  onDone: (value: Record<string, PersonalImportance> | undefined) => void;
+}) {
+  const [values, setValues] = useState<Record<string, PersonalImportance>>(
+    initial ?? {}
+  );
+  const idPrefix = useId();
+
+  return (
+    <div className="mx-auto max-w-2xl px-4 sm:px-6 py-16 rise-in">
+      <p className="text-xs uppercase tracking-[0.2em] text-muted">
+        Casi listo · opcional
+      </p>
+      <h1 className="font-display text-2xl sm:text-3xl mt-3 leading-snug">
+        ¿Cuánto te importa cada tema?
+      </h1>
+      <p className="mt-3 text-ink-2 text-sm">
+        Los temas que más te importan cuentan un poco más en tu resultado, y
+        los que menos, un poco menos. El efecto está acotado para que ningún
+        tema domine. Si marcaste la importancia de alguna pregunta concreta,
+        esa se mantiene.
+      </p>
+      <ul className="mt-8 divide-y divide-line border-y border-line">
+        {topics.map((topic, i) => (
+          <li
+            key={topic}
+            className="py-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3"
+          >
+            <span className="font-medium" id={`${idPrefix}-${i}`}>
+              {topic}
+            </span>
+            <div
+              role="group"
+              aria-labelledby={`${idPrefix}-${i}`}
+              className="flex gap-2 text-sm"
+            >
+              {(Object.keys(PERSONAL_IMPORTANCE_LABELS) as PersonalImportance[]).map(
+                (imp) => {
+                  const selected = (values[topic] ?? "normal") === imp;
+                  return (
+                    <button
+                      key={imp}
+                      type="button"
+                      onClick={() =>
+                        setValues((v) => ({ ...v, [topic]: imp }))
+                      }
+                      aria-pressed={selected}
+                      className={`px-3 py-1.5 rounded-full border transition-colors ${
+                        selected
+                          ? "border-accent bg-accent-soft/50"
+                          : "border-line hover:border-accent/60"
+                      }`}
+                    >
+                      {PERSONAL_IMPORTANCE_LABELS[imp]}
+                    </button>
+                  );
+                }
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+      <div className="mt-10 flex flex-wrap gap-3">
+        <button
+          type="button"
+          onClick={() => onDone(Object.keys(values).length > 0 ? values : undefined)}
+          className="px-6 py-3 rounded-md bg-ink text-paper hover:bg-accent transition-colors"
+        >
+          Continuar
+        </button>
+        <button
+          type="button"
+          onClick={() => onDone(undefined)}
+          className="px-6 py-3 rounded-md border border-line hover:border-accent transition-colors"
+        >
+          Saltar: todos por igual
+        </button>
+      </div>
+    </div>
+  );
+}
+
 function SelfPlacement({ onDone }: { onDone: (value?: number) => void }) {
   const [value, setValue] = useState(5.5);
   const [touched, setTouched] = useState(false);

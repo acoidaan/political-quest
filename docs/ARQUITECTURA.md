@@ -101,6 +101,10 @@ score_a = Σᵢ (rᵢ/3 · wᵢₐ · impᵢ) / Σᵢ (|wᵢₐ| · impᵢ)
 donde `rᵢ` es la respuesta (-3..+3), `wᵢₐ` el peso de la pregunta en el eje
 ([-1, +1]), `impᵢ` = importancia editorial de la pregunta × multiplicador de
 importancia personal (0.75 / 1.0 / 1.3 — acotado para que no domine, §7).
+La importancia personal se declara por pregunta o, al final del test, por bloque
+temático (`group` de la categoría, `QuizSession.topicImportance`);
+`applyTopicImportance` la traslada a las preguntas del bloque sin importancia
+propia, que prevalece. Se aplica igual en ejes y en similitud con partidos.
 Las preguntas omitidas o respondidas "no tengo suficiente información" no entran
 ni en numerador ni en denominador.
 

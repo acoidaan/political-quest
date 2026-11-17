@@ -89,7 +89,7 @@ export function saveSession(session: QuizSession): void {
     window.localStorage.setItem(KEY, JSON.stringify(session));
   } catch {
     // almacenamiento lleno o bloqueado: seguimos en memoria
-    cacheRaw = `mem:${session.id}:${Object.keys(session.answers).length}:${session.finishedAt ?? ""}:${session.selfPlacement ?? ""}`;
+    cacheRaw = `mem:${session.id}:${Object.keys(session.answers).length}:${session.finishedAt ?? ""}:${session.selfPlacement ?? ""}:${JSON.stringify(session.topicImportance ?? {})}`;
     cacheSession = session;
     cachePrimed = true;
   }

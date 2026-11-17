@@ -3,6 +3,7 @@ import { calculateAxisScores } from "./axes";
 import { calculateLeftRightScore } from "./leftRight";
 import { calculateConsistency, inconsistencyMultiplier } from "./consistency";
 import { calculateCentrist, calculateConvictions } from "./convictions";
+import { applyTopicImportance } from "./topicImportance";
 
 export { calculateAxisScores } from "./axes";
 export { calculateLeftRightScore } from "./leftRight";
@@ -13,6 +14,7 @@ export { discriminationScore } from "./discrimination";
 export { calculateCentrist, calculateConvictions } from "./convictions";
 export { calculatePartyAxisScores } from "./partyProfile";
 export { currentPosition, currentPositions, todayIso } from "./positions";
+export { applyTopicImportance, topicOf, topicsOf } from "./topicImportance";
 export * from "./constants";
 
 /**
@@ -30,7 +32,11 @@ export function computeQuizResult(
     .map((id) => byId.get(id))
     .filter((q): q is Question => q !== undefined);
 
-  const answers = session.answers;
+  const answers = applyTopicImportance(
+    questions,
+    session.answers,
+    session.topicImportance
+  );
   const answerList = Object.values(answers);
   const answeredCount = answerList.filter((a) => a.value !== "skipped").length;
   const skippedCount = answerList.filter((a) => a.value === "skipped").length;
