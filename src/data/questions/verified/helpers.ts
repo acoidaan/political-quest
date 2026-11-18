@@ -90,6 +90,9 @@ const PROGRAMS: Record<PartyId, Omit<Source, "page">> = {
  *   descargado de frenteamplio.info (web enlazada desde movimientosumar.es) el
  *   2026-11-17. Al ser una coalición nueva, sus posiciones van con su propio
  *   id; las de Sumar se conservan como historial (docs/ACTUALIZACION.md §3).
+ *   El 2026-11-17 publicó en la misma URL una versión revisada (cultura,
+ *   autónomos); se citan sus páginas tras comprobar de nuevo todas las citas
+ *   el 2026-11-18 (solo cambió de página la de tra_001).
  * - Adelante Andalucía: «Un programa para frenar a las derechas» (134 pp.),
  *   presentado el 2026-11-10; se cita la versión revisada del 2026-11-16
  *   publicada en la misma URL, descargada el 2026-11-17.
@@ -97,7 +100,9 @@ const PROGRAMS: Record<PartyId, Omit<Source, "page">> = {
  *   presentado el 2026-11-03. bng.gal bloquea el acceso automatizado a sus
  *   páginas, pero no al PDF, que se descargó de la URL de abajo.
  * - ERC: «Eleccions al Congrés 2026. Programa electoral» (48 pp., en
- *   catalán), presentado el 2026-11-10 en esquerrarepublicana.cat.
+ *   catalán), presentado el 2026-11-10 en esquerrarepublicana.cat. El
+ *   2026-11-17 publicó en la misma URL una versión revisada (renumera
+ *   medidas); todas las citas se comprobaron de nuevo el 2026-11-18.
  * - PNV: «Euskadi Zaindu» (43 pp.), presentado el 2026-11-09.
  * Las citas en gallego y catalán se transcriben literalmente, sin traducir.
  */
@@ -129,8 +134,8 @@ const PROGRAMS_2026: Record<PartyId, Omit<Source, "page">> = {
     type: "electoral_program",
     document: "Programa electoral Frente Amplio 29N 2026 — «Un programa como una casa»",
     url: "https://frenteamplio.info/pdf/ProgramaFrenteAmplio.pdf",
-    date: "2026-11-16",
-    verifiedAt: "2026-11-17",
+    date: "2026-11-17",
+    verifiedAt: "2026-11-18",
   },
   "adelante-andalucia": {
     type: "electoral_program",
@@ -150,8 +155,8 @@ const PROGRAMS_2026: Record<PartyId, Omit<Source, "page">> = {
     type: "electoral_program",
     document: "Programa electoral ERC 29N 2026 — «Eleccions al Congrés 2026»",
     url: "https://esquerrarepublicana.cat/documents/e2026-programa.pdf",
-    date: "2026-11-10",
-    verifiedAt: "2026-11-17",
+    date: "2026-11-17",
+    verifiedAt: "2026-11-18",
   },
   pnv: {
     type: "electoral_program",

@@ -24,6 +24,14 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-18",
+    kind: "datos",
+    title: "Versiones revisadas de los programas de Frente Amplio y ERC",
+    details: [
+      "Frente Amplio y ERC publicaron el 17 de noviembre versiones revisadas de sus programas en la misma dirección. Se han vuelto a comprobar todas sus citas: siguen siendo literales, y solo una cita del Frente Amplio (indemnización por despido) cambia de página. Ninguna posición cambia, así que el test no cambia.",
+    ],
+  },
+  {
     date: "2026-11-17",
     kind: "metodologia",
     title: "El aviso de cobertura del informe de balance compara solo partidos estatales",

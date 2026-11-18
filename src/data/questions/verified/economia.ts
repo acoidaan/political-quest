@@ -628,7 +628,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      52,
+      53,
       "Reformaremos la indemnización por despido improcedente para que repare el daño real causado a la persona trabajadora y disuada de los despidos injustificados",
       { confidence: 0.8, explanation: "No fija la cuantía." }
     ),

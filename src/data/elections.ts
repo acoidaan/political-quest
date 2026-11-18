@@ -66,7 +66,7 @@ export const CURRENT_ELECTION: Election = {
   campaign: { from: "2026-11-13", to: "2026-11-27" },
 };
 
-const CHECKED = "2026-11-17";
+const CHECKED = "2026-11-18";
 /** Webs cuyas páginas bloquean hoy el acceso automatizado (Cloudflare). */
 const LAST_READABLE = "2026-11-13";
 /** Candidaturas sin web oficial registrada que revisar. */
@@ -92,7 +92,9 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
         date: "2026-10-15",
       },
     ],
-    lastChecked: CHECKED,
+    // Programa completo en mi.democracia21.es (2026-11-13) pendiente de
+    // confirmación en un segundo medio (docs/ACTUALIZACION.md §1).
+    lastChecked: "2026-11-17",
   },
   {
     id: "frente-amplio",
@@ -109,7 +111,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
       },
     ],
     lastChecked: CHECKED,
-    notes: `En Las Palmas y Santa Cruz de Tenerife, IU y Sumar concurren dentro de «Unidad del Pueblo Canario UPC (NC-BC, PODEMOS, IU, SUMAR)». ${BOE_PROCLAIMED}.`,
+    notes: `En Las Palmas y Santa Cruz de Tenerife, IU y Sumar concurren dentro de «Unidad del Pueblo Canario UPC (NC-BC, PODEMOS, IU, SUMAR)». ${BOE_PROCLAIMED}. El 2026-11-17 se publicó en la misma URL una versión revisada del programa, que es la que se cita.`,
   },
   {
     id: "podemos",
@@ -260,6 +262,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
         date: "2026-11-10",
       },
     ],
+    notes: "El 2026-11-17 se publicó en la misma URL una versión revisada, que es la que se cita.",
     lastChecked: LAST_READABLE,
   },
   {
