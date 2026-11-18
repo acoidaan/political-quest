@@ -253,7 +253,10 @@ elemento secundario (un punto, no un fondo).
 
 1. **Sesgo de selección de propuestas** → informe de balance automático
    (`npm run balance`): nº de propuestas por partido origen, distribución de
-   polaridad, cobertura de categorías, discriminación media.
+   polaridad, cobertura de categorías, discriminación media. El aviso de
+   desequilibrio de cobertura compara solo partidos estatales activos: los
+   territoriales (`scope: "territorial"`) se listan, pero su menor cobertura
+   de propuestas estatales es estructural y no indica sesgo del cuestionario.
 2. **Razonamiento circular partidos↔ideología** → separación estricta de campos y
    procesos (§67-68); el L-R nunca toca posiciones de partidos.
 3. **Acquiescence bias** → campo `polarity`, alternancia en la selección, pares

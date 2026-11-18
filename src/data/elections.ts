@@ -66,7 +66,7 @@ export const CURRENT_ELECTION: Election = {
   campaign: { from: "2026-11-13", to: "2026-11-27" },
 };
 
-const CHECKED = "2026-11-17";
+const CHECKED = "2026-11-18";
 /** Webs cuyas páginas bloquean hoy el acceso automatizado (Cloudflare). */
 const LAST_READABLE = "2026-11-13";
 /** Candidaturas sin web oficial registrada que revisar. */
@@ -92,7 +92,9 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
         date: "2026-10-15",
       },
     ],
-    lastChecked: CHECKED,
+    // Programa completo en mi.democracia21.es (2026-11-13) pendiente de
+    // confirmación en un segundo medio (docs/ACTUALIZACION.md §1).
+    lastChecked: "2026-11-17",
   },
   {
     id: "frente-amplio",
@@ -109,7 +111,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
       },
     ],
     lastChecked: CHECKED,
-    notes: `En Las Palmas y Santa Cruz de Tenerife, IU y Sumar concurren dentro de «Unidad del Pueblo Canario UPC (NC-BC, PODEMOS, IU, SUMAR)». ${BOE_PROCLAIMED}.`,
+    notes: `En Las Palmas y Santa Cruz de Tenerife, IU y Sumar concurren dentro de «Unidad del Pueblo Canario UPC (NC-BC, PODEMOS, IU, SUMAR)». ${BOE_PROCLAIMED}. El 2026-11-17 se publicó en la misma URL una versión revisada del programa, que es la que se cita.`,
   },
   {
     id: "podemos",
@@ -187,7 +189,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "Adelante Andalucía",
     scope: "Andalucía",
     officialWebsite: "https://adelanteandalucia.org",
-    programStatus: "published",
+    programStatus: "incorporated",
     documents: [
       {
         title: "Programa electoral 29N — «Un programa para frenar a las derechas»",
@@ -195,6 +197,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
         date: "2026-11-10",
       },
     ],
+    notes: "El 2026-11-16 se publicó en la misma URL una versión revisada, que es la que se cita.",
     lastChecked: CHECKED,
   },
   {
@@ -202,7 +205,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "BNG",
     scope: "Galicia",
     officialWebsite: "https://www.bng.gal",
-    programStatus: "published",
+    programStatus: "incorporated",
     documents: [
       {
         title: "Programa electoral. 29N. Xerais 2026",
@@ -251,7 +254,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "ERC",
     scope: "Cataluña",
     officialWebsite: "https://www.esquerra.cat",
-    programStatus: "published",
+    programStatus: "incorporated",
     documents: [
       {
         title: "Eleccions al Congrés 2026. Programa electoral",
@@ -259,6 +262,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
         date: "2026-11-10",
       },
     ],
+    notes: "El 2026-11-17 se publicó en la misma URL una versión revisada, que es la que se cita.",
     lastChecked: LAST_READABLE,
   },
   {
@@ -283,6 +287,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
         date: "2026-11-09",
       },
     ],
+    notes: "Programa revisado: solo aborda 18 de las 90 propuestas del test, por debajo del mínimo para compararlo con garantías. Sus posiciones se conservan en el dataset.",
     lastChecked: CHECKED,
   },
 ];
@@ -290,7 +295,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
 export const PROGRAM_STATUS_LABELS: Record<ProgramStatus, string> = {
   pending: "Programa pendiente",
   partial: "Documentos parciales",
-  published: "Programa publicado · en verificación",
+  published: "Programa publicado · aún no incorporado",
   incorporated: "Incorporado a la comparación",
 };
 

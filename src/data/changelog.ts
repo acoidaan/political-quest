@@ -24,6 +24,33 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-18",
+    kind: "datos",
+    title: "Versiones revisadas de los programas de Frente Amplio y ERC",
+    details: [
+      "Frente Amplio y ERC publicaron el 17 de noviembre versiones revisadas de sus programas en la misma dirección. Se han vuelto a comprobar todas sus citas: siguen siendo literales, y solo una cita del Frente Amplio (indemnización por despido) cambia de página. Ninguna posición cambia, así que el test no cambia.",
+    ],
+  },
+  {
+    date: "2026-11-17",
+    kind: "metodologia",
+    title: "El aviso de cobertura del informe de balance compara solo partidos estatales",
+    details: [
+      "El informe de balance avisa si el partido con menos posiciones tiene menos del 60 % de las del que más tiene. Ahora esa comparación se hace solo entre partidos estatales que se comparan: los partidos territoriales abordan por naturaleza menos propuestas de ámbito estatal, y los inactivos no puntúan. Sus recuentos siguen apareciendo en el informe.",
+    ],
+  },
+  {
+    date: "2026-11-17",
+    kind: "datos",
+    title: "Adelante Andalucía, BNG y ERC entran en la comparación",
+    details: [
+      "Se incorporan con sus programas para el 29-N, con cita literal y página: Adelante Andalucía en 51 de las 90 propuestas, BNG en 40 y ERC en 32. Las citas del BNG y de ERC se reproducen en gallego y en catalán, sin traducir.",
+      "En las propuestas que su programa no aborda figuran como «evidencia insuficiente» y no puntúan en la comparación.",
+      "El programa del PNV también se ha revisado, pero solo aborda 18 de las 90 propuestas: por debajo del mínimo para compararlo con garantías, así que no se muestra en los resultados.",
+      "La etiqueta «Programa publicado · en verificación» pasa a «Programa publicado · aún no incorporado».",
+    ],
+  },
+  {
     date: "2026-11-17",
     kind: "datos",
     title: "Frente Amplio entra en la comparación con su programa para el 29-N",
