@@ -54,6 +54,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ),
     ne26("erc"),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "support",
+      16,
+      "refuercen la participación pública en sectores estratégicos",
+      { confidence: 0.8 }
+    ),
   ]),
   verify(base("eco_002"), [
     vp(
@@ -92,6 +99,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("eco_003"), [
     vp(
@@ -142,6 +150,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.9, explanation: "Propone también recuperar el impuesto a las grandes energéticas (pág. 22)." }
     ),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      14,
+      "Recuperar el impuesto a la energéticas que PNV, UPN, PP, VOX y JUNTS tumbaron, haciéndolo permanente.",
+      { confidence: 0.95 }
+    ),
   ]),
   axesOnly(
     base("eco_004"),
@@ -179,6 +194,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       ne26("bng"),
       ne26("erc"),
       ne26("pnv"),
+      ne26("ehbildu"),
     ]
   ),
   verify(base("imp_001"), [
@@ -254,6 +270,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.85, explanation: "Se concreta en las rentas del capital." }
     ),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("imp_002"), [
     vp(
@@ -316,6 +333,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.65, explanation: "Propone bajarlo a la clase trabajadora y subirlo a las rentas altas." }
     ),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("imp_003"), [
     vp(
@@ -354,6 +372,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("imp_004"), [
     vp("pp", "strongly_oppose", 23, "Eliminaremos el impuesto a las grandes fortunas…", { confidence: 0.95 }),
@@ -410,6 +429,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.95 }
     ),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      14,
+      "Aumentar el peso impositivo del impuesto a la banca y las grandes fortunas.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("bie_001"), [
     vp(
@@ -472,6 +498,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.65, explanation: "Lo plantea como adaptación de la cuantía al coste de vida en Cataluña." }
     ),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      13,
+      "ampliar las condiciones y requisitos para hacerlo accesible a más personas. Además, se propone aumentar las cuantías",
+      { confidence: 0.85, explanation: "Se refiere al Ingreso Mínimo Vital, cuya transferencia también reclama." }
+    ),
   ]),
   verify(base("bie_002"), [
     vp(
@@ -492,6 +525,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("pen_001"), [
     vp(
@@ -566,6 +600,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "revalorizarlas anualmente conforme al IPC, protegiendo su poder adquisitivo frente al incremento del coste de la vida.",
       { confidence: 0.9 }
     ),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      7,
+      "Garantizar el poder adquisitivo de las y los pensionistas, manteniendo y blindando la revalorización anual al IPC.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("pen_002"), [
     vp(
@@ -604,6 +645,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Favorecer la extensión de los sistemas de previsión social de empleo",
       { confidence: 0.6, explanation: "Posición derivada: apoya la previsión social de empleo como complemento de las pensiones públicas, sin mencionar incentivos fiscales." }
     ),
+    ne26("ehbildu"),
   ]),
   verify(base("tra_001"), [
     vp(
@@ -654,6 +696,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.9 }
     ),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      6,
+      "Indemnización por despido improcedente de al menos 45 días",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("tra_002"), [
     vp(
@@ -710,6 +759,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.95 }
     ),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      6,
+      "Reducción de la jornada laboral hasta las 32 horas semanales o la jornada de 4 días sin reducción salarial.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("smi_001"), [
     vp(
@@ -772,6 +828,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ),
     ne26("erc", "Su programa del 29N pide un salario mínimo propio para Cataluña (pág. 20), sin pronunciarse sobre la evolución del estatal."),
     ne26("pnv", "Su programa del 29N pide la competencia para fijar un salario mínimo vasco por encima del estatal (pág. 9), sin pronunciarse sobre la evolución del estatal."),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      6,
+      "Establecer por ley, como parámetro de suficiencia para el establecimiento de las cuantías, la referencia que establece la Carta Social Europea.",
+      { confidence: 0.75, explanation: "Propone además que las comunidades autónomas puedan fijar un salario mínimo propio por encima del estatal." }
+    ),
   ]),
   verify(base("viv_001"), [
     vp(
@@ -840,6 +903,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("bng"),
     ne26("erc", "Su programa del 29N pide que la Generalitat pueda legislar plenamente sobre arrendamientos urbanos (pág. 19), sin pronunciarse sobre limitar los precios por ley estatal."),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      5,
+      "estableciendo regulaciones de los precios y aportando seguridad mediante contratos duraderos y prorrogables automáticamente",
+      { confidence: 0.85, explanation: "Propone además un tope estructural del 2 % a la actualización anual de las rentas." }
+    ),
   ]),
   verify(base("viv_002"), [
     vp(
@@ -908,6 +978,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_oppose",
+      5,
+      "Establecer de manera estructural el máximo de 2% de actualización anual de renta en los contratos de arrendamiento",
+      { confidence: 0.8, explanation: "Posición derivada: propone regular los precios del alquiler." }
+    ),
   ]),
   verify(base("viv_003"), [
     vp(
@@ -958,6 +1035,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("viv_004"), [
     vp(
@@ -1014,6 +1092,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("reg_001"), [
     vp(
@@ -1070,6 +1149,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Reducir la burocracia y eliminar duplicidades administrativas que dificultan la creación, ampliación y gestión de empresas y negocios.",
       { confidence: 0.65, explanation: "No se refiere expresamente a reducir el control previo." }
     ),
+    ne26("ehbildu"),
   ]),
   verify(base("emp_001"), [
     vp(
@@ -1132,5 +1212,12 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.6, explanation: "Se refiere a la plantilla judicial en Cataluña." }
     ),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "support",
+      12,
+      "deberán realizarse las inversiones en recursos y plantillas necesarios para respetar y asegurar el derecho de la ciudadanía a un servicio de calidad",
+      { confidence: 0.6, explanation: "Se refiere a la atención de la Administración pública." }
+    ),
   ]),
 ];

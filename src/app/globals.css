@@ -27,6 +27,7 @@
   --party-bng: #7b52c7;
   --party-erc: #b07800;
   --party-pnv: #8c5a2e;
+  --party-ehbildu: #0b7fa3;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -50,6 +51,7 @@
     --party-bng: #a283e0;
     --party-erc: #e8b13a;
     --party-pnv: #c08a5a;
+    --party-ehbildu: #4fb3d4;
   }
 }
 

@@ -79,6 +79,15 @@ export const PARTIES: Party[] = [
     positionCycle: "2026 (29N)",
   },
   {
+    id: "ehbildu",
+    name: "EH Bildu",
+    fullName: "Euskal Herria Bildu",
+    color: "#0b7fa3",
+    active: true,
+    scope: "territorial",
+    positionCycle: "2026 (29N)",
+  },
+  {
     id: "pnv",
     name: "PNV",
     fullName: "Partido Nacionalista Vasco (EAJ-PNV)",
@@ -92,7 +101,7 @@ export const PARTIES: Party[] = [
       "Programa del 29N incorporado, pero solo aborda 18 de las preguntas del test: por debajo del mínimo para compararlo con garantías.",
   },
   // Preparados para fases posteriores (inactivos hasta tener posiciones
-  // verificadas): podemos, junts, ehbildu, cc, upn.
+  // verificadas): podemos, junts, cc, upn.
 ];
 
 export const ACTIVE_PARTIES = PARTIES.filter((p) => p.active);

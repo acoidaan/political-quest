@@ -104,6 +104,9 @@ const PROGRAMS: Record<PartyId, Omit<Source, "page">> = {
  *   2026-11-17 publicó en la misma URL una versión revisada (renumera
  *   medidas); todas las citas se comprobaron de nuevo el 2026-11-18.
  * - PNV: «Euskadi Zaindu» (43 pp.), presentado el 2026-11-09.
+ * - EH Bildu: «Posible egin. Garantía y derechos» (30 pp., versión en
+ *   castellano), publicado el 2026-11-16 en posibleegin.ehbildu.eus, su web
+ *   de campaña (enlazada desde ehbildu.eus).
  * Las citas en gallego y catalán se transcriben literalmente, sin traducir.
  */
 export const VERIFIED_AT_2026 = "2026-11-11";
@@ -158,6 +161,13 @@ const PROGRAMS_2026: Record<PartyId, Omit<Source, "page">> = {
     date: "2026-11-17",
     verifiedAt: "2026-11-18",
   },
+  ehbildu: {
+    type: "electoral_program",
+    document: "Programa electoral EH Bildu 29N 2026 — «Posible egin. Garantía y derechos»",
+    url: "https://posibleegin.ehbildu.eus/wp-content/uploads/2026/11/PROGRAMA-CAS.pdf",
+    date: "2026-11-16",
+    verifiedAt: "2026-11-19",
+  },
   pnv: {
     type: "electoral_program",
     document: "Programa electoral PNV 29N 2026 — «Euskadi Zaindu»",
@@ -177,6 +187,7 @@ const PROGRAM_2026_FROM: Record<PartyId, string> = {
   bng: "2026-11-03",
   erc: "2026-11-10",
   pnv: "2026-11-09",
+  ehbildu: "2026-11-16",
 };
 
 function program2026(party: PartyId): Omit<Source, "page"> {

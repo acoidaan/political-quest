@@ -66,6 +66,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.6, explanation: "Posición derivada: amplía la cartera pública (dental, visual y psicológica) a cargo del Estado, sin hablar de impuestos." }
     ),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("san_002"), [
     vp(
@@ -122,6 +123,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne26("erc"),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_oppose",
+      11,
+      "Derogar la Ley 15/1997 de 25 de abril, sobre habilitación de nuevas formas de gestión del Sistema Nacional de Salud, aprobada por el PP que permite la privatización y externalización de los servicios sanitarios.",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("san_003"), [
     vp(
@@ -202,6 +210,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.85 }
     ),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   axesOnly(
     base("san_004"),
@@ -221,6 +230,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       ne26("bng"),
       ne26("erc"),
       ne26("pnv"),
+      ne26("ehbildu"),
     ]
   ),
   verify(base("edu_001"), [
@@ -278,6 +288,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   axesOnly(
     base("edu_002"),
@@ -303,6 +314,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       ),
       ne26("erc"),
       ne26("pnv"),
+      ne26("ehbildu"),
     ]
   ),
   verify(base("edu_003"), [
@@ -354,6 +366,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.85, explanation: "Posición derivada: defiende la inmersión en catalán en Cataluña." }
     ),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("edu_004"), [
     vp(
@@ -398,6 +411,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Reforzar la coeducación y la educación afectivo-sexual en igualdad",
       { confidence: 0.5, explanation: "Posición derivada: no se refiere expresamente a la autorización previa de las familias." }
     ),
+    ne26("ehbildu"),
   ]),
   verify(base("uni_001"), [
     vp(
@@ -472,6 +486,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.7 }
     ),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("igu_001"), [
     vp(
@@ -534,6 +549,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Asegurar la aplicación de la normativa europea sobre transparencia retributiva, para detectar y corregir las desigualdades salariales entre mujeres y hombres.",
       { confidence: 0.65, explanation: "No menciona expresamente auditorías ni sanciones." }
     ),
+    ne26("ehbildu"),
   ]),
   verify(base("gen_001"), [
     vp(
@@ -620,6 +636,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Asegurar el cumplimiento íntegro de las medidas estatales del Pacto de Estado contra la Violencia de Género renovado en 2025",
       { confidence: 0.6, explanation: "Posición derivada: refuerza el marco específico contra la violencia de género." }
     ),
+    ne26("ehbildu"),
   ]),
   verify(base("gen_002"), [
     vp(
@@ -682,6 +699,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Asegurar el desarrollo reglamentario del artículo 50 de la Ley 4/2023",
       { confidence: 0.55, explanation: "Posición derivada: pide desarrollar la Ley 4/2023, que regula la rectificación registral por declaración propia; no se pronuncia sobre ese procedimiento." }
     ),
+    vp26(
+      "ehbildu",
+      "support",
+      19,
+      "no aceptaremos retrocesos en los derechos adquiridos, especialmente en la despatologización de las personas Trans",
+      { confidence: 0.75, explanation: "Posición derivada: defiende la despatologización vigente." }
+    ),
   ]),
   verify(base("lgb_001"), [
     vp(
@@ -726,6 +750,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("lgb_002"), [
     vote("psoe", "support", {
@@ -782,6 +807,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       27,
       "Favorecer la tipificación penal específica de las prácticas de conversión o aversión dirigidas a modificar la orientación sexual, la identidad sexual o la expresión de género.",
       { confidence: 0.9 }
+    ),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      19,
+      "Prohibir las terapias de conversión",
+      { confidence: 0.95 }
     ),
   ]),
   verify(base("fam_001"), [
@@ -857,6 +889,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.85 }
     ),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "support",
+      13,
+      "Proponemos que se oriente a las CCAA a desarrollar prestaciones económicas de apoyo a la crianza acordes con índices de gasto de crianza territoriales.",
+      { confidence: 0.6, explanation: "Propone que las desarrollen las comunidades autónomas." }
+    ),
   ]),
   verify(base("abo_001"), [
     vp(
@@ -931,6 +970,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Proteger el ejercicio efectivo de los derechos sexuales y reproductivos de las mujeres, garantizando el acceso libre y seguro a los servicios sanitarios.",
       { confidence: 0.75, explanation: "Propone además perímetros de protección alrededor de las clínicas que practican abortos (pág. 26)." }
     ),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      19,
+      "Blindar el derecho al aborto.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("abo_002"), [
     vp(
@@ -975,6 +1021,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("eut_001"), [
     vp(
@@ -1043,6 +1090,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      10,
+      "Con el objetivo de blindar el derecho a morir dignamente frente a la intromisión judicial de terceros.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("rel_001"), [
     vp(
@@ -1081,6 +1135,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("rel_002"), [
     vp(
@@ -1119,6 +1174,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("cul_001"), [
     vp(
@@ -1169,6 +1225,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("cul_002"), [
     vp(
@@ -1219,6 +1276,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("mpu_001"), [
     vp(
@@ -1257,5 +1315,6 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
 ];

@@ -24,6 +24,15 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-19",
+    kind: "datos",
+    title: "EH Bildu entra en la comparación con su programa para el 29-N",
+    details: [
+      "Sus posiciones proceden de su programa «Posible egin. Garantía y derechos» (16 de noviembre de 2026), con cita literal y página en 41 de las 90 propuestas.",
+      "En las propuestas que su programa no aborda figura como «evidencia insuficiente» y no puntúa en la comparación.",
+    ],
+  },
+  {
     date: "2026-11-18",
     kind: "datos",
     title: "Versiones revisadas de los programas de Frente Amplio y ERC",
