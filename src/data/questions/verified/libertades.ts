@@ -78,6 +78,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Avanzar en los procesos de regularización previstos en la legislación, facilitando la integración social y laboral de las personas que cumplen los requisitos establecidos.",
       { confidence: 0.6, explanation: "Dentro de los procedimientos legales vigentes." }
     ),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      20,
+      "Regularización y nueva Ley de Extranjería: Garantizar una regularización efectiva, accesible y estable.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("inm_002"), [
     vp(
@@ -146,6 +153,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_oppose",
+      20,
+      "Facilitar las autorizaciones de residencia y trabajo y prevenir la irregularidad sobrevenida.",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("inm_003"), [
     vp(
@@ -196,6 +210,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.7, explanation: "Posición derivada: rechaza las expulsiones automáticas." }
     ),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("inm_004"), [
     vp(
@@ -249,6 +264,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.5, explanation: "Acepta aplicar el Pacto Europeo de Migración y Asilo, sin pronunciarse expresamente sobre el reparto obligatorio." }
     ),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("inm_005"), [
     vote("psoe", "strongly_support", {
@@ -300,6 +316,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      20,
+      "eliminación de barreras para acceder a la sanidad, educación, vivienda y protección social, independientemente de la situación administrativa",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("inm_006"), [
     vp(
@@ -362,6 +385,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ),
     ne26("erc"),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_oppose",
+      20,
+      "Rechazar las disposiciones restrictivas del Pacto Europeo sobre Migración y Asilo, las devoluciones sumarias",
+      { confidence: 0.8, explanation: "Posición derivada: rechaza las devoluciones sumarias." }
+    ),
   ]),
   verify(base("nac_001"), [
     vp(
@@ -400,6 +430,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("seg_001"), [
     vp(
@@ -450,6 +481,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Combatir la multirreincidencia y proteger a las víctimas.",
       { confidence: 0.6, explanation: "Pide una respuesta judicial «ágil, eficaz y proporcionada» a la reincidencia, sin concretar un endurecimiento de las penas." }
     ),
+    ne26("ehbildu"),
   ]),
   verify(base("seg_002"), [
     vp(
@@ -522,6 +554,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Rechazar la prisión permanente revisable",
       { confidence: 0.95 }
     ),
+    ne26("ehbildu"),
   ]),
   verify(base("pol_001"), [
     vp(
@@ -584,6 +617,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Impulsar la reforma de la legislación conocida como «ley mordaza», eliminando las restricciones desproporcionadas al ejercicio de derechos y libertades.",
       { confidence: 0.8 }
     ),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      22,
+      "Acabar con la Ley Mordaza.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("jus_001"), [
     vp(
@@ -640,6 +680,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("jus_002"), [
     vp(
@@ -714,6 +755,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "defender un sistema penitenciario orientado a la reeducación y la reinserción",
       { confidence: 0.7 }
     ),
+    ne26("ehbildu"),
   ]),
   axesOnly(
     base("pri_001"),
@@ -745,6 +787,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       ne26("bng"),
       ne26("erc"),
       ne26("pnv"),
+      ne26("ehbildu"),
     ]
   ),
   verify(base("lib_001"), [
@@ -802,6 +845,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Código Penal en los delitos relacionados con la expresión de opiniones sobre la Corona, las instituciones y los símbolos del Estado, adecuando la legislación a los estándares europeos de libertad de expresión.",
       { confidence: 0.5, explanation: "Propone reformar estos delitos, no suprimirlos; no menciona la ofensa religiosa." }
     ),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      22,
+      "propondremos despenalizar los artículos sobre las criticas a la corona y las instituciones del estado",
+      { confidence: 0.95, explanation: "Incluye también la crítica a los sentimientos religiosos." }
+    ),
   ]),
   axesOnly(
     base("prv_001"),
@@ -821,6 +871,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       ),
       ne26("erc"),
       ne26("pnv"),
+      ne26("ehbildu"),
     ]
   ),
 ];

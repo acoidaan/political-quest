@@ -66,7 +66,7 @@ export const CURRENT_ELECTION: Election = {
   campaign: { from: "2026-11-13", to: "2026-11-27" },
 };
 
-const CHECKED = "2026-11-18";
+const CHECKED = "2026-11-19";
 /** Webs cuyas páginas bloquean hoy el acceso automatizado (Cloudflare). */
 const LAST_READABLE = "2026-11-13";
 /** Candidaturas sin web oficial registrada que revisar. */
@@ -245,8 +245,14 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "EH Bildu",
     scope: "País Vasco y Navarra",
     officialWebsite: "https://ehbildu.eus",
-    programStatus: "pending",
-    documents: [],
+    programStatus: "incorporated",
+    documents: [
+      {
+        title: "Posible egin. Garantía y derechos. Programa elecciones generales 29N",
+        url: "https://posibleegin.ehbildu.eus/wp-content/uploads/2026/11/PROGRAMA-CAS.pdf",
+        date: "2026-11-16",
+      },
+    ],
     lastChecked: CHECKED,
   },
   {

@@ -59,6 +59,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Ampliar la capacidad normativa de las Haciendas Forales en el IVA y los Impuestos Especiales.",
       { confidence: 0.85 }
     ),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      24,
+      "trabajaremos para lograr ensanchar estos instrumentos, dotándolos de nuevas capacidades",
+      { confidence: 0.8, explanation: "Se refiere al Concierto y al Convenio Económico." }
+    ),
   ]),
   verify(base("ter_002"), [
     vp(
@@ -133,6 +140,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Rechazar cualquier intento de recentralización, invasión o vaciamiento de las competencias vascas",
       { confidence: 0.95 }
     ),
+    vp26(
+      "ehbildu",
+      "strongly_oppose",
+      24,
+      "Defenderemos también, por encima de cualquier intento de re-centralización o retroceso, el autogobierno",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("cat_001"), [
     vp(
@@ -188,6 +202,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   axesOnly(
     base("cat_002"),
@@ -231,6 +246,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         { confidence: 0.9 }
       ),
       ne26("pnv"),
+      vp26(
+        "ehbildu",
+        "support",
+        24,
+        "El reconocimiento del derecho a decidir del pueblo vasco como mecanismo democrático y legítimo para dicha solución",
+        { confidence: 0.6, explanation: "Posición derivada: se refiere al pueblo vasco y pide reconocer a las diferentes naciones del Estado." }
+      ),
     ]
   ),
   axesOnly(
@@ -250,6 +272,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         37,
         "En Madrid defenderemos el cumplimiento íntegro del Estatuto de Gernika, el Concierto Económico y las inversiones comprometidas.",
         { confidence: 0.95 }
+      ),
+      vp26(
+        "ehbildu",
+        "conditional_support",
+        24,
+        "Defenderemos estas herramientas como uno de los pilares de nuestro bienestar social y autogobierno económico, fiscal y financiero.",
+        { confidence: 0.6, explanation: "Los defiende, pero propone ampliarlos y acordar un nuevo modelo de cálculo del Cupo y la Aportación." }
       ),
     ]
   ),
@@ -277,6 +306,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         { confidence: 0.8, explanation: "Se refiere a la monarquía; no menciona una consulta." }
       ),
       ne26("pnv"),
+      ne26("ehbildu"),
     ]
   ),
   axesOnly(
@@ -303,6 +333,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         { confidence: 0.9, explanation: "Se refiere a la monarquía." }
       ),
       ne26("pnv"),
+      vp26(
+        "ehbildu",
+        "oppose",
+        23,
+        "la función garante de todo ello de monarquía heredera directa del franquismo",
+        { confidence: 0.55, explanation: "Posición derivada: critica la monarquía, sin proponer expresamente un cambio de forma de Estado." }
+      ),
     ]
   ),
   axesOnly(
@@ -335,6 +372,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       ne26("bng"),
       ne26("erc"),
       ne26("pnv"),
+      ne26("ehbildu"),
     ]
   ),
   verify(base("ter_003"), [
@@ -374,6 +412,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("ue_001"), [
     vp(
@@ -424,6 +463,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.6, explanation: "Pide un presupuesto común europeo más ambicioso; no se refiere a impuestos ni deuda comunes." }
     ),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("ue_002"), [
     vp(
@@ -468,6 +508,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("ue_003"), [
     vp(
@@ -515,6 +556,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("ue_004"), [
     vp(
@@ -559,6 +601,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("ue_005"), [
     vp(
@@ -621,6 +664,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.55, explanation: "Posición derivada: quiere una UE con defensa propia, autónoma de la OTAN." }
     ),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "support",
+      28,
+      "abogaremos por la construcción de un proyecto de seguridad estratégica europeo",
+      { confidence: 0.5, explanation: "Posición derivada: plantea un proyecto europeo de seguridad basado en la diplomacia, sin referirse a integrar estructuras militares." }
+    ),
   ]),
   verify(base("ota_001"), [
     vp(
@@ -683,6 +733,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ),
     ne26("erc"),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_oppose",
+      28,
+      "Rechazamos la OTAN y la pertenencia de Euskal Herria a la misma",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("def_001"), [
     vp(
@@ -751,6 +808,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ),
     ne26("erc"),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_oppose",
+      28,
+      "rechazaremos el aumento del gasto en defensa que la OTAN está exigiendo",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("def_002"), [
     vp(
@@ -789,6 +853,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.8, explanation: "Se refiere a Israel." }
     ),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      29,
+      "propondremos endurecer el embargo de armas para un embargo real y efectivo, bloqueando por completo la venta de armas",
+      { confidence: 0.8, explanation: "Se refiere a Israel." }
+    ),
   ]),
   axesOnly(
     base("ext_001"),
@@ -832,6 +903,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         { confidence: 0.7, explanation: "Posición derivada: pide revertir el cambio de posición del Gobierno sobre el Sáhara." }
       ),
       ne26("pnv"),
+      vp26(
+        "ehbildu",
+        "strongly_support",
+        29,
+        "recuperando el reconocimiento, apoyo y respeto al derecho de autodeterminación del Pueblo Saharaui",
+        { confidence: 0.85 }
+      ),
     ]
   ),
   verify(base("ene_001"), [
@@ -871,6 +949,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ),
     ne26("erc"),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "support",
+      15,
+      "impulsando la participación pública y comunitaria desde la generación al consumo",
+      { confidence: 0.55, explanation: "Posición derivada: no menciona expresamente una empresa pública de energía." }
+    ),
   ]),
   verify(base("ene_002"), [
     vp(
@@ -921,6 +1006,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("nuc_001"), [
     vp(
@@ -989,6 +1075,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_oppose",
+      15,
+      "Apostaremos por mantener el calendario de cierre nuclear definido en el PNIEC.",
+      { confidence: 0.85, explanation: "Posición derivada." }
+    ),
   ]),
   verify(base("nuc_002"), [
     vp(
@@ -1051,6 +1144,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      15,
+      "Apostaremos por mantener el calendario de cierre nuclear definido en el PNIEC.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("cli_001"), [
     vp(
@@ -1119,6 +1219,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      15,
+      "Revisión al alza de los objetivos de la planificación de energía y clima (PNIEC), con el objetivo de adelantar la descarbonización, al menos, a 2045.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("cli_002"), [
     vp(
@@ -1163,6 +1270,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("agr_001"), [
     vp(
@@ -1201,6 +1309,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("med_001"), [
     vp(
@@ -1269,6 +1378,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
   verify(base("tpt_001"), [
     vp(
@@ -1319,6 +1429,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.75 }
     ),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      9,
+      "Mantener y ampliar rebajas de tarifas y los bonos subvencionados de viajero frecuente actuales",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("fis_001"), [
     vp(
@@ -1369,6 +1486,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "support",
+      18,
+      "Eliminar las subvenciones directas e indirectas a los combustibles fósiles, desde la equiparación del impuesto especial de hidrocarburos",
+      { confidence: 0.7 }
+    ),
   ]),
   verify(base("dig_001"), [
     vp(
@@ -1431,6 +1555,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ),
     ne26("erc"),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "strongly_support",
+      12,
+      "se deberán establecer obligatoriamente canales presenciales ágiles que permitan realizar cualquier trámite en tiempo y forma",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("ia_001"), [
     vp(
@@ -1487,6 +1618,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ),
     ne26("erc"),
     ne26("pnv"),
+    vp26(
+      "ehbildu",
+      "support",
+      21,
+      "Garantizar la transparencia, la superficialidad, la auditoría y la protección de los derechos de los ciudadanos en las decisiones automatizadas",
+      { confidence: 0.7 }
+    ),
   ]),
   verify(base("ia_002"), [
     vp(
@@ -1537,5 +1675,6 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("bng"),
     ne26("erc"),
     ne26("pnv"),
+    ne26("ehbildu"),
   ]),
 ];
