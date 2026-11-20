@@ -66,6 +66,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "trabajaremos para lograr ensanchar estos instrumentos, dotándolos de nuevas capacidades",
       { confidence: 0.8, explanation: "Se refiere al Concierto y al Convenio Económico." }
     ),
+    ne26("democracia21"),
   ]),
   verify(base("ter_002"), [
     vp(
@@ -147,6 +148,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Defenderemos también, por encima de cualquier intento de re-centralización o retroceso, el autogobierno",
       { confidence: 0.95 }
     ),
+    ne26("democracia21"),
   ]),
   verify(base("cat_001"), [
     vp(
@@ -203,6 +205,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   axesOnly(
     base("cat_002"),
@@ -253,6 +256,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         "El reconocimiento del derecho a decidir del pueblo vasco como mecanismo democrático y legítimo para dicha solución",
         { confidence: 0.6, explanation: "Posición derivada: se refiere al pueblo vasco y pide reconocer a las diferentes naciones del Estado." }
       ),
+      ne26("democracia21"),
     ]
   ),
   axesOnly(
@@ -280,6 +284,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         "Defenderemos estas herramientas como uno de los pilares de nuestro bienestar social y autogobierno económico, fiscal y financiero.",
         { confidence: 0.6, explanation: "Los defiende, pero propone ampliarlos y acordar un nuevo modelo de cálculo del Cupo y la Aportación." }
       ),
+      ne26("democracia21"),
     ]
   ),
   axesOnly(
@@ -307,6 +312,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       ),
       ne26("pnv"),
       ne26("ehbildu"),
+      ne26("democracia21"),
     ]
   ),
   axesOnly(
@@ -340,6 +346,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         "la función garante de todo ello de monarquía heredera directa del franquismo",
         { confidence: 0.55, explanation: "Posición derivada: critica la monarquía, sin proponer expresamente un cambio de forma de Estado." }
       ),
+      ne26("democracia21"),
     ]
   ),
   axesOnly(
@@ -373,6 +380,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       ne26("erc"),
       ne26("pnv"),
       ne26("ehbildu"),
+      ne26("democracia21"),
     ]
   ),
   verify(base("ter_003"), [
@@ -413,6 +421,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   verify(base("ue_001"), [
     vp(
@@ -464,6 +473,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   verify(base("ue_002"), [
     vp(
@@ -509,6 +519,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   verify(base("ue_003"), [
     vp(
@@ -557,6 +568,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   verify(base("ue_004"), [
     vp(
@@ -602,6 +614,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   verify(base("ue_005"), [
     vp(
@@ -671,6 +684,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "abogaremos por la construcción de un proyecto de seguridad estratégica europeo",
       { confidence: 0.5, explanation: "Posición derivada: plantea un proyecto europeo de seguridad basado en la diplomacia, sin referirse a integrar estructuras militares." }
     ),
+    vp26(
+      "democracia21",
+      "support",
+      97,
+      "promoviendo compras conjuntas de armamento, movilidad militar inmediata y la interoperabilidad de nuestros ejércitos",
+      { confidence: 0.6, explanation: "Lo plantea como pilar europeo de defensa dentro de la OTAN, sin hablar de ceder autonomía de decisión." }
+    ),
   ]),
   verify(base("ota_001"), [
     vp(
@@ -739,6 +759,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       28,
       "Rechazamos la OTAN y la pertenencia de Euskal Herria a la misma",
       { confidence: 0.9 }
+    ),
+    vp26(
+      "democracia21",
+      "support",
+      97,
+      "Reforzaremos el pilar europeo dentro de la OTAN",
+      { confidence: 0.75 }
     ),
   ]),
   verify(base("def_001"), [
@@ -815,6 +842,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "rechazaremos el aumento del gasto en defensa que la OTAN está exigiendo",
       { confidence: 0.95 }
     ),
+    vp26(
+      "democracia21",
+      "neutral_or_unclear",
+      85,
+      "Si España va a invertir más en defensa, la primera inversión serán sus profesionales.",
+      { confidence: 0.5, explanation: "No fija un objetivo de gasto en defensa." }
+    ),
   ]),
   verify(base("def_002"), [
     vp(
@@ -860,6 +894,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "propondremos endurecer el embargo de armas para un embargo real y efectivo, bloqueando por completo la venta de armas",
       { confidence: 0.8, explanation: "Se refiere a Israel." }
     ),
+    ne26("democracia21"),
   ]),
   axesOnly(
     base("ext_001"),
@@ -910,6 +945,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         "recuperando el reconocimiento, apoyo y respeto al derecho de autodeterminación del Pueblo Saharaui",
         { confidence: 0.85 }
       ),
+      ne26("democracia21"),
     ]
   ),
   verify(base("ene_001"), [
@@ -955,6 +991,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       15,
       "impulsando la participación pública y comunitaria desde la generación al consumo",
       { confidence: 0.55, explanation: "Posición derivada: no menciona expresamente una empresa pública de energía." }
+    ),
+    vp26(
+      "democracia21",
+      "conditional_opposition",
+      93,
+      "sustituiremos la intervención política indiscriminada de precios y tarifas",
+      { confidence: 0.55, explanation: "Posición derivada: prefiere mecanismos de competencia y un bono social focalizado a la intervención pública en los precios; no menciona una empresa pública de energía." }
     ),
   ]),
   verify(base("ene_002"), [
@@ -1007,6 +1050,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   verify(base("nuc_001"), [
     vp(
@@ -1082,6 +1126,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Apostaremos por mantener el calendario de cierre nuclear definido en el PNIEC.",
       { confidence: 0.85, explanation: "Posición derivada." }
     ),
+    ne26("democracia21", "Defiende la neutralidad tecnológica en el sistema eléctrico, sin mencionar la energía nuclear."),
   ]),
   verify(base("nuc_002"), [
     vp(
@@ -1151,6 +1196,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Apostaremos por mantener el calendario de cierre nuclear definido en el PNIEC.",
       { confidence: 0.95 }
     ),
+    ne26("democracia21", "Defiende la neutralidad tecnológica en el sistema eléctrico, sin mencionar la energía nuclear."),
   ]),
   verify(base("cli_001"), [
     vp(
@@ -1226,6 +1272,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Revisión al alza de los objetivos de la planificación de energía y clima (PNIEC), con el objetivo de adelantar la descarbonización, al menos, a 2045.",
       { confidence: 0.9 }
     ),
+    vp26(
+      "democracia21",
+      "neutral_or_unclear",
+      93,
+      "Apostaremos por una regulación exigente con los objetivos de descarbonización, pero neutral en las tecnologías y respetuosa con las señales de mercado.",
+      { confidence: 0.5, explanation: "No propone endurecer los objetivos vigentes y pone el acento en abaratar la energía." }
+    ),
   ]),
   verify(base("cli_002"), [
     vp(
@@ -1271,6 +1324,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   verify(base("agr_001"), [
     vp(
@@ -1310,6 +1364,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   verify(base("med_001"), [
     vp(
@@ -1379,6 +1434,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21", "Propone medir cada captación de los acuíferos y devolver a ríos y acuíferos parte del agua ahorrada, sin pronunciarse sobre restringir regadíos."),
   ]),
   verify(base("tpt_001"), [
     vp(
@@ -1436,6 +1492,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Mantener y ampliar rebajas de tarifas y los bonos subvencionados de viajero frecuente actuales",
       { confidence: 0.85 }
     ),
+    ne26("democracia21"),
   ]),
   verify(base("fis_001"), [
     vp(
@@ -1492,6 +1549,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       18,
       "Eliminar las subvenciones directas e indirectas a los combustibles fósiles, desde la equiparación del impuesto especial de hidrocarburos",
       { confidence: 0.7 }
+    ),
+    vp26(
+      "democracia21",
+      "conditional_support",
+      94,
+      "reestructuraremos de forma integral los tributos energéticos para dejar de penalizar a la electricidad frente a los combustibles fósiles",
+      { confidence: 0.5, explanation: "Propone además equiparar los impuestos especiales medioambientales a la media de la Unión Europea y un bono social eléctrico reforzado para los hogares vulnerables." }
     ),
   ]),
   verify(base("dig_001"), [
@@ -1562,6 +1626,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "se deberán establecer obligatoriamente canales presenciales ágiles que permitan realizar cualquier trámite en tiempo y forma",
       { confidence: 0.9 }
     ),
+    vp26(
+      "democracia21",
+      "support",
+      26,
+      "se mantendrán los servicios presenciales para quienes no puedan o no deseen usar la vía digital",
+      { confidence: 0.85, explanation: "Garantiza además la atención presencial sin cita previa obligatoria." }
+    ),
   ]),
   verify(base("ia_001"), [
     vp(
@@ -1625,6 +1696,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Garantizar la transparencia, la superficialidad, la auditoría y la protección de los derechos de los ciudadanos en las decisiones automatizadas",
       { confidence: 0.7 }
     ),
+    vp26(
+      "democracia21",
+      "strongly_support",
+      31,
+      "Cada sistema contará con evaluación de impacto sobre derechos fundamentales y auditorías independientes",
+      { confidence: 0.9, explanation: "Se refiere a los algoritmos públicos que deciden sobre derechos, que se inscribirán en un registro público." }
+    ),
   ]),
   verify(base("ia_002"), [
     vp(
@@ -1676,5 +1754,12 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    vp26(
+      "democracia21",
+      "conditional_support",
+      103,
+      "los códigos voluntarios no han bastado",
+      { confidence: 0.55, explanation: "Pide reglas obligatorias de transparencia, licencia y etiquetado para la IA en la creación cultural, y que la Administración cumpla el Reglamento Europeo de IA; a la vez propone un plan estatal para acelerar la adopción de la IA en las empresas." }
+    ),
   ]),
 ];

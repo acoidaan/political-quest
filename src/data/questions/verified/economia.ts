@@ -61,6 +61,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "refuercen la participación pública en sectores estratégicos",
       { confidence: 0.8 }
     ),
+    ne26("democracia21"),
   ]),
   verify(base("eco_002"), [
     vp(
@@ -100,6 +101,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    vp26(
+      "democracia21",
+      "conditional_support",
+      48,
+      "La empresa que comparta esa mejora con su plantilla tendrá una bonificación del 50% en su cotización a la Seguridad Social por ese extra",
+      { confidence: 0.55, explanation: "Rebaja de cotizaciones selectiva, ligada a los pluses por productividad, no general." }
+    ),
   ]),
   verify(base("eco_003"), [
     vp(
@@ -157,6 +165,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Recuperar el impuesto a la energéticas que PNV, UPN, PP, VOX y JUNTS tumbaron, haciéndolo permanente.",
       { confidence: 0.95 }
     ),
+    ne26("democracia21"),
   ]),
   axesOnly(
     base("eco_004"),
@@ -195,6 +204,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       ne26("erc"),
       ne26("pnv"),
       ne26("ehbildu"),
+      ne26("democracia21"),
     ]
   ),
   verify(base("imp_001"), [
@@ -271,6 +281,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ),
     ne26("pnv"),
     ne26("ehbildu"),
+    vp26(
+      "democracia21",
+      "neutral_or_unclear",
+      32,
+      "no hace falta subir ni bajar impuestos para hacerlo mucho mejor",
+      { confidence: 0.5, explanation: "No propone subir el IRPF a las rentas altas; sí que las ganancias por activos mantenidos menos de un año tributen como rentas del trabajo." }
+    ),
   ]),
   verify(base("imp_002"), [
     vp(
@@ -334,6 +351,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ),
     ne26("pnv"),
     ne26("ehbildu"),
+    vp26(
+      "democracia21",
+      "conditional_opposition",
+      32,
+      "no hace falta subir ni bajar impuestos para hacerlo mucho mejor",
+      { confidence: 0.6, explanation: "No propone una rebaja general del IRPF, aunque sí deflactar cada año los tramos con el IPC y rebajas fiscales selectivas." }
+    ),
   ]),
   verify(base("imp_003"), [
     vp(
@@ -373,6 +397,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   verify(base("imp_004"), [
     vp("pp", "strongly_oppose", 23, "Eliminaremos el impuesto a las grandes fortunas…", { confidence: 0.95 }),
@@ -436,6 +461,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Aumentar el peso impositivo del impuesto a la banca y las grandes fortunas.",
       { confidence: 0.9 }
     ),
+    ne26("democracia21"),
   ]),
   verify(base("bie_001"), [
     vp(
@@ -505,6 +531,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "ampliar las condiciones y requisitos para hacerlo accesible a más personas. Además, se propone aumentar las cuantías",
       { confidence: 0.85, explanation: "Se refiere al Ingreso Mínimo Vital, cuya transferencia también reclama." }
     ),
+    vp26(
+      "democracia21",
+      "support",
+      30,
+      "la Administración se pondrá en contacto proactivamente con ellas para tramitar de oficio el Ingreso Mínimo Vital (IMV)",
+      { confidence: 0.6, explanation: "Busca que el IMV llegue a más hogares concediéndolo de oficio, sin proponer ampliar sus requisitos ni sus cuantías." }
+    ),
   ]),
   verify(base("bie_002"), [
     vp(
@@ -526,6 +559,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   verify(base("pen_001"), [
     vp(
@@ -607,6 +641,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Garantizar el poder adquisitivo de las y los pensionistas, manteniendo y blindando la revalorización anual al IPC.",
       { confidence: 0.95 }
     ),
+    vp26(
+      "democracia21",
+      "neutral_or_unclear",
+      79,
+      "tranquilidad para quienes ya cobran su pensión, sostenibilidad para quienes la cobrarán mañana y justicia entre generaciones",
+      { confidence: 0.5, explanation: "Remite la reforma de las pensiones a una asamblea ciudadana elegida por sorteo, sin pronunciarse sobre la revalorización con el IPC." }
+    ),
   ]),
   verify(base("pen_002"), [
     vp(
@@ -646,6 +687,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.6, explanation: "Posición derivada: apoya la previsión social de empleo como complemento de las pensiones públicas, sin mencionar incentivos fiscales." }
     ),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   verify(base("tra_001"), [
     vp(
@@ -703,6 +745,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Indemnización por despido improcedente de al menos 45 días",
       { confidence: 0.95 }
     ),
+    ne26("democracia21"),
   ]),
   verify(base("tra_002"), [
     vp(
@@ -766,6 +809,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Reducción de la jornada laboral hasta las 32 horas semanales o la jornada de 4 días sin reducción salarial.",
       { confidence: 0.95 }
     ),
+    ne26("democracia21"),
   ]),
   verify(base("smi_001"), [
     vp(
@@ -834,6 +878,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       6,
       "Establecer por ley, como parámetro de suficiencia para el establecimiento de las cuantías, la referencia que establece la Carta Social Europea.",
       { confidence: 0.75, explanation: "Propone además que las comunidades autónomas puedan fijar un salario mínimo propio por encima del estatal." }
+    ),
+    vp26(
+      "democracia21",
+      "conditional_support",
+      49,
+      "con el objetivo de que el SMI no baje de los 2/3 de la mediana salarial de nuestro país",
+      { confidence: 0.6, explanation: "Encarga la actualización a un órgano técnico independiente con cláusulas de revisión por inflación y filtros de prudencia para jóvenes y pequeñas empresas." }
     ),
   ]),
   verify(base("viv_001"), [
@@ -910,6 +961,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "estableciendo regulaciones de los precios y aportando seguridad mediante contratos duraderos y prorrogables automáticamente",
       { confidence: 0.85, explanation: "Propone además un tope estructural del 2 % a la actualización anual de las rentas." }
     ),
+    vp26(
+      "democracia21",
+      "conditional_support",
+      19,
+      "aplicaremos una limitación general y temporal de los alquileres en zonas tensionadas",
+      { confidence: 0.8, explanation: "La limitación es excepcional y transitoria, y va unida a garantías públicas para los propietarios frente a impagos." }
+    ),
   ]),
   verify(base("viv_002"), [
     vp(
@@ -985,6 +1043,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Establecer de manera estructural el máximo de 2% de actualización anual de renta en los contratos de arrendamiento",
       { confidence: 0.8, explanation: "Posición derivada: propone regular los precios del alquiler." }
     ),
+    vp26(
+      "democracia21",
+      "conditional_opposition",
+      19,
+      "Esta tregua de precios tendrá un carácter estrictamente excepcional y transitorio",
+      { confidence: 0.65, explanation: "Posición derivada: propone limitar temporalmente los alquileres en zonas tensionadas e ir levantando la limitación a medida que aumente la oferta." }
+    ),
   ]),
   verify(base("viv_003"), [
     vp(
@@ -1036,6 +1101,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21", "Propone juzgados especializados de arrendamientos y medidas contra la «inquiokupación» (impago del alquiler), pero no se pronuncia sobre los desalojos de viviendas ocupadas ilegalmente."),
   ]),
   verify(base("viv_004"), [
     vp(
@@ -1093,6 +1159,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    vp26(
+      "democracia21",
+      "support",
+      22,
+      "aportarán el suelo público mediante concesiones o derechos de superficie a 75 años (garantizando que el suelo y las viviendas sigan siendo 100% públicas al final del periodo)",
+      { confidence: 0.6, explanation: "El suelo público se cede, sin venderse, para construir vivienda asequible en colaboración público-privada; el programa no precisa que sea solo de alquiler." }
+    ),
   ]),
   verify(base("reg_001"), [
     vp(
@@ -1150,6 +1223,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.65, explanation: "No se refiere expresamente a reducir el control previo." }
     ),
     ne26("ehbildu"),
+    vp26(
+      "democracia21",
+      "strongly_support",
+      51,
+      "podrá iniciar su actividad de inmediato mediante una licencia provisional automática",
+      { confidence: 0.9, explanation: "Se aplica cuando la Administración no resuelve en plazo, salvo casos tasados de seguridad o salud pública; propone también crear una empresa en una hora y suprimir la licencia de obra menor." }
+    ),
   ]),
   verify(base("emp_001"), [
     vp(
@@ -1218,6 +1298,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       12,
       "deberán realizarse las inversiones en recursos y plantillas necesarios para respetar y asegurar el derecho de la ciudadanía a un servicio de calidad",
       { confidence: 0.6, explanation: "Se refiere a la atención de la Administración pública." }
+    ),
+    vp26(
+      "democracia21",
+      "support",
+      70,
+      "Estableceremos un calendario vinculante de incremento de plazas estructurales para acabar con la sobrecarga asistencial",
+      { confidence: 0.7, explanation: "Se refiere a la sanidad pública; en educación propone equipos permanentes de refuerzo en los centros." }
     ),
   ]),
 ];

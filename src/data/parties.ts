@@ -100,6 +100,20 @@ export const PARTIES: Party[] = [
     notes:
       "Programa del 29N incorporado, pero solo aborda 18 de las preguntas del test: por debajo del mínimo para compararlo con garantías.",
   },
+  {
+    id: "democracia21",
+    name: "Democracia 21",
+    fullName: "Democracia para el Siglo 21",
+    color: "#5b6b7a",
+    // 30 posiciones claras: supera el umbral orientativo de 20, pero queda
+    // por debajo del 60% del partido estatal activo más cubierto (aviso de
+    // cobertura de npm run balance). Activarlo es una decisión editorial
+    // pendiente (docs/ACTUALIZACION.md §3).
+    active: false,
+    positionCycle: "2026 (29N)",
+    notes:
+      "Programa del 29N incorporado (30 posiciones claras). Concurre solo en Madrid y Barcelona y su cobertura del test es menor que la de los demás partidos estatales, así que de momento no se compara.",
+  },
   // Preparados para fases posteriores (inactivos hasta tener posiciones
   // verificadas): podemos, junts, cc, upn.
 ];

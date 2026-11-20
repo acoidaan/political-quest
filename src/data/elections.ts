@@ -66,7 +66,7 @@ export const CURRENT_ELECTION: Election = {
   campaign: { from: "2026-11-13", to: "2026-11-27" },
 };
 
-const CHECKED = "2026-11-19";
+const CHECKED = "2026-11-20";
 /** Webs cuyas páginas bloquean hoy el acceso automatizado (Cloudflare). */
 const LAST_READABLE = "2026-11-13";
 /** Candidaturas sin web oficial registrada que revisar. */
@@ -84,17 +84,21 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     composition:
       "Registrada en coalición con Ciudadanos y UCIN como «Democracia para el Siglo 21», proclamada en Madrid y Barcelona (BOE de 3-11-2026)",
     officialWebsite: "https://democracia21.es",
-    programStatus: "partial",
+    programStatus: "published",
     documents: [
+      {
+        title: "La España que merecemos. Programa electoral, elecciones generales 29N",
+        url: "https://mi.democracia21.es/docs/programa/programa-democracia21.pdf",
+        date: "2026-11-13",
+      },
       {
         title: "España Limpia",
         url: "https://democracia21.es/docs/espana-limpia-democracia21.pdf",
         date: "2026-10-15",
       },
     ],
-    // Programa completo en mi.democracia21.es (2026-11-13) pendiente de
-    // confirmación en un segundo medio (docs/ACTUALIZACION.md §1).
-    lastChecked: "2026-11-17",
+    lastChecked: CHECKED,
+    notes: "Programa revisado: aborda 30 de las 90 propuestas del test, menos que los demás partidos estatales, así que de momento no se compara. Sus posiciones se conservan en el dataset. El programa abre con un bloque titulado «España Limpia», como el documento de octubre.",
   },
   {
     id: "frente-amplio",

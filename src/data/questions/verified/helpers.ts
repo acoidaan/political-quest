@@ -107,6 +107,9 @@ const PROGRAMS: Record<PartyId, Omit<Source, "page">> = {
  * - EH Bildu: «Posible egin. Garantía y derechos» (30 pp., versión en
  *   castellano), publicado el 2026-11-16 en posibleegin.ehbildu.eus, su web
  *   de campaña (enlazada desde ehbildu.eus).
+ * - Democracia 21: «La España que merecemos» (108 pp.), creado el
+ *   2026-11-13 y publicado en mi.democracia21.es; descargado el 2026-11-20
+ *   (idéntico a la copia del 2026-11-18).
  * Las citas en gallego y catalán se transcriben literalmente, sin traducir.
  */
 export const VERIFIED_AT_2026 = "2026-11-11";
@@ -175,6 +178,13 @@ const PROGRAMS_2026: Record<PartyId, Omit<Source, "page">> = {
     date: "2026-11-09",
     verifiedAt: "2026-11-17",
   },
+  democracia21: {
+    type: "electoral_program",
+    document: "Programa electoral Democracia 21 29N 2026 — «La España que merecemos»",
+    url: "https://mi.democracia21.es/docs/programa/programa-democracia21.pdf",
+    date: "2026-11-13",
+    verifiedAt: "2026-11-20",
+  },
 };
 
 /** Fecha de publicación del programa del 29N, por partido (= validFrom). */
@@ -188,6 +198,7 @@ const PROGRAM_2026_FROM: Record<PartyId, string> = {
   erc: "2026-11-10",
   pnv: "2026-11-09",
   ehbildu: "2026-11-16",
+  democracia21: "2026-11-13",
 };
 
 function program2026(party: PartyId): Omit<Source, "page"> {

@@ -85,6 +85,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Regularización y nueva Ley de Extranjería: Garantizar una regularización efectiva, accesible y estable.",
       { confidence: 0.9 }
     ),
+    vp26(
+      "democracia21",
+      "neutral_or_unclear",
+      57,
+      "Con una vía ordinaria que funcione, la irregularidad no se acumulará hasta forzar regularizaciones extraordinarias.",
+      { confidence: 0.5, explanation: "Prioriza vías legales ordinarias (visado de búsqueda de empleo, tarjeta para jóvenes extutelados) frente a regularizaciones extraordinarias, sin pronunciarse sobre una nueva." }
+    ),
   ]),
   verify(base("inm_002"), [
     vp(
@@ -160,6 +167,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Facilitar las autorizaciones de residencia y trabajo y prevenir la irregularidad sobrevenida.",
       { confidence: 0.85 }
     ),
+    vp26(
+      "democracia21",
+      "conditional_opposition",
+      57,
+      "renovaciones automáticas cuando la Administración ya tenga los datos de cotización y antecedentes penales",
+      { confidence: 0.6, explanation: "Posición derivada: propone agilizar y automatizar los permisos y renovaciones, no endurecer sus requisitos." }
+    ),
   ]),
   verify(base("inm_003"), [
     vp(
@@ -211,6 +225,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ),
     ne26("pnv"),
     ne26("ehbildu"),
+    vp26(
+      "democracia21",
+      "support",
+      57,
+      "La prioridad serán quienes cometen delitos, especialmente los reincidentes.",
+      { confidence: 0.65, explanation: "Se refiere a la ejecución de las órdenes de expulsión, que propone seguir con un registro digital único." }
+    ),
   ]),
   verify(base("inm_004"), [
     vp(
@@ -265,6 +286,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21", "Se compromete a aplicar completo el Pacto Europeo de Migración y Asilo, sin referirse al reparto de solicitantes."),
   ]),
   verify(base("inm_005"), [
     vote("psoe", "strongly_support", {
@@ -323,6 +345,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "eliminación de barreras para acceder a la sanidad, educación, vivienda y protección social, independientemente de la situación administrativa",
       { confidence: 0.9 }
     ),
+    ne26("democracia21"),
   ]),
   verify(base("inm_006"), [
     vp(
@@ -392,6 +415,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Rechazar las disposiciones restrictivas del Pacto Europeo sobre Migración y Asilo, las devoluciones sumarias",
       { confidence: 0.8, explanation: "Posición derivada: rechaza las devoluciones sumarias." }
     ),
+    ne26("democracia21"),
   ]),
   verify(base("nac_001"), [
     vp(
@@ -431,6 +455,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   verify(base("seg_001"), [
     vp(
@@ -482,6 +507,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.6, explanation: "Pide una respuesta judicial «ágil, eficaz y proporcionada» a la reincidencia, sin concretar un endurecimiento de las penas." }
     ),
     ne26("ehbildu"),
+    vp26(
+      "democracia21",
+      "support",
+      85,
+      "permita aplicar con rapidez las herramientas contra la multirreincidencia",
+      { confidence: 0.6, explanation: "Lo plantea dentro de una nueva ley procesal penal." }
+    ),
   ]),
   verify(base("seg_002"), [
     vp(
@@ -555,6 +587,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.95 }
     ),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   verify(base("pol_001"), [
     vp(
@@ -624,6 +657,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Acabar con la Ley Mordaza.",
       { confidence: 0.95 }
     ),
+    ne26("democracia21"),
   ]),
   verify(base("jus_001"), [
     vp(
@@ -681,6 +715,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    vp26(
+      "democracia21",
+      "strongly_support",
+      9,
+      "los vocales judiciales se elegirán por los jueces, sin intervención alguna de las asociaciones judiciales",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("jus_002"), [
     vp(
@@ -756,6 +797,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.7 }
     ),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   axesOnly(
     base("pri_001"),
@@ -788,6 +830,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       ne26("erc"),
       ne26("pnv"),
       ne26("ehbildu"),
+      ne26("democracia21"),
     ]
   ),
   verify(base("lib_001"), [
@@ -852,6 +895,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "propondremos despenalizar los artículos sobre las criticas a la corona y las instituciones del estado",
       { confidence: 0.95, explanation: "Incluye también la crítica a los sentimientos religiosos." }
     ),
+    ne26("democracia21"),
   ]),
   axesOnly(
     base("prv_001"),
@@ -872,6 +916,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       ne26("erc"),
       ne26("pnv"),
       ne26("ehbildu"),
+      ne26("democracia21"),
     ]
   ),
 ];
