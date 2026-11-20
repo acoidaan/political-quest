@@ -67,6 +67,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne26("pnv"),
     ne26("ehbildu"),
+    vp26(
+      "democracia21",
+      "neutral_or_unclear",
+      68,
+      "Defender nuestra sanidad pública no es gastar a ciegas",
+      { confidence: 0.5, explanation: "Propone financiar mejoras de la sanidad pública reinvirtiendo lo que se ahorre con mejor gestión, sin plantear subir impuestos." }
+    ),
   ]),
   verify(base("san_002"), [
     vp(
@@ -130,6 +137,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Derogar la Ley 15/1997 de 25 de abril, sobre habilitación de nuevas formas de gestión del Sistema Nacional de Salud, aprobada por el PP que permite la privatización y externalización de los servicios sanitarios.",
       { confidence: 0.85 }
     ),
+    ne26("democracia21", "Propone abrir los quirófanos públicos por la tarde y alquilar sus horas vacantes a mutuas, sin pronunciarse sobre los conciertos con la sanidad privada."),
   ]),
   verify(base("san_003"), [
     vp(
@@ -211,6 +219,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne26("pnv"),
     ne26("ehbildu"),
+    vp26(
+      "democracia21",
+      "support",
+      77,
+      "crearemos Unidades de Enlace (psiquiatra infantil, psicólogo clínico y enfermera especialista en salud mental)",
+      { confidence: 0.7, explanation: "Se centra en la salud mental infantil y juvenil en los centros educativos y en el seguimiento tras conductas suicidas." }
+    ),
   ]),
   axesOnly(
     base("san_004"),
@@ -231,6 +246,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       ne26("erc"),
       ne26("pnv"),
       ne26("ehbildu"),
+      ne26("democracia21"),
     ]
   ),
   verify(base("edu_001"), [
@@ -289,6 +305,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   axesOnly(
     base("edu_002"),
@@ -315,6 +332,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       ne26("erc"),
       ne26("pnv"),
       ne26("ehbildu"),
+      ne26("democracia21"),
     ]
   ),
   verify(base("edu_003"), [
@@ -367,6 +385,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   verify(base("edu_004"), [
     vp(
@@ -412,6 +431,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.5, explanation: "Posición derivada: no se refiere expresamente a la autorización previa de las familias." }
     ),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   verify(base("uni_001"), [
     vp(
@@ -487,6 +507,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21", "Propone pagar las becas al inicio del curso, sin pronunciarse sobre su cuantía ni sobre las tasas universitarias."),
   ]),
   verify(base("igu_001"), [
     vp(
@@ -550,6 +571,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.65, explanation: "No menciona expresamente auditorías ni sanciones." }
     ),
     ne26("ehbildu"),
+    vp26(
+      "democracia21",
+      "conditional_support",
+      99,
+      "Reafirmamos nuestro compromiso inquebrantable con la erradicación de la brecha salarial",
+      { confidence: 0.5, explanation: "No concreta auditorías salariales obligatorias ni sanciones." }
+    ),
   ]),
   verify(base("gen_001"), [
     vp(
@@ -637,6 +665,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.6, explanation: "Posición derivada: refuerza el marco específico contra la violencia de género." }
     ),
     ne26("ehbildu"),
+    vp26(
+      "democracia21",
+      "support",
+      99,
+      "no permitiremos, bajo ninguna circunstancia ni acuerdo político, que se cuestione la existencia de la violencia de género",
+      { confidence: 0.75, explanation: "Se compromete también a bloquear cualquier iniciativa para desmantelar o desfinanciar la red pública de protección a las víctimas." }
+    ),
   ]),
   verify(base("gen_002"), [
     vp(
@@ -706,6 +741,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "no aceptaremos retrocesos en los derechos adquiridos, especialmente en la despatologización de las personas Trans",
       { confidence: 0.75, explanation: "Posición derivada: defiende la despatologización vigente." }
     ),
+    vp26(
+      "democracia21",
+      "support",
+      100,
+      "Frenaremos cualquier ofensiva que pretenda recortar libertades, patologizar identidades, derogar normas que aseguran la no-discriminación",
+      { confidence: 0.6, explanation: "Posición derivada: defiende la no discriminación trans y rechaza patologizar identidades, sin mencionar expresamente la autodeterminación registral." }
+    ),
   ]),
   verify(base("lgb_001"), [
     vp(
@@ -751,6 +793,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    vp26(
+      "democracia21",
+      "support",
+      77,
+      "basados solo en el interés del menor y en la capacidad real de cuidado, nunca en el modelo de familia",
+      { confidence: 0.75, explanation: "Se refiere a los criterios de idoneidad para adoptar; el programa reivindica también la ley de matrimonio igualitario y propone reforzar los derechos de las parejas de mujeres." }
+    ),
   ]),
   verify(base("lgb_002"), [
     vote("psoe", "support", {
@@ -814,6 +863,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       19,
       "Prohibir las terapias de conversión",
       { confidence: 0.95 }
+    ),
+    vp26(
+      "democracia21",
+      "support",
+      100,
+      "Exigiremos y apoyaremos la aplicación de la ley contra quienes promuevan agresiones, discursos de odio o terapias de conversión",
+      { confidence: 0.8 }
     ),
   ]),
   verify(base("fam_001"), [
@@ -896,6 +952,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Proponemos que se oriente a las CCAA a desarrollar prestaciones económicas de apoyo a la crianza acordes con índices de gasto de crianza territoriales.",
       { confidence: 0.6, explanation: "Propone que las desarrollen las comunidades autónomas." }
     ),
+    vp26(
+      "democracia21",
+      "conditional_support",
+      73,
+      "Las convertiremos en una cantidad mensual por cada hijo que se activará automáticamente al inscribir al recién nacido",
+      { confidence: 0.6, explanation: "El Bono Crianza es mayor en los hogares con menos renta, desaparece en las rentas altas y se financia en buena parte reordenando deducciones y ayudas ya existentes." }
+    ),
   ]),
   verify(base("abo_001"), [
     vp(
@@ -977,6 +1040,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Blindar el derecho al aborto.",
       { confidence: 0.95 }
     ),
+    vp26(
+      "democracia21",
+      "strongly_support",
+      99,
+      "defenderemos que el acceso a la interrupción voluntaria del embarazo esté plenamente garantizado en la red sanitaria pública",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("abo_002"), [
     vp(
@@ -1022,6 +1092,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    vp26(
+      "democracia21",
+      "oppose",
+      99,
+      "nos opondremos a cualquier intento de derogar, limitar o entorpecer la actual ley de plazos",
+      { confidence: 0.6, explanation: "Posición derivada: la ley vigente no exige el consentimiento paterno a las jóvenes de 16 y 17 años." }
+    ),
   ]),
   verify(base("eut_001"), [
     vp(
@@ -1097,6 +1174,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Con el objetivo de blindar el derecho a morir dignamente frente a la intromisión judicial de terceros.",
       { confidence: 0.9 }
     ),
+    ne26("democracia21"),
   ]),
   verify(base("rel_001"), [
     vp(
@@ -1136,6 +1214,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   verify(base("rel_002"), [
     vp(
@@ -1175,6 +1254,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   verify(base("cul_001"), [
     vp(
@@ -1226,6 +1306,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   verify(base("cul_002"), [
     vp(
@@ -1277,6 +1358,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    ne26("democracia21"),
   ]),
   verify(base("mpu_001"), [
     vp(
@@ -1316,5 +1398,12 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("erc"),
     ne26("pnv"),
     ne26("ehbildu"),
+    vp26(
+      "democracia21",
+      "support",
+      102,
+      "un contrato-programa plurianual y vinculante garantizará su financiación",
+      { confidence: 0.65, explanation: "Se refiere a RTVE, cuyo consejo propone elegir por concurso y mayoría de dos tercios." }
+    ),
   ]),
 ];

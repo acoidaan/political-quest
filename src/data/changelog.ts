@@ -24,6 +24,15 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-20",
+    kind: "datos",
+    title: "Programa de Democracia 21 revisado",
+    details: [
+      "Democracia 21 publicó su programa completo, «La España que merecemos» (13 de noviembre de 2026). Sus posiciones se han extraído con cita literal y página: toma postura clara en 30 de las 90 propuestas.",
+      "Es menos que los demás partidos estatales y concurre solo en Madrid y Barcelona, así que de momento no se muestra en los resultados; sus posiciones se conservan en el dataset.",
+    ],
+  },
+  {
     date: "2026-11-19",
     kind: "datos",
     title: "EH Bildu entra en la comparación con su programa para el 29-N",
