@@ -114,8 +114,16 @@ export const PARTIES: Party[] = [
     notes:
       "Programa del 29N incorporado (30 posiciones claras). Concurre solo en Madrid y Barcelona y su cobertura del test es menor que la de los demás partidos estatales, así que de momento no se compara.",
   },
+  {
+    id: "podemos",
+    name: "Podemos",
+    fullName: "Podemos",
+    color: "#8a2c86",
+    active: true,
+    positionCycle: "2026 (29N)",
+  },
   // Preparados para fases posteriores (inactivos hasta tener posiciones
-  // verificadas): podemos, junts, cc, upn.
+  // verificadas): junts, cc, upn.
 ];
 
 export const ACTIVE_PARTIES = PARTIES.filter((p) => p.active);

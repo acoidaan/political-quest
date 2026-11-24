@@ -112,6 +112,12 @@ const PROGRAMS: Record<PartyId, Omit<Source, "page">> = {
  * - Democracia 21: «La España que merecemos» (108 pp.), creado el
  *   2026-11-13 y publicado en mi.democracia21.es; descargado el 2026-11-20
  *   (idéntico a la copia del 2026-11-18).
+ * - Podemos: «Así de básico: Paz, casa y trabajo» (141 pp., 442 medidas),
+ *   PDF creado el 2026-11-17 y publicado en podemos.info. podemos.info
+ *   bloquea el acceso automatizado (403) y Wayback Machine no es accesible
+ *   desde el entorno de revisión, así que se cita la copia que aportó el
+ *   mantenedor el 2026-11-24 (141 pp., mismo título, creada el 2026-11-17);
+ *   no se ha podido comparar byte a byte con la URL oficial.
  * Las citas en gallego y catalán se transcriben literalmente, sin traducir.
  */
 export const VERIFIED_AT_2026 = "2026-11-11";
@@ -187,6 +193,13 @@ const PROGRAMS_2026: Record<PartyId, Omit<Source, "page">> = {
     date: "2026-11-13",
     verifiedAt: "2026-11-20",
   },
+  podemos: {
+    type: "electoral_program",
+    document: "Programa electoral Podemos 29N 2026 — «Así de básico: Paz, casa y trabajo»",
+    url: "https://podemos.info/wp-content/uploads/2026/11/29N-programa-Podemos.-Paz-casa-y-trabajo.pdf",
+    date: "2026-11-17",
+    verifiedAt: "2026-11-24",
+  },
 };
 
 /** Fecha de publicación del programa del 29N, por partido (= validFrom). */
@@ -201,6 +214,7 @@ const PROGRAM_2026_FROM: Record<PartyId, string> = {
   pnv: "2026-11-09",
   ehbildu: "2026-11-16",
   democracia21: "2026-11-13",
+  podemos: "2026-11-17",
 };
 
 function program2026(party: PartyId): Omit<Source, "page"> {

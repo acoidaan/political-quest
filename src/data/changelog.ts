@@ -26,6 +26,16 @@ export const CHANGELOG: ChangelogEntry[] = [
   {
     date: "2026-11-24",
     kind: "datos",
+    title: "Podemos entra en la comparación con su programa para el 29-N",
+    details: [
+      "Sus posiciones proceden de su programa «Así de básico: Paz, casa y trabajo» (17 de noviembre de 2026), con cita literal y página en 63 de las 90 propuestas.",
+      "La web de Podemos bloquea el acceso automatizado, así que se ha usado una copia del programa aportada por el mantenedor, con el mismo título, número de páginas y fecha que la publicada.",
+      "En las propuestas que su programa no aborda figura como «evidencia insuficiente» y no puntúa en la comparación.",
+    ],
+  },
+  {
+    date: "2026-11-24",
+    kind: "datos",
     title: "Nueva versión revisada del programa del Frente Amplio",
     details: [
       "El Frente Amplio publicó el 23 de noviembre otra versión de su programa en la misma dirección, con un capítulo nuevo sobre deporte. Se han vuelto a comprobar todas sus citas: siguen siendo literales y 49 cambian de página. Ninguna posición cambia, así que el test no cambia.",

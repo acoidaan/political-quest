@@ -67,6 +67,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.8, explanation: "Se refiere al Concierto y al Convenio Económico." }
     ),
     ne26("democracia21"),
+    ne26("podemos"),
   ]),
   verify(base("ter_002"), [
     vp(
@@ -149,6 +150,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.95 }
     ),
     ne26("democracia21"),
+    ne26("podemos"),
   ]),
   verify(base("cat_001"), [
     vp(
@@ -206,6 +208,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21"),
+    ne26("podemos"),
   ]),
   axesOnly(
     base("cat_002"),
@@ -257,6 +260,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         { confidence: 0.6, explanation: "Posición derivada: se refiere al pueblo vasco y pide reconocer a las diferentes naciones del Estado." }
       ),
       ne26("democracia21"),
+      ne26("podemos"),
     ]
   ),
   axesOnly(
@@ -285,6 +289,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         { confidence: 0.6, explanation: "Los defiende, pero propone ampliarlos y acordar un nuevo modelo de cálculo del Cupo y la Aportación." }
       ),
       ne26("democracia21"),
+      ne26("podemos"),
     ]
   ),
   axesOnly(
@@ -313,6 +318,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       ne26("pnv"),
       ne26("ehbildu"),
       ne26("democracia21"),
+      vp26(
+        "podemos",
+        "strongly_support",
+        128,
+        "Esta reforma constitucional permitirá, por primera vez, que la ciudadanía decida de forma separada y directa entre monarquía y república",
+        { confidence: 0.95 }
+      ),
     ]
   ),
   axesOnly(
@@ -347,6 +359,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         { confidence: 0.55, explanation: "Posición derivada: critica la monarquía, sin proponer expresamente un cambio de forma de Estado." }
       ),
       ne26("democracia21"),
+      vp26(
+        "podemos",
+        "strongly_oppose",
+        128,
+        "Proceso constituyente y referéndum sobre la forma de Estado.",
+        { confidence: 0.95 }
+      ),
     ]
   ),
   axesOnly(
@@ -381,6 +400,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       ne26("pnv"),
       ne26("ehbildu"),
       ne26("democracia21"),
+      vp26(
+        "podemos",
+        "strongly_support",
+        132,
+        "ampliaremos el acceso al recurso de amparo ante el Tribunal Constitucional para incluir los derechos económicos, sociales y culturales",
+        { confidence: 0.85 }
+      ),
     ]
   ),
   verify(base("ter_003"), [
@@ -422,6 +448,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21"),
+    ne26("podemos"),
   ]),
   verify(base("ue_001"), [
     vp(
@@ -474,6 +501,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21"),
+    ne26("podemos"),
   ]),
   verify(base("ue_002"), [
     vp(
@@ -520,6 +548,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21"),
+    ne26("podemos"),
   ]),
   verify(base("ue_003"), [
     vp(
@@ -569,6 +598,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21"),
+    ne26("podemos"),
   ]),
   verify(base("ue_004"), [
     vp(
@@ -615,6 +645,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21"),
+    ne26("podemos"),
   ]),
   verify(base("ue_005"), [
     vp(
@@ -691,6 +722,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "promoviendo compras conjuntas de armamento, movilidad militar inmediata y la interoperabilidad de nuestros ejércitos",
       { confidence: 0.6, explanation: "Lo plantea como pilar europeo de defensa dentro de la OTAN, sin hablar de ceder autonomía de decisión." }
     ),
+    vp26(
+      "podemos",
+      "oppose",
+      28,
+      "Este Estatuto establecerá una política de no alineamiento con los bloques militares",
+      { confidence: 0.55, explanation: "Posición derivada del Estatuto de Neutralidad; no se refiere expresamente a estructuras militares europeas." }
+    ),
   ]),
   verify(base("ota_001"), [
     vp(
@@ -766,6 +804,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       97,
       "Reforzaremos el pilar europeo dentro de la OTAN",
       { confidence: 0.75 }
+    ),
+    vp26(
+      "podemos",
+      "strongly_oppose",
+      28,
+      "Impulsaremos la salida de España de la OTAN mediante la denuncia del Tratado del Atlántico Norte",
+      { confidence: 0.95 }
     ),
   ]),
   verify(base("def_001"), [
@@ -849,6 +894,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Si España va a invertir más en defensa, la primera inversión serán sus profesionales.",
       { confidence: 0.5, explanation: "No fija un objetivo de gasto en defensa." }
     ),
+    vp26(
+      "podemos",
+      "strongly_oppose",
+      28,
+      "Rechazaremos el compromiso adquirido por el Gobierno de Pedro Sánchez de elevar el gasto militar hasta el 5 % del PIB en 2035",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("def_002"), [
     vp(
@@ -895,6 +947,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.8, explanation: "Se refiere a Israel." }
     ),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "support",
+      34,
+      "Impulsaremos un embargo de armas efectivo, sin excepciones, y verificable a las empresas públicas y privadas israelíes",
+      { confidence: 0.7, explanation: "Referido a Israel; además excluye de la contratación pública a empresas implicadas en crímenes internacionales (medida 75)." }
+    ),
   ]),
   axesOnly(
     base("ext_001"),
@@ -946,6 +1005,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         { confidence: 0.85 }
       ),
       ne26("democracia21"),
+      vp26(
+        "podemos",
+        "strongly_support",
+        35,
+        "promoveremos la celebración de un referéndum que permita decidir libremente su futuro político, de conformidad con el derecho internacional",
+        { confidence: 0.95 }
+      ),
     ]
   ),
   verify(base("ene_001"), [
@@ -999,6 +1065,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "sustituiremos la intervención política indiscriminada de precios y tarifas",
       { confidence: 0.55, explanation: "Posición derivada: prefiere mecanismos de competencia y un bono social focalizado a la intervención pública en los precios; no menciona una empresa pública de energía." }
     ),
+    vp26(
+      "podemos",
+      "strongly_support",
+      18,
+      "Articulación de una Empresa Pública de Energía.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("ene_002"), [
     vp(
@@ -1051,6 +1124,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "oppose",
+      118,
+      "Reformaremos la Ley de Minas franquista de 1973 para adaptarla a las exigencias ambientales y democráticas actuales.",
+      { confidence: 0.6, explanation: "Posición derivada: endurece los controles ambientales sobre la minería." }
+    ),
   ]),
   verify(base("nuc_001"), [
     vp(
@@ -1127,6 +1207,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.85, explanation: "Posición derivada." }
     ),
     ne26("democracia21", "Defiende la neutralidad tecnológica en el sistema eléctrico, sin mencionar la energía nuclear."),
+    vp26(
+      "podemos",
+      "strongly_oppose",
+      103,
+      "Ni prórrogas nucleares indefinidas ni comarcas abandonadas.",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("nuc_002"), [
     vp(
@@ -1197,6 +1284,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.95 }
     ),
     ne26("democracia21", "Defiende la neutralidad tecnológica en el sistema eléctrico, sin mencionar la energía nuclear."),
+    vp26(
+      "podemos",
+      "strongly_support",
+      103,
+      "Defenderemos el cumplimiento del calendario de cierre de las centrales nucleares, comenzando por Almaraz",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("cli_001"), [
     vp(
@@ -1279,6 +1373,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Apostaremos por una regulación exigente con los objetivos de descarbonización, pero neutral en las tecnologías y respetuosa con las señales de mercado.",
       { confidence: 0.5, explanation: "No propone endurecer los objetivos vigentes y pone el acento en abaratar la energía." }
     ),
+    vp26(
+      "podemos",
+      "strongly_support",
+      94,
+      "Reformaremos la Ley de Cambio Climático y Transición Energética para elevar la ambición de los objetivos de reducción de emisiones",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("cli_002"), [
     vp(
@@ -1325,6 +1426,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "strongly_support",
+      95,
+      "Implantar de forma acelerada las Zonas de Bajas Emisiones",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("agr_001"), [
     vp(
@@ -1365,6 +1473,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "oppose",
+      111,
+      "Impulsaremos un plan estatal de transición agroecológica para reducir progresivamente el uso de pesticidas y fertilizantes de síntesis",
+      { confidence: 0.55, explanation: "Posición derivada: acompaña la transición con ayudas, sin relajar objetivos ambientales." }
+    ),
   ]),
   verify(base("med_001"), [
     vp(
@@ -1435,6 +1550,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21", "Propone medir cada captación de los acuíferos y devolver a ríos y acuíferos parte del agua ahorrada, sin pronunciarse sobre restringir regadíos."),
+    vp26(
+      "podemos",
+      "support",
+      112,
+      "establecer una moratoria a nuevos regadíos intensivos y ampliaciones en las cuencas con estrés hídrico. Revisaremos las concesiones existentes para garantizar la recuperación de los acuíferos",
+      { confidence: 0.8 }
+    ),
   ]),
   verify(base("tpt_001"), [
     vp(
@@ -1493,6 +1615,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.85 }
     ),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "strongly_support",
+      19,
+      "Garantizaremos la gratuidad de todo el transporte público de viajeros",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("fis_001"), [
     vp(
@@ -1557,6 +1686,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "reestructuraremos de forma integral los tributos energéticos para dejar de penalizar a la electricidad frente a los combustibles fósiles",
       { confidence: 0.5, explanation: "Propone además equiparar los impuestos especiales medioambientales a la media de la Unión Europea y un bono social eléctrico reforzado para los hogares vulnerables." }
     ),
+    ne26("podemos", "Propone recargos a vehículos de lujo de combustibles fósiles y una fiscalidad según la huella de carbono que exime al 90 % de la población, pero también topes al precio de los carburantes; no plantea subir los impuestos a los combustibles con carácter general."),
   ]),
   verify(base("dig_001"), [
     vp(
@@ -1633,6 +1763,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "se mantendrán los servicios presenciales para quienes no puedan o no deseen usar la vía digital",
       { confidence: 0.85, explanation: "Garantiza además la atención presencial sin cita previa obligatoria." }
     ),
+    vp26(
+      "podemos",
+      "conditional_support",
+      106,
+      "manteniendo atención presencial y telefónica para los servicios esenciales",
+      { confidence: 0.5, explanation: "Referido a los servicios esenciales en el medio rural." }
+    ),
   ]),
   verify(base("ia_001"), [
     vp(
@@ -1703,6 +1840,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Cada sistema contará con evaluación de impacto sobre derechos fundamentales y auditorías independientes",
       { confidence: 0.9, explanation: "Se refiere a los algoritmos públicos que deciden sobre derechos, que se inscribirán en un registro público." }
     ),
+    ne26("podemos"),
   ]),
   verify(base("ia_002"), [
     vp(
@@ -1761,5 +1899,6 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "los códigos voluntarios no han bastado",
       { confidence: 0.55, explanation: "Pide reglas obligatorias de transparencia, licencia y etiquetado para la IA en la creación cultural, y que la Administración cumpla el Reglamento Europeo de IA; a la vez propone un plan estatal para acelerar la adopción de la IA en las empresas." }
     ),
+    ne26("podemos"),
   ]),
 ];

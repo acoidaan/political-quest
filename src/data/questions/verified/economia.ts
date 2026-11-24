@@ -62,6 +62,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.8 }
     ),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "strongly_support",
+      18,
+      "El Estado adquirirá, a través de la Empresa Pública de Energía, la mayoría absoluta del accionariado de Repsol.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("eco_002"), [
     vp(
@@ -107,6 +114,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       48,
       "La empresa que comparta esa mejora con su plantilla tendrá una bonificación del 50% en su cotización a la Seguridad Social por ese extra",
       { confidence: 0.55, explanation: "Rebaja de cotizaciones selectiva, ligada a los pluses por productividad, no general." }
+    ),
+    vp26(
+      "podemos",
+      "oppose",
+      44,
+      "estableceremos un sistema de cotización progresiva que tenga en cuenta el nivel de renta y el volumen de beneficios empresariales",
+      { confidence: 0.55, explanation: "Posición derivada: propone cotizaciones progresivas según los beneficios empresariales y suprimir la base máxima, no reducirlas." }
     ),
   ]),
   verify(base("eco_003"), [
@@ -166,6 +180,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.95 }
     ),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "strongly_support",
+      17,
+      "Estableceremos un impuesto permanente sobre los beneficios extraordinarios de la gran banca, de forma que al menos el 50 % de sus beneficios revierta en las arcas públicas.",
+      { confidence: 0.95 }
+    ),
   ]),
   axesOnly(
     base("eco_004"),
@@ -205,6 +226,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       ne26("pnv"),
       ne26("ehbildu"),
       ne26("democracia21"),
+      vp26(
+        "podemos",
+        "oppose",
+        17,
+        "Fomentaremos la creación de empresas públicas que operen en el mercado y se financien con el fruto de su actividad",
+        { confidence: 0.7, explanation: "Posición derivada: propone ampliar el sector público empresarial (incluida la nacionalización de Repsol), no desinvertir." }
+      ),
     ]
   ),
   verify(base("imp_001"), [
@@ -288,6 +316,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "no hace falta subir ni bajar impuestos para hacerlo mucho mejor",
       { confidence: 0.5, explanation: "No propone subir el IRPF a las rentas altas; sí que las ganancias por activos mantenidos menos de un año tributen como rentas del trabajo." }
     ),
+    vp26(
+      "podemos",
+      "strongly_support",
+      21,
+      "Reforma del IRPF para que las rentas más altas contribuyan más.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("imp_002"), [
     vp(
@@ -358,6 +393,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "no hace falta subir ni bajar impuestos para hacerlo mucho mejor",
       { confidence: 0.6, explanation: "No propone una rebaja general del IRPF, aunque sí deflactar cada año los tramos con el IPC y rebajas fiscales selectivas." }
     ),
+    vp26(
+      "podemos",
+      "oppose",
+      21,
+      "reduciremos el tipo mínimo del 9,5 % actual al 9 %, y elevaremos los tipos a las bases imponibles de más de 60.000 euros anuales",
+      { confidence: 0.6, explanation: "Posición derivada: rebaja solo el tipo mínimo y sube los tipos desde 60.000 euros; no plantea una rebaja generalizada." }
+    ),
   ]),
   verify(base("imp_003"), [
     vp(
@@ -398,6 +440,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21"),
+    ne26("podemos"),
   ]),
   verify(base("imp_004"), [
     vp("pp", "strongly_oppose", 23, "Eliminaremos el impuesto a las grandes fortunas…", { confidence: 0.95 }),
@@ -462,6 +505,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.9 }
     ),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "strongly_support",
+      17,
+      "reformaremos el Impuesto Temporal de Solidaridad de las Grandes Fortunas para configurarlo como un impuesto estatal permanente",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("bie_001"), [
     vp(
@@ -538,6 +588,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "la Administración se pondrá en contacto proactivamente con ellas para tramitar de oficio el Ingreso Mínimo Vital (IMV)",
       { confidence: 0.6, explanation: "Busca que el IMV llegue a más hogares concediéndolo de oficio, sin proponer ampliar sus requisitos ni sus cuantías." }
     ),
+    vp26(
+      "podemos",
+      "strongly_support",
+      45,
+      "Potenciaremos el Ingreso Mínimo Vital con el objetivo de convertirlo en una renta universal incondicionada para todos los ciudadanos y ciudadanas.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("bie_002"), [
     vp(
@@ -560,6 +617,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "oppose",
+      45,
+      "Potenciaremos el Ingreso Mínimo Vital con el objetivo de convertirlo en una renta universal incondicionada para todos los ciudadanos y ciudadanas.",
+      { confidence: 0.65, explanation: "Posición derivada: su objetivo es una renta incondicionada, lo contrario de endurecer la condicionalidad." }
+    ),
   ]),
   verify(base("pen_001"), [
     vp(
@@ -648,6 +712,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "tranquilidad para quienes ya cobran su pensión, sostenibilidad para quienes la cobrarán mañana y justicia entre generaciones",
       { confidence: 0.5, explanation: "Remite la reforma de las pensiones a una asamblea ciudadana elegida por sorteo, sin pronunciarse sobre la revalorización con el IPC." }
     ),
+    ne26("podemos", "Propone equiparar la pensión mínima al SMI y financiar las pensiones con los Presupuestos, pero no se pronuncia sobre la revalorización conforme al IPC."),
   ]),
   verify(base("pen_002"), [
     vp(
@@ -688,6 +753,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ),
     ne26("ehbildu"),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "strongly_oppose",
+      21,
+      "Eliminaremos las desgravaciones al IRPF por la suscripción de planes de pensiones incluyendo los planes de empleo de las empresas",
+      { confidence: 0.9, explanation: "Posición inversa: suprime los incentivos fiscales al ahorro privado para la jubilación." }
+    ),
   ]),
   verify(base("tra_001"), [
     vp(
@@ -746,6 +818,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.95 }
     ),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "strongly_support",
+      42,
+      "Restableceremos la indemnización de 45 días por año trabajado en los despidos ilegales",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("tra_002"), [
     vp(
@@ -810,6 +889,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.95 }
     ),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "strongly_support",
+      41,
+      "Reduciremos la jornada laboral a 30 horas semanales durante la legislatura, comenzando con una bajada a 35 horas",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("smi_001"), [
     vp(
@@ -885,6 +971,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       49,
       "con el objetivo de que el SMI no baje de los 2/3 de la mediana salarial de nuestro país",
       { confidence: 0.6, explanation: "Encarga la actualización a un órgano técnico independiente con cláusulas de revisión por inflación y filtros de prudencia para jóvenes y pequeñas empresas." }
+    ),
+    vp26(
+      "podemos",
+      "strongly_support",
+      41,
+      "Aumentaremos el SMI hasta los 1.800 euros al mes en una legislatura",
+      { confidence: 0.95 }
     ),
   ]),
   verify(base("viv_001"), [
@@ -968,6 +1061,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "aplicaremos una limitación general y temporal de los alquileres en zonas tensionadas",
       { confidence: 0.8, explanation: "La limitación es excepcional y transitoria, y va unida a garantías públicas para los propietarios frente a impagos." }
     ),
+    vp26(
+      "podemos",
+      "strongly_support",
+      8,
+      "Aprobaremos una reducción extraordinaria del 40 % de los precios del alquiler, aplicable a los contratos vigentes, sus renovaciones y prórrogas, así como a los nuevos contratos",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("viv_002"), [
     vp(
@@ -1050,6 +1150,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Esta tregua de precios tendrá un carácter estrictamente excepcional y transitorio",
       { confidence: 0.65, explanation: "Posición derivada: propone limitar temporalmente los alquileres en zonas tensionadas e ir levantando la limitación a medida que aumente la oferta." }
     ),
+    vp26(
+      "podemos",
+      "strongly_oppose",
+      8,
+      "Aprobaremos una reducción extraordinaria del 40 % de los precios del alquiler, aplicable a los contratos vigentes, sus renovaciones y prórrogas, así como a los nuevos contratos",
+      { confidence: 0.9, explanation: "Posición inversa de la limitación legal de los alquileres que propone." }
+    ),
   ]),
   verify(base("viv_003"), [
     vp(
@@ -1102,6 +1209,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21", "Propone juzgados especializados de arrendamientos y medidas contra la «inquiokupación» (impago del alquiler), pero no se pronuncia sobre los desalojos de viviendas ocupadas ilegalmente."),
+    vp26(
+      "podemos",
+      "oppose",
+      9,
+      "Prohibiremos los desahucios y lanzamientos de personas en situación de vulnerabilidad sin alternativa habitacional digna y adecuada",
+      { confidence: 0.65, explanation: "Posición derivada: prioriza suspender desalojos de personas vulnerables e ilegalizar las empresas de desokupación; no propone desalojos exprés." }
+    ),
   ]),
   verify(base("viv_004"), [
     vp(
@@ -1165,6 +1279,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       22,
       "aportarán el suelo público mediante concesiones o derechos de superficie a 75 años (garantizando que el suelo y las viviendas sigan siendo 100% públicas al final del periodo)",
       { confidence: 0.6, explanation: "El suelo público se cede, sin venderse, para construir vivienda asequible en colaboración público-privada; el programa no precisa que sea solo de alquiler." }
+    ),
+    vp26(
+      "podemos",
+      "support",
+      10,
+      "así como todo el suelo edificable en sus manos, para destinarlos al alquiler social",
+      { confidence: 0.7, explanation: "Referido al suelo de la SAREB; además prohíbe vender vivienda pública al sector privado (medida 17)." }
     ),
   ]),
   verify(base("reg_001"), [
@@ -1230,6 +1351,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "podrá iniciar su actividad de inmediato mediante una licencia provisional automática",
       { confidence: 0.9, explanation: "Se aplica cuando la Administración no resuelve en plazo, salvo casos tasados de seguridad o salud pública; propone también crear una empresa en una hora y suprimir la licencia de obra menor." }
     ),
+    ne26("podemos"),
   ]),
   verify(base("emp_001"), [
     vp(
@@ -1305,6 +1427,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       70,
       "Estableceremos un calendario vinculante de incremento de plazas estructurales para acabar con la sobrecarga asistencial",
       { confidence: 0.7, explanation: "Se refiere a la sanidad pública; en educación propone equipos permanentes de refuerzo en los centros." }
+    ),
+    vp26(
+      "podemos",
+      "support",
+      131,
+      "Aumentaremos la financiación y las plantillas de la Administración de Justicia",
+      { confidence: 0.75, explanation: "También fija ratios mínimas de profesionales de salud mental (medida 306)." }
     ),
   ]),
 ];

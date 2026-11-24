@@ -92,6 +92,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Con una vía ordinaria que funcione, la irregularidad no se acumulará hasta forzar regularizaciones extraordinarias.",
       { confidence: 0.5, explanation: "Prioriza vías legales ordinarias (visado de búsqueda de empleo, tarjeta para jóvenes extutelados) frente a regularizaciones extraordinarias, sin pronunciarse sobre una nueva." }
     ),
+    vp26(
+      "podemos",
+      "strongly_support",
+      67,
+      "Establecimiento de un procedimiento permanente de regularización de las personas migrantes.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("inm_002"), [
     vp(
@@ -174,6 +181,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "renovaciones automáticas cuando la Administración ya tenga los datos de cotización y antecedentes penales",
       { confidence: 0.6, explanation: "Posición derivada: propone agilizar y automatizar los permisos y renovaciones, no endurecer sus requisitos." }
     ),
+    vp26(
+      "podemos",
+      "oppose",
+      67,
+      "sin hacer depender el derecho a residir legalmente en España exclusivamente de disponer de un contrato de trabajo",
+      { confidence: 0.75, explanation: "Posición derivada: propone flexibilizar los requisitos y prorrogar automáticamente las autorizaciones." }
+    ),
   ]),
   verify(base("inm_003"), [
     vp(
@@ -232,6 +246,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "La prioridad serán quienes cometen delitos, especialmente los reincidentes.",
       { confidence: 0.65, explanation: "Se refiere a la ejecución de las órdenes de expulsión, que propone seguir con un registro digital único." }
     ),
+    ne26("podemos"),
   ]),
   verify(base("inm_004"), [
     vp(
@@ -287,6 +302,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21", "Se compromete a aplicar completo el Pacto Europeo de Migración y Asilo, sin referirse al reparto de solicitantes."),
+    vp26(
+      "podemos",
+      "strongly_support",
+      32,
+      "Propondremos un reparto vinculante de responsabilidades entre los Estados miembros de la UE, con mecanismos de reubicación",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("inm_005"), [
     vote("psoe", "strongly_support", {
@@ -346,6 +368,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.9 }
     ),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "strongly_support",
+      69,
+      "personas que viven en España, incluidas las personas migrantes en situación administrativa irregular y las solicitantes de asilo",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("inm_006"), [
     vp(
@@ -416,6 +445,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.8, explanation: "Posición derivada: rechaza las devoluciones sumarias." }
     ),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "oppose",
+      32,
+      "Retiraremos los elementos lesivos, de violencia y control en frontera que sean incompatibles con la integridad física de las personas.",
+      { confidence: 0.7, explanation: "Posición derivada: propone retirar elementos de contención en frontera, no reforzarlos." }
+    ),
   ]),
   verify(base("nac_001"), [
     vp(
@@ -456,6 +492,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "strongly_support",
+      66,
+      "Reforma del art. 22 Código Civil para simplificar el acceso a la nacionalidad española y reducir los plazos de residencia exigidos",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("seg_001"), [
     vp(
@@ -514,6 +557,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "permita aplicar con rapidez las herramientas contra la multirreincidencia",
       { confidence: 0.6, explanation: "Lo plantea dentro de una nueva ley procesal penal." }
     ),
+    ne26("podemos"),
   ]),
   verify(base("seg_002"), [
     vp(
@@ -588,6 +632,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ),
     ne26("ehbildu"),
     ne26("democracia21"),
+    ne26("podemos"),
   ]),
   verify(base("pol_001"), [
     vp(
@@ -658,6 +703,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.95 }
     ),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "strongly_support",
+      133,
+      "Derogaremos la Ley de Reforma de la Ley Orgánica de protección de la seguridad ciudadana",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("jus_001"), [
     vp(
@@ -721,6 +773,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       9,
       "los vocales judiciales se elegirán por los jueces, sin intervención alguna de las asociaciones judiciales",
       { confidence: 0.95 }
+    ),
+    vp26(
+      "podemos",
+      "oppose",
+      129,
+      "reformaremos la Ley Orgánica del Poder Judicial para que la elección de los doce vocales del turno judicial por el Congreso requiera mayoría absoluta",
+      { confidence: 0.8, explanation: "Mantiene la elección parlamentaria (y plantea a largo plazo la elección directa por la ciudadanía), no por los propios jueces." }
     ),
   ]),
   verify(base("jus_002"), [
@@ -798,6 +857,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ),
     ne26("ehbildu"),
     ne26("democracia21"),
+    ne26("podemos"),
   ]),
   axesOnly(
     base("pri_001"),
@@ -831,6 +891,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       ne26("pnv"),
       ne26("ehbildu"),
       ne26("democracia21"),
+      ne26("podemos"),
     ]
   ),
   verify(base("lib_001"), [
@@ -896,6 +957,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.95, explanation: "Incluye también la crítica a los sentimientos religiosos." }
     ),
     ne26("democracia21"),
+    ne26("podemos"),
   ]),
   axesOnly(
     base("prv_001"),
@@ -917,6 +979,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       ne26("pnv"),
       ne26("ehbildu"),
       ne26("democracia21"),
+      ne26("podemos"),
     ]
   ),
 ];
