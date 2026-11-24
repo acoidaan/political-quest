@@ -69,6 +69,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "El Estado adquirirá, a través de la Empresa Pública de Energía, la mayoría absoluta del accionariado de Repsol.",
       { confidence: 0.9 }
     ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      19,
+      "Augmentarem la presència de l’estat en sectors estratègics a través de l’adquisició de participacions i accions en empreses o la creació d’empreses estatals",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("eco_002"), [
     vp(
@@ -122,6 +129,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "estableceremos un sistema de cotización progresiva que tenga en cuenta el nivel de renta y el volumen de beneficios empresariales",
       { confidence: 0.55, explanation: "Posición derivada: propone cotizaciones progresivas según los beneficios empresariales y suprimir la base máxima, no reducirlas." }
     ),
+    ne26("compromis"),
   ]),
   verify(base("eco_003"), [
     vp(
@@ -187,6 +195,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Estableceremos un impuesto permanente sobre los beneficios extraordinarios de la gran banca, de forma que al menos el 50 % de sus beneficios revierta en las arcas públicas.",
       { confidence: 0.95 }
     ),
+    vp26(
+      "compromis",
+      "support",
+      17,
+      "Crearem un impost sobre el benefici de les empreses oligopolístiques.",
+      { confidence: 0.6, explanation: "Impuesto sobre el beneficio de las empresas oligopolísticas; no menciona expresamente la banca ni los beneficios extraordinarios." }
+    ),
   ]),
   axesOnly(
     base("eco_004"),
@@ -232,6 +247,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
         17,
         "Fomentaremos la creación de empresas públicas que operen en el mercado y se financien con el fruto de su actividad",
         { confidence: 0.7, explanation: "Posición derivada: propone ampliar el sector público empresarial (incluida la nacionalización de Repsol), no desinvertir." }
+      ),
+      vp26(
+        "compromis",
+        "oppose",
+        19,
+        "Augmentarem la presència de l’estat en sectors estratègics a través de l’adquisició de participacions i accions en empreses o la creació d’empreses estatals",
+        { confidence: 0.65, explanation: "Posición derivada: propone ampliar las participaciones públicas, no venderlas." }
       ),
     ]
   ),
@@ -323,6 +345,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Reforma del IRPF para que las rentas más altas contribuyan más.",
       { confidence: 0.95 }
     ),
+    vp26(
+      "compromis",
+      "support",
+      17,
+      "Eliminarem els privilegis de les rendes financeres respecte de les del treball, TOT fent-les idènticament progressives.",
+      { confidence: 0.55, explanation: "Posición derivada: más progresividad en las rentas del capital; no propone subir los tipos de las rentas altas del trabajo." }
+    ),
   ]),
   verify(base("imp_002"), [
     vp(
@@ -400,6 +429,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "reduciremos el tipo mínimo del 9,5 % actual al 9 %, y elevaremos los tipos a las bases imponibles de más de 60.000 euros anuales",
       { confidence: 0.6, explanation: "Posición derivada: rebaja solo el tipo mínimo y sube los tipos desde 60.000 euros; no plantea una rebaja generalizada." }
     ),
+    ne26("compromis", "Propone deflactar el IRPF para las rentas inferiores a 30.000 euros, no una rebaja generalizada."),
   ]),
   verify(base("imp_003"), [
     vp(
@@ -441,6 +471,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("ehbildu"),
     ne26("democracia21"),
     ne26("podemos"),
+    ne26("compromis"),
   ]),
   verify(base("imp_004"), [
     vp("pp", "strongly_oppose", 23, "Eliminaremos el impuesto a las grandes fortunas…", { confidence: 0.95 }),
@@ -510,6 +541,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "strongly_support",
       17,
       "reformaremos el Impuesto Temporal de Solidaridad de las Grandes Fortunas para configurarlo como un impuesto estatal permanente",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      17,
+      "Mantindrem i ampliarem l’Impost a les Grans Fortunes",
       { confidence: 0.95 }
     ),
   ]),
@@ -595,6 +633,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Potenciaremos el Ingreso Mínimo Vital con el objetivo de convertirlo en una renta universal incondicionada para todos los ciudadanos y ciudadanas.",
       { confidence: 0.9 }
     ),
+    vp26(
+      "compromis",
+      "support",
+      11,
+      "Reformarem l’Ingrés Mínim Vital per a incloure noves situacions de vulnerabilitat, millorar la seua cobertura",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("bie_002"), [
     vp(
@@ -624,6 +669,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Potenciaremos el Ingreso Mínimo Vital con el objetivo de convertirlo en una renta universal incondicionada para todos los ciudadanos y ciudadanas.",
       { confidence: 0.65, explanation: "Posición derivada: su objetivo es una renta incondicionada, lo contrario de endurecer la condicionalidad." }
     ),
+    ne26("compromis"),
   ]),
   verify(base("pen_001"), [
     vp(
@@ -713,6 +759,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.5, explanation: "Remite la reforma de las pensiones a una asamblea ciudadana elegida por sorteo, sin pronunciarse sobre la revalorización con el IPC." }
     ),
     ne26("podemos", "Propone equiparar la pensión mínima al SMI y financiar las pensiones con los Presupuestos, pero no se pronuncia sobre la revalorización conforme al IPC."),
+    vp26(
+      "compromis",
+      "strongly_support",
+      8,
+      "Assegurarem el manteniment del poder adquisitiu de les pensions, garantint constitucionalment la seua revaloració conforme al cost de la vida.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("pen_002"), [
     vp(
@@ -758,6 +811,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "strongly_oppose",
       21,
       "Eliminaremos las desgravaciones al IRPF por la suscripción de planes de pensiones incluyendo los planes de empleo de las empresas",
+      { confidence: 0.9, explanation: "Posición inversa: suprime los incentivos fiscales al ahorro privado para la jubilación." }
+    ),
+    vp26(
+      "compromis",
+      "strongly_oppose",
+      9,
+      "Suprimirem tota desgravació fiscal als plans de pensions privats per evitar la competència amb el sistema públic de pensions.",
       { confidence: 0.9, explanation: "Posición inversa: suprime los incentivos fiscales al ahorro privado para la jubilación." }
     ),
   ]),
@@ -823,6 +883,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "strongly_support",
       42,
       "Restableceremos la indemnización de 45 días por año trabajado en los despidos ilegales",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      7,
+      "Modificarem la normativa laboral sobre acomiadaments per recuperar els salaris de tramitació (en el cas d’acomiadament improcedent indemnitzat) i la indemnització de 45 dies per any treballat.",
       { confidence: 0.95 }
     ),
   ]),
@@ -894,6 +961,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "strongly_support",
       41,
       "Reduciremos la jornada laboral a 30 horas semanales durante la legislatura, comenzando con una bajada a 35 horas",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      7,
+      "Reduirem la jornada laboral a quatre dies (trenta-dues hores) setmanals, sense disminució del sou.",
       { confidence: 0.95 }
     ),
   ]),
@@ -978,6 +1052,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       41,
       "Aumentaremos el SMI hasta los 1.800 euros al mes en una legislatura",
       { confidence: 0.95 }
+    ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      7,
+      "Garantirem per llei que l’SMI arribe al 60% del salari mitjà",
+      { confidence: 0.85 }
     ),
   ]),
   verify(base("viv_001"), [
@@ -1068,6 +1149,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Aprobaremos una reducción extraordinaria del 40 % de los precios del alquiler, aplicable a los contratos vigentes, sus renovaciones y prórrogas, así como a los nuevos contratos",
       { confidence: 0.95 }
     ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      5,
+      "Donarem competències als ajuntaments perquè puguen declarar zones tensionades als municipis, d’acord amb la Llei estatal de Vivienda, per impulsar el control efectiu de preus de lloguer.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("viv_002"), [
     vp(
@@ -1157,6 +1245,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Aprobaremos una reducción extraordinaria del 40 % de los precios del alquiler, aplicable a los contratos vigentes, sus renovaciones y prórrogas, así como a los nuevos contratos",
       { confidence: 0.9, explanation: "Posición inversa de la limitación legal de los alquileres que propone." }
     ),
+    vp26(
+      "compromis",
+      "strongly_oppose",
+      5,
+      "Donarem competències als ajuntaments perquè puguen declarar zones tensionades als municipis, d’acord amb la Llei estatal de Vivienda, per impulsar el control efectiu de preus de lloguer.",
+      { confidence: 0.85, explanation: "Posición inversa del control de precios del alquiler que propone." }
+    ),
   ]),
   verify(base("viv_003"), [
     vp(
@@ -1215,6 +1310,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       9,
       "Prohibiremos los desahucios y lanzamientos de personas en situación de vulnerabilidad sin alternativa habitacional digna y adecuada",
       { confidence: 0.65, explanation: "Posición derivada: prioriza suspender desalojos de personas vulnerables e ilegalizar las empresas de desokupación; no propone desalojos exprés." }
+    ),
+    vp26(
+      "compromis",
+      "oppose",
+      6,
+      "Prohibirem legalment els desnonaments sense alternativa habitacional",
+      { confidence: 0.6, explanation: "Posición derivada: prioriza impedir desahucios sin alternativa habitacional; no propone desalojos exprés." }
     ),
   ]),
   verify(base("viv_004"), [
@@ -1287,6 +1389,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "así como todo el suelo edificable en sus manos, para destinarlos al alquiler social",
       { confidence: 0.7, explanation: "Referido al suelo de la SAREB; además prohíbe vender vivienda pública al sector privado (medida 17)." }
     ),
+    vp26(
+      "compromis",
+      "support",
+      30,
+      "Crearem un inventari i un banc estatal de sòl i edificis públics en desús per a destinar-los a habitatge social",
+      { confidence: 0.7 }
+    ),
   ]),
   verify(base("reg_001"), [
     vp(
@@ -1352,6 +1461,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.9, explanation: "Se aplica cuando la Administración no resuelve en plazo, salvo casos tasados de seguridad o salud pública; propone también crear una empresa en una hora y suprimir la licencia de obra menor." }
     ),
     ne26("podemos"),
+    vp26(
+      "compromis",
+      "support",
+      20,
+      "Treballarem per a simplificar i agilitzar els processos de tramitació en les relacions de les pimes amb l’administració",
+      { confidence: 0.55, explanation: "Simplificación y ventanillas únicas para pymes; no se pronuncia sobre reducir el control previo." }
+    ),
   ]),
   verify(base("emp_001"), [
     vp(
@@ -1434,6 +1550,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       131,
       "Aumentaremos la financiación y las plantillas de la Administración de Justicia",
       { confidence: 0.75, explanation: "También fija ratios mínimas de profesionales de salud mental (medida 306)." }
+    ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      34,
+      "Eliminarem les taxes de reposició i derogarem tota normativa que impedix a tots els nivells de l’administració créixer en recursos humans",
+      { confidence: 0.85 }
     ),
   ]),
 ];

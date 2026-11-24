@@ -99,6 +99,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Establecimiento de un procedimiento permanente de regularización de las personas migrantes.",
       { confidence: 0.95 }
     ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      56,
+      "Regularitzarem i donarem drets per als qui viuen ací.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("inm_002"), [
     vp(
@@ -188,6 +195,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "sin hacer depender el derecho a residir legalmente en España exclusivamente de disponer de un contrato de trabajo",
       { confidence: 0.75, explanation: "Posición derivada: propone flexibilizar los requisitos y prorrogar automáticamente las autorizaciones." }
     ),
+    vp26(
+      "compromis",
+      "oppose",
+      56,
+      "Impulsarem vies de regularització i reformes que faciliten la documentació i autorització de treball",
+      { confidence: 0.7, explanation: "Posición derivada: propone facilitar las autorizaciones, no endurecerlas." }
+    ),
   ]),
   verify(base("inm_003"), [
     vp(
@@ -247,6 +261,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.65, explanation: "Se refiere a la ejecución de las órdenes de expulsión, que propone seguir con un registro digital único." }
     ),
     ne26("podemos"),
+    ne26("compromis"),
   ]),
   verify(base("inm_004"), [
     vp(
@@ -309,6 +324,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Propondremos un reparto vinculante de responsabilidades entre los Estados miembros de la UE, con mecanismos de reubicación",
       { confidence: 0.85 }
     ),
+    ne26("compromis"),
   ]),
   verify(base("inm_005"), [
     vote("psoe", "strongly_support", {
@@ -373,6 +389,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "strongly_support",
       69,
       "personas que viven en España, incluidas las personas migrantes en situación administrativa irregular y las solicitantes de asilo",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      9,
+      "Garantirem l’accés universal a l’atenció sanitària pública, sense discriminacions per origen o situació administrativa.",
       { confidence: 0.95 }
     ),
   ]),
@@ -452,6 +475,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Retiraremos los elementos lesivos, de violencia y control en frontera que sean incompatibles con la integridad física de las personas.",
       { confidence: 0.7, explanation: "Posición derivada: propone retirar elementos de contención en frontera, no reforzarlos." }
     ),
+    ne26("compromis"),
   ]),
   verify(base("nac_001"), [
     vp(
@@ -499,6 +523,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Reforma del art. 22 Código Civil para simplificar el acceso a la nacionalidad española y reducir los plazos de residencia exigidos",
       { confidence: 0.95 }
     ),
+    ne26("compromis"),
   ]),
   verify(base("seg_001"), [
     vp(
@@ -558,6 +583,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.6, explanation: "Lo plantea dentro de una nueva ley procesal penal." }
     ),
     ne26("podemos"),
+    ne26("compromis"),
   ]),
   verify(base("seg_002"), [
     vp(
@@ -633,6 +659,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ne26("ehbildu"),
     ne26("democracia21"),
     ne26("podemos"),
+    ne26("compromis"),
   ]),
   verify(base("pol_001"), [
     vp(
@@ -710,6 +737,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Derogaremos la Ley de Reforma de la Ley Orgánica de protección de la seguridad ciudadana",
       { confidence: 0.9 }
     ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      38,
+      "Derogarem la Llei de Protecció de la Seguretat Ciutadana, coneguda com a llei mordassa.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("jus_001"), [
     vp(
@@ -781,6 +815,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "reformaremos la Ley Orgánica del Poder Judicial para que la elección de los doce vocales del turno judicial por el Congreso requiera mayoría absoluta",
       { confidence: 0.8, explanation: "Mantiene la elección parlamentaria (y plantea a largo plazo la elección directa por la ciudadanía), no por los propios jueces." }
     ),
+    ne26("compromis", "Pide un CGPJ independiente y elegido «tenint en compte la sobirania del poble», sin precisar si deben elegirlo los jueces o el Parlamento."),
   ]),
   verify(base("jus_002"), [
     vp(
@@ -858,6 +893,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ne26("ehbildu"),
     ne26("democracia21"),
     ne26("podemos"),
+    vp26(
+      "compromis",
+      "support",
+      41,
+      "Defensarem un model de justícia penal progressista amb mitjans econòmics, materials i humans suficients inspirat en l'interès superior del i la menor, no adreçat a satisfer el populisme punitiu ni l'alarma social.",
+      { confidence: 0.55, explanation: "Referido a la justicia penal de menores." }
+    ),
   ]),
   axesOnly(
     base("pri_001"),
@@ -892,6 +934,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       ne26("ehbildu"),
       ne26("democracia21"),
       ne26("podemos"),
+      ne26("compromis"),
     ]
   ),
   verify(base("lib_001"), [
@@ -958,6 +1001,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ),
     ne26("democracia21"),
     ne26("podemos"),
+    vp26(
+      "compromis",
+      "support",
+      40,
+      "Derogarem el delicte d'ofensa als sentiments religiosos tipificat a l'article 525 del Codi Penal.",
+      { confidence: 0.8, explanation: "No se pronuncia sobre las injurias a la Corona." }
+    ),
   ]),
   axesOnly(
     base("prv_001"),
@@ -980,6 +1030,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       ne26("ehbildu"),
       ne26("democracia21"),
       ne26("podemos"),
+      ne26("compromis"),
     ]
   ),
 ];

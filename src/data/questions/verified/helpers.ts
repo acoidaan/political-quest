@@ -118,7 +118,13 @@ const PROGRAMS: Record<PartyId, Omit<Source, "page">> = {
  *   desde el entorno de revisión, así que se cita la copia que aportó el
  *   mantenedor el 2026-11-24 (141 pp., mismo título, creada el 2026-11-17);
  *   no se ha podido comparar byte a byte con la URL oficial.
- * Las citas en gallego y catalán se transcriben literalmente, sin traducir.
+ * - Compromís: «Programa electoral 29N Compromís-Front Valencià» (57 pp., en
+ *   valenciano), publicado en frontvalencia.org, la web de campaña de la
+ *   coalición (aviso legal en compromis.net). El PDF no trae fecha de
+ *   creación; la de modificación es el 2026-11-18. La copia aportada por el
+ *   mantenedor es idéntica byte a byte a la descargada de la URL de abajo el
+ *   2026-11-24.
+ * Las citas en gallego, catalán y valenciano se transcriben literalmente, sin traducir.
  */
 export const VERIFIED_AT_2026 = "2026-11-11";
 
@@ -200,6 +206,13 @@ const PROGRAMS_2026: Record<PartyId, Omit<Source, "page">> = {
     date: "2026-11-17",
     verifiedAt: "2026-11-24",
   },
+  compromis: {
+    type: "electoral_program",
+    document: "Programa electoral Compromís-Front Valencià 29N 2026",
+    url: "https://frontvalencia.org/programa-compromis-front-valencia.pdf",
+    date: "2026-11-18",
+    verifiedAt: "2026-11-24",
+  },
 };
 
 /** Fecha de publicación del programa del 29N, por partido (= validFrom). */
@@ -215,6 +228,7 @@ const PROGRAM_2026_FROM: Record<PartyId, string> = {
   ehbildu: "2026-11-16",
   democracia21: "2026-11-13",
   podemos: "2026-11-17",
+  compromis: "2026-11-18",
 };
 
 function program2026(party: PartyId): Omit<Source, "page"> {

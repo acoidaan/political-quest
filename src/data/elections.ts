@@ -249,9 +249,17 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "Compromís",
     scope: "Comunitat Valenciana",
     composition: `«Compromís: Front Valencià» (Compromís-EUPV-Podem-ERPV). ${BOE_PROCLAIMED}`,
-    programStatus: "pending",
-    documents: [],
-    lastChecked: PREVIOUS_CHECK,
+    officialWebsite: "https://frontvalencia.org",
+    programStatus: "incorporated",
+    documents: [
+      {
+        title: "Programa electoral 29N Compromís-Front Valencià",
+        url: "https://frontvalencia.org/programa-compromis-front-valencia.pdf",
+        date: "2026-11-18",
+      },
+    ],
+    lastChecked: CHECKED,
+    notes: "Programa en valenciano; las citas se reproducen en el idioma original. El PDF no indica fecha de creación: se toma la de su última modificación.",
   },
   {
     id: "ehbildu",
