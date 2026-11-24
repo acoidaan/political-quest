@@ -34,7 +34,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      84,
+      91,
       "Dotaremos a la SEPI de los medios económicos y humanos para entrar como accionista en nuevas empresas y sectores estratégicos y para modernizar las empresas públicas en las que participa.",
       { confidence: 0.9 }
     ),
@@ -132,7 +132,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      44,
+      51,
       "Recuperación con carácter estructural del gravamen especial del 1,2 % sobre la cifra de negocios de los grandes operadores y empresas energéticas que actúan en España.",
       { confidence: 0.9, explanation: "En la misma página: «Mantendremos con carácter estructural el gravamen bancario»." }
     ),
@@ -189,7 +189,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       vp26(
         "frente-amplio",
         "oppose",
-        84,
+        91,
         "Dotaremos a la SEPI de los medios económicos y humanos para entrar como accionista en nuevas empresas y sectores estratégicos y para modernizar las empresas públicas en las que participa.",
         { confidence: 0.6, explanation: "Posición derivada: propone ampliar la participación pública en empresas; no se refiere expresamente a vender participaciones." }
       ),
@@ -254,7 +254,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      46,
+      53,
       "Acercaremos la tributación de las rentas del capital a la de las rentas del trabajo.",
       { confidence: 0.8, explanation: "Se concreta en las rentas del capital y en los grandes patrimonios (págs. 45-46)." }
     ),
@@ -382,7 +382,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_oppose",
-      45,
+      52,
       "Crearemos un impuesto estatal sobre las grandes herencias, de más de un millón de euros.",
       { confidence: 0.85, explanation: "Mantiene las reducciones por parentesco, transmisión de empresas y vivienda habitual (pág. 46)." }
     ),
@@ -434,7 +434,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      45,
+      52,
       "Reformaremos el Impuesto de Solidaridad de las Grandes Fortunas para garantizar que los patrimonios con más de un millón de euros paguen como mínimo el 2 %.",
       { confidence: 0.95 }
     ),
@@ -602,7 +602,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      57,
+      64,
       "ubicaremos el derecho a la pensión pública y su revalorización automática con arreglo al IPC",
       { confidence: 0.95, explanation: "Propone llevarlo a la Constitución." }
     ),
@@ -666,7 +666,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_oppose",
-      46,
+      53,
       "Eliminaremos el régimen fiscal especial de los trabajadores desplazados y las deducciones por planes de pensiones privados individuales.",
       { confidence: 0.85 }
     ),
@@ -712,7 +712,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      53,
+      60,
       "Reformaremos la indemnización por despido improcedente para que repare el daño real causado a la persona trabajadora y disuada de los despidos injustificados",
       { confidence: 0.8, explanation: "No fija la cuantía." }
     ),
@@ -852,7 +852,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     vp26(
       "frente-amplio",
       "support",
-      51,
+      58,
       "Garantizaremos por ley una subida progresiva del Salario Mínimo Interprofesional (SMI) manteniendo un suelo permanente equivalente al 60 % del salario medio neto de la economía.",
       { confidence: 0.8, explanation: "Vincula el SMI al 60% del salario medio neto con subidas progresivas, sin referirse expresamente a la inflación." }
     ),
@@ -1202,7 +1202,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     vp26(
       "frente-amplio",
       "conditional_support",
-      92,
+      99,
       "Reforzaremos la ventanilla única administrativa y aceleraremos la digitalización para reducir trabas y trámites burocráticos",
       { confidence: 0.5, explanation: "Reduce trámites mediante ventanilla única y digitalización, sin plantear menos control previo." }
     ),

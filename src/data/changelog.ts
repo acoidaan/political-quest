@@ -24,6 +24,14 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-24",
+    kind: "datos",
+    title: "Nueva versión revisada del programa del Frente Amplio",
+    details: [
+      "El Frente Amplio publicó el 23 de noviembre otra versión de su programa en la misma dirección, con un capítulo nuevo sobre deporte. Se han vuelto a comprobar todas sus citas: siguen siendo literales y 49 cambian de página. Ninguna posición cambia, así que el test no cambia.",
+    ],
+  },
+  {
     date: "2026-11-20",
     kind: "datos",
     title: "Programa de Democracia 21 revisado",
