@@ -88,6 +88,15 @@ export const PARTIES: Party[] = [
     positionCycle: "2026 (29N)",
   },
   {
+    id: "compromis",
+    name: "Compromís",
+    fullName: "Compromís: Front Valencià (Compromís-EUPV-Podem-ERPV)",
+    color: "#c2410c",
+    active: true,
+    scope: "territorial",
+    positionCycle: "2026 (29N)",
+  },
+  {
     id: "pnv",
     name: "PNV",
     fullName: "Partido Nacionalista Vasco (EAJ-PNV)",

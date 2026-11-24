@@ -30,6 +30,7 @@
   --party-ehbildu: #0b7fa3;
   --party-democracia21: #5b6b7a;
   --party-podemos: #8a2c86;
+  --party-compromis: #c2410c;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -56,6 +57,7 @@
     --party-ehbildu: #4fb3d4;
     --party-democracia21: #9aa8b6;
     --party-podemos: #cf7fcb;
+    --party-compromis: #f28c4f;
   }
 }
 

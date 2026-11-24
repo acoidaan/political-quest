@@ -26,6 +26,15 @@ export const CHANGELOG: ChangelogEntry[] = [
   {
     date: "2026-11-24",
     kind: "datos",
+    title: "Compromís entra en la comparación con su programa para el 29-N",
+    details: [
+      "Sus posiciones proceden del programa de Compromís-Front Valencià, publicado en frontvalencia.org (18 de noviembre de 2026), con cita literal en valenciano y página en 63 de las 90 propuestas.",
+      "Concurre solo en la Comunitat Valenciana. En las propuestas que su programa no aborda figura como «evidencia insuficiente» y no puntúa en la comparación.",
+    ],
+  },
+  {
+    date: "2026-11-24",
+    kind: "datos",
     title: "Podemos entra en la comparación con su programa para el 29-N",
     details: [
       "Sus posiciones proceden de su programa «Así de básico: Paz, casa y trabajo» (17 de noviembre de 2026), con cita literal y página en 63 de las 90 propuestas.",
