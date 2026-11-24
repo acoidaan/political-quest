@@ -755,7 +755,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("democracia21"),
     vp26(
       "podemos",
-      "strongly_support",
+      "strongly_oppose",
       21,
       "Eliminaremos las desgravaciones al IRPF por la suscripción de planes de pensiones incluyendo los planes de empleo de las empresas",
       { confidence: 0.9, explanation: "Posición inversa: suprime los incentivos fiscales al ahorro privado para la jubilación." }
