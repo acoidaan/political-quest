@@ -237,7 +237,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       vp26(
         "frente-amplio",
         "oppose",
-        47,
+        54,
         "Eliminaremos la exención del IVA a la enseñanza privada y la del Impuesto sobre las Primas de Seguros a los seguros sanitarios privados.",
         { confidence: 0.6, explanation: "Posición derivada: suprime el beneficio fiscal de los seguros sanitarios privados en el impuesto sobre primas; no se refiere al IRPF." }
       ),
@@ -550,7 +550,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     vp26(
       "frente-amplio",
       "support",
-      123,
+      130,
       "evaluaciones salariales conjuntas cuando la brecha supere el 5 % sin justificación",
       { confidence: 0.75, explanation: "Dentro de la transposición de la Directiva (UE) 2023/970 de transparencia retributiva; no menciona sanciones." }
     ),
@@ -714,7 +714,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      123,
+      130,
       "Desplegaremos de forma efectiva la Ley Trans, reconoceremos a las personas no binarias",
       { confidence: 0.7, explanation: "Posición derivada: despliega la Ley 4/2023, que regula la rectificación registral del sexo por declaración propia, y amplía el reconocimiento a las personas no binarias." }
     ),
@@ -1153,7 +1153,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      150,
+      157,
       "Derecho a la interrupción voluntaria del embarazo, a la eutanasia y al suicidio asistido.",
       { confidence: 0.85 }
     ),
@@ -1193,7 +1193,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      150,
+      157,
       "Revisaremos los Acuerdos de 1979 con la Santa Sede, así como con las otras confesiones religiosas, incluyendo la legislación de privilegio que se deriva de los mismos.",
       { confidence: 0.9 }
     ),
@@ -1291,7 +1291,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      76,
+      83,
       "Derogaremos la Ley 18/2013 de protección cultural y patrimonial de la tauromaquia, como paso imprescindible para acabar con la financiación pública de la tauromaquia",
       { confidence: 0.95 }
     ),
@@ -1343,7 +1343,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_oppose",
-      76,
+      83,
       "Derogaremos la Ley 18/2013 de protección cultural y patrimonial de la tauromaquia, como paso imprescindible para acabar con la financiación pública de la tauromaquia",
       { confidence: 0.8, explanation: "Posición derivada: deroga la protección de la tauromaquia; sobre la caza, pide vincularla a la mejora de los recursos (pág. 87)." }
     ),

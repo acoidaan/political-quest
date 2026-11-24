@@ -52,7 +52,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      126,
+      133,
       "Reformaremos de forma integral la Ley de Extranjería para instaurar un procedimiento estable, permanente y reglado de regularización administrativa.",
       { confidence: 0.95 }
     ),
@@ -146,7 +146,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
     vp26(
       "frente-amplio",
       "oppose",
-      126,
+      133,
       "Suprimiremos trabas administrativas para el acceso efectivo a derechos",
       { confidence: 0.65, explanation: "Posición derivada: propone eliminar trabas administrativas y un procedimiento estable de regularización." }
     ),
@@ -271,7 +271,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
     vp26(
       "frente-amplio",
       "conditional_support",
-      127,
+      134,
       "Interpretación y aplicación del Pacto Europeo de Migración y Asilo bajo su vertiente más garantista.",
       { confidence: 0.5, explanation: "Acepta aplicar el Pacto Europeo de Migración y Asilo, sin pronunciarse expresamente sobre el reparto obligatorio." }
     ),
@@ -388,7 +388,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_oppose",
-      126,
+      133,
       "Derogaremos formalmente la disposición adicional décima de la Ley de Extranjería (relativa al «rechazo en frontera»)",
       { confidence: 0.75, explanation: "Posición derivada: deroga el rechazo en frontera y crea un control independiente de derechos humanos en la Frontera Sur." }
     ),
@@ -618,7 +618,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      142,
+      149,
       "Derogaremos por completo la Ley Mordaza.",
       { confidence: 0.95 }
     ),
@@ -706,7 +706,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
     vp26(
       "frente-amplio",
       "oppose",
-      148,
+      155,
       "Los vocales del turno judicial se seguirán eligiendo por mayoría de tres quintos, pero si en dos meses no hay acuerdo, las Cámaras podrán elegirlos en segunda votación",
       { confidence: 0.8 }
     ),
@@ -770,7 +770,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
     vp26(
       "frente-amplio",
       "support",
-      144,
+      151,
       "Estableceremos un cuerpo de agentes de penas y medidas en medio abierto, con capacitación especial en reinserción.",
       { confidence: 0.7, explanation: "Elimina además obstáculos a la progresión de grado (pág. 144)." }
     ),
@@ -821,7 +821,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       vp26(
         "frente-amplio",
         "strongly_oppose",
-        144,
+        151,
         "Eliminaremos los obstáculos en la progresión de grados y el acceso a los medios abiertos (tercer grado y libertad condicional).",
         { confidence: 0.75, explanation: "Posición derivada: facilita el acceso al tercer grado, sin distinguir por tipo de delito." }
       ),
@@ -856,7 +856,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      142,
+      149,
       "Derogaremos los artículos del Código Penal que castigan los delitos contra los sentimientos religiosos o de escarnio público, los delitos contra la Corona",
       { confidence: 0.95 }
     ),

@@ -66,7 +66,7 @@ export const CURRENT_ELECTION: Election = {
   campaign: { from: "2026-11-13", to: "2026-11-27" },
 };
 
-const CHECKED = "2026-11-20";
+const CHECKED = "2026-11-24";
 /** Webs cuyas páginas bloquean hoy el acceso automatizado (Cloudflare). */
 const LAST_READABLE = "2026-11-13";
 /** Candidaturas sin web oficial registrada que revisar. */
@@ -115,7 +115,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
       },
     ],
     lastChecked: CHECKED,
-    notes: `En Las Palmas y Santa Cruz de Tenerife, IU y Sumar concurren dentro de «Unidad del Pueblo Canario UPC (NC-BC, PODEMOS, IU, SUMAR)». ${BOE_PROCLAIMED}. El 2026-11-17 se publicó en la misma URL una versión revisada del programa, que es la que se cita.`,
+    notes: `En Las Palmas y Santa Cruz de Tenerife, IU y Sumar concurren dentro de «Unidad del Pueblo Canario UPC (NC-BC, PODEMOS, IU, SUMAR)». ${BOE_PROCLAIMED}. El 2026-11-17 y el 2026-11-23 se publicaron en la misma URL versiones revisadas del programa; se cita la del 2026-11-23.`,
   },
   {
     id: "podemos",
@@ -160,7 +160,8 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
         date: "2026-11-15",
       },
     ],
-    lastChecked: CHECKED,
+    // La web devuelve una página de Incapsula desde el 2026-11-23.
+    lastChecked: "2026-11-22",
   },
   {
     id: "vox",

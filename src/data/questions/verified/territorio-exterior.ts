@@ -33,7 +33,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      103,
+      110,
       "El nuevo modelo debe avanzar en la autonomía financiera de las comunidades autónomas, con una mayor capacidad tributaria y de gestión por las agencias tributarias autonómicas.",
       { confidence: 0.9 }
     ),
@@ -109,7 +109,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_oppose",
-      103,
+      110,
       "debe acomodar la voluntad de mayor autogobierno que han expresado algunas comunidades autónomas",
       { confidence: 0.75, explanation: "Posición derivada: defiende más autogobierno y un modelo federal (pág. 140)." }
     ),
@@ -229,7 +229,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       vp26(
         "frente-amplio",
         "support",
-        140,
+        147,
         "impulsar el cambio de modelo territorial establecido en la Constitución, en un sentido federal y plurinacional incluyendo el derecho a decidir mediante referéndum",
         { confidence: 0.65, explanation: "Lo plantea mediante reforma constitucional y sin mencionar expresamente Cataluña." }
       ),
@@ -297,7 +297,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       vp26(
         "frente-amplio",
         "support",
-        140,
+        147,
         "Nuestro horizonte es avanzar hacia una República Federal que nos permita alcanzar una democracia real en la que también elijamos la Jefatura del Estado.",
         { confidence: 0.8, explanation: "Lo plantea como horizonte, sin concretar una consulta." }
       ),
@@ -325,7 +325,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       vp26(
         "frente-amplio",
         "strongly_oppose",
-        140,
+        147,
         "Nuestro horizonte es avanzar hacia una República Federal que nos permita alcanzar una democracia real en la que también elijamos la Jefatura del Estado.",
         { confidence: 0.8, explanation: "Posición derivada: su horizonte es una república federal." }
       ),
@@ -458,7 +458,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     vp26(
       "frente-amplio",
       "support",
-      137,
+      144,
       "Financiaremos el presupuesto europeo no solo con contribuciones nacionales, sino también con nuevos recursos propios",
       { confidence: 0.65, explanation: "Propone nuevos recursos propios europeos; no menciona deuda común." }
     ),
@@ -605,7 +605,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     vp26(
       "frente-amplio",
       "support",
-      136,
+      143,
       "Apostaremos por abandonar el requisito de la unanimidad a favor de un sistema de mayorías cualificadas en materia de política exterior y de seguridad común cuando esté involucrada la protección de los derechos humanos",
       { confidence: 0.75, explanation: "Mantiene la unanimidad en seguridad y defensa." }
     ),
@@ -657,7 +657,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     vp26(
       "frente-amplio",
       "conditional_support",
-      135,
+      142,
       "un espacio europeo de seguridad sujeto a control democrático",
       { confidence: 0.5, explanation: "Defiende una autonomía estratégica europea «no al servicio de la industria armamentística», sin hablar de integrar estructuras militares." }
     ),
@@ -733,7 +733,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     vp26(
       "frente-amplio",
       "conditional_opposition",
-      130,
+      137,
       "Rechazaremos de forma explícita el compromiso de destinar el 5 % del PIB a gasto militar en el marco de la OTAN",
       { confidence: 0.55, explanation: "No plantea salir de la OTAN; rechaza su objetivo de gasto y propone la desmilitarización." }
     ),
@@ -815,7 +815,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_oppose",
-      130,
+      137,
       "Rechazaremos de forma explícita el compromiso de destinar el 5 % del PIB a gasto militar en el marco de la OTAN, impulsando una reducción efectiva de las partidas militares",
       { confidence: 0.9 }
     ),
@@ -867,7 +867,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      131,
+      138,
       "Aprobaremos la reforma de la Ley 53/2007 para establecer el embargo automático de material de defensa y de doble uso a cualquier Estado cuyos dirigentes estén investigados por la Corte Penal Internacional",
       { confidence: 0.85 }
     ),
@@ -912,7 +912,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       vp26(
         "frente-amplio",
         "strongly_support",
-        132,
+        139,
         "Defenderemos el derecho incondicional a la autodeterminación del pueblo saharaui mediante un referéndum libre supervisado por Naciones Unidas",
         { confidence: 0.95 }
       ),
@@ -965,7 +965,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      63,
+      70,
       "Crearemos una comercializadora pública de referencia, que distribuya energía a los hogares y rompa el oligopolio y su integración vertical.",
       { confidence: 0.9 }
     ),
@@ -1029,7 +1029,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_oppose",
-      64,
+      71,
       "El Estado dejará de invertir en empresas dedicadas a la exploración, extracción, refino o distribución de combustibles fósiles.",
       { confidence: 0.7, explanation: "Posición derivada: retira la inversión pública en combustibles fósiles y prohíbe importar gas obtenido con fracking." }
     ),
@@ -1105,7 +1105,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_oppose",
-      64,
+      71,
       "Cumpliremos el calendario de cierre de las centrales nucleares.",
       { confidence: 0.9 }
     ),
@@ -1181,7 +1181,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      64,
+      71,
       "Cumpliremos el calendario de cierre de las centrales nucleares.",
       { confidence: 0.95 }
     ),
@@ -1251,7 +1251,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      60,
+      67,
       "Reduciremos las emisiones respecto a 1990 un 38 % en 2035, un 85 % en 2040 y alcanzaremos la neutralidad climática en 2050",
       { confidence: 0.85 }
     ),
@@ -1419,7 +1419,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     vp26(
       "frente-amplio",
       "support",
-      74,
+      81,
       "creación de un canon hídrico progresivo para el regadío industrial en zonas con acuíferos sobreexplotados",
       { confidence: 0.7, explanation: "Plantea además evaluar moratorias a nuevos regadíos (pág. 75)." }
     ),
@@ -1465,7 +1465,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      65,
+      72,
       "Crearemos un abono único nominativo y mensual válido en todo el Estado, ciudades y modos de transporte.",
       { confidence: 0.85, explanation: "Con precios de 20 €/mes para Cercanías." }
     ),
@@ -1529,7 +1529,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      48,
+      55,
       "Profundizaremos en la fiscalidad sobre el carbono y los hidrocarburos, con compensaciones y exenciones para las rentas bajas y colectivos vulnerables.",
       { confidence: 0.9 }
     ),
@@ -1675,7 +1675,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     vp26(
       "frente-amplio",
       "strongly_support",
-      120,
+      127,
       "Exigencia a proveedores de superar una auditoría de seguridad independiente antes de desplegar sistemas de IA en contratos públicos",
       { confidence: 0.85, explanation: "Propone además una ley sobre el uso de la IA en el sector público con inventario público obligatorio." }
     ),
@@ -1745,7 +1745,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     vp26(
       "frente-amplio",
       "support",
-      120,
+      127,
       "Extenderemos las auditorías independientes a decisiones automatizadas en empleo, crédito, seguros y servicios esenciales",
       { confidence: 0.7 }
     ),

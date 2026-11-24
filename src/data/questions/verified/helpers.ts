@@ -92,7 +92,9 @@ const PROGRAMS: Record<PartyId, Omit<Source, "page">> = {
  *   id; las de Sumar se conservan como historial (docs/ACTUALIZACION.md §3).
  *   El 2026-11-17 publicó en la misma URL una versión revisada (cultura,
  *   autónomos); se citan sus páginas tras comprobar de nuevo todas las citas
- *   el 2026-11-18 (solo cambió de página la de tra_001).
+ *   el 2026-11-18 (solo cambió de página la de tra_001). El 2026-11-23
+ *   publicó otra versión (158 pp.) que añade un capítulo de deporte; las 67
+ *   citas se comprobaron el 2026-11-24 y 49 cambian de página.
  * - Adelante Andalucía: «Un programa para frenar a las derechas» (134 pp.),
  *   presentado el 2026-11-10; se cita la versión revisada del 2026-11-16
  *   publicada en la misma URL, descargada el 2026-11-17.
@@ -140,8 +142,8 @@ const PROGRAMS_2026: Record<PartyId, Omit<Source, "page">> = {
     type: "electoral_program",
     document: "Programa electoral Frente Amplio 29N 2026 — «Un programa como una casa»",
     url: "https://frenteamplio.info/pdf/ProgramaFrenteAmplio.pdf",
-    date: "2026-11-17",
-    verifiedAt: "2026-11-18",
+    date: "2026-11-23",
+    verifiedAt: "2026-11-24",
   },
   "adelante-andalucia": {
     type: "electoral_program",
