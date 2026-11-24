@@ -122,10 +122,18 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "Podemos",
     scope: "Estatal",
     officialWebsite: "https://podemos.info",
-    programStatus: "pending",
-    documents: [],
+    programStatus: "incorporated",
+    documents: [
+      {
+        title: "Así de básico: Paz, casa y trabajo. Programa electoral",
+        url: "https://podemos.info/wp-content/uploads/2026/11/29N-programa-Podemos.-Paz-casa-y-trabajo.pdf",
+        date: "2026-11-17",
+      },
+    ],
+    // podemos.info sigue devolviendo 403 al acceso automatizado: la fecha es
+    // la de la última consulta manual de la web.
     lastChecked: MANUAL_CHECK,
-    notes: `En Las Palmas y Santa Cruz de Tenerife concurre dentro de «Unidad del Pueblo Canario UPC (NC-BC, PODEMOS, IU, SUMAR)», y en Alicante, Castellón y Valencia dentro de «Compromís: Front Valencià (Compromís-EUPV-Podem-ERPV)». ${BOE_PROCLAIMED}.`,
+    notes: `En Las Palmas y Santa Cruz de Tenerife concurre dentro de «Unidad del Pueblo Canario UPC (NC-BC, PODEMOS, IU, SUMAR)», y en Alicante, Castellón y Valencia dentro de «Compromís: Front Valencià (Compromís-EUPV-Podem-ERPV)». ${BOE_PROCLAIMED}. La web bloquea el acceso automatizado: se cita una copia del programa aportada por el mantenedor (141 pp., creada el 2026-11-17), que no se ha podido comparar byte a byte con la de la URL oficial.`,
   },
   {
     id: "pp",

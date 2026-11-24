@@ -74,6 +74,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Defender nuestra sanidad pública no es gastar a ciegas",
       { confidence: 0.5, explanation: "Propone financiar mejoras de la sanidad pública reinvirtiendo lo que se ahorre con mejor gestión, sin plantear subir impuestos." }
     ),
+    vp26(
+      "podemos",
+      "strongly_support",
+      89,
+      "Incrementaremos progresivamente la financiación del Sistema Nacional de Salud hasta alcanzar una dotación mínima de 2.900 euros por habitante y año",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("san_002"), [
     vp(
@@ -138,6 +145,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.85 }
     ),
     ne26("democracia21", "Propone abrir los quirófanos públicos por la tarde y alquilar sus horas vacantes a mutuas, sin pronunciarse sobre los conciertos con la sanidad privada."),
+    vp26(
+      "podemos",
+      "strongly_oppose",
+      88,
+      "Prohibiremos la externalización y privatización de centros y servicios sanitarios, tanto existentes como de nueva creación",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("san_003"), [
     vp(
@@ -226,6 +240,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "crearemos Unidades de Enlace (psiquiatra infantil, psicólogo clínico y enfermera especialista en salud mental)",
       { confidence: 0.7, explanation: "Se centra en la salud mental infantil y juvenil en los centros educativos y en el seguimiento tras conductas suicidas." }
     ),
+    vp26(
+      "podemos",
+      "strongly_support",
+      91,
+      "Aprobaremos la Ley General de Salud Mental que establecerá ratios mínimas de 18 psiquiatras, 18 psicólogos y psicólogas clínicas y 23 enfermeros y enfermeras especialistas por cada 100.000 habitantes",
+      { confidence: 0.95 }
+    ),
   ]),
   axesOnly(
     base("san_004"),
@@ -247,6 +268,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       ne26("pnv"),
       ne26("ehbildu"),
       ne26("democracia21"),
+      ne26("podemos"),
     ]
   ),
   verify(base("edu_001"), [
@@ -306,6 +328,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "strongly_oppose",
+      79,
+      "Estableceremos una moratoria indefinida a la concesión de nuevos conciertos y a la apertura de nuevos centros privados en todas las etapas educativas",
+      { confidence: 0.9 }
+    ),
   ]),
   axesOnly(
     base("edu_002"),
@@ -333,6 +362,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       ne26("pnv"),
       ne26("ehbildu"),
       ne26("democracia21"),
+      vp26(
+        "podemos",
+        "strongly_support",
+        83,
+        "Suprimiremos la enseñanza de cualquier religión en cualquier colegio.",
+        { confidence: 0.85, explanation: "Va más allá del enunciado: suprime la enseñanza de religión en todos los centros." }
+      ),
     ]
   ),
   verify(base("edu_003"), [
@@ -386,6 +422,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21"),
+    ne26("podemos"),
   ]),
   verify(base("edu_004"), [
     vp(
@@ -432,6 +469,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne26("ehbildu"),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "strongly_oppose",
+      83,
+      "Impediremos la aplicación del denominado Pin Parental",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("uni_001"), [
     vp(
@@ -508,6 +552,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21", "Propone pagar las becas al inicio del curso, sin pronunciarse sobre su cuantía ni sobre las tasas universitarias."),
+    vp26(
+      "podemos",
+      "strongly_support",
+      85,
+      "Alcanzaremos progresivamente, durante la próxima legislatura, la gratuidad total de las tasas de grado, máster y doctorado en las universidades públicas",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("igu_001"), [
     vp(
@@ -577,6 +628,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       99,
       "Reafirmamos nuestro compromiso inquebrantable con la erradicación de la brecha salarial",
       { confidence: 0.5, explanation: "No concreta auditorías salariales obligatorias ni sanciones." }
+    ),
+    vp26(
+      "podemos",
+      "support",
+      44,
+      "reforzaremos la transparencia salarial para garantizar la igualdad retributiva por trabajos de igual valor",
+      { confidence: 0.6, explanation: "Propone una Inspección de Igualdad para hacer cumplir los RD 901 y 902/2021 (planes de igualdad y política salarial); no menciona auditorías ni sanciones específicas." }
     ),
   ]),
   verify(base("gen_001"), [
@@ -672,6 +730,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "no permitiremos, bajo ninguna circunstancia ni acuerdo político, que se cuestione la existencia de la violencia de género",
       { confidence: 0.75, explanation: "Se compromete también a bloquear cualquier iniciativa para desmantelar o desfinanciar la red pública de protección a las víctimas." }
     ),
+    vp26(
+      "podemos",
+      "support",
+      56,
+      "se actualizará esta definición conforme a lo que exige el Convenio de Estambul",
+      { confidence: 0.7, explanation: "Posición derivada: amplía la definición legal de violencia machista más allá de la pareja, manteniendo su tratamiento específico." }
+    ),
   ]),
   verify(base("gen_002"), [
     vp(
@@ -748,6 +813,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Frenaremos cualquier ofensiva que pretenda recortar libertades, patologizar identidades, derogar normas que aseguran la no-discriminación",
       { confidence: 0.6, explanation: "Posición derivada: defiende la no discriminación trans y rechaza patologizar identidades, sin mencionar expresamente la autodeterminación registral." }
     ),
+    vp26(
+      "podemos",
+      "strongly_support",
+      52,
+      "Eliminación de obstáculos para la libre determinación de género en las infancias trans menores de 14 años.",
+      { confidence: 0.8, explanation: "Posición derivada: extiende la libre determinación de género a menores de 14 años." }
+    ),
   ]),
   verify(base("lgb_001"), [
     vp(
@@ -799,6 +871,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       77,
       "basados solo en el interés del menor y en la capacidad real de cuidado, nunca en el modelo de familia",
       { confidence: 0.75, explanation: "Se refiere a los criterios de idoneidad para adoptar; el programa reivindica también la ley de matrimonio igualitario y propone reforzar los derechos de las parejas de mujeres." }
+    ),
+    vp26(
+      "podemos",
+      "support",
+      52,
+      "Reconocimiento de la diversidad familiar y protección social de las familias LGTBIQA+ con medidas de apoyo a la adopción a familias LGTBIQA+",
+      { confidence: 0.65, explanation: "No menciona el matrimonio; apoya la adopción por familias LGTBIQA+." }
     ),
   ]),
   verify(base("lgb_002"), [
@@ -871,6 +950,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Exigiremos y apoyaremos la aplicación de la ley contra quienes promuevan agresiones, discursos de odio o terapias de conversión",
       { confidence: 0.8 }
     ),
+    ne26("podemos"),
   ]),
   verify(base("fam_001"), [
     vp(
@@ -958,6 +1038,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       73,
       "Las convertiremos en una cantidad mensual por cada hijo que se activará automáticamente al inscribir al recién nacido",
       { confidence: 0.6, explanation: "El Bono Crianza es mayor en los hogares con menos renta, desaparece en las rentas altas y se financia en buena parte reordenando deducciones y ayudas ya existentes." }
+    ),
+    vp26(
+      "podemos",
+      "strongly_support",
+      60,
+      "Establecer una prestación mensual por cada hija o hijo, desde el nacimiento hasta los 21 años, equivalente al 15 % del Salario Mínimo Interprofesional (SMI).",
+      { confidence: 0.95 }
     ),
   ]),
   verify(base("abo_001"), [
@@ -1047,6 +1134,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "defenderemos que el acceso a la interrupción voluntaria del embarazo esté plenamente garantizado en la red sanitaria pública",
       { confidence: 0.95 }
     ),
+    vp26(
+      "podemos",
+      "strongly_support",
+      51,
+      "Incorporar expresamente el derecho al aborto en la Constitución",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("abo_002"), [
     vp(
@@ -1099,6 +1193,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "nos opondremos a cualquier intento de derogar, limitar o entorpecer la actual ley de plazos",
       { confidence: 0.6, explanation: "Posición derivada: la ley vigente no exige el consentimiento paterno a las jóvenes de 16 y 17 años." }
     ),
+    ne26("podemos"),
   ]),
   verify(base("eut_001"), [
     vp(
@@ -1175,6 +1270,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.9 }
     ),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "strongly_support",
+      94,
+      "Garantizaremos el ejercicio efectivo del derecho a una muerte digna.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("rel_001"), [
     vp(
@@ -1215,6 +1317,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "strongly_support",
+      134,
+      "Denunciaremos el Concordato con la Santa Sede y los acuerdos de 1979",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("rel_002"), [
     vp(
@@ -1255,6 +1364,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "oppose",
+      134,
+      "Las instituciones públicas deberán mantener una posición de neutralidad respecto a todas las confesiones",
+      { confidence: 0.6, explanation: "Posición derivada de la neutralidad religiosa de las instituciones que propone." }
+    ),
   ]),
   verify(base("cul_001"), [
     vp(
@@ -1307,6 +1423,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "strongly_support",
+      124,
+      "eliminaremos las ayudas y la promoción institucional de espectáculos que impliquen maltrato animal",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("cul_002"), [
     vp(
@@ -1359,6 +1482,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("pnv"),
     ne26("ehbildu"),
     ne26("democracia21"),
+    vp26(
+      "podemos",
+      "strongly_oppose",
+      124,
+      "Acabar con la tauromaquia y las fiestas basadas en el maltrato animal.",
+      { confidence: 0.85, explanation: "Posición inversa en la tauromaquia; no se pronuncia sobre la caza." }
+    ),
   ]),
   verify(base("mpu_001"), [
     vp(
@@ -1404,6 +1534,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       102,
       "un contrato-programa plurianual y vinculante garantizará su financiación",
       { confidence: 0.65, explanation: "Se refiere a RTVE, cuyo consejo propone elegir por concurso y mayoría de dos tercios." }
+    ),
+    vp26(
+      "podemos",
+      "support",
+      138,
+      "La ley garantizará también una distribución plural del espacio audiovisual que reserve un tercio a los medios públicos",
+      { confidence: 0.55, explanation: "Posición derivada: refuerza el peso de los medios públicos; no menciona expresamente RTVE ni su financiación." }
     ),
   ]),
 ];

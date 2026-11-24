@@ -29,6 +29,7 @@
   --party-pnv: #8c5a2e;
   --party-ehbildu: #0b7fa3;
   --party-democracia21: #5b6b7a;
+  --party-podemos: #8a2c86;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -54,6 +55,7 @@
     --party-pnv: #c08a5a;
     --party-ehbildu: #4fb3d4;
     --party-democracia21: #9aa8b6;
+    --party-podemos: #cf7fcb;
   }
 }
 
