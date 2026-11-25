@@ -81,6 +81,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Incrementaremos progresivamente la financiación del Sistema Nacional de Salud hasta alcanzar una dotación mínima de 2.900 euros por habitante y año",
       { confidence: 0.85 }
     ),
+    vp26(
+      "compromis",
+      "support",
+      9,
+      "Reforçarem l’atenció primària, la salut comunitària i la prevenció, fixant per llei bàsica un finançament mínim",
+      { confidence: 0.7 }
+    ),
   ]),
   verify(base("san_002"), [
     vp(
@@ -151,6 +158,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       88,
       "Prohibiremos la externalización y privatización de centros y servicios sanitarios, tanto existentes como de nueva creación",
       { confidence: 0.9 }
+    ),
+    vp26(
+      "compromis",
+      "strongly_oppose",
+      9,
+      "Blindarem la gestió pública de la sanitat i impedirem la mercantilització de l’atenció sanitària i la privatització de la gestió dels serveis públics a través de la derogació de la Llei 15/1997.",
+      { confidence: 0.85 }
     ),
   ]),
   verify(base("san_003"), [
@@ -247,6 +261,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Aprobaremos la Ley General de Salud Mental que establecerá ratios mínimas de 18 psiquiatras, 18 psicólogos y psicólogas clínicas y 23 enfermeros y enfermeras especialistas por cada 100.000 habitantes",
       { confidence: 0.95 }
     ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      9,
+      "Aprovarem un Pacte estatal per la salut mental amb finançament suficient per a ampliar les plantilles de professionals",
+      { confidence: 0.9 }
+    ),
   ]),
   axesOnly(
     base("san_004"),
@@ -269,6 +290,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       ne26("ehbildu"),
       ne26("democracia21"),
       ne26("podemos"),
+      ne26("compromis"),
     ]
   ),
   verify(base("edu_001"), [
@@ -335,6 +357,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Estableceremos una moratoria indefinida a la concesión de nuevos conciertos y a la apertura de nuevos centros privados en todas las etapas educativas",
       { confidence: 0.9 }
     ),
+    vp26(
+      "compromis",
+      "oppose",
+      10,
+      "Modificarem la normativa bàsica de concerts educatius perquè la xarxa concertada siga realment subsidiària de la pública.",
+      { confidence: 0.75 }
+    ),
   ]),
   axesOnly(
     base("edu_002"),
@@ -368,6 +397,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
         83,
         "Suprimiremos la enseñanza de cualquier religión en cualquier colegio.",
         { confidence: 0.85, explanation: "Va más allá del enunciado: suprime la enseñanza de religión en todos los centros." }
+      ),
+      vp26(
+        "compromis",
+        "strongly_support",
+        39,
+        "Garantirem mitjançant les reformes legals oportunes el caràcter laic que ha de revestir l'escola pública, tot deixant l'educació confessional fora del currículum i de l'àmbit escolar.",
+        { confidence: 0.9 }
       ),
     ]
   ),
@@ -423,6 +459,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("ehbildu"),
     ne26("democracia21"),
     ne26("podemos"),
+    ne26("compromis"),
   ]),
   verify(base("edu_004"), [
     vp(
@@ -476,6 +513,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Impediremos la aplicación del denominado Pin Parental",
       { confidence: 0.9 }
     ),
+    ne26("compromis"),
   ]),
   verify(base("uni_001"), [
     vp(
@@ -559,6 +597,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Alcanzaremos progresivamente, durante la próxima legislatura, la gratuidad total de las tasas de grado, máster y doctorado en las universidades públicas",
       { confidence: 0.95 }
     ),
+    vp26(
+      "compromis",
+      "support",
+      16,
+      "Posarem en marxa un nou sistema de taxes universitàries perquè qui menys recursos té pague menys.",
+      { confidence: 0.7, explanation: "También propone mejorar el sistema estatal de becas." }
+    ),
   ]),
   verify(base("igu_001"), [
     vp(
@@ -635,6 +680,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       44,
       "reforzaremos la transparencia salarial para garantizar la igualdad retributiva por trabajos de igual valor",
       { confidence: 0.6, explanation: "Propone una Inspección de Igualdad para hacer cumplir los RD 901 y 902/2021 (planes de igualdad y política salarial); no menciona auditorías ni sanciones específicas." }
+    ),
+    vp26(
+      "compromis",
+      "support",
+      46,
+      "Reforçarem la inspecció laboral i les polítiques contra la bretxa salarial",
+      { confidence: 0.55, explanation: "No menciona auditorías salariales obligatorias ni sanciones específicas." }
     ),
   ]),
   verify(base("gen_001"), [
@@ -737,6 +789,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "se actualizará esta definición conforme a lo que exige el Convenio de Estambul",
       { confidence: 0.7, explanation: "Posición derivada: amplía la definición legal de violencia machista más allá de la pareja, manteniendo su tratamiento específico." }
     ),
+    vp26(
+      "compromis",
+      "support",
+      47,
+      "Reforçarem les unitats policials especialitzades, els jutjats de violència sobre la dona, els serveis forenses i l’assistència jurídica gratuïta.",
+      { confidence: 0.7, explanation: "Posición derivada: refuerza la jurisdicción específica de violencia sobre la mujer." }
+    ),
   ]),
   verify(base("gen_002"), [
     vp(
@@ -820,6 +879,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Eliminación de obstáculos para la libre determinación de género en las infancias trans menores de 14 años.",
       { confidence: 0.8, explanation: "Posición derivada: extiende la libre determinación de género a menores de 14 años." }
     ),
+    vp26(
+      "compromis",
+      "support",
+      49,
+      "Blindarem els avanços en matèria de drets LGTBIQ+, com ara la Llei per la igualtat real i efectiva de les persones trans",
+      { confidence: 0.75, explanation: "Posición derivada: blinda la Ley trans de 2023, que regula la autodeterminación del sexo registral." }
+    ),
   ]),
   verify(base("lgb_001"), [
     vp(
@@ -878,6 +944,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       52,
       "Reconocimiento de la diversidad familiar y protección social de las familias LGTBIQA+ con medidas de apoyo a la adopción a familias LGTBIQA+",
       { confidence: 0.65, explanation: "No menciona el matrimonio; apoya la adopción por familias LGTBIQA+." }
+    ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      49,
+      "Blindarem els avanços en matèria de drets LGTBIQ+, com ara la Llei per la igualtat real i efectiva de les persones trans i per a la garantia dels drets de les persones LGTBI, i el matrimoni igualitari.",
+      { confidence: 0.9 }
     ),
   ]),
   verify(base("lgb_002"), [
@@ -951,6 +1024,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.8 }
     ),
     ne26("podemos"),
+    vp26(
+      "compromis",
+      "strongly_support",
+      49,
+      "Tipificarem específicament les teràpies de conversió com a delicte",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("fam_001"), [
     vp(
@@ -1044,6 +1124,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "strongly_support",
       60,
       "Establecer una prestación mensual por cada hija o hijo, desde el nacimiento hasta los 21 años, equivalente al 15 % del Salario Mínimo Interprofesional (SMI).",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      41,
+      "Implementarem una prestació universal per criança de 200 euros mensuals per fill o filla",
       { confidence: 0.95 }
     ),
   ]),
@@ -1141,6 +1228,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Incorporar expresamente el derecho al aborto en la Constitución",
       { confidence: 0.95 }
     ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      46,
+      "Garantirem la interrupció voluntària de l’embaràs gratuïta, segura i accessible dins de la xarxa sanitària pública, en els termes previstos legalment",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("abo_002"), [
     vp(
@@ -1194,6 +1288,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.6, explanation: "Posición derivada: la ley vigente no exige el consentimiento paterno a las jóvenes de 16 y 17 años." }
     ),
     ne26("podemos"),
+    ne26("compromis"),
   ]),
   verify(base("eut_001"), [
     vp(
@@ -1277,6 +1372,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Garantizaremos el ejercicio efectivo del derecho a una muerte digna.",
       { confidence: 0.9 }
     ),
+    ne26("compromis"),
   ]),
   verify(base("rel_001"), [
     vp(
@@ -1324,6 +1420,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Denunciaremos el Concordato con la Santa Sede y los acuerdos de 1979",
       { confidence: 0.95 }
     ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      39,
+      "Eliminarem els privilegis atorgats mitjançant els diferents acords particulars entre l'Estat i les diferents confessions religioses, com ara el cas del tractat signat amb la Santa Seu el 3 de gener de 1979",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("rel_002"), [
     vp(
@@ -1370,6 +1473,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       134,
       "Las instituciones públicas deberán mantener una posición de neutralidad respecto a todas las confesiones",
       { confidence: 0.6, explanation: "Posición derivada de la neutralidad religiosa de las instituciones que propone." }
+    ),
+    vp26(
+      "compromis",
+      "oppose",
+      40,
+      "Impulsarem reformes legislatives que tendisquen a assegurar la neutralitat dels poders públics estatals davant del fet religiós",
+      { confidence: 0.55, explanation: "Posición derivada de la neutralidad religiosa de los poderes públicos que propone." }
     ),
   ]),
   verify(base("cul_001"), [
@@ -1428,6 +1538,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "strongly_support",
       124,
       "eliminaremos las ayudas y la promoción institucional de espectáculos que impliquen maltrato animal",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      40,
+      "eliminarem tot tipus de subvencions i ajudes públiques a manifestacions o espectacles que impliquen patiment animal",
       { confidence: 0.95 }
     ),
   ]),
@@ -1489,6 +1606,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Acabar con la tauromaquia y las fiestas basadas en el maltrato animal.",
       { confidence: 0.85, explanation: "Posición inversa en la tauromaquia; no se pronuncia sobre la caza." }
     ),
+    vp26(
+      "compromis",
+      "strongly_oppose",
+      40,
+      "Prohibirem la cacera amb gossos i els espectacles que facen servir animals.",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("mpu_001"), [
     vp(
@@ -1542,5 +1666,6 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "La ley garantizará también una distribución plural del espacio audiovisual que reserve un tercio a los medios públicos",
       { confidence: 0.55, explanation: "Posición derivada: refuerza el peso de los medios públicos; no menciona expresamente RTVE ni su financiación." }
     ),
+    ne26("compromis", "Propone más programación en valenciano en el centro territorial de RTVE, pero no se pronuncia sobre su financiación."),
   ]),
 ];

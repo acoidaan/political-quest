@@ -66,11 +66,9 @@ export const CURRENT_ELECTION: Election = {
   campaign: { from: "2026-11-13", to: "2026-11-27" },
 };
 
-const CHECKED = "2026-11-24";
+const CHECKED = "2026-11-25";
 /** Webs cuyas páginas bloquean hoy el acceso automatizado (Cloudflare). */
 const LAST_READABLE = "2026-11-13";
-/** Candidaturas sin web oficial registrada que revisar. */
-const PREVIOUS_CHECK = "2026-10-22";
 /** Webs que bloquean el acceso automatizado; última lectura, manual. */
 const MANUAL_CHECK = "2026-11-02";
 const BOE_PROCLAIMED = "Candidaturas proclamadas, BOE de 3-11-2026";
@@ -249,9 +247,17 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "Compromís",
     scope: "Comunitat Valenciana",
     composition: `«Compromís: Front Valencià» (Compromís-EUPV-Podem-ERPV). ${BOE_PROCLAIMED}`,
-    programStatus: "pending",
-    documents: [],
-    lastChecked: PREVIOUS_CHECK,
+    officialWebsite: "https://frontvalencia.org",
+    programStatus: "incorporated",
+    documents: [
+      {
+        title: "Programa electoral 29N Compromís-Front Valencià",
+        url: "https://frontvalencia.org/programa-compromis-front-valencia.pdf",
+        date: "2026-11-18",
+      },
+    ],
+    lastChecked: CHECKED,
+    notes: "Programa en valenciano; las citas se reproducen en el idioma original. El PDF no indica fecha de creación: se toma la de su última modificación.",
   },
   {
     id: "ehbildu",

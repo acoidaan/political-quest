@@ -68,6 +68,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ),
     ne26("democracia21"),
     ne26("podemos"),
+    vp26(
+      "compromis",
+      "strongly_support",
+      50,
+      "Apostarem per un concert econòmic responsable o, en el seu defecte, per un sistema de finançament on la Generalitat Valenciana recapte directament la major part dels tributs.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("ter_002"), [
     vp(
@@ -151,6 +158,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ),
     ne26("democracia21"),
     ne26("podemos"),
+    vp26(
+      "compromis",
+      "strongly_oppose",
+      52,
+      "Avançarem en el desplegament de l’autogovern i en el traspàs a la Generalitat Valenciana de les competències",
+      { confidence: 0.8, explanation: "Posición inversa: pide más competencias para la Generalitat, no recentralizarlas." }
+    ),
   ]),
   verify(base("cat_001"), [
     vp(
@@ -209,6 +223,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("ehbildu"),
     ne26("democracia21"),
     ne26("podemos"),
+    ne26("compromis"),
   ]),
   axesOnly(
     base("cat_002"),
@@ -261,6 +276,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       ),
       ne26("democracia21"),
       ne26("podemos"),
+      ne26("compromis"),
     ]
   ),
   axesOnly(
@@ -290,6 +306,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       ),
       ne26("democracia21"),
       ne26("podemos"),
+      ne26("compromis"),
     ]
   ),
   axesOnly(
@@ -325,6 +342,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         "Esta reforma constitucional permitirá, por primera vez, que la ciudadanía decida de forma separada y directa entre monarquía y república",
         { confidence: 0.95 }
       ),
+      ne26("compromis"),
     ]
   ),
   axesOnly(
@@ -366,6 +384,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         "Proceso constituyente y referéndum sobre la forma de Estado.",
         { confidence: 0.95 }
       ),
+      ne26("compromis"),
     ]
   ),
   axesOnly(
@@ -406,6 +425,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         132,
         "ampliaremos el acceso al recurso de amparo ante el Tribunal Constitucional para incluir los derechos económicos, sociales y culturales",
         { confidence: 0.85 }
+      ),
+      vp26(
+        "compromis",
+        "support",
+        8,
+        "Assegurarem el manteniment del poder adquisitiu de les pensions, garantint constitucionalment la seua revaloració conforme al cost de la vida.",
+        { confidence: 0.55, explanation: "Referido a las pensiones; también propone reformar el artículo 135 de la Constitución." }
       ),
     ]
   ),
@@ -449,6 +475,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("ehbildu"),
     ne26("democracia21"),
     ne26("podemos"),
+    vp26(
+      "compromis",
+      "support",
+      53,
+      "Avançarem en la supressió de les diputacions provincials",
+      { confidence: 0.8, explanation: "Solo se refiere a las diputaciones, no a la fusión de municipios." }
+    ),
   ]),
   verify(base("ue_001"), [
     vp(
@@ -502,6 +535,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("ehbildu"),
     ne26("democracia21"),
     ne26("podemos"),
+    vp26(
+      "compromis",
+      "support",
+      56,
+      "Negociarem amb la resta de socis europeus l’augment d’ingressos comunitaris per dotar la UE d’un pressupost reforçat fins al menys el 2% RNB.",
+      { confidence: 0.7 }
+    ),
   ]),
   verify(base("ue_002"), [
     vp(
@@ -549,6 +589,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("ehbildu"),
     ne26("democracia21"),
     ne26("podemos"),
+    vp26(
+      "compromis",
+      "oppose",
+      55,
+      "Proposarem una reforma dels tractats per dotar més poder al Parlament Europeu i al Comité de les Regions.",
+      { confidence: 0.6, explanation: "Posición derivada: propone reforzar las instituciones europeas, no recuperar competencias." }
+    ),
   ]),
   verify(base("ue_003"), [
     vp(
@@ -599,6 +646,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("ehbildu"),
     ne26("democracia21"),
     ne26("podemos"),
+    ne26("compromis"),
   ]),
   verify(base("ue_004"), [
     vp(
@@ -646,6 +694,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("ehbildu"),
     ne26("democracia21"),
     ne26("podemos"),
+    vp26(
+      "compromis",
+      "strongly_support",
+      56,
+      "Treballarem per superar l’adopció de decisions en el Consell de la UE per unanimitat en política exterior o política fiscal.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("ue_005"), [
     vp(
@@ -729,6 +784,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Este Estatuto establecerá una política de no alineamiento con los bloques militares",
       { confidence: 0.55, explanation: "Posición derivada del Estatuto de Neutralidad; no se refiere expresamente a estructuras militares europeas." }
     ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      54,
+      "Treballarem per la construcció d'una Unió Europea de la Defensa que puga substituir el marc de l'OTAN",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("ota_001"), [
     vp(
@@ -811,6 +873,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       28,
       "Impulsaremos la salida de España de la OTAN mediante la denuncia del Tratado del Atlántico Norte",
       { confidence: 0.95 }
+    ),
+    vp26(
+      "compromis",
+      "oppose",
+      54,
+      "Treballarem per la construcció d'una Unió Europea de la Defensa que puga substituir el marc de l'OTAN",
+      { confidence: 0.7, explanation: "Posición derivada: propone sustituir la OTAN por una defensa europea." }
     ),
   ]),
   verify(base("def_001"), [
@@ -901,6 +970,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Rechazaremos el compromiso adquirido por el Gobierno de Pedro Sánchez de elevar el gasto militar hasta el 5 % del PIB en 2035",
       { confidence: 0.9 }
     ),
+    vp26(
+      "compromis",
+      "conditional_opposition",
+      55,
+      "Impedirem que els increments de la despesa militar es facen a costa de reduir la inversió en serveis públics, protecció social o infraestructures crítiques.",
+      { confidence: 0.6 }
+    ),
   ]),
   verify(base("def_002"), [
     vp(
@@ -953,6 +1029,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       34,
       "Impulsaremos un embargo de armas efectivo, sin excepciones, y verificable a las empresas públicas y privadas israelíes",
       { confidence: 0.7, explanation: "Referido a Israel; además excluye de la contratación pública a empresas implicadas en crímenes internacionales (medida 75)." }
+    ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      55,
+      "Revisarem de manera integral la política d’exportació d’armaments per a prohibir de manera estricta la venda d’armes a països que vulneren els drets humans.",
+      { confidence: 0.95 }
     ),
   ]),
   axesOnly(
@@ -1010,6 +1093,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         "strongly_support",
         35,
         "promoveremos la celebración de un referéndum que permita decidir libremente su futuro político, de conformidad con el derecho internacional",
+        { confidence: 0.95 }
+      ),
+      vp26(
+        "compromis",
+        "strongly_support",
+        55,
+        "Donarem suport al dret a la lliure determinació dels pobles consagrada en la Carta de Nacions Unides en casos com el Sàhara Occidental, tot redoblant esforços diplomàtics i exigint la celebració d’un referèndum.",
         { confidence: 0.95 }
       ),
     ]
@@ -1072,6 +1162,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Articulación de una Empresa Pública de Energía.",
       { confidence: 0.95 }
     ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      26,
+      "Crearem una empresa pública de generació, distribució i comercialització",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("ene_002"), [
     vp(
@@ -1131,6 +1228,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Reformaremos la Ley de Minas franquista de 1973 para adaptarla a las exigencias ambientales y democráticas actuales.",
       { confidence: 0.6, explanation: "Posición derivada: endurece los controles ambientales sobre la minería." }
     ),
+    ne26("compromis"),
   ]),
   verify(base("nuc_001"), [
     vp(
@@ -1214,6 +1312,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Ni prórrogas nucleares indefinidas ni comarcas abandonadas.",
       { confidence: 0.85 }
     ),
+    vp26(
+      "compromis",
+      "strongly_oppose",
+      27,
+      "Mantindrem el calendari de tancament de les centrals nuclears i no acceptarem cap nova pròrroga",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("nuc_002"), [
     vp(
@@ -1289,6 +1394,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "strongly_support",
       103,
       "Defenderemos el cumplimiento del calendario de cierre de las centrales nucleares, comenzando por Almaraz",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      27,
+      "Mantindrem el calendari de tancament de les centrals nuclears i no acceptarem cap nova pròrroga",
       { confidence: 0.95 }
     ),
   ]),
@@ -1380,6 +1492,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Reformaremos la Ley de Cambio Climático y Transición Energética para elevar la ambición de los objetivos de reducción de emisiones",
       { confidence: 0.95 }
     ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      27,
+      "Revisarem la Llei 7/2021 de Canvi Climàtic i Transició Energètica i ampliarem els compromisos d’electrificació del sistema",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("cli_002"), [
     vp(
@@ -1433,6 +1552,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Implantar de forma acelerada las Zonas de Bajas Emisiones",
       { confidence: 0.85 }
     ),
+    vp26(
+      "compromis",
+      "support",
+      31,
+      "Condicionarem les ajudes estatals al transport al fet que les zones de baixes emissions funcionen de veritat",
+      { confidence: 0.8 }
+    ),
   ]),
   verify(base("agr_001"), [
     vp(
@@ -1480,6 +1606,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Impulsaremos un plan estatal de transición agroecológica para reducir progresivamente el uso de pesticidas y fertilizantes de síntesis",
       { confidence: 0.55, explanation: "Posición derivada: acompaña la transición con ayudas, sin relajar objetivos ambientales." }
     ),
+    ne26("compromis", "Pide reducir pesticidas y fertilizantes de síntesis, pero también ecorregímenes «viables» y regímenes simplificados de la PAC: posición mixta."),
   ]),
   verify(base("med_001"), [
     vp(
@@ -1557,6 +1684,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "establecer una moratoria a nuevos regadíos intensivos y ampliaciones en las cuencas con estrés hídrico. Revisaremos las concesiones existentes para garantizar la recuperación de los acuíferos",
       { confidence: 0.8 }
     ),
+    vp26(
+      "compromis",
+      "conditional_support",
+      28,
+      "Establirem una transició hidrològica justa i un full de ruta per a adaptar el regadiu i el futur de l'agricultura a la disponibilitat hídrica",
+      { confidence: 0.5, explanation: "También pide dar al riego agrario consideración prioritaria tras el abastecimiento humano." }
+    ),
   ]),
   verify(base("tpt_001"), [
     vp(
@@ -1621,6 +1755,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       19,
       "Garantizaremos la gratuidad de todo el transporte público de viajeros",
       { confidence: 0.95 }
+    ),
+    vp26(
+      "compromis",
+      "support",
+      12,
+      "Garantirem tarifes accessibles, integració dels títols de transport",
+      { confidence: 0.6, explanation: "No precisa abonos gratuitos; también propone transporte asequible para jóvenes." }
     ),
   ]),
   verify(base("fis_001"), [
@@ -1687,6 +1828,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.5, explanation: "Propone además equiparar los impuestos especiales medioambientales a la media de la Unión Europea y un bono social eléctrico reforzado para los hogares vulnerables." }
     ),
     ne26("podemos", "Propone recargos a vehículos de lujo de combustibles fósiles y una fiscalidad según la huella de carbono que exime al 90 % de la población, pero también topes al precio de los carburantes; no plantea subir los impuestos a los combustibles con carácter general."),
+    vp26(
+      "compromis",
+      "support",
+      17,
+      "Eliminarem els privilegis fiscals al sector l’aviació (combustible, IVA…)",
+      { confidence: 0.55, explanation: "Referido al combustible de aviación; también propone subir el IVA a los productos contaminantes." }
+    ),
   ]),
   verify(base("dig_001"), [
     vp(
@@ -1770,6 +1918,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "manteniendo atención presencial y telefónica para los servicios esenciales",
       { confidence: 0.5, explanation: "Referido a los servicios esenciales en el medio rural." }
     ),
+    vp26(
+      "compromis",
+      "strongly_support",
+      34,
+      "Proposarem garanties d'atenció presencial, accessibilitat i comunicacions clares en l'Administració de l'Estat.",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("ia_001"), [
     vp(
@@ -1841,6 +1996,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.9, explanation: "Se refiere a los algoritmos públicos que deciden sobre derechos, que se inscribirán en un registro público." }
     ),
     ne26("podemos"),
+    vp26(
+      "compromis",
+      "support",
+      34,
+      "Defensarem les explicacions i la revisió humana de decisions automatitzades que afecten ajudes o serveis",
+      { confidence: 0.6, explanation: "Propone explicación y revisión humana de decisiones automatizadas, no auditorías obligatorias." }
+    ),
   ]),
   verify(base("ia_002"), [
     vp(
@@ -1900,5 +2062,12 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.55, explanation: "Pide reglas obligatorias de transparencia, licencia y etiquetado para la IA en la creación cultural, y que la Administración cumpla el Reglamento Europeo de IA; a la vez propone un plan estatal para acelerar la adopción de la IA en las empresas." }
     ),
     ne26("podemos"),
+    vp26(
+      "compromis",
+      "strongly_support",
+      16,
+      "Regularem de manera estricta els usos legítims de la intel·ligència artificial",
+      { confidence: 0.85 }
+    ),
   ]),
 ];
