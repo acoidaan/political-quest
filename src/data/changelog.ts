@@ -24,7 +24,7 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
-    date: "2026-11-24",
+    date: "2026-11-25",
     kind: "datos",
     title: "Compromís entra en la comparación con su programa para el 29-N",
     details: [
