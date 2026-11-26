@@ -24,6 +24,14 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-26",
+    kind: "datos",
+    title: "Otra versión revisada del programa del Frente Amplio",
+    details: [
+      "El Frente Amplio publicó el 24 de noviembre otra versión de su programa en la misma dirección, que solo reescribe una frase sobre un tema que el test no aborda. Se han vuelto a comprobar todas sus citas: siguen siendo literales y en la misma página. Ninguna posición cambia, así que el test no cambia.",
+    ],
+  },
+  {
     date: "2026-11-25",
     kind: "datos",
     title: "Compromís entra en la comparación con su programa para el 29-N",
