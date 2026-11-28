@@ -175,7 +175,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
     name: "SALF",
     scope: "Estatal",
     officialWebsite: "https://www.seacabolafiesta.com",
-    programStatus: "published",
+    programStatus: "incorporated",
     documents: [
       {
         title: "Contrato electoral simplificado. Generales 2026",
@@ -184,7 +184,7 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
       },
     ],
     lastChecked: CHECKED,
-    notes: "Programa revisado: aborda 39 de las 90 propuestas del test, por debajo del 60% del partido estatal más cubierto, así que de momento no se compara. Sus posiciones se conservan en el dataset. La web bloquea la descarga automatizada del PDF; se revisó la copia aportada por el mantenedor, que coincide con la versión enlazada en la web. El PDF no indica fecha de creación: se toma la de sus metadatos.",
+    notes: "Su contrato electoral aborda 39 de las 90 propuestas del test; en el resto figura como «evidencia insuficiente» y no puntúa. La web bloquea la descarga automatizada del PDF; se revisó la copia aportada por el mantenedor, que coincide con la versión enlazada en la web. El PDF no indica fecha de creación: se toma la de sus metadatos.",
   },
   {
     id: "vox",
