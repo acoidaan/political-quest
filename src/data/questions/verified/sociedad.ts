@@ -88,6 +88,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Reforçarem l’atenció primària, la salut comunitària i la prevenció, fixant per llei bàsica un finançament mínim",
       { confidence: 0.7 }
     ),
+    vp26(
+      "salf",
+      "support",
+      23,
+      "10.000 camas y 1.500 UCI más.",
+      { confidence: 0.55, explanation: "Más camas, plantillas y sueldos sanitarios financiados con el ahorro de una central de compras única, no con subidas de impuestos." }
+    ),
   ]),
   verify(base("san_002"), [
     vp(
@@ -165,6 +172,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       9,
       "Blindarem la gestió pública de la sanitat i impedirem la mercantilització de l’atenció sanitària i la privatització de la gestió dels serveis públics a través de la derogació de la Llei 15/1997.",
       { confidence: 0.85 }
+    ),
+    vp26(
+      "salf",
+      "support",
+      22,
+      "Superado el plazo, eliges centro, público o privado, y lo paga la sanidad pública.",
+      { confidence: 0.8 }
     ),
   ]),
   verify(base("san_003"), [
@@ -268,6 +282,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Aprovarem un Pacte estatal per la salut mental amb finançament suficient per a ampliar les plantilles de professionals",
       { confidence: 0.9 }
     ),
+    vp26(
+      "salf",
+      "strongly_support",
+      24,
+      "Un psicólogo clínico por cada 10.000 habitantes en los centros de salud y atención en 15 días.",
+      { confidence: 0.9 }
+    ),
   ]),
   axesOnly(
     base("san_004"),
@@ -291,6 +312,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       ne26("democracia21"),
       ne26("podemos"),
       ne26("compromis"),
+      ne26("salf"),
     ]
   ),
   verify(base("edu_001"), [
@@ -364,6 +386,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Modificarem la normativa bàsica de concerts educatius perquè la xarxa concertada siga realment subsidiària de la pública.",
       { confidence: 0.75 }
     ),
+    vp26(
+      "salf",
+      "strongly_support",
+      34,
+      "Cheque escolar válido en pública, concertada y privada, con el mismo importe por alumno",
+      { confidence: 0.8 }
+    ),
   ]),
   axesOnly(
     base("edu_002"),
@@ -405,6 +434,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
         "Garantirem mitjançant les reformes legals oportunes el caràcter laic que ha de revestir l'escola pública, tot deixant l'educació confessional fora del currículum i de l'àmbit escolar.",
         { confidence: 0.9 }
       ),
+      ne26("salf"),
     ]
   ),
   verify(base("edu_003"), [
@@ -460,6 +490,13 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ne26("democracia21"),
     ne26("podemos"),
     ne26("compromis"),
+    vp26(
+      "salf",
+      "strongly_support",
+      33,
+      "Derecho a la enseñanza en castellano en toda España, exigible por la familia, con Alta Inspección estatal que sanciona.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("edu_004"), [
     vp(
@@ -514,6 +551,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.9 }
     ),
     ne26("compromis"),
+    ne26("salf"),
   ]),
   verify(base("uni_001"), [
     vp(
@@ -604,6 +642,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Posarem en marxa un nou sistema de taxes universitàries perquè qui menys recursos té pague menys.",
       { confidence: 0.7, explanation: "También propone mejorar el sistema estatal de becas." }
     ),
+    ne26("salf", "Propone una beca-salario para FP superior y matrícula gratuita para quien complete la mili voluntaria; no se pronuncia sobre las tasas universitarias en general."),
   ]),
   verify(base("igu_001"), [
     vp(
@@ -688,6 +727,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Reforçarem la inspecció laboral i les polítiques contra la bretxa salarial",
       { confidence: 0.55, explanation: "No menciona auditorías salariales obligatorias ni sanciones específicas." }
     ),
+    ne26("salf"),
   ]),
   verify(base("gen_001"), [
     vp(
@@ -796,6 +836,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Reforçarem les unitats policials especialitzades, els jutjats de violència sobre la dona, els serveis forenses i l’assistència jurídica gratuïta.",
       { confidence: 0.7, explanation: "Posición derivada: refuerza la jurisdicción específica de violencia sobre la mujer." }
     ),
+    ne26("salf"),
   ]),
   verify(base("gen_002"), [
     vp(
@@ -886,6 +927,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Blindarem els avanços en matèria de drets LGTBIQ+, com ara la Llei per la igualtat real i efectiva de les persones trans",
       { confidence: 0.75, explanation: "Posición derivada: blinda la Ley trans de 2023, que regula la autodeterminación del sexo registral." }
     ),
+    ne26("salf"),
   ]),
   verify(base("lgb_001"), [
     vp(
@@ -952,6 +994,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Blindarem els avanços en matèria de drets LGTBIQ+, com ara la Llei per la igualtat real i efectiva de les persones trans i per a la garantia dels drets de les persones LGTBI, i el matrimoni igualitari.",
       { confidence: 0.9 }
     ),
+    ne26("salf"),
   ]),
   verify(base("lgb_002"), [
     vote("psoe", "support", {
@@ -1031,6 +1074,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Tipificarem específicament les teràpies de conversió com a delicte",
       { confidence: 0.95 }
     ),
+    ne26("salf"),
   ]),
   verify(base("fam_001"), [
     vp(
@@ -1133,6 +1177,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Implementarem una prestació universal per criança de 200 euros mensuals per fill o filla",
       { confidence: 0.95 }
     ),
+    ne26("salf", "Propone 5.000 euros más de mínimo exento en el IRPF por cada hijo y progenitor, una ventaja fiscal, no ayudas económicas directas."),
   ]),
   verify(base("abo_001"), [
     vp(
@@ -1235,6 +1280,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Garantirem la interrupció voluntària de l’embaràs gratuïta, segura i accessible dins de la xarxa sanitària pública, en els termes previstos legalment",
       { confidence: 0.95 }
     ),
+    ne26("salf"),
   ]),
   verify(base("abo_002"), [
     vp(
@@ -1289,6 +1335,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
     ),
     ne26("podemos"),
     ne26("compromis"),
+    ne26("salf"),
   ]),
   verify(base("eut_001"), [
     vp(
@@ -1373,6 +1420,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.9 }
     ),
     ne26("compromis"),
+    ne26("salf"),
   ]),
   verify(base("rel_001"), [
     vp(
@@ -1427,6 +1475,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Eliminarem els privilegis atorgats mitjançant els diferents acords particulars entre l'Estat i les diferents confessions religioses, com ara el cas del tractat signat amb la Santa Seu el 3 de gener de 1979",
       { confidence: 0.9 }
     ),
+    ne26("salf"),
   ]),
   verify(base("rel_002"), [
     vp(
@@ -1481,6 +1530,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Impulsarem reformes legislatives que tendisquen a assegurar la neutralitat dels poders públics estatals davant del fet religiós",
       { confidence: 0.55, explanation: "Posición derivada de la neutralidad religiosa de los poderes públicos que propone." }
     ),
+    ne26("salf"),
   ]),
   verify(base("cul_001"), [
     vp(
@@ -1547,6 +1597,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "eliminarem tot tipus de subvencions i ajudes públiques a manifestacions o espectacles que impliquen patiment animal",
       { confidence: 0.95 }
     ),
+    ne26("salf"),
   ]),
   verify(base("cul_002"), [
     vp(
@@ -1613,6 +1664,7 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       "Prohibirem la cacera amb gossos i els espectacles que facen servir animals.",
       { confidence: 0.85 }
     ),
+    ne26("salf"),
   ]),
   verify(base("mpu_001"), [
     vp(
@@ -1667,5 +1719,6 @@ export const VERIFIED_SOCIEDAD: Question[] = [
       { confidence: 0.55, explanation: "Posición derivada: refuerza el peso de los medios públicos; no menciona expresamente RTVE ni su financiación." }
     ),
     ne26("compromis", "Propone más programación en valenciano en el centro territorial de RTVE, pero no se pronuncia sobre su financiación."),
+    ne26("salf"),
   ]),
 ];

@@ -127,6 +127,14 @@ const PROGRAMS: Record<PartyId, Omit<Source, "page">> = {
  *   creación; la de modificación es el 2026-11-18. La copia aportada por el
  *   mantenedor es idéntica byte a byte a la descargada de la URL de abajo el
  *   2026-11-24.
+ * - SALF: «Contrato electoral simplificado. Generales 2026» (40 pp.),
+ *   enlazado como «Contrato electoral» en seacabolafiesta.com. La web sirve
+ *   el PDF tras una protección anti-bots que bloquea la descarga desde el
+ *   entorno de revisión; se cita la copia que aportó el mantenedor el
+ *   2026-11-28, cuyo sha256 empieza por 073425b9522d, el mismo valor que la
+ *   web añade como parámetro de versión al enlace (?v=073425b9522d). El PDF
+ *   no trae fechas de creación ni de modificación; se toma la de sus
+ *   metadatos XMP (2026-11-04). Las páginas impresas coinciden con las del PDF.
  * Las citas en gallego, catalán y valenciano se transcriben literalmente, sin traducir.
  */
 export const VERIFIED_AT_2026 = "2026-11-11";
@@ -216,6 +224,13 @@ const PROGRAMS_2026: Record<PartyId, Omit<Source, "page">> = {
     date: "2026-11-18",
     verifiedAt: "2026-11-24",
   },
+  salf: {
+    type: "electoral_program",
+    document: "Contrato electoral SALF (Se Acabó La Fiesta) — Generales 29N 2026",
+    url: "https://www.seacabolafiesta.com/SALF_Contrato_Electoral_29N.pdf",
+    date: "2026-11-04",
+    verifiedAt: "2026-11-28",
+  },
 };
 
 /** Fecha de publicación del programa del 29N, por partido (= validFrom). */
@@ -232,6 +247,7 @@ const PROGRAM_2026_FROM: Record<PartyId, string> = {
   democracia21: "2026-11-13",
   podemos: "2026-11-17",
   compromis: "2026-11-18",
+  salf: "2026-11-04",
 };
 
 function program2026(party: PartyId): Omit<Source, "page"> {

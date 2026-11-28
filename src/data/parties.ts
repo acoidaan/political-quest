@@ -131,6 +131,20 @@ export const PARTIES: Party[] = [
     active: true,
     positionCycle: "2026 (29N)",
   },
+  {
+    id: "salf",
+    name: "SALF",
+    fullName: "Se Acabó La Fiesta",
+    color: "#3f3f46",
+    // 39 posiciones claras: supera el umbral orientativo de 20, pero queda
+    // por debajo del 60% del partido estatal activo más cubierto (aviso de
+    // cobertura de npm run balance). Activarlo es una decisión editorial
+    // pendiente (docs/ACTUALIZACION.md §3).
+    active: false,
+    positionCycle: "2026 (29N)",
+    notes:
+      "Programa del 29N incorporado (39 posiciones claras). Su cobertura del test es menor que la de los demás partidos estatales, así que de momento no se compara.",
+  },
   // Preparados para fases posteriores (inactivos hasta tener posiciones
   // verificadas): junts, cc, upn.
 ];

@@ -24,6 +24,15 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-28",
+    kind: "datos",
+    title: "Revisado el contrato electoral de SALF para el 29-N",
+    details: [
+      "Se ha revisado el «Contrato electoral» que Se Acabó La Fiesta (SALF) publica en seacabolafiesta.com: aborda 39 de las 90 propuestas del test, con cita literal y página.",
+      "Es menos que los demás partidos estatales, así que de momento no se compara en los resultados. Sus posiciones se conservan en el dataset y figura en el seguimiento de candidaturas.",
+    ],
+  },
+  {
     date: "2026-11-26",
     kind: "datos",
     title: "Otra versión revisada del programa del Frente Amplio",

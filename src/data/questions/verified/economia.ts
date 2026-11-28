@@ -76,6 +76,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Augmentarem la presència de l’estat en sectors estratègics a través de l’adquisició de participacions i accions en empreses o la creació d’empreses estatals",
       { confidence: 0.95 }
     ),
+    ne26("salf"),
   ]),
   verify(base("eco_002"), [
     vp(
@@ -130,6 +131,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.55, explanation: "Posición derivada: propone cotizaciones progresivas según los beneficios empresariales y suprimir la base máxima, no reducirlas." }
     ),
     ne26("compromis"),
+    vp26(
+      "salf",
+      "support",
+      31,
+      "Cotización cero durante dos años por contratar a menores de 30 y mayores de 50.",
+      { confidence: 0.6, explanation: "Cotización cero para contratar a menores de 30 y mayores de 50, y cotización empresarial al 0 % en Ceuta y Melilla; no propone una rebaja generalizada de las cotizaciones empresariales." }
+    ),
   ]),
   verify(base("eco_003"), [
     vp(
@@ -202,6 +210,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Crearem un impost sobre el benefici de les empreses oligopolístiques.",
       { confidence: 0.6, explanation: "Impuesto sobre el beneficio de las empresas oligopolísticas; no menciona expresamente la banca ni los beneficios extraordinarios." }
     ),
+    vp26(
+      "salf",
+      "neutral_or_unclear",
+      15,
+      "Ley de Devolución del Rescate: las entidades que se quedaron con las cajas rescatadas (CaixaBank, BBVA, Sabadell, Unicaja y Abanca) pagan 4.700 millones al año durante 15 años",
+      { confidence: 0.5, explanation: "Propone que los bancos herederos de las cajas devuelvan el rescate, no un impuesto sobre beneficios extraordinarios; a la vez suprime el impuesto a la producción eléctrica." }
+    ),
   ]),
   axesOnly(
     base("eco_004"),
@@ -255,6 +270,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
         "Augmentarem la presència de l’estat en sectors estratègics a través de l’adquisició de participacions i accions en empreses o la creació d’empreses estatals",
         { confidence: 0.65, explanation: "Posición derivada: propone ampliar las participaciones públicas, no venderlas." }
       ),
+      ne26("salf"),
     ]
   ),
   verify(base("imp_001"), [
@@ -352,6 +368,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Eliminarem els privilegis de les rendes financeres respecte de les del treball, TOT fent-les idènticament progressives.",
       { confidence: 0.55, explanation: "Posición derivada: más progresividad en las rentas del capital; no propone subir los tipos de las rentas altas del trabajo." }
     ),
+    vp26(
+      "salf",
+      "oppose",
+      13,
+      "Toda subida de impuestos exigirá tres quintos del Congreso (reforma constitucional).",
+      { confidence: 0.55, explanation: "Posición derivada: rebaja generalizada del IRPF y mayoría de tres quintos para cualquier subida de impuestos; no se refiere específicamente a las rentas altas." }
+    ),
   ]),
   verify(base("imp_002"), [
     vp(
@@ -430,6 +453,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.6, explanation: "Posición derivada: rebaja solo el tipo mínimo y sube los tipos desde 60.000 euros; no plantea una rebaja generalizada." }
     ),
     ne26("compromis", "Propone deflactar el IRPF para las rentas inferiores a 30.000 euros, no una rebaja generalizada."),
+    vp26(
+      "salf",
+      "strongly_support",
+      12,
+      "35.000 euros libres de IRPF para todos.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("imp_003"), [
     vp(
@@ -472,6 +502,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
     ne26("democracia21"),
     ne26("podemos"),
     ne26("compromis"),
+    vp26(
+      "salf",
+      "strongly_support",
+      13,
+      "Sucesiones, Donaciones y Patrimonio: suprimidos.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("imp_004"), [
     vp("pp", "strongly_oppose", 23, "Eliminaremos el impuesto a las grandes fortunas…", { confidence: 0.95 }),
@@ -548,6 +585,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "strongly_support",
       17,
       "Mantindrem i ampliarem l’Impost a les Grans Fortunes",
+      { confidence: 0.95 }
+    ),
+    vp26(
+      "salf",
+      "strongly_oppose",
+      13,
+      "Fuera también el impuesto a las grandes fortunas.",
       { confidence: 0.95 }
     ),
   ]),
@@ -640,6 +684,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Reformarem l’Ingrés Mínim Vital per a incloure noves situacions de vulnerabilitat, millorar la seua cobertura",
       { confidence: 0.85 }
     ),
+    ne26("salf", "Propone que el Ingreso Mínimo baje 50 céntimos por cada euro ganado para hacerlo compatible con el empleo; no se pronuncia sobre ampliar su cobertura a más hogares."),
   ]),
   verify(base("bie_002"), [
     vp(
@@ -670,6 +715,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       { confidence: 0.65, explanation: "Posición derivada: su objetivo es una renta incondicionada, lo contrario de endurecer la condicionalidad." }
     ),
     ne26("compromis"),
+    vp26(
+      "salf",
+      "strongly_support",
+      32,
+      "Rechazar dos ofertas adecuadas: fin de la prestación.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("pen_001"), [
     vp(
@@ -766,6 +818,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Assegurarem el manteniment del poder adquisitiu de les pensions, garantint constitucionalment la seua revaloració conforme al cost de la vida.",
       { confidence: 0.95 }
     ),
+    vp26(
+      "salf",
+      "strongly_support",
+      20,
+      "Revalorización con el IPC y prohibición de recortes, con rango constitucional.",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("pen_002"), [
     vp(
@@ -819,6 +878,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       9,
       "Suprimirem tota desgravació fiscal als plans de pensions privats per evitar la competència amb el sistema públic de pensions.",
       { confidence: 0.9, explanation: "Posición inversa: suprime los incentivos fiscales al ahorro privado para la jubilación." }
+    ),
+    vp26(
+      "salf",
+      "support",
+      20,
+      "Menores de 45 años: el 2 % del salario a una cuenta individual obligatoria, tuya, heredable, con comisión máxima del 0,3 %.",
+      { confidence: 0.6, explanation: "Sistema mixto con cuenta individual obligatoria como complemento de la pensión pública; no menciona incentivos fiscales." }
     ),
   ]),
   verify(base("tra_001"), [
@@ -891,6 +957,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       7,
       "Modificarem la normativa laboral sobre acomiadaments per recuperar els salaris de tramitació (en el cas d’acomiadament improcedent indemnitzat) i la indemnització de 45 dies per any treballat.",
       { confidence: 0.95 }
+    ),
+    vp26(
+      "salf",
+      "oppose",
+      30,
+      "Un solo contrato indefinido con indemnización creciente de 12 a 33 días, más la mochila del 1,53 %.",
+      { confidence: 0.65, explanation: "Posición derivada: contrato único con indemnización de 12 a 33 días por año más mochila; no eleva los 33 días actuales del despido improcedente." }
     ),
   ]),
   verify(base("tra_002"), [
@@ -970,6 +1043,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Reduirem la jornada laboral a quatre dies (trenta-dues hores) setmanals, sense disminució del sou.",
       { confidence: 0.95 }
     ),
+    ne26("salf"),
   ]),
   verify(base("smi_001"), [
     vp(
@@ -1060,6 +1134,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Garantirem per llei que l’SMI arribe al 60% del salari mitjà",
       { confidence: 0.85 }
     ),
+    ne26("salf"),
   ]),
   verify(base("viv_001"), [
     vp(
@@ -1156,6 +1231,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Donarem competències als ajuntaments perquè puguen declarar zones tensionades als municipis, d’acord amb la Llei estatal de Vivienda, per impulsar el control efectiu de preus de lloguer.",
       { confidence: 0.9 }
     ),
+    ne26("salf"),
   ]),
   verify(base("viv_002"), [
     vp(
@@ -1252,6 +1328,7 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Donarem competències als ajuntaments perquè puguen declarar zones tensionades als municipis, d’acord amb la Llei estatal de Vivienda, per impulsar el control efectiu de preus de lloguer.",
       { confidence: 0.85, explanation: "Posición inversa del control de precios del alquiler que propone." }
     ),
+    ne26("salf"),
   ]),
   verify(base("viv_003"), [
     vp(
@@ -1317,6 +1394,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       6,
       "Prohibirem legalment els desnonaments sense alternativa habitacional",
       { confidence: 0.6, explanation: "Posición derivada: prioriza impedir desahucios sin alternativa habitacional; no propone desalojos exprés." }
+    ),
+    vp26(
+      "salf",
+      "strongly_support",
+      5,
+      "Con denuncia y título de propiedad, la Policía desaloja en 48 horas.",
+      { confidence: 0.95 }
     ),
   ]),
   verify(base("viv_004"), [
@@ -1396,6 +1480,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       "Crearem un inventari i un banc estatal de sòl i edificis públics en desús per a destinar-los a habitatge social",
       { confidence: 0.7 }
     ),
+    vp26(
+      "salf",
+      "oppose",
+      6,
+      "Todo el suelo de la Sareb y del Estado, en 12 meses, a concurso para construir vivienda protegida en propiedad a precio tasado.",
+      { confidence: 0.7, explanation: "Destina el suelo público a vivienda protegida en propiedad, no en alquiler." }
+    ),
   ]),
   verify(base("reg_001"), [
     vp(
@@ -1467,6 +1558,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       20,
       "Treballarem per a simplificar i agilitzar els processos de tramitació en les relacions de les pimes amb l’administració",
       { confidence: 0.55, explanation: "Simplificación y ventanillas únicas para pymes; no se pronuncia sobre reducir el control previo." }
+    ),
+    vp26(
+      "salf",
+      "strongly_support",
+      30,
+      "Licencia de actividad en 24 horas por declaración responsable.",
+      { confidence: 0.9 }
     ),
   ]),
   verify(base("emp_001"), [
@@ -1557,6 +1655,13 @@ export const VERIFIED_ECONOMIA: Question[] = [
       34,
       "Eliminarem les taxes de reposició i derogarem tota normativa que impedix a tots els nivells de l’administració créixer en recursos humans",
       { confidence: 0.85 }
+    ),
+    vp26(
+      "salf",
+      "support",
+      10,
+      "2.000 jueces y 1.500 fiscales más.",
+      { confidence: 0.65, explanation: "Más jueces, fiscales, investigadores policiales y psicólogos clínicos; a la vez propone reducir altos cargos, asesores y entes públicos." }
     ),
   ]),
 ];

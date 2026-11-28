@@ -106,6 +106,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Regularitzarem i donarem drets per als qui viuen ací.",
       { confidence: 0.9 }
     ),
+    vp26(
+      "salf",
+      "strongly_oppose",
+      17,
+      "Derogación de la regularización de 2026, revisión una por una de las concesiones y prohibición por ley orgánica de cualquier regularización masiva.",
+      { confidence: 0.95 }
+    ),
   ]),
   verify(base("inm_002"), [
     vp(
@@ -202,6 +209,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Impulsarem vies de regularització i reformes que faciliten la documentació i autorització de treball",
       { confidence: 0.7, explanation: "Posición derivada: propone facilitar las autorizaciones, no endurecerlas." }
     ),
+    vp26(
+      "salf",
+      "strongly_support",
+      18,
+      "Para el resto, solo visados con contrato previo y cupo anual votado en el Congreso.",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("inm_003"), [
     vp(
@@ -262,6 +276,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ),
     ne26("podemos"),
     ne26("compromis"),
+    vp26(
+      "salf",
+      "strongly_support",
+      18,
+      "Condena de más de un año: pérdida de la residencia.",
+      { confidence: 0.8, explanation: "Pérdida de la residencia por condenas de más de un año; los extranjeros condenados cumplirían la pena en terceros países, con veto de por vida de acceso a España." }
+    ),
   ]),
   verify(base("inm_004"), [
     vp(
@@ -325,6 +346,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.85 }
     ),
     ne26("compromis"),
+    ne26("salf"),
   ]),
   verify(base("inm_005"), [
     vote("psoe", "strongly_support", {
@@ -397,6 +419,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       9,
       "Garantirem l’accés universal a l’atenció sanitària pública, sense discriminacions per origen o situació administrativa.",
       { confidence: 0.95 }
+    ),
+    vp26(
+      "salf",
+      "strongly_oppose",
+      23,
+      "Tarjeta para españoles y residentes legales con cotización o cobertura. Urgencias para todos, siempre.",
+      { confidence: 0.9 }
     ),
   ]),
   verify(base("inm_006"), [
@@ -476,6 +505,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.7, explanation: "Posición derivada: propone retirar elementos de contención en frontera, no reforzarlos." }
     ),
     ne26("compromis"),
+    vp26(
+      "salf",
+      "strongly_support",
+      37,
+      "5.000 militares y 1.000 guardias civiles más en las dos plazas",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("nac_001"), [
     vp(
@@ -524,6 +560,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.95 }
     ),
     ne26("compromis"),
+    vp26(
+      "salf",
+      "oppose",
+      18,
+      "Nacionalidad: diez años de residencia legal, examen de cultura y Constitución, sin antecedentes y sin depender de ayudas.",
+      { confidence: 0.8, explanation: "Mantiene diez años de residencia legal y añade requisitos." }
+    ),
   ]),
   verify(base("seg_001"), [
     vp(
@@ -584,6 +627,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ),
     ne26("podemos"),
     ne26("compromis"),
+    vp26(
+      "salf",
+      "strongly_support",
+      8,
+      "Tres condenas: prisión sin suspensión.",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("seg_002"), [
     vp(
@@ -660,6 +710,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
     ne26("democracia21"),
     ne26("podemos"),
     ne26("compromis"),
+    vp26(
+      "salf",
+      "strongly_support",
+      8,
+      "Prisión permanente revisable por violación a menores o con lesiones graves.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("pol_001"), [
     vp(
@@ -744,6 +801,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Derogarem la Llei de Protecció de la Seguretat Ciutadana, coneguda com a llei mordassa.",
       { confidence: 0.9 }
     ),
+    ne26("salf"),
   ]),
   verify(base("jus_001"), [
     vp(
@@ -816,6 +874,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       { confidence: 0.8, explanation: "Mantiene la elección parlamentaria (y plantea a largo plazo la elección directa por la ciudadanía), no por los propios jueces." }
     ),
     ne26("compromis", "Pide un CGPJ independiente y elegido «tenint en compte la sobirania del poble», sin precisar si deben elegirlo los jueces o el Parlamento."),
+    vp26(
+      "salf",
+      "strongly_support",
+      28,
+      "con composición determinada por criterios excluyentes de cualquier influencia política: elección por jueces y magistrados, antigüedad y/o sorteo.",
+      { confidence: 0.9 }
+    ),
   ]),
   verify(base("jus_002"), [
     vp(
@@ -900,6 +965,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Defensarem un model de justícia penal progressista amb mitjans econòmics, materials i humans suficients inspirat en l'interès superior del i la menor, no adreçat a satisfer el populisme punitiu ni l'alarma social.",
       { confidence: 0.55, explanation: "Referido a la justicia penal de menores." }
     ),
+    vp26(
+      "salf",
+      "strongly_oppose",
+      8,
+      "Violadores, asesinos, narcos y corruptos: cumplimiento íntegro, sin reducción ninguna ni permisos.",
+      { confidence: 0.8 }
+    ),
   ]),
   axesOnly(
     base("pri_001"),
@@ -935,6 +1007,13 @@ export const VERIFIED_LIBERTADES: Question[] = [
       ne26("democracia21"),
       ne26("podemos"),
       ne26("compromis"),
+      vp26(
+        "salf",
+        "strongly_support",
+        8,
+        "Sin permisos, sin tercer grado, sin teléfono.",
+        { confidence: 0.95 }
+      ),
     ]
   ),
   verify(base("lib_001"), [
@@ -1008,6 +1087,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       "Derogarem el delicte d'ofensa als sentiments religiosos tipificat a l'article 525 del Codi Penal.",
       { confidence: 0.8, explanation: "No se pronuncia sobre las injurias a la Corona." }
     ),
+    ne26("salf"),
   ]),
   axesOnly(
     base("prv_001"),
@@ -1031,6 +1111,7 @@ export const VERIFIED_LIBERTADES: Question[] = [
       ne26("democracia21"),
       ne26("podemos"),
       ne26("compromis"),
+      ne26("salf"),
     ]
   ),
 ];
