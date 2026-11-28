@@ -24,6 +24,22 @@ export const CHANGE_KIND_LABELS: Record<ChangeKind, string> = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-28",
+    kind: "datos",
+    title: "SALF entra en la comparación con su contrato electoral para el 29-N",
+    details: [
+      "Sus posiciones proceden del «Contrato electoral» que Se Acabó La Fiesta (SALF) publica en seacabolafiesta.com, con cita literal y página en 39 de las 90 propuestas. En las que no aborda figura como «evidencia insuficiente» y no puntúa en la comparación.",
+    ],
+  },
+  {
+    date: "2026-11-28",
+    kind: "metodologia",
+    title: "Umbral de cobertura entre partidos estatales: del 60% al 55%",
+    details: [
+      "La comprobación de equilibrio exige ahora que el partido estatal comparado con menos posiciones tenga al menos el 55% de las del más cubierto (antes, el 60%). El cambio permite comparar a SALF, que llega al 58%.",
+    ],
+  },
+  {
     date: "2026-11-26",
     kind: "datos",
     title: "Otra versión revisada del programa del Frente Amplio",

@@ -256,7 +256,8 @@ export default function MetodologiaPage() {
             (coalición que sustituye a Sumar) proceden de sus programas para
             las elecciones del 29 de noviembre; las de 2023 se conservan como
             historial. Podemos, que en 2023 concurrió dentro de Sumar, se
-            compara con su propio programa del 29-N. También se comparan
+            compara con su propio programa del 29-N, y SALF, que concurre por
+            primera vez, con su contrato electoral. También se comparan
             Adelante Andalucía, BNG, Compromís, EH Bildu y ERC con sus
             programas del 29-N (las citas en gallego, catalán y valenciano se
             reproducen en el idioma original). Cada posición

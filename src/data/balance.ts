@@ -82,9 +82,12 @@ export function generateBalanceReport(questions: Question[]): BalanceReport {
   if (counts.length > 0) {
     const max = Math.max(...counts);
     const min = Math.min(...counts);
-    if (min < max * 0.6)
+    // Umbral del 55% desde el 2026-11-28 (antes, 60%): decisión editorial
+    // para comparar a SALF, con 39 posiciones claras frente a 67 del más
+    // cubierto (58%).
+    if (min < max * 0.55)
       warnings.push(
-        "Desequilibrio de cobertura entre partidos estatales activos: el menos cubierto tiene menos del 60% de posiciones que el más cubierto."
+        "Desequilibrio de cobertura entre partidos estatales activos: el menos cubierto tiene menos del 55% de posiciones que el más cubierto."
       );
   }
   const polRatio =

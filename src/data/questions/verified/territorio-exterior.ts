@@ -75,6 +75,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Apostarem per un concert econòmic responsable o, en el seu defecte, per un sistema de finançament on la Generalitat Valenciana recapte directament la major part dels tributs.",
       { confidence: 0.95 }
     ),
+    ne26("salf"),
   ]),
   verify(base("ter_002"), [
     vp(
@@ -165,6 +166,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Avançarem en el desplegament de l’autogovern i en el traspàs a la Generalitat Valenciana de les competències",
       { confidence: 0.8, explanation: "Posición inversa: pide más competencias para la Generalitat, no recentralizarlas." }
     ),
+    vp26(
+      "salf",
+      "support",
+      33,
+      "Contenidos mínimos comunes al 100 %, evaluaciones externas al final de cada etapa y selectividad única y en castellano en toda España.",
+      { confidence: 0.5, explanation: "Posición derivada: unifica contenidos educativos, selectividad y compras sanitarias en toda España, sin proponer expresamente que el Estado recupere competencias." }
+    ),
   ]),
   verify(base("cat_001"), [
     vp(
@@ -224,6 +232,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("democracia21"),
     ne26("podemos"),
     ne26("compromis"),
+    vp26(
+      "salf",
+      "strongly_oppose",
+      26,
+      "Reforma de la Constitución para prohibir expresamente las amnistías y condicionar los indultos a requisitos que impidan su utilización política",
+      { confidence: 0.95 }
+    ),
   ]),
   axesOnly(
     base("cat_002"),
@@ -277,6 +292,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       ne26("democracia21"),
       ne26("podemos"),
       ne26("compromis"),
+      ne26("salf"),
     ]
   ),
   axesOnly(
@@ -307,6 +323,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       ne26("democracia21"),
       ne26("podemos"),
       ne26("compromis"),
+      ne26("salf"),
     ]
   ),
   axesOnly(
@@ -343,6 +360,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         { confidence: 0.95 }
       ),
       ne26("compromis"),
+      ne26("salf"),
     ]
   ),
   axesOnly(
@@ -385,6 +403,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         { confidence: 0.95 }
       ),
       ne26("compromis"),
+      ne26("salf"),
     ]
   ),
   axesOnly(
@@ -433,6 +452,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         "Assegurarem el manteniment del poder adquisitiu de les pensions, garantint constitucionalment la seua revaloració conforme al cost de la vida.",
         { confidence: 0.55, explanation: "Referido a las pensiones; también propone reformar el artículo 135 de la Constitución." }
       ),
+      ne26("salf"),
     ]
   ),
   verify(base("ter_003"), [
@@ -481,6 +501,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       53,
       "Avançarem en la supressió de les diputacions provincials",
       { confidence: 0.8, explanation: "Solo se refiere a las diputaciones, no a la fusión de municipios." }
+    ),
+    vp26(
+      "salf",
+      "strongly_support",
+      16,
+      "Supresión de las diputaciones provinciales",
+      { confidence: 0.9 }
     ),
   ]),
   verify(base("ue_001"), [
@@ -542,6 +569,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Negociarem amb la resta de socis europeus l’augment d’ingressos comunitaris per dotar la UE d’un pressupost reforçat fins al menys el 2% RNB.",
       { confidence: 0.7 }
     ),
+    ne26("salf"),
   ]),
   verify(base("ue_002"), [
     vp(
@@ -596,6 +624,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Proposarem una reforma dels tractats per dotar més poder al Parlament Europeu i al Comité de les Regions.",
       { confidence: 0.6, explanation: "Posición derivada: propone reforzar las instituciones europeas, no recuperar competencias." }
     ),
+    vp26(
+      "salf",
+      "strongly_support",
+      35,
+      "Referéndum de renegociación europea; y de salida, si Bruselas se niega.",
+      { confidence: 0.85 }
+    ),
   ]),
   verify(base("ue_003"), [
     vp(
@@ -647,6 +682,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
     ne26("democracia21"),
     ne26("podemos"),
     ne26("compromis"),
+    vp26(
+      "salf",
+      "support",
+      35,
+      "Que el eje franco-alemán quiera arruinar nuestro sector primario, bloquear medidas contra la inmigración ilegal",
+      { confidence: 0.55, explanation: "Cita el bloqueo europeo de medidas contra la inmigración ilegal como motivo para renegociar con la UE; fija además un cupo anual de inmigración votado en el Congreso." }
+    ),
   ]),
   verify(base("ue_004"), [
     vp(
@@ -700,6 +742,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       56,
       "Treballarem per superar l’adopció de decisions en el Consell de la UE per unanimitat en política exterior o política fiscal.",
       { confidence: 0.95 }
+    ),
+    vp26(
+      "salf",
+      "oppose",
+      35,
+      "España lo veta en el Consejo: lo que se come en España se produce en España.",
+      { confidence: 0.5, explanation: "Posición derivada: recurre al veto nacional en el Consejo (Mercosur, PAC, Pacto Verde); no se refiere a la política exterior." }
     ),
   ]),
   verify(base("ue_005"), [
@@ -791,6 +840,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Treballarem per la construcció d'una Unió Europea de la Defensa que puga substituir el marc de l'OTAN",
       { confidence: 0.85 }
     ),
+    ne26("salf"),
   ]),
   verify(base("ota_001"), [
     vp(
@@ -881,6 +931,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Treballarem per la construcció d'una Unió Europea de la Defensa que puga substituir el marc de l'OTAN",
       { confidence: 0.7, explanation: "Posición derivada: propone sustituir la OTAN por una defensa europea." }
     ),
+    ne26("salf"),
   ]),
   verify(base("def_001"), [
     vp(
@@ -977,6 +1028,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Impedirem que els increments de la despesa militar es facen a costa de reduir la inversió en serveis públics, protecció social o infraestructures crítiques.",
       { confidence: 0.6 }
     ),
+    vp26(
+      "salf",
+      "support",
+      38,
+      "Defensa: el 2 % se gasta en España y en sus militares.",
+      { confidence: 0.8 }
+    ),
   ]),
   verify(base("def_002"), [
     vp(
@@ -1037,6 +1095,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Revisarem de manera integral la política d’exportació d’armaments per a prohibir de manera estricta la venda d’armes a països que vulneren els drets humans.",
       { confidence: 0.95 }
     ),
+    ne26("salf"),
   ]),
   axesOnly(
     base("ext_001"),
@@ -1101,6 +1160,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
         55,
         "Donarem suport al dret a la lliure determinació dels pobles consagrada en la Carta de Nacions Unides en casos com el Sàhara Occidental, tot redoblant esforços diplomàtics i exigint la celebració d’un referèndum.",
         { confidence: 0.95 }
+      ),
+      vp26(
+        "salf",
+        "support",
+        38,
+        "Vuelta a la posición de la ONU, tratado de amistad con Argelia y contratos de gas a largo plazo",
+        { confidence: 0.55, explanation: "Retira el apoyo de 2022 al plan marroquí y vuelve a la posición de la ONU; no menciona expresamente el referéndum." }
       ),
     ]
   ),
@@ -1169,6 +1235,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Crearem una empresa pública de generació, distribució i comercialització",
       { confidence: 0.95 }
     ),
+    ne26("salf"),
   ]),
   verify(base("ene_002"), [
     vp(
@@ -1229,6 +1296,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.6, explanation: "Posición derivada: endurece los controles ambientales sobre la minería." }
     ),
     ne26("compromis"),
+    ne26("salf"),
   ]),
   verify(base("nuc_001"), [
     vp(
@@ -1319,6 +1387,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Mantindrem el calendari de tancament de les centrals nuclears i no acceptarem cap nova pròrroga",
       { confidence: 0.95 }
     ),
+    ne26("salf"),
   ]),
   verify(base("nuc_002"), [
     vp(
@@ -1403,6 +1472,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Mantindrem el calendari de tancament de les centrals nuclears i no acceptarem cap nova pròrroga",
       { confidence: 0.95 }
     ),
+    ne26("salf"),
   ]),
   verify(base("cli_001"), [
     vp(
@@ -1499,6 +1569,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Revisarem la Llei 7/2021 de Canvi Climàtic i Transició Energètica i ampliarem els compromisos d’electrificació del sistema",
       { confidence: 0.85 }
     ),
+    vp26(
+      "salf",
+      "oppose",
+      35,
+      "Veto a Mercosur, al recorte de la PAC y al Pacto Verde.",
+      { confidence: 0.65, explanation: "Propone vetar el Pacto Verde europeo; no se pronuncia expresamente sobre los objetivos de emisiones." }
+    ),
   ]),
   verify(base("cli_002"), [
     vp(
@@ -1559,6 +1636,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Condicionarem les ajudes estatals al transport al fet que les zones de baixes emissions funcionen de veritat",
       { confidence: 0.8 }
     ),
+    ne26("salf"),
   ]),
   verify(base("agr_001"), [
     vp(
@@ -1607,6 +1685,13 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       { confidence: 0.55, explanation: "Posición derivada: acompaña la transición con ayudas, sin relajar objetivos ambientales." }
     ),
     ne26("compromis", "Pide reducir pesticidas y fertilizantes de síntesis, pero también ecorregímenes «viables» y regímenes simplificados de la PAC: posición mixta."),
+    vp26(
+      "salf",
+      "support",
+      35,
+      "la Ley de Restauración deja improductivo hasta el 40 % de la Red Natura. España lo veta en el Consejo",
+      { confidence: 0.7 }
+    ),
   ]),
   verify(base("med_001"), [
     vp(
@@ -1691,6 +1776,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Establirem una transició hidrològica justa i un full de ruta per a adaptar el regadiu i el futur de l'agricultura a la disponibilitat hídrica",
       { confidence: 0.5, explanation: "También pide dar al riego agrario consideración prioritaria tras el abastecimiento humano." }
     ),
+    ne26("salf"),
   ]),
   verify(base("tpt_001"), [
     vp(
@@ -1763,6 +1849,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Garantirem tarifes accessibles, integració dels títols de transport",
       { confidence: 0.6, explanation: "No precisa abonos gratuitos; también propone transporte asequible para jóvenes." }
     ),
+    ne26("salf"),
   ]),
   verify(base("fis_001"), [
     vp(
@@ -1835,6 +1922,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Eliminarem els privilegis fiscals al sector l’aviació (combustible, IVA…)",
       { confidence: 0.55, explanation: "Referido al combustible de aviación; también propone subir el IVA a los productos contaminantes." }
     ),
+    ne26("salf"),
   ]),
   verify(base("dig_001"), [
     vp(
@@ -1925,6 +2013,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Proposarem garanties d'atenció presencial, accessibilitat i comunicacions clares en l'Administració de l'Estat.",
       { confidence: 0.85 }
     ),
+    ne26("salf"),
   ]),
   verify(base("ia_001"), [
     vp(
@@ -2003,6 +2092,7 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Defensarem les explicacions i la revisió humana de decisions automatitzades que afecten ajudes o serveis",
       { confidence: 0.6, explanation: "Propone explicación y revisión humana de decisiones automatizadas, no auditorías obligatorias." }
     ),
+    ne26("salf"),
   ]),
   verify(base("ia_002"), [
     vp(
@@ -2069,5 +2159,6 @@ export const VERIFIED_TERRITORIO_EXTERIOR: Question[] = [
       "Regularem de manera estricta els usos legítims de la intel·ligència artificial",
       { confidence: 0.85 }
     ),
+    ne26("salf"),
   ]),
 ];

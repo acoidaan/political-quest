@@ -66,7 +66,7 @@ export const CURRENT_ELECTION: Election = {
   campaign: { from: "2026-11-13", to: "2026-11-27" },
 };
 
-const CHECKED = "2026-11-26";
+const CHECKED = "2026-11-28";
 /** Webs cuyas páginas bloquean hoy el acceso automatizado (Cloudflare). */
 const LAST_READABLE = "2026-11-13";
 /** Webs que bloquean el acceso automatizado; última lectura, manual. */
@@ -166,8 +166,25 @@ export const TRACKED_CANDIDACIES: TrackedCandidacy[] = [
         date: "2026-11-15",
       },
     ],
-    // La web devuelve una página de Incapsula desde el 2026-11-23.
-    lastChecked: "2026-11-22",
+    // Desde el 2026-11-23 la web suele devolver una página de Incapsula; el
+    // 2026-11-27 se descargó el PDF y era idéntico al ya incorporado.
+    lastChecked: "2026-11-27",
+  },
+  {
+    id: "salf",
+    name: "SALF",
+    scope: "Estatal",
+    officialWebsite: "https://www.seacabolafiesta.com",
+    programStatus: "incorporated",
+    documents: [
+      {
+        title: "Contrato electoral simplificado. Generales 2026",
+        url: "https://www.seacabolafiesta.com/SALF_Contrato_Electoral_29N.pdf",
+        date: "2026-11-04",
+      },
+    ],
+    lastChecked: CHECKED,
+    notes: "Su contrato electoral aborda 39 de las 90 propuestas del test; en el resto figura como «evidencia insuficiente» y no puntúa. La web bloquea la descarga automatizada del PDF; se revisó la copia aportada por el mantenedor, que coincide con la versión enlazada en la web. El PDF no indica fecha de creación: se toma la de sus metadatos.",
   },
   {
     id: "vox",
